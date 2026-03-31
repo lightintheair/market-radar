@@ -304,12 +304,53 @@
 
 <!-- Tab Bar -->
 <div class="tab-bar">
-  <button class="tab-btn active" onclick="switchTab('market')">📡 市场雷达</button>
+  <button class="tab-btn active" onclick="switchTab('market')">📡 市场环境</button>
+  <button class="tab-btn" onclick="switchTab('fx')">💱 汇率与资金</button>
+  <button class="tab-btn" onclick="switchTab('ops')">🛒 平台运营</button>
   <button class="tab-btn" onclick="switchTab('ar')">📦 应收账款</button>
 </div>
 
-<!-- ========== Tab 1: 市场雷达 ========== -->
+<!-- ========== Tab 1: 市场环境 ========== -->
 <div id="tab-market" class="tab-content active">
+<div class="dashboard">
+
+  <!-- 市场环境：宏观 + 竞争情报 -->
+  <div class="bottom-row">
+    <div class="list-card">
+      <h3>🌎 墨西哥宏观动态</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：消费力/通胀/关税/央行政策，判断当地市场需求是否健康，定价空间是否收窄
+      </div>
+      <div id="macro-list"><div class="empty-state">加载中...</div></div>
+      <div class="fx-conclusion ok" id="macro-conclusion" style="margin-top:12px;display:none"></div>
+    </div>
+    <div class="list-card">
+      <h3>🔍 竞争情报</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：① Temu/Shopee 格局动向，判断市场空间 ② 速卖通近期爆品品类，找参考与机会
+      </div>
+      <div id="competitor-list"><div class="empty-state">加载中...</div></div>
+      <div class="fx-conclusion ok" id="competitor-conclusion" style="margin-top:12px;display:none"></div>
+    </div>
+  </div>
+
+  <!-- 节日日历 -->
+  <div class="bottom-row">
+    <div class="list-card">
+      <h3>📅 节日 / 备货日历</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：当前处于哪个备货阶段，距离下一个销售旺季还有多少准备时间
+      </div>
+      <div id="calendar-list"><div class="empty-state">加载中...</div></div>
+      <div class="fx-conclusion ok" id="calendar-conclusion" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ========== Tab 2: 汇率与资金 ========== -->
+<div id="tab-fx" class="tab-content">
 <div class="dashboard">
 
   <!-- ① 汇率板块：帐期流程图 -->
@@ -616,46 +657,6 @@
     </div>
   </div>
 
-  <!-- 平台动态 + 节日日历 -->
-  <div class="bottom-row">
-    <div class="list-card">
-      <h3>🛒 平台动态</h3>
-      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
-        价值点：有无影响毛利的费率/佣金/物流规则变化，操盘前必看
-      </div>
-      <div id="platform-list"><div class="empty-state">暂无最新动态</div></div>
-      <div class="fx-conclusion ok" id="platform-conclusion" style="margin-top:12px;display:none"></div>
-    </div>
-    <div class="list-card">
-      <h3>📅 节日 / 备货日历</h3>
-      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
-        价值点：当前处于哪个备货阶段，距离下一个销售旺季还有多少准备时间
-      </div>
-      <div id="calendar-list"><div class="empty-state">加载中...</div></div>
-      <div class="fx-conclusion ok" id="calendar-conclusion" style="margin-top:12px"></div>
-    </div>
-  </div>
-
-  <!-- 市场环境：宏观 + 竞争情报 -->
-  <div class="bottom-row">
-    <div class="list-card">
-      <h3>🌎 墨西哥宏观动态</h3>
-      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
-        价值点：消费力/通胀/关税/央行政策，判断当地市场需求是否健康，定价空间是否收窄
-      </div>
-      <div id="macro-list"><div class="empty-state">加载中...</div></div>
-      <div class="fx-conclusion ok" id="macro-conclusion" style="margin-top:12px;display:none"></div>
-    </div>
-    <div class="list-card">
-      <h3>🔍 竞争情报</h3>
-      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
-        价值点：① Temu/Shopee 格局动向，判断市场空间 ② 速卖通近期爆品品类，找参考与机会
-      </div>
-      <div id="competitor-list"><div class="empty-state">加载中...</div></div>
-      <div class="fx-conclusion ok" id="competitor-conclusion" style="margin-top:12px;display:none"></div>
-    </div>
-  </div>
-
   <!-- 历史数据表 -->
   <div class="history-card">
     <h3>📊 历史汇率记录</h3>
@@ -678,7 +679,25 @@
 </div>
 </div><!-- end #tab-market -->
 
-<!-- ========== Tab 2: 应收账款 ========== -->
+</div>
+</div>
+
+<!-- ========== Tab 3: 平台运营 ========== -->
+<div id="tab-ops" class="tab-content">
+<div class="dashboard">
+  <div class="bottom-row" style="grid-template-columns:1fr">
+    <div class="list-card">
+      <h3>🛒 平台动态</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：有无影响毛利的费率/佣金/物流规则变化，操盘前必看
+      </div>
+      <div id="platform-list"><div class="empty-state">暂无最新动态</div></div>
+      <div class="fx-conclusion ok" id="platform-conclusion" style="margin-top:12px;display:none"></div>
+    </div>
+  </div>
+</div>
+</div>
+
 <div id="tab-ar" class="tab-content">
 <div class="ar-dashboard">
 

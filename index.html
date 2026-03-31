@@ -286,6 +286,13 @@
   .ar-hedge-item .hedge-title.ok { color: var(--accent2); }
 
   .ar-empty { color: var(--muted); font-size: 13px; padding: 40px 0; text-align: center; }
+
+  @media (max-width: 900px) {
+    .metrics-row { grid-template-columns: repeat(2, 1fr); }
+    .charts-row, .bottom-row { grid-template-columns: 1fr; }
+    .flow-modes, .fx-compare-grid { grid-template-columns: 1fr; }
+    .dashboard { padding: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -492,6 +499,79 @@
     <div class="fx-conclusion ok" id="fx-conclusion">
       计算中...
     </div>
+  </div>
+
+  <!-- 汇率展望模块 -->
+  <div class="fx-analysis" id="fx-outlook-card">
+    <div style="font-size:15px;font-weight:700;margin-bottom:6px">📈 汇率展望（未来60天）</div>
+    <div class="section-purpose">
+      价值点：<strong>①</strong> 未来帐期内汇率趋势研判　<strong>②</strong> 主要驱动因子追踪　<strong>③</strong> 概率区间辅助备货决策
+    </div>
+
+    <!-- 三列：技术信号 + 风险区间 + 基本面 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px">
+
+      <!-- 技术信号 -->
+      <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">📊 技术信号</div>
+        <div class="event-item" style="padding:6px 0">
+          <div class="event-dot" id="sig-trend-dot"></div>
+          <div>
+            <div class="event-text">趋势方向</div>
+            <div style="font-size:14px;font-weight:700;margin-top:2px" id="sig-trend">计算中...</div>
+          </div>
+        </div>
+        <div class="event-item" style="padding:6px 0">
+          <div class="event-dot warn"></div>
+          <div>
+            <div class="event-text">支撑位</div>
+            <div style="font-size:14px;font-weight:700;margin-top:2px" id="sig-support">--</div>
+          </div>
+        </div>
+        <div class="event-item" style="padding:6px 0">
+          <div class="event-dot" style="background:var(--danger)"></div>
+          <div>
+            <div class="event-text">压力位</div>
+            <div style="font-size:14px;font-weight:700;margin-top:2px" id="sig-resist">--</div>
+          </div>
+        </div>
+        <div class="event-item" style="padding:6px 0;border-bottom:none">
+          <div class="event-dot" id="sig-vol-dot"></div>
+          <div>
+            <div class="event-text">波动率状态</div>
+            <div style="font-size:13px;font-weight:600;margin-top:2px" id="sig-vol-state">--</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 风险区间 -->
+      <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">🎯 概率区间（95%）</div>
+        <div style="margin-bottom:14px">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:4px">未来 30 天（空运帐期）</div>
+          <div style="font-size:15px;font-weight:700" id="range-30d">--</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px" id="range-30d-sub"></div>
+        </div>
+        <div style="margin-bottom:14px">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:4px">未来 60 天（海运帐期）</div>
+          <div style="font-size:15px;font-weight:700" id="range-60d">--</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px" id="range-60d-sub"></div>
+        </div>
+        <div style="font-size:10px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border)">
+          基于近30日历史波动率（正态分布假设），为概率估算，非精确预测
+        </div>
+      </div>
+
+      <!-- 基本面摘要 -->
+      <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">🌐 基本面驱动因子</div>
+        <div id="outlook-list"><div class="empty-state">加载中...</div></div>
+      </div>
+
+    </div>
+
+    <!-- 展望结论 -->
+    <div class="fx-conclusion ok" id="fx-outlook-conclusion">计算中...</div>
   </div>
 
   <!-- 顶部指标 -->
@@ -781,6 +861,125 @@ function updateConclusion(today, d30, d60, allData) {
   el.innerHTML = text;
 }
 
+// ===== 汇率展望：技术信号 + 风险区间 + 基本面 =====
+function updateFxOutlook(allData, latestDayData) {
+  const prices = allData.map(d => d.fx?.mxn_cny).filter(Boolean);
+  if (prices.length < 5) return;
+
+  const today = prices[prices.length - 1];
+  const recent30 = prices.slice(-30);
+  const recent7 = prices.slice(-7);
+
+  // ── 技术信号 ──
+  // 趋势：线性回归斜率
+  const slope30 = calcSlope(recent30);
+  const slope7 = calcSlope(recent7);
+  let trendText, trendColor, trendDotClass;
+  if (slope7 > 0.0002) {
+    trendText = '↗ 短期上行（比索走强）'; trendColor = 'var(--danger)'; trendDotClass = 'danger';
+  } else if (slope7 < -0.0002) {
+    trendText = '↘ 短期下行（比索走弱）'; trendColor = 'var(--accent2)'; trendDotClass = 'green';
+  } else if (slope30 > 0.0001) {
+    trendText = '→ 横盘偏强'; trendColor = 'var(--warn)'; trendDotClass = 'warn';
+  } else if (slope30 < -0.0001) {
+    trendText = '→ 横盘偏弱'; trendColor = 'var(--warn)'; trendDotClass = 'warn';
+  } else {
+    trendText = '→ 震荡横盘'; trendColor = 'var(--muted)'; trendDotClass = '';
+  }
+  document.getElementById('sig-trend').textContent = trendText;
+  document.getElementById('sig-trend').style.color = trendColor;
+  const trendDot = document.getElementById('sig-trend-dot');
+  trendDot.style.background = trendColor;
+
+  // 支撑/压力位（近30天低点/高点）
+  const min30 = Math.min(...recent30);
+  const max30 = Math.max(...recent30);
+  document.getElementById('sig-support').textContent = min30.toFixed(4) + ' （近30日低点）';
+  document.getElementById('sig-resist').textContent = max30.toFixed(4) + ' （近30日高点）';
+
+  // 波动率扩张判断
+  const vol30 = calcVol(recent30);
+  const vol7 = calcVol(recent7);
+  let volState, volDotColor;
+  if (vol7 > vol30 * 1.3) {
+    volState = '⚡ 扩张中（近期波动加剧）'; volDotColor = 'var(--danger)';
+  } else if (vol7 < vol30 * 0.7) {
+    volState = '✅ 收缩中（波动趋于平稳）'; volDotColor = 'var(--accent2)';
+  } else {
+    volState = '〰 正常水平 (' + (vol30 * 100).toFixed(2) + '%)'; volDotColor = 'var(--muted)';
+  }
+  document.getElementById('sig-vol-state').textContent = volState;
+  document.getElementById('sig-vol-dot').style.background = volDotColor;
+
+  // ── 风险区间（正态分布，95% = ±1.96σ）──
+  const dailyVol = vol30; // 日波动率
+  const vol30d = dailyVol * Math.sqrt(30);
+  const vol60d = dailyVol * Math.sqrt(60);
+  const lo30 = (today * (1 - 1.96 * vol30d)).toFixed(4);
+  const hi30 = (today * (1 + 1.96 * vol30d)).toFixed(4);
+  const lo60 = (today * (1 - 1.96 * vol60d)).toFixed(4);
+  const hi60 = (today * (1 + 1.96 * vol60d)).toFixed(4);
+  document.getElementById('range-30d').textContent = `${lo30} ～ ${hi30}`;
+  document.getElementById('range-30d-sub').textContent = `基准 ${today.toFixed(4)}，±${(vol30d*100).toFixed(1)}% 波动`;
+  document.getElementById('range-60d').textContent = `${lo60} ～ ${hi60}`;
+  document.getElementById('range-60d-sub').textContent = `基准 ${today.toFixed(4)}，±${(vol60d*100).toFixed(1)}% 波动`;
+
+  // ── 基本面摘要（来自 latestDayData.outlook）──
+  const outlookItems = latestDayData?.outlook || [];
+  const outlookEl = document.getElementById('outlook-list');
+  if (outlookItems.length) {
+    outlookEl.innerHTML = outlookItems.map(x => {
+      const titleHtml = x.url
+        ? `<a href="${x.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${x.title}</a>`
+        : x.title;
+      return `<div class="event-item" style="padding:6px 0">
+        <div class="event-dot warn"></div>
+        <div>
+          <div class="event-text" style="font-size:12px">${titleHtml}</div>
+          <div class="event-date">${x.source}</div>
+        </div>
+      </div>`;
+    }).join('');
+  } else {
+    outlookEl.innerHTML = '<div class="empty-state">今日暂无基本面数据</div>';
+  }
+
+  // ── 展望结论 ──
+  const outlookConcEl = document.getElementById('fx-outlook-conclusion');
+  let outlookLevel = 'ok', outlookText = '';
+  const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
+
+  if (slope30 < -0.0002 && vol7 > vol30) {
+    outlookLevel = 'danger';
+    outlookText = `⚠️ <strong>趋势下行 + 波动扩大，建议谨慎备货</strong><br>近30天 MXN/CNY 趋势向下，且近期波动率正在扩大，海运帐期（${seaDays}天）内汇损风险较高。建议：① 缩短备货周期，优先选空运品类 ② 定价加入汇率缓冲 ③ 密切关注 Banxico 利率决议和美元指数动向。`;
+  } else if (slope30 < -0.0001 || slope7 < -0.0003) {
+    outlookLevel = 'warn';
+    outlookText = `⚡ <strong>短期偏弱，注意帐期汇损</strong><br>MXN/CNY 近期有下行压力，60天区间下轨为 ${lo60}。建议在定价中预留 ${(vol60d*100).toFixed(1)}% 汇率缓冲，大额海运订单可考虑分批执行。`;
+  } else if (slope30 > 0.0002) {
+    outlookLevel = 'ok';
+    outlookText = `✅ <strong>趋势偏强，当前是较好的备货窗口</strong><br>MXN/CNY 近30天呈上行趋势，比索走强对出口回款有利。60天置信区间上轨 ${hi60}，当前备货若能在帐期内收款，汇率风险偏低。`;
+  } else {
+    outlookLevel = 'ok';
+    outlookText = `✅ <strong>震荡格局，汇率风险可控</strong><br>MXN/CNY 近期震荡横盘，30天区间 ${lo30}～${hi30}，60天区间 ${lo60}～${hi60}。在合理定价基础上，当前备货的汇率风险在可控范围内。建议持续关注 Banxico 利率方向和美墨贸易动态。`;
+  }
+  outlookConcEl.className = `fx-conclusion ${outlookLevel}`;
+  outlookConcEl.innerHTML = outlookText;
+}
+
+function calcSlope(arr) {
+  const n = arr.length;
+  const xMean = (n - 1) / 2;
+  const yMean = arr.reduce((a, b) => a + b, 0) / n;
+  let num = 0, den = 0;
+  arr.forEach((y, x) => { num += (x - xMean) * (y - yMean); den += (x - xMean) ** 2; });
+  return den ? num / den : 0;
+}
+
+function calcVol(arr) {
+  const mean = arr.reduce((a, b) => a + b, 0) / arr.length;
+  return Math.sqrt(arr.map(v => (v - mean) ** 2).reduce((a, b) => a + b, 0) / arr.length) / mean;
+}
+
 // ===== 数据加载 =====
 async function loadData() {
   let index = [];
@@ -816,6 +1015,7 @@ async function loadData() {
   updateMetrics(latest, prev);
   updateCharts(allData);
   updateFxAnalysis(allData);
+  updateFxOutlook(allData, latest);
   updatePlatform(latest);
   updateCalendar();
   updateHistory(allData);

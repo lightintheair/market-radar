@@ -1,0 +1,11 @@
+{
+  "date": "2026-03-31",
+  "time": "17:00",
+  "fx": {
+    "mxn_cny": null,
+    "mxn_usd": null,
+    "note": "数据源暂时不可用（SSL代理限制），待恢复后自动补录"
+  },
+  "platform": [],
+  "source": "market-radar"
+}

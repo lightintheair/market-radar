@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市场雷达 · 墨西哥跨境电商</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --accent: #6366f1;
+    --accent2: #10b981;
+    --warn: #f59e0b;
+    --danger: #ef4444;
+    --text: #e2e8f0;
+    --muted: #64748b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, 'PingFang SC', sans-serif; min-height: 100vh; }
+
+  header {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header h1 { font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
+  header h1 span { color: var(--accent); }
+  #last-update { font-size: 12px; color: var(--muted); }
+
+  .dashboard { padding: 24px 32px; display: grid; gap: 20px; }
+
+  /* 顶部指标条 */
+  .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .metric-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px; position: relative; overflow: hidden;
+  }
+  .metric-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent);
+  }
+  .metric-card.green::before { background: var(--accent2); }
+  .metric-card.warn::before { background: var(--warn); }
+  .metric-card.danger::before { background: var(--danger); }
+  .metric-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+  .metric-value { font-size: 28px; font-weight: 700; line-height: 1; }
+  .metric-sub { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .metric-change { font-size: 13px; font-weight: 600; margin-top: 4px; }
+  .up { color: var(--danger); }
+  .down { color: var(--accent2); }
+
+  /* 图表区 */
+  .charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+  .chart-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+  }
+  .chart-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
+  .chart-wrap { position: relative; height: 220px; }
+
+  /* 底部双栏 */
+  .bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .list-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+  }
+  .list-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
+  .event-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .event-item:last-child { border-bottom: none; }
+  .event-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 5px; flex-shrink: 0; }
+  .event-dot.green { background: var(--accent2); }
+  .event-dot.warn { background: var(--warn); }
+  .event-text { font-size: 13px; line-height: 1.5; }
+  .event-date { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .empty-state { color: var(--muted); font-size: 13px; padding: 20px 0; text-align: center; }
+
+  /* 历史数据表 */
+  .history-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+  }
+  .history-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { color: var(--muted); font-weight: 500; text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  td { padding: 8px 12px; border-bottom: 1px solid rgba(42,45,58,0.5); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(99,102,241,0.05); }
+
+  @media (max-width: 900px) {
+    .metrics-row { grid-template-columns: repeat(2, 1fr); }
+    .charts-row, .bottom-row { grid-template-columns: 1fr; }
+    .dashboard { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📡 市场雷达 · <span>墨西哥跨境电商</span></h1>
+  <div id="last-update">加载中...</div>
+</header>
+
+<div class="dashboard">
+
+  <!-- 顶部指标 -->
+  <div class="metrics-row">
+    <div class="metric-card" id="card-mxn-cny">
+      <div class="metric-label">MXN / CNY</div>
+      <div class="metric-value" id="val-mxn-cny">--</div>
+      <div class="metric-change" id="chg-mxn-cny">--</div>
+      <div class="metric-sub">比索 → 人民币</div>
+    </div>
+    <div class="metric-card green" id="card-mxn-usd">
+      <div class="metric-label">MXN / USD</div>
+      <div class="metric-value" id="val-mxn-usd">--</div>
+      <div class="metric-change" id="chg-mxn-usd">--</div>
+      <div class="metric-sub">比索 → 美元</div>
+    </div>
+    <div class="metric-card warn">
+      <div class="metric-label">30日波动</div>
+      <div class="metric-value" id="val-vol">--</div>
+      <div class="metric-sub" id="sub-vol">MXN/CNY 标准差</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">数据更新</div>
+      <div class="metric-value" style="font-size:18px" id="val-date">--</div>
+      <div class="metric-sub" id="val-source">数据来源：ECB/Wise</div>
+    </div>
+  </div>
+
+  <!-- 图表 -->
+  <div class="charts-row">
+    <div class="chart-card">
+      <h3>MXN/CNY 近期走势</h3>
+      <div class="chart-wrap">
+        <canvas id="chart-fx"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <h3>MXN/USD 近期走势</h3>
+      <div class="chart-wrap">
+        <canvas id="chart-usd"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- 平台动态 + 节日日历 -->
+  <div class="bottom-row">
+    <div class="list-card">
+      <h3>🛒 平台动态</h3>
+      <div id="platform-list"><div class="empty-state">暂无最新动态</div></div>
+    </div>
+    <div class="list-card">
+      <h3>📅 节日 / 促销日历</h3>
+      <div id="calendar-list"><div class="empty-state">加载中...</div></div>
+    </div>
+  </div>
+
+  <!-- 历史数据表 -->
+  <div class="history-card">
+    <h3>📊 历史汇率记录</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>日期</th>
+          <th>MXN/CNY</th>
+          <th>MXN/USD</th>
+          <th>较前日</th>
+          <th>平台动态</th>
+        </tr>
+      </thead>
+      <tbody id="history-tbody">
+        <tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px">加载中...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+// ===== 数据加载 =====
+async function loadData() {
+  // 加载索引文件（包含所有历史日期）
+  let index = [];
+  try {
+    const r = await fetch(`data/index.json?t=${Date.now()}`);
+    index = await r.json();
+  } catch(e) {
+    console.log('no index yet');
+  }
+
+  if (index.length === 0) {
+    showEmpty();
+    return;
+  }
+
+  // 加载所有历史数据
+  const allData = [];
+  for (const date of index.slice(-60)) { // 最近60天
+    try {
+      const r = await fetch(`data/${date}.json?t=${Date.now()}`);
+      const d = await r.json();
+      allData.push(d);
+    } catch(e) {}
+  }
+
+  if (allData.length === 0) { showEmpty(); return; }
+
+  const latest = allData[allData.length - 1];
+  const prev = allData.length > 1 ? allData[allData.length - 2] : null;
+
+  // 更新指标卡
+  updateMetrics(latest, prev);
+
+  // 更新图表
+  updateCharts(allData);
+
+  // 更新平台动态
+  updatePlatform(latest);
+
+  // 更新节日日历
+  updateCalendar();
+
+  // 更新历史表格
+  updateHistory(allData);
+
+  document.getElementById('last-update').textContent = `最后更新：${latest.date} ${latest.time || ''}`;
+}
+
+function updateMetrics(d, prev) {
+  const mxnCny = d.fx?.mxn_cny;
+  const mxnUsd = d.fx?.mxn_usd;
+  document.getElementById('val-mxn-cny').textContent = mxnCny ? mxnCny.toFixed(4) : '--';
+  document.getElementById('val-mxn-usd').textContent = mxnUsd ? mxnUsd.toFixed(4) : '--';
+  document.getElementById('val-date').textContent = d.date || '--';
+
+  if (prev) {
+    const chgCny = mxnCny && prev.fx?.mxn_cny ? ((mxnCny - prev.fx.mxn_cny) / prev.fx.mxn_cny * 100) : null;
+    const chgUsd = mxnUsd && prev.fx?.mxn_usd ? ((mxnUsd - prev.fx.mxn_usd) / prev.fx.mxn_usd * 100) : null;
+    setChange('chg-mxn-cny', chgCny);
+    setChange('chg-mxn-usd', chgUsd);
+  }
+}
+
+function setChange(id, pct) {
+  const el = document.getElementById(id);
+  if (pct === null) { el.textContent = '--'; return; }
+  const sign = pct >= 0 ? '+' : '';
+  el.textContent = `${sign}${pct.toFixed(2)}% 较昨日`;
+  el.className = 'metric-change ' + (pct >= 0 ? 'up' : 'down');
+}
+
+function updateCharts(allData) {
+  const labels = allData.map(d => d.date?.slice(5)); // MM-DD
+  const cnyVals = allData.map(d => d.fx?.mxn_cny || null);
+  const usdVals = allData.map(d => d.fx?.mxn_usd || null);
+
+  // 波动率
+  const validCny = cnyVals.filter(v => v !== null).slice(-30);
+  if (validCny.length > 1) {
+    const mean = validCny.reduce((a,b) => a+b, 0) / validCny.length;
+    const std = Math.sqrt(validCny.map(v => (v-mean)**2).reduce((a,b)=>a+b,0) / validCny.length);
+    document.getElementById('val-vol').textContent = (std / mean * 100).toFixed(2) + '%';
+  }
+
+  drawLine('chart-fx', labels, cnyVals, 'MXN/CNY', '#6366f1');
+  drawLine('chart-usd', labels, usdVals, 'MXN/USD', '#10b981');
+}
+
+function drawLine(id, labels, data, label, color) {
+  const ctx = document.getElementById(id).getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label,
+        data,
+        borderColor: color,
+        backgroundColor: color + '18',
+        borderWidth: 2,
+        pointRadius: 2,
+        tension: 0.3,
+        fill: true,
+        spanGaps: true,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: '#2a2d3a' }, ticks: { color: '#64748b', maxTicksLimit: 10 } },
+        y: { grid: { color: '#2a2d3a' }, ticks: { color: '#64748b' } }
+      }
+    }
+  });
+}
+
+function updatePlatform(d) {
+  const list = d.platform || [];
+  const el = document.getElementById('platform-list');
+  if (!list.length) { el.innerHTML = '<div class="empty-state">今日暂无平台动态</div>'; return; }
+  el.innerHTML = list.map(item => `
+    <div class="event-item">
+      <div class="event-dot ${item.level === 'warn' ? 'warn' : 'green'}"></div>
+      <div>
+        <div class="event-text">${item.title}</div>
+        <div class="event-date">${item.date || ''} · ${item.source || ''}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateCalendar() {
+  // 静态节日日历（墨西哥重要节点）
+  const today = new Date();
+  const year = today.getFullYear();
+  const events = [
+    { date: `${year}-05-10`, name: '🌸 母亲节（墨西哥）', type: 'peak', note: '5/3 起备货窗口' },
+    { date: `${year}-09-16`, name: '🇲🇽 独立日', type: 'peak', note: '9/9 起备货窗口' },
+    { date: `${year}-11-01`, name: '💀 亡灵节 Day1', type: 'peak', note: '节日消费旺季' },
+    { date: `${year}-11-02`, name: '💀 亡灵节 Day2', type: 'peak', note: '节日消费旺季' },
+    { date: `${year}-11-01`, name: '🛒 El Buen Fin（预估）', type: 'sale', note: '11月第三周，墨西哥版黑五' },
+    { date: `${year}-12-25`, name: '🎄 圣诞节', type: 'peak', note: '12/15 起冲刺期' },
+  ].filter(e => new Date(e.date) >= today)
+   .sort((a, b) => new Date(a.date) - new Date(b.date))
+   .slice(0, 6);
+
+  const el = document.getElementById('calendar-list');
+  el.innerHTML = events.map(e => {
+    const d = new Date(e.date);
+    const diff = Math.ceil((d - today) / 86400000);
+    const diffStr = diff <= 7 ? `<span style="color:var(--warn)">还有 ${diff} 天</span>` : `还有 ${diff} 天`;
+    return `
+      <div class="event-item">
+        <div class="event-dot ${e.type === 'sale' ? 'warn' : 'green'}"></div>
+        <div>
+          <div class="event-text">${e.name}</div>
+          <div class="event-date">${e.date} · ${diffStr} · ${e.note}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function updateHistory(allData) {
+  const tbody = document.getElementById('history-tbody');
+  const rows = [...allData].reverse().slice(0, 30);
+  if (!rows.length) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted)">暂无数据</td></tr>'; return; }
+  tbody.innerHTML = rows.map((d, i) => {
+    const prev = allData[allData.length - 1 - i - 1];
+    let chgHtml = '--';
+    if (prev && d.fx?.mxn_cny && prev.fx?.mxn_cny) {
+      const chg = (d.fx.mxn_cny - prev.fx.mxn_cny) / prev.fx.mxn_cny * 100;
+      const cls = chg >= 0 ? 'up' : 'down';
+      chgHtml = `<span class="${cls}">${chg >= 0 ? '+' : ''}${chg.toFixed(3)}%</span>`;
+    }
+    const platform = d.platform?.length ? d.platform.map(p => p.title).join('；') : '—';
+    return `<tr>
+      <td>${d.date}</td>
+      <td>${d.fx?.mxn_cny?.toFixed(4) || '--'}</td>
+      <td>${d.fx?.mxn_usd?.toFixed(4) || '--'}</td>
+      <td>${chgHtml}</td>
+      <td style="color:var(--muted);max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${platform}</td>
+    </tr>`;
+  }).join('');
+}
+
+function showEmpty() {
+  document.getElementById('last-update').textContent = '暂无数据，等待首次更新';
+  document.getElementById('history-tbody').innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px">暂无历史数据</td></tr>';
+  document.getElementById('calendar-list').innerHTML = '';
+  updateCalendar();
+}
+
+loadData();
+</script>
+</body>
+</html>

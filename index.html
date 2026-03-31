@@ -159,6 +159,18 @@
     </div>
   </div>
 
+  <!-- 周报模块 -->
+  <div class="bottom-row">
+    <div class="list-card">
+      <h3>📢 墨西哥宏观动态</h3>
+      <div id="macro-list"><div class="empty-state">周一更新</div></div>
+    </div>
+    <div class="list-card">
+      <h3>🔍 竞争情报</h3>
+      <div id="competitor-list"><div class="empty-state">周一更新</div></div>
+    </div>
+  </div>
+
   <!-- 历史数据表 -->
   <div class="history-card">
     <h3>📊 历史汇率记录</h3>
@@ -369,6 +381,45 @@ function updateHistory(allData) {
   }).join('');
 }
 
+function updateWeekly(w) {
+  const macroEl = document.getElementById('macro-list');
+  const compEl = document.getElementById('competitor-list');
+
+  const macro = w.macro || [];
+  const comp = w.competitor || [];
+  const platform = w.platform || [];
+
+  macroEl.innerHTML = macro.length
+    ? macro.map(x => `<div class="event-item"><div class="event-dot warn"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('')
+    : '<div class="empty-state">暂无宏观动态</div>';
+
+  compEl.innerHTML = comp.length
+    ? comp.map(x => `<div class="event-item"><div class="event-dot"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('')
+    : '<div class="empty-state">暂无竞争情报</div>';
+
+  // 更新平台动态（来自周报补充）
+  if (platform.length) {
+    const platEl = document.getElementById('platform-list');
+    const existing = platEl.querySelector('.empty-state');
+    if (existing) {
+      platEl.innerHTML = platform.map(x => `<div class="event-item"><div class="event-dot green"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('');
+    }
+  }
+}
+
+async function loadWeekly() {
+  try {
+    const r = await fetch(`data/weekly/index.json?t=${Date.now()}`);
+    const idx = await r.json();
+    if (idx.length) {
+      const latest = idx[idx.length - 1];
+      const r2 = await fetch(`data/weekly/${latest}.json?t=${Date.now()}`);
+      const w = await r2.json();
+      updateWeekly(w);
+    }
+  } catch(e) { console.log('no weekly data yet'); }
+}
+
 function showEmpty() {
   document.getElementById('last-update').textContent = '暂无数据，等待首次更新';
   document.getElementById('history-tbody').innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px">暂无历史数据</td></tr>';
@@ -377,6 +428,7 @@ function showEmpty() {
 }
 
 loadData();
+loadWeekly();
 </script>
 </body>
 </html>

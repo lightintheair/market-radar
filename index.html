@@ -51,7 +51,7 @@
 
   /* Tab content visibility */
   .tab-content { display: none; }
-  .tab-content.active { display: block; }
+  .tab-content.active { display: contents; }
 
   .dashboard { padding: 24px 32px; display: grid; gap: 20px; }
 
@@ -837,9 +837,13 @@ function updateCharts(allData) {
   drawLine('chart-usd', labels, usdVals, 'MXN/USD', '#10b981');
 }
 
+const _charts = {};
 function drawLine(id, labels, data, label, color) {
-  const ctx = document.getElementById(id).getContext('2d');
-  new Chart(ctx, {
+  if (_charts[id]) { _charts[id].destroy(); }
+  const canvas = document.getElementById(id);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  _charts[id] = new Chart(ctx, {
     type: 'line',
     data: {
       labels,

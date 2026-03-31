@@ -1,0 +1,30 @@
+{
+  "week": "2026-W14",
+  "date": "2026-03-31",
+  "platform": [
+    {
+      "title": "Return&amp;refund policy",
+      "source": "AliExpress平台政策",
+      "url": "https://www.aliexpress.com/help/platformPolicies.html",
+      "date": "2026-03-31"
+    }
+  ],
+  "macro": [],
+  "competitor": [
+    {
+      "title": "Retail Technology Show 2026 research shows growing shopper backlash against Temu, Shein et al - Retail Technology Innovation Hub",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "704 Shop finally lands apparel deal with Charlotte Hornets - The Business Journals",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Top retailers by most recent cross-border order 2025 - Statista",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

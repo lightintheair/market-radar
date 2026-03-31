@@ -89,12 +89,87 @@
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: rgba(99,102,241,0.05); }
 
-  @media (max-width: 900px) {
-    .metrics-row { grid-template-columns: repeat(2, 1fr); }
-    .charts-row, .bottom-row { grid-template-columns: 1fr; }
-    .dashboard { padding: 16px; }
+  /* 帐期流程图 */
+  .shipment-flow {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
   }
-</style>
+  .shipment-flow .section-header {
+    display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;
+  }
+  .shipment-flow .section-title { font-size: 15px; font-weight: 700; }
+  .shipment-flow .section-purpose {
+    font-size: 12px; color: var(--muted); margin-bottom: 20px; line-height: 1.6;
+  }
+  .flow-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .flow-mode { background: #12141e; border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .flow-mode-title { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .flow-steps { display: flex; align-items: center; gap: 0; flex-wrap: nowrap; overflow-x: auto; }
+  .flow-step {
+    display: flex; flex-direction: column; align-items: center; min-width: 72px;
+  }
+  .flow-step-box {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 7px 10px; font-size: 11px; text-align: center; line-height: 1.4; white-space: nowrap;
+  }
+  .flow-step-box.highlight { border-color: var(--accent); background: #6366f115; }
+  .flow-step-box.end { border-color: var(--accent2); background: #10b98115; }
+  .flow-step-days { font-size: 10px; color: var(--warn); margin-top: 4px; font-weight: 600; }
+  .flow-arrow { color: var(--muted); font-size: 16px; padding: 0 2px; margin-top: -12px; flex-shrink: 0; }
+  .flow-total {
+    margin-top: 10px; padding: 8px 12px; background: #6366f110; border-radius: 6px;
+    font-size: 12px; display: flex; justify-content: space-between; align-items: center;
+  }
+  .flow-total strong { color: var(--accent); }
+  .flow-config { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); }
+  .flow-config input {
+    width: 48px; background: #12141e; border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 3px 6px; font-size: 12px; text-align: center;
+  }
+  .flow-config input:focus { outline: none; border-color: var(--accent); }
+
+  /* 汇率分析卡 */
+  .fx-analysis {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+  }
+  .fx-analysis .section-purpose {
+    font-size: 12px; color: var(--muted); margin-bottom: 20px; line-height: 1.6;
+  }
+  .fx-compare { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  .fx-compare-item {
+    background: #12141e; border: 1px solid var(--border); border-radius: 8px; padding: 14px; text-align: center;
+  }
+  .fx-compare-item.active { border-color: var(--accent); }
+  .fx-compare-label { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .fx-compare-val { font-size: 22px; font-weight: 700; }
+  .fx-compare-diff { font-size: 12px; margin-top: 4px; }
+
+  .fx-simulator {
+    background: #12141e; border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px;
+  }
+  .fx-simulator-title { font-size: 12px; color: var(--muted); margin-bottom: 12px; font-weight: 600; }
+  .sim-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 12px; }
+  .sim-field { display: flex; flex-direction: column; gap: 4px; }
+  .sim-field label { font-size: 11px; color: var(--muted); }
+  .sim-field input, .sim-field select {
+    background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 5px 10px; font-size: 13px;
+  }
+  .sim-field input:focus, .sim-field select:focus { outline: none; border-color: var(--accent); }
+  .sim-result {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+  }
+  .sim-result-item { background: var(--card); border-radius: 6px; padding: 10px; text-align: center; }
+  .sim-result-label { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+  .sim-result-val { font-size: 15px; font-weight: 700; }
+
+  .fx-conclusion {
+    border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 1.7;
+  }
+  .fx-conclusion.ok { background: #10b98112; border: 1px solid #10b98144; }
+  .fx-conclusion.warn { background: #f59e0b12; border: 1px solid #f59e0b44; }
+  .fx-conclusion.danger { background: #ef444412; border: 1px solid #ef444444; }
+
+
 </head>
 <body>
 
@@ -104,6 +179,170 @@
 </header>
 
 <div class="dashboard">
+
+  <!-- ① 汇率板块：帐期流程图 -->
+  <div class="shipment-flow">
+    <div class="section-header">
+      <div>
+        <div class="section-title">① 汇率与帐期风险</div>
+        <div class="section-purpose">
+          价值点：<strong>①</strong> 今天定价/备货是否合算　<strong>②</strong> 从备货到收款的完整帐期内汇率趋势　<strong>③</strong> 量化汇损/汇益，辅助备货决策
+        </div>
+      </div>
+    </div>
+
+    <!-- 流程图：海运 & 空运 -->
+    <div class="flow-modes">
+      <!-- 海运 -->
+      <div class="flow-mode">
+        <div class="flow-mode-title">
+          🚢 海运模式
+          <span style="margin-left:auto;display:flex;align-items:center;gap:4px">
+            总帐期 <strong id="sea-total-days" style="color:var(--warn)">--</strong> 天
+          </span>
+        </div>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-step-box highlight">备货付款</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">海运在途</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="sea-transit" type="number" value="35" min="1" max="90" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">清关入仓</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="sea-customs" type="number" value="7" min="1" max="30" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">平台出售</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="sea-sell" type="number" value="14" min="1" max="60" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">平台结算</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="sea-settle" type="number" value="14" min="1" max="30" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box end">收款</div>
+          </div>
+        </div>
+        <div class="flow-total">
+          <span>总暴露窗口：备货 → 收款</span>
+          <strong id="sea-exposure">-- 天</strong>
+        </div>
+      </div>
+
+      <!-- 空运 -->
+      <div class="flow-mode">
+        <div class="flow-mode-title">
+          ✈️ 空运模式
+          <span style="margin-left:auto;display:flex;align-items:center;gap:4px">
+            总帐期 <strong id="air-total-days" style="color:var(--warn)">--</strong> 天
+          </span>
+        </div>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-step-box highlight">备货付款</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">空运在途</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="air-transit" type="number" value="10" min="1" max="30" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">清关入仓</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="air-customs" type="number" value="5" min="1" max="20" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">平台出售</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="air-sell" type="number" value="10" min="1" max="60" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box">平台结算</div>
+            <div class="flow-step-days"><input class="flow-config-input" id="air-settle" type="number" value="14" min="1" max="30" style="width:40px;background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--warn);padding:2px 4px;font-size:11px;text-align:center"> 天</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-box end">收款</div>
+          </div>
+        </div>
+        <div class="flow-total">
+          <span>总暴露窗口：备货 → 收款</span>
+          <strong id="air-exposure">-- 天</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 汇率指标 + 三点分析 -->
+  <div class="fx-analysis">
+    <div class="section-purpose">
+      以下数据对应「备货当日」「30天前（约空运帐期起点）」「60天前（约海运帐期起点）」三个时间点的汇率，直接反映不同运输模式下的帐期汇损/汇益。
+    </div>
+
+    <!-- 三点对比 -->
+    <div class="fx-compare">
+      <div class="fx-compare-item">
+        <div class="fx-compare-label">60天前 MXN/CNY<br><span style="font-size:10px">海运帐期起点参考</span></div>
+        <div class="fx-compare-val" id="fx-60d">--</div>
+        <div class="fx-compare-diff" id="fx-60d-diff"></div>
+      </div>
+      <div class="fx-compare-item">
+        <div class="fx-compare-label">30天前 MXN/CNY<br><span style="font-size:10px">空运帐期起点参考</span></div>
+        <div class="fx-compare-val" id="fx-30d">--</div>
+        <div class="fx-compare-diff" id="fx-30d-diff"></div>
+      </div>
+      <div class="fx-compare-item active">
+        <div class="fx-compare-label">今日 MXN/CNY<br><span style="font-size:10px">当前结算汇率</span></div>
+        <div class="fx-compare-val" id="fx-today">--</div>
+        <div class="fx-compare-diff" style="color:var(--muted)">收款参考价</div>
+      </div>
+    </div>
+
+    <!-- 帐期模拟器 -->
+    <div class="fx-simulator">
+      <div class="fx-simulator-title">📐 帐期汇损模拟器 — 输入货值，即时计算汇损/汇益</div>
+      <div class="sim-row">
+        <div class="sim-field">
+          <label>货值（人民币元）</label>
+          <input type="number" id="sim-amount" value="100000" min="1000">
+        </div>
+        <div class="sim-field">
+          <label>运输方式</label>
+          <select id="sim-mode">
+            <option value="sea">🚢 海运（60天帐期）</option>
+            <option value="air">✈️ 空运（30天帐期）</option>
+          </select>
+        </div>
+      </div>
+      <div class="sim-result">
+        <div class="sim-result-item">
+          <div class="sim-result-label">备货时按当时汇率<br>折算 MXN 收入预期</div>
+          <div class="sim-result-val" id="sim-expected">--</div>
+        </div>
+        <div class="sim-result-item">
+          <div class="sim-result-label">今日汇率<br>折算实际 MXN 收入</div>
+          <div class="sim-result-val" id="sim-actual">--</div>
+        </div>
+        <div class="sim-result-item">
+          <div class="sim-result-label">帐期内汇损/汇益<br>（人民币估算）</div>
+          <div class="sim-result-val" id="sim-diff">--</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结论 -->
+    <div class="fx-conclusion ok" id="fx-conclusion">
+      计算中...
+    </div>
+  </div>
 
   <!-- 顶部指标 -->
   <div class="metrics-row">
@@ -193,6 +432,123 @@
 </div>
 
 <script>
+// ===== 帐期流程图计算 =====
+function getVal(id) { return parseInt(document.getElementById(id)?.value || 0); }
+
+function updateExposure() {
+  const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle');
+  const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle');
+  document.getElementById('sea-exposure').textContent = seaDays + ' 天';
+  document.getElementById('air-exposure').textContent = airDays + ' 天';
+  document.getElementById('sea-total-days').textContent = seaDays;
+  document.getElementById('air-total-days').textContent = airDays;
+  updateSimulator();
+}
+
+document.querySelectorAll('.flow-config-input').forEach(el => {
+  el.addEventListener('input', updateExposure);
+});
+document.getElementById('sim-amount')?.addEventListener('input', updateSimulator);
+document.getElementById('sim-mode')?.addEventListener('change', updateSimulator);
+
+// ===== 汇率三点对比 & 模拟器 =====
+let _allFxData = [];
+
+function updateFxAnalysis(allData) {
+  _allFxData = allData;
+  const today = allData[allData.length - 1]?.fx?.mxn_cny;
+  const d30 = allData.length >= 30 ? allData[allData.length - 30]?.fx?.mxn_cny : null;
+  const d60 = allData.length >= 60 ? allData[allData.length - 60]?.fx?.mxn_cny : null;
+
+  document.getElementById('fx-today').textContent = today ? today.toFixed(4) : '--';
+
+  if (d30) {
+    document.getElementById('fx-30d').textContent = d30.toFixed(4);
+    if (today) {
+      const chg = (today - d30) / d30 * 100;
+      const el = document.getElementById('fx-30d-diff');
+      el.textContent = (chg >= 0 ? '▲' : '▼') + ' ' + Math.abs(chg).toFixed(2) + '% vs 今日';
+      el.style.color = chg < 0 ? 'var(--accent2)' : 'var(--danger)'; // 下跌对出口商有利（收款少但备货早）
+    }
+  }
+  if (d60) {
+    document.getElementById('fx-60d').textContent = d60.toFixed(4);
+    if (today) {
+      const chg = (today - d60) / d60 * 100;
+      const el = document.getElementById('fx-60d-diff');
+      el.textContent = (chg >= 0 ? '▲' : '▼') + ' ' + Math.abs(chg).toFixed(2) + '% vs 今日';
+      el.style.color = chg < 0 ? 'var(--accent2)' : 'var(--danger)';
+    }
+  }
+
+  updateExposure();
+  updateConclusion(today, d30, d60, allData);
+}
+
+function updateSimulator() {
+  if (!_allFxData.length) return;
+  const today = _allFxData[_allFxData.length - 1]?.fx?.mxn_cny;
+  const mode = document.getElementById('sim-mode')?.value || 'sea';
+  const amount = parseFloat(document.getElementById('sim-amount')?.value || 100000);
+
+  const refDays = mode === 'sea' ? 60 : 30;
+  const refData = _allFxData.length >= refDays ? _allFxData[_allFxData.length - refDays]?.fx?.mxn_cny : null;
+
+  if (!today || !refData) return;
+
+  // 备货时折算 MXN 预期（按备货时汇率推算）
+  const mxnExpected = amount / refData; // 预计收多少MXN
+  const mxnActual = amount / today;     // 按今日汇率对应MXN
+
+  // 帐期汇损（CNY口径）
+  const diffCny = (today - refData) / refData * amount;
+
+  document.getElementById('sim-expected').textContent = Math.round(mxnExpected).toLocaleString() + ' MXN';
+  document.getElementById('sim-actual').textContent = Math.round(mxnActual).toLocaleString() + ' MXN';
+  const diffEl = document.getElementById('sim-diff');
+  const sign = diffCny >= 0 ? '+' : '';
+  diffEl.textContent = sign + Math.round(diffCny).toLocaleString() + ' 元';
+  diffEl.style.color = diffCny >= 0 ? 'var(--accent2)' : 'var(--danger)';
+}
+
+function updateConclusion(today, d30, d60, allData) {
+  const el = document.getElementById('fx-conclusion');
+  if (!today) { el.textContent = '数据不足，无法生成结论'; return; }
+
+  const chg30 = d30 ? (today - d30) / d30 * 100 : null;
+  const chg60 = d60 ? (today - d60) / d60 * 100 : null;
+
+  // 计算近30日波动率
+  const recent = allData.slice(-30).map(d => d.fx?.mxn_cny).filter(Boolean);
+  const mean = recent.reduce((a,b)=>a+b,0)/recent.length;
+  const vol = Math.sqrt(recent.map(v=>(v-mean)**2).reduce((a,b)=>a+b,0)/recent.length) / mean * 100;
+
+  let level = 'ok', text = '';
+  const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
+  const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle') || 39;
+
+  if (chg60 !== null && chg60 < -3) {
+    level = 'danger';
+    text = `⚠️ <strong>汇率风险较高，建议谨慎备货</strong><br>
+过去60天 MXN/CNY 已下跌 ${Math.abs(chg60).toFixed(2)}%，若按海运帐期（${seaDays}天）备货，每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chg60)/100*100000).toLocaleString()} 元</strong>。建议在定价中加入汇率缓冲，或分批备货降低敞口。`;
+  } else if (chg30 !== null && chg30 < -2) {
+    level = 'warn';
+    text = `⚡ <strong>近期汇率走弱，空运帐期内有一定汇损风险</strong><br>
+过去30天 MXN/CNY 下跌 ${Math.abs(chg30).toFixed(2)}%，空运帐期（${airDays}天）内每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chg30)/100*100000).toLocaleString()} 元</strong>。波动率 ${vol.toFixed(2)}%，${vol > 1.5 ? '波动偏高' : '尚在正常范围'}。建议关注趋势，按需调整定价。`;
+  } else if (chg60 !== null && chg60 > 2) {
+    level = 'ok';
+    text = `✅ <strong>汇率趋势向好，备货窗口较优</strong><br>
+过去60天 MXN/CNY 上涨 ${chg60.toFixed(2)}%，海运帐期内有汇益。当前结算汇率 ${today.toFixed(4)}，近30日波动率 ${vol.toFixed(2)}%，整体汇率环境对出口有利。可正常推进备货计划。`;
+  } else {
+    level = 'ok';
+    text = `✅ <strong>汇率基本平稳，备货窗口正常</strong><br>
+近30天 MXN/CNY 变化 ${chg30 !== null ? (chg30>=0?'+':'')+chg30.toFixed(2)+'%' : 'N/A'}，60天 ${chg60 !== null ? (chg60>=0?'+':'')+chg60.toFixed(2)+'%' : 'N/A'}，波动率 ${vol.toFixed(2)}%，均在正常区间。当前汇率 ${today.toFixed(4)}，无明显汇率风险，可按计划备货。`;
+  }
+
+  el.className = `fx-conclusion ${level}`;
+  el.innerHTML = text;
+}
+
 // ===== 数据加载 =====
 async function loadData() {
   // 加载索引文件（包含所有历史日期）
@@ -229,6 +585,9 @@ async function loadData() {
 
   // 更新图表
   updateCharts(allData);
+
+  // 更新汇率分析（三点对比 + 模拟器 + 结论）
+  updateFxAnalysis(allData);
 
   // 更新平台动态
   updatePlatform(latest);

@@ -2,10 +2,9 @@
   "date": "2026-03-31",
   "time": "17:00",
   "fx": {
-    "mxn_cny": null,
-    "mxn_usd": null,
-    "note": "数据源暂时不可用（SSL代理限制），待恢复后自动补录"
+    "mxn_cny": 0.3815,
+    "mxn_usd": 0.05517
   },
   "platform": [],
-  "source": "market-radar"
+  "source": "open.er-api.com"
 }

@@ -9,7 +9,28 @@
       "date": "2026-03-31"
     }
   ],
-  "macro": [],
+  "macro": [
+    {
+      "title": "Headline inflation approaches 5% amid agricultural and energy price pressures - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated March 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - corporate.vanguard.com",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
   "competitor": [
     {
       "title": "Retail Technology Show 2026 research shows growing shopper backlash against Temu, Shein et al - Retail Technology Innovation Hub",

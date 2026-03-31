@@ -1,11 +1,28 @@
 {
   "date": "2026-03-31",
-  "time": "17:45",
+  "time": "17:53",
   "fx": {
     "mxn_cny": 0.3815,
     "mxn_usd": 0.05517,
     "source": "open.er-api.com"
   },
-  "platform": [],
+  "platform": [
+    {
+      "title": "EU to impose 3 euro duty on e-commerce parcels from July 2026 - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObHVrVzRpUkdmQkhwMkFPR2JndFlEUVJ2aTZIdUp3YTRJYjJPN1RscG1TOUJLeW04YjhjakFldENiUjkxSkxENlg3ZXJXcU11LUUwX1N6VWNtMVp3Z3QtQXEtcXZoS3N5Y1RWYmUtQ0JqVUN5WnJqWllQSFN3OTRKTmp1WjB1MUJiWjl3SkUyWURWV2s0QmhTLVNySGVucEFUYnJXc0hsTQ?oc=5",
+      "date": "2026-03-31",
+      "type": "news"
+    },
+    {
+      "title": "AliExpress in 2026: Is the ultra-cheap marketplace still worth it for US shoppers? - AD HOC NEWS",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSHlFNkVBZ0c1M3VpQW9qY2VwRVhzLTFURy10THhXbnl5dFQ5MnVSRGdid2Y0bThuMFJaTVpsNTVibUtQN1FfbnJYdC1pT3oxNlhVN3Q2dWlVMTh6OFJXamhqcE5SWHJHX0o3SG96NC1jc2xaaVZ6dUJlekxVWW04QV9fZDFoTC1mZ0lDSTdGYXdjZkRZN2ZMM1lBcG1MOUlxSmtHdS1SZXNKc2ZOczlBZHZwamtKWUNKSUtEZ0J6dlliLXc?oc=5",
+      "date": "2026-03-31",
+      "type": "news"
+    }
+  ],
+  "macro": [],
+  "competitor": [],
   "source": "open.er-api.com"
 }

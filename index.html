@@ -315,15 +315,26 @@ function updatePlatform(d) {
   const list = d.platform || [];
   const el = document.getElementById('platform-list');
   if (!list.length) { el.innerHTML = '<div class="empty-state">今日暂无平台动态</div>'; return; }
-  el.innerHTML = list.map(item => `
-    <div class="event-item">
-      <div class="event-dot ${item.level === 'warn' ? 'warn' : 'green'}"></div>
-      <div>
-        <div class="event-text">${item.title}</div>
-        <div class="event-date">${item.date || ''} · ${item.source || ''}</div>
-      </div>
-    </div>
-  `).join('');
+
+  // 分组：公告/新闻 vs 政策兜底
+  const announcements = list.filter(x => x.type === 'announcement' || x.type === 'news');
+  const policies = list.filter(x => x.type === 'policy');
+  const display = announcements.length ? announcements : policies;
+
+  el.innerHTML = display.map(item => {
+    const titleHtml = item.url
+      ? `<a href="${item.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${item.title}</a>`
+      : item.title;
+    const tag = item.type === 'policy' ? '<span style="font-size:10px;background:#6366f122;color:var(--accent);padding:1px 6px;border-radius:4px;margin-left:6px">政策</span>' : '';
+    return `
+      <div class="event-item">
+        <div class="event-dot ${item.type === 'policy' ? '' : 'green'}"></div>
+        <div>
+          <div class="event-text">${titleHtml}${tag}</div>
+          <div class="event-date">${item.date || ''} · ${item.source || ''}</div>
+        </div>
+      </div>`;
+  }).join('');
 }
 
 function updateCalendar() {

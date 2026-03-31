@@ -620,23 +620,39 @@
   <div class="bottom-row">
     <div class="list-card">
       <h3>🛒 平台动态</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：有无影响毛利的费率/佣金/物流规则变化，操盘前必看
+      </div>
       <div id="platform-list"><div class="empty-state">暂无最新动态</div></div>
+      <div class="fx-conclusion ok" id="platform-conclusion" style="margin-top:12px;display:none"></div>
     </div>
     <div class="list-card">
-      <h3>📅 节日 / 促销日历</h3>
+      <h3>📅 节日 / 备货日历</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：当前处于哪个备货阶段，距离下一个销售旺季还有多少准备时间
+      </div>
       <div id="calendar-list"><div class="empty-state">加载中...</div></div>
+      <div class="fx-conclusion ok" id="calendar-conclusion" style="margin-top:12px"></div>
     </div>
   </div>
 
-  <!-- 周报模块 -->
+  <!-- 市场环境：宏观 + 竞争情报 -->
   <div class="bottom-row">
     <div class="list-card">
-      <h3>📢 墨西哥宏观动态</h3>
-      <div id="macro-list"><div class="empty-state">周一更新</div></div>
+      <h3>🌎 墨西哥宏观动态</h3>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：消费力/通胀/关税/央行政策，判断当地市场需求是否健康，定价空间是否收窄
+      </div>
+      <div id="macro-list"><div class="empty-state">加载中...</div></div>
+      <div class="fx-conclusion ok" id="macro-conclusion" style="margin-top:12px;display:none"></div>
     </div>
     <div class="list-card">
       <h3>🔍 竞争情报</h3>
-      <div id="competitor-list"><div class="empty-state">周一更新</div></div>
+      <div style="font-size:11px;color:var(--muted);margin:-4px 0 12px;line-height:1.6">
+        价值点：① Temu/Shopee 格局动向，判断市场空间 ② 速卖通近期爆品品类，找参考与机会
+      </div>
+      <div id="competitor-list"><div class="empty-state">加载中...</div></div>
+      <div class="fx-conclusion ok" id="competitor-conclusion" style="margin-top:12px;display:none"></div>
     </div>
   </div>
 
@@ -1017,6 +1033,8 @@ async function loadData() {
   updateFxAnalysis(allData);
   updateFxOutlook(allData, latest);
   updatePlatform(latest);
+  // 用每日数据驱动宏观+竞争情报（不再依赖周报）
+  updateWeekly(latest);
   updateCalendar();
   updateHistory(allData);
 
@@ -1098,38 +1116,53 @@ function drawLine(id, labels, data, label, color) {
 function updatePlatform(d) {
   const list = d.platform || [];
   const el = document.getElementById('platform-list');
-  if (!list.length) { el.innerHTML = '<div class="empty-state">今日暂无平台动态</div>'; return; }
+  const concEl = document.getElementById('platform-conclusion');
 
-  const announcements = list.filter(x => x.type === 'announcement' || x.type === 'news');
-  const policies = list.filter(x => x.type === 'policy');
-  const display = announcements.length ? announcements : policies;
+  if (!list.length) {
+    el.innerHTML = '<div class="empty-state">今日暂无平台动态</div>';
+    return;
+  }
 
-  el.innerHTML = display.map(item => {
+  el.innerHTML = list.map(item => {
     const titleHtml = item.url
       ? `<a href="${item.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${item.title}</a>`
       : item.title;
-    const tag = item.type === 'policy' ? '<span style="font-size:10px;background:#6366f122;color:var(--accent);padding:1px 6px;border-radius:4px;margin-left:6px">政策</span>' : '';
-    return `
-      <div class="event-item">
-        <div class="event-dot ${item.type === 'policy' ? '' : 'green'}"></div>
-        <div>
-          <div class="event-text">${titleHtml}${tag}</div>
-          <div class="event-date">${item.date || ''} · ${item.source || ''}</div>
-        </div>
-      </div>`;
+    const tag = item.type === 'policy'
+      ? '<span style="font-size:10px;background:#6366f122;color:var(--accent);padding:1px 6px;border-radius:4px;margin-left:6px">政策</span>'
+      : '';
+    return `<div class="event-item">
+      <div class="event-dot ${item.type === 'policy' ? '' : 'green'}"></div>
+      <div>
+        <div class="event-text">${titleHtml}${tag}</div>
+        <div class="event-date">${item.date || ''} · ${item.source || ''}</div>
+      </div>
+    </div>`;
   }).join('');
+
+  // 结论：有无政策变化
+  const hasPolicyAlert = list.some(x => x.type === 'policy' &&
+    /fee|commission|佣金|费率|tariff|关税|ban|禁/i.test(x.title));
+  if (hasPolicyAlert) {
+    concEl.style.display = '';
+    concEl.className = 'fx-conclusion warn';
+    concEl.textContent = '⚡ 检测到可能影响毛利的平台政策变化，建议核实具体条款后调整定价或运营策略。';
+  } else if (list.length) {
+    concEl.style.display = '';
+    concEl.className = 'fx-conclusion ok';
+    concEl.textContent = '✅ 今日无重大费率/规则变化，正常运营。';
+  }
 }
 
 function updateCalendar() {
   const today = new Date();
   const year = today.getFullYear();
   const events = [
-    { date: `${year}-05-10`, name: '🌸 母亲节（墨西哥）', type: 'peak', note: '5/3 起备货窗口' },
-    { date: `${year}-09-16`, name: '🇲🇽 独立日', type: 'peak', note: '9/9 起备货窗口' },
-    { date: `${year}-11-01`, name: '💀 亡灵节 Day1', type: 'peak', note: '节日消费旺季' },
-    { date: `${year}-11-02`, name: '💀 亡灵节 Day2', type: 'peak', note: '节日消费旺季' },
-    { date: `${year}-11-01`, name: '🛒 El Buen Fin（预估）', type: 'sale', note: '11月第三周，墨西哥版黑五' },
-    { date: `${year}-12-25`, name: '🎄 圣诞节', type: 'peak', note: '12/15 起冲刺期' },
+    { date: `${year}-05-10`, name: '🌸 母亲节', type: 'peak', prepDays: 45, note: '墨西哥最重要节日之一，家居/礼品/服饰强需求' },
+    { date: `${year}-06-15`, name: '👨 父亲节', type: 'peak', prepDays: 35, note: '运动/工具/电子配件热销' },
+    { date: `${year}-09-16`, name: '🇲🇽 独立日', type: 'peak', prepDays: 40, note: '爱国主题、派对用品需求旺' },
+    { date: `${year}-11-01`, name: '💀 亡灵节', type: 'peak', prepDays: 50, note: '节日装饰/服饰/家居强需求' },
+    { date: `${year}-11-15`, name: '🛒 El Buen Fin', type: 'sale', prepDays: 55, note: '墨西哥版黑五，全品类冲量' },
+    { date: `${year}-12-25`, name: '🎄 圣诞节', type: 'peak', prepDays: 60, note: '全年最大促销季，提前备货至关重要' },
   ].filter(e => new Date(e.date) >= today)
    .sort((a, b) => new Date(a.date) - new Date(b.date))
    .slice(0, 6);
@@ -1138,17 +1171,46 @@ function updateCalendar() {
   el.innerHTML = events.map(e => {
     const d = new Date(e.date);
     const diff = Math.ceil((d - today) / 86400000);
-    const diffStr = diff <= 7 ? `<span style="color:var(--warn)">还有 ${diff} 天</span>` : `还有 ${diff} 天`;
-    return `
-      <div class="event-item">
-        <div class="event-dot ${e.type === 'sale' ? 'warn' : 'green'}"></div>
-        <div>
-          <div class="event-text">${e.name}</div>
-          <div class="event-date">${e.date} · ${diffStr} · ${e.note}</div>
-        </div>
+    // 判断当前所处备货阶段
+    let stageText, stageDot;
+    if (diff <= 0) {
+      stageText = '🎉 节日进行中'; stageDot = 'green';
+    } else if (diff <= 14) {
+      stageText = `🔴 冲刺期（还有 ${diff} 天）`; stageDot = 'danger';
+    } else if (diff <= e.prepDays) {
+      stageText = `🟡 备货窗口（还有 ${diff} 天，建议尽快下单）`; stageDot = 'warn';
+    } else {
+      stageText = `⚪ 备货窗口未开（还有 ${diff} 天，海运需提前 ${e.prepDays} 天）`; stageDot = '';
+    }
+    return `<div class="event-item">
+      <div class="event-dot ${stageDot}"></div>
+      <div>
+        <div class="event-text">${e.name} <span style="color:var(--muted);font-size:11px">· ${e.date}</span></div>
+        <div class="event-date">${stageText}</div>
+        <div class="event-date" style="margin-top:2px">${e.note}</div>
       </div>
-    `;
+    </div>`;
   }).join('');
+
+  // 结论：当前最紧迫的节点
+  const concEl = document.getElementById('calendar-conclusion');
+  const urgent = events.find(e => {
+    const diff = Math.ceil((new Date(e.date) - today) / 86400000);
+    return diff <= e.prepDays;
+  });
+  if (urgent) {
+    const diff = Math.ceil((new Date(urgent.date) - today) / 86400000);
+    const isRush = diff <= 14;
+    concEl.className = `fx-conclusion ${isRush ? 'danger' : 'warn'}`;
+    concEl.innerHTML = isRush
+      ? `🔴 <strong>${urgent.name} 进入冲刺期</strong>，空运是当前唯一可行选项，关注库存是否充足。`
+      : `🟡 <strong>当前处于 ${urgent.name} 备货窗口</strong>（还有 ${diff} 天），海运尚有时间，建议本周确认采购计划。`;
+  } else if (events.length) {
+    const next = events[0];
+    const diff = Math.ceil((new Date(next.date) - today) / 86400000);
+    concEl.className = 'fx-conclusion ok';
+    concEl.innerHTML = `✅ 近期无紧迫备货节点。下一节日 <strong>${next.name}</strong> 还有 ${diff} 天，备货窗口将在 ${diff - next.prepDays} 天后开启。`;
+  }
 }
 
 function updateHistory(allData) {
@@ -1177,24 +1239,88 @@ function updateHistory(allData) {
 function updateWeekly(w) {
   const macroEl = document.getElementById('macro-list');
   const compEl = document.getElementById('competitor-list');
+  const macroConcEl = document.getElementById('macro-conclusion');
+  const compConcEl = document.getElementById('competitor-conclusion');
 
   const macro = w.macro || [];
   const comp = w.competitor || [];
   const platform = w.platform || [];
 
-  macroEl.innerHTML = macro.length
-    ? macro.map(x => `<div class="event-item"><div class="event-dot warn"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('')
-    : '<div class="empty-state">暂无宏观动态</div>';
+  // 宏观
+  if (macro.length) {
+    macroEl.innerHTML = macro.map(x => {
+      const titleHtml = x.url
+        ? `<a href="${x.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${x.title}</a>`
+        : x.title;
+      return `<div class="event-item"><div class="event-dot warn"></div><div>
+        <div class="event-text">${titleHtml}</div>
+        <div class="event-date">${x.source}</div>
+      </div></div>`;
+    }).join('');
 
-  compEl.innerHTML = comp.length
-    ? comp.map(x => `<div class="event-item"><div class="event-dot"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('')
-    : '<div class="empty-state">暂无竞争情报</div>';
+    // 结论：检测关键词
+    const allText = macro.map(x => x.title).join(' ').toLowerCase();
+    let macroLevel = 'ok', macroText = '';
+    if (/tariff|aranceles|关税|sanction|制裁/.test(allText)) {
+      macroLevel = 'danger';
+      macroText = '⚠️ <strong>关税/制裁相关动态</strong>：可能影响商品进口成本或清关周期，建议关注具体政策内容，必要时调整采购节奏。';
+    } else if (/inflation|inflación|通胀|rate cut|recorte|降息/.test(allText)) {
+      macroLevel = 'warn';
+      macroText = '⚡ <strong>通胀/利率动态</strong>：Banxico 政策调整影响消费信贷和购买力，关注是否传导至终端消费需求。';
+    } else if (/growth|crecimiento|增长|recovery|recuperación/.test(allText)) {
+      macroLevel = 'ok';
+      macroText = '✅ <strong>宏观环境偏正面</strong>：近期无重大政策风险，墨西哥消费市场整体稳定，可正常推进备货计划。';
+    } else {
+      macroLevel = 'ok';
+      macroText = '✅ 近期宏观动态无重大异常，市场环境正常。';
+    }
+    macroConcEl.style.display = '';
+    macroConcEl.className = `fx-conclusion ${macroLevel}`;
+    macroConcEl.innerHTML = macroText;
+  } else {
+    macroEl.innerHTML = '<div class="empty-state">数据每日更新，请稍候</div>';
+  }
 
+  // 竞争情报
+  if (comp.length) {
+    compEl.innerHTML = comp.map(x => {
+      const titleHtml = x.url
+        ? `<a href="${x.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${x.title}</a>`
+        : x.title;
+      return `<div class="event-item"><div class="event-dot"></div><div>
+        <div class="event-text">${titleHtml}</div>
+        <div class="event-date">${x.source}</div>
+      </div></div>`;
+    }).join('');
+
+    // 结论：竞争态势判断
+    const compText = comp.map(x => x.title).join(' ').toLowerCase();
+    let compLevel = 'ok', compConc = '';
+    if (/temu.*(mexico|expand|free|免费)|shopee.*(launch|enter|进入)/.test(compText)) {
+      compLevel = 'warn';
+      compConc = '⚡ <strong>竞争对手有扩张动作</strong>：Temu 或 Shopee 在墨西哥市场活跃，可能加剧价格竞争。建议在选品上差异化，避开已被低价渗透的标品。';
+    } else if (/aliexpress.*(ban|suspend|封号|处罚|violation)/.test(compText)) {
+      compLevel = 'danger';
+      compConc = '⚠️ <strong>速卖通合规风险提示</strong>：检测到平台封禁/处罚相关新闻，请核查是否涉及你的品类或操作方式。';
+    } else {
+      compLevel = 'ok';
+      compConc = '✅ 近期无明显竞争威胁信号。持续关注 Temu 墨西哥扩张动态和速卖通品类榜单变化。';
+    }
+    compConcEl.style.display = '';
+    compConcEl.className = `fx-conclusion ${compLevel}`;
+    compConcEl.innerHTML = compConc;
+  } else {
+    compEl.innerHTML = '<div class="empty-state">数据每日更新，请稍候</div>';
+  }
+
+  // 平台动态补充（如weekly有更多）
   if (platform.length) {
     const platEl = document.getElementById('platform-list');
-    const existing = platEl.querySelector('.empty-state');
-    if (existing) {
-      platEl.innerHTML = platform.map(x => `<div class="event-item"><div class="event-dot green"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('');
+    if (platEl.querySelector('.empty-state')) {
+      platEl.innerHTML = platform.map(x => `<div class="event-item"><div class="event-dot green"></div><div>
+        <div class="event-text">${x.title}</div>
+        <div class="event-date">${x.source}</div>
+      </div></div>`).join('');
     }
   }
 }

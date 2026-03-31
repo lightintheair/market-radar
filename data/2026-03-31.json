@@ -1,6 +1,6 @@
 {
   "date": "2026-03-31",
-  "time": "17:53",
+  "time": "17:54",
   "fx": {
     "mxn_cny": 0.3815,
     "mxn_usd": 0.05517,
@@ -22,7 +22,33 @@
       "type": "news"
     }
   ],
-  "macro": [],
-  "competitor": [],
+  "macro": [
+    {
+      "title": "Global Economics Intelligence executive summary (February 2026) - McKinsey &amp; Company",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated March 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "In debt because of unpaid rent, Boston burrito shop Villa Mexico could soon close - The Boston Globe",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Top retailers by most recent cross-border order 2025 - Statista",
+      "source": "速卖通墨西哥"
+    }
+  ],
   "source": "open.er-api.com"
 }

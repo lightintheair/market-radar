@@ -5,55 +5,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>市场雷达 · 墨西哥跨境电商</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f1117;
-    --card: #1a1d27;
-    --border: #2a2d3a;
+    --bg: #0b0d14;
+    --bg2: #0f1117;
+    --card: #13151f;
+    --card2: #191c28;
+    --border: #23263a;
+    --border2: #2e3248;
     --accent: #6366f1;
+    --accent-glow: #6366f130;
     --accent2: #10b981;
+    --accent2-glow: #10b98120;
     --warn: #f59e0b;
+    --warn-glow: #f59e0b20;
     --danger: #ef4444;
-    --text: #e2e8f0;
-    --muted: #64748b;
+    --danger-glow: #ef444420;
+    --text: #dde3f0;
+    --text2: #a8b2cc;
+    --muted: #505878;
+    --col-market: #6366f1;
+    --col-fx: #10b981;
+    --col-ops: #f59e0b;
+    --col-ar: #ec4899;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, 'PingFang SC', sans-serif; min-height: 100vh; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', 'PingFang SC', -apple-system, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 数字用等宽字体 */
+  .metric-value, .fx-compare-val, #range-30d, #range-60d,
+  #sig-support, #sig-resist, .sim-result-val {
+    font-family: 'DM Mono', 'SF Mono', monospace;
+  }
 
   header {
-    padding: 20px 32px;
+    padding: 18px 32px;
     border-bottom: 1px solid var(--border);
     display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(180deg, #0d0f1a 0%, var(--bg) 100%);
   }
-  header h1 { font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
+  header h1 { font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: var(--text); }
   header h1 span { color: var(--accent); }
-  #last-update { font-size: 12px; color: var(--muted); }
+  #last-update { font-size: 11px; color: var(--muted); letter-spacing: 0.3px; }
 
   /* ===== Tab Bar ===== */
   .tab-bar {
     display: flex; gap: 0;
     border-bottom: 1px solid var(--border);
-    padding: 0 32px;
-    background: var(--bg);
+    padding: 0 28px;
+    background: var(--bg2);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
   }
   .tab-btn {
-    padding: 12px 24px;
-    font-size: 14px; font-weight: 600;
+    padding: 13px 20px;
+    font-size: 13px; font-weight: 600;
     color: var(--muted);
     background: none; border: none; cursor: pointer;
     border-bottom: 2px solid transparent;
     margin-bottom: -1px;
     transition: color 0.2s, border-color 0.2s;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
   }
-  .tab-btn:hover { color: var(--text); }
-  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-btn:hover { color: var(--text2); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
 
   /* Tab content visibility */
   .tab-content { display: none; }
   .tab-content.active { display: contents; }
 
-  .dashboard { padding: 24px 32px; display: grid; gap: 20px; }
+  .dashboard { padding: 28px 32px; display: grid; gap: 20px; }
+
+  /* ===== 总览卡片 ===== */
+  .overview-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    cursor: pointer;
+    transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+    position: relative;
+    overflow: hidden;
+  }
+  .overview-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 14px 0 0 14px;
+    background: var(--card-color, var(--accent));
+  }
+  .overview-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--card-color, var(--accent));
+    box-shadow: 0 8px 32px var(--card-glow, var(--accent-glow));
+  }
+  .overview-card-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  .overview-card-icon { font-size: 22px; }
+  .overview-card-title { font-weight: 700; font-size: 15px; }
+  .overview-card-q { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .overview-card-arrow { margin-left: auto; font-size: 11px; color: var(--muted); }
+  .overview-card-body { font-size: 13px; line-height: 1.65; color: var(--text2); }
+
 
   /* 顶部指标条 */
   .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -315,77 +379,56 @@
 <div id="tab-overview" class="tab-content active">
 <div class="dashboard">
 
-  <div style="font-size:13px;color:var(--muted);margin-bottom:4px">
+  <div style="font-size:12px;color:var(--muted);letter-spacing:0.3px">
     墨西哥跨境电商决策框架 · 今日全局快照
   </div>
 
   <!-- 四个总览卡片 -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
 
-    <!-- 市场环境 -->
-    <div onclick="switchTab('market');document.querySelectorAll('.tab-btn')[1].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')"
-         style="background:#12141e;border:1px solid var(--border);border-radius:12px;padding:20px;cursor:pointer;transition:border-color 0.2s"
-         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:20px">📡</span>
-        <div>
-          <div style="font-weight:700;font-size:14px">市场环境</div>
-          <div style="font-size:11px;color:var(--muted)">现在适合进什么货？</div>
-        </div>
-        <span style="margin-left:auto;font-size:11px;color:var(--muted)">点击查看 →</span>
+    <div class="overview-card" style="--card-color:var(--col-market);--card-glow:var(--accent-glow)"
+         onclick="switchTab('market');document.querySelectorAll('.tab-btn')[1].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')">
+      <div class="overview-card-header">
+        <span class="overview-card-icon">📡</span>
+        <div><div class="overview-card-title">市场环境</div><div class="overview-card-q">现在适合进什么货？</div></div>
+        <span class="overview-card-arrow">查看详情 →</span>
       </div>
-      <div id="overview-market" style="font-size:13px;line-height:1.6;color:var(--muted)">加载中...</div>
+      <div class="overview-card-body" id="overview-market">加载中...</div>
     </div>
 
-    <!-- 汇率与资金 -->
-    <div onclick="switchTab('fx');document.querySelectorAll('.tab-btn')[2].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')"
-         style="background:#12141e;border:1px solid var(--border);border-radius:12px;padding:20px;cursor:pointer;transition:border-color 0.2s"
-         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:20px">💱</span>
-        <div>
-          <div style="font-weight:700;font-size:14px">汇率与资金</div>
-          <div style="font-size:11px;color:var(--muted)">当前备货的汇率风险是多少？</div>
-        </div>
-        <span style="margin-left:auto;font-size:11px;color:var(--muted)">点击查看 →</span>
+    <div class="overview-card" style="--card-color:var(--col-fx);--card-glow:var(--accent2-glow)"
+         onclick="switchTab('fx');document.querySelectorAll('.tab-btn')[2].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')">
+      <div class="overview-card-header">
+        <span class="overview-card-icon">💱</span>
+        <div><div class="overview-card-title">汇率与资金</div><div class="overview-card-q">当前备货的汇率风险是多少？</div></div>
+        <span class="overview-card-arrow">查看详情 →</span>
       </div>
-      <div id="overview-fx" style="font-size:13px;line-height:1.6;color:var(--muted)">加载中...</div>
+      <div class="overview-card-body" id="overview-fx">加载中...</div>
     </div>
 
-    <!-- 平台运营 -->
-    <div onclick="switchTab('ops');document.querySelectorAll('.tab-btn')[3].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')"
-         style="background:#12141e;border:1px solid var(--border);border-radius:12px;padding:20px;cursor:pointer;transition:border-color 0.2s"
-         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:20px">🛒</span>
-        <div>
-          <div style="font-weight:700;font-size:14px">平台运营</div>
-          <div style="font-size:11px;color:var(--muted)">有无影响毛利的规则变化？</div>
-        </div>
-        <span style="margin-left:auto;font-size:11px;color:var(--muted)">点击查看 →</span>
+    <div class="overview-card" style="--card-color:var(--col-ops);--card-glow:var(--warn-glow)"
+         onclick="switchTab('ops');document.querySelectorAll('.tab-btn')[3].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')">
+      <div class="overview-card-header">
+        <span class="overview-card-icon">🛒</span>
+        <div><div class="overview-card-title">平台运营</div><div class="overview-card-q">有无影响毛利的规则变化？</div></div>
+        <span class="overview-card-arrow">查看详情 →</span>
       </div>
-      <div id="overview-ops" style="font-size:13px;line-height:1.6;color:var(--muted)">加载中...</div>
+      <div class="overview-card-body" id="overview-ops">加载中...</div>
     </div>
 
-    <!-- 应收账款 -->
-    <div onclick="switchTab('ar');document.querySelectorAll('.tab-btn')[4].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')"
-         style="background:#12141e;border:1px solid var(--border);border-radius:12px;padding:20px;cursor:pointer;transition:border-color 0.2s"
-         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:20px">📦</span>
-        <div>
-          <div style="font-weight:700;font-size:14px">应收账款</div>
-          <div style="font-size:11px;color:var(--muted)">在途资金风险是否可控？</div>
-        </div>
-        <span style="margin-left:auto;font-size:11px;color:var(--muted)">点击查看 →</span>
+    <div class="overview-card" style="--card-color:var(--col-ar);--card-glow:#ec489920"
+         onclick="switchTab('ar');document.querySelectorAll('.tab-btn')[4].classList.add('active');document.querySelectorAll('.tab-btn')[0].classList.remove('active')">
+      <div class="overview-card-header">
+        <span class="overview-card-icon">📦</span>
+        <div><div class="overview-card-title">应收账款</div><div class="overview-card-q">在途资金风险是否可控？</div></div>
+        <span class="overview-card-arrow">查看详情 →</span>
       </div>
-      <div id="overview-ar" style="font-size:13px;line-height:1.6;color:var(--muted)">导入应收账款数据后自动显示</div>
+      <div class="overview-card-body" id="overview-ar">加载示例数据中...</div>
     </div>
 
   </div>
 
-  <!-- 更新时间 -->
-  <div style="text-align:center;font-size:11px;color:var(--muted);margin-top:8px" id="overview-update-time"></div>
+  <div style="text-align:center;font-size:11px;color:var(--muted);margin-top:4px" id="overview-update-time"></div>
 
 </div>
 </div>
@@ -909,6 +952,31 @@ function updateOverview() {
   const lastUpdate = document.getElementById('last-update');
   const overviewTime = document.getElementById('overview-update-time');
   if (overviewTime && lastUpdate) overviewTime.textContent = lastUpdate.textContent;
+
+  // 应收账款摘要
+  const overviewAr = document.getElementById('overview-ar');
+  if (overviewAr) {
+    const rawData = localStorage.getItem('ar_data');
+    const isSample = localStorage.getItem('ar_is_sample') === '1';
+    if (rawData) {
+      const records = JSON.parse(rawData);
+      const currentFx = getCurrentFx();
+      const active = records.filter(r => r.status !== 'received');
+      const totalExposure = active.reduce((s, r) => s + r.amount, 0);
+      let totalPnl = 0, hasPnl = false;
+      active.forEach(r => {
+        const shipFx = getFxAtDate(r.date);
+        if (shipFx && currentFx) { totalPnl += (currentFx - shipFx) / shipFx * r.amount; hasPnl = true; }
+      });
+      const pnlStr = hasPnl
+        ? (totalPnl >= 0 ? `+${(totalPnl/10000).toFixed(1)}万汇益` : `${(totalPnl/10000).toFixed(1)}万汇损`)
+        : '汇率数据加载中';
+      const riskLevel = hasPnl && totalPnl < -5000 ? '🔴' : hasPnl && totalPnl < 0 ? '🟡' : '✅';
+      const sampleTag = isSample ? ' <span style="color:var(--warn);font-size:11px">（示例）</span>' : '';
+      overviewAr.innerHTML = `${riskLevel} 在途敞口 <strong style="font-family:DM Mono,monospace">${(totalExposure/10000).toFixed(1)}万</strong>，浮动 ${pnlStr}${sampleTag}`;
+      overviewAr.style.color = hasPnl && totalPnl < 0 ? 'var(--warn)' : 'var(--accent2)';
+    }
+  }
 }
 
 
@@ -1188,7 +1256,7 @@ async function loadData() {
 
   document.getElementById('last-update').textContent = `最后更新：${latest.date} ${latest.time || ''}`;
   // 所有板块渲染完毕后更新总览
-  setTimeout(updateOverview, 100);
+  setTimeout(() => { loadArSampleIfEmpty(); updateOverview(); }, 150);
 }
 
 function updateMetrics(d, prev) {
@@ -1533,6 +1601,7 @@ function importArData() {
   if (!raw.trim()) { alert('请先粘贴 CSV 数据'); return; }
   const rows = parseArCsv(raw);
   if (!rows.length) { alert('解析失败，请检查 CSV 格式'); return; }
+  localStorage.removeItem('ar_is_sample');
   localStorage.setItem('ar_data', JSON.stringify(rows));
   const totalAmount = rows.reduce((s, r) => s + r.amount, 0);
   document.getElementById('ar-import-status').textContent =
@@ -1544,6 +1613,7 @@ function importArData() {
 function clearArData() {
   if (!confirm('确认清空所有应收账款数据？此操作不可撤销。')) return;
   localStorage.removeItem('ar_data');
+  localStorage.removeItem('ar_is_sample');
   document.getElementById('ar-import-status').textContent = '数据已清空';
   document.getElementById('ar-csv-input').value = '';
   renderArDashboard();
@@ -1589,18 +1659,37 @@ function getVol30() {
 }
 
 // 渲染应收账款看板
+// ===== 应收账款示例数据 =====
+const AR_SAMPLE_CSV = `发货日期,运输方式,货值CNY,预计收款日,状态
+2026-02-01,sea,80000,2026-05-10,transit
+2026-03-01,sea,120000,2026-05-30,customs
+2026-03-15,air,45000,2026-04-23,pending
+2026-03-20,air,30000,2026-04-15,pending
+2026-01-15,sea,60000,2026-03-25,received`;
+
+function loadArSampleIfEmpty() {
+  if (!localStorage.getItem('ar_data')) {
+    const rows = parseArCsv(AR_SAMPLE_CSV);
+    localStorage.setItem('ar_data', JSON.stringify(rows));
+    localStorage.setItem('ar_is_sample', '1');
+  }
+}
+
 function renderArDashboard() {
+  loadArSampleIfEmpty();
   const rawData = localStorage.getItem('ar_data');
+  const isSample = localStorage.getItem('ar_is_sample') === '1';
   const records = rawData ? JSON.parse(rawData) : [];
   const currentFx = getCurrentFx();
 
-  // 更新导入状态（如果有数据）
+  // 更新导入状态
   if (records.length) {
     const totalAmount = records.reduce((s, r) => s + r.amount, 0);
     const statusEl = document.getElementById('ar-import-status');
-    if (!statusEl.textContent) {
-      statusEl.textContent = `已导入 ${records.length} 笔，共 ${(totalAmount / 10000).toFixed(2)} 万元`;
-    }
+    statusEl.textContent = isSample
+      ? `📋 示例数据（${records.length} 笔）· 导入真实数据后自动替换`
+      : `已导入 ${records.length} 笔，共 ${(totalAmount / 10000).toFixed(2)} 万元`;
+    statusEl.style.color = isSample ? 'var(--warn)' : 'var(--accent2)';
   }
 
   // 为每条记录附加计算字段

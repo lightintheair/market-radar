@@ -29,6 +29,30 @@
   header h1 span { color: var(--accent); }
   #last-update { font-size: 12px; color: var(--muted); }
 
+  /* ===== Tab Bar ===== */
+  .tab-bar {
+    display: flex; gap: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    background: var(--bg);
+  }
+  .tab-btn {
+    padding: 12px 24px;
+    font-size: 14px; font-weight: 600;
+    color: var(--muted);
+    background: none; border: none; cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* Tab content visibility */
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
   .dashboard { padding: 24px 32px; display: grid; gap: 20px; }
 
   /* 顶部指标条 */
@@ -169,7 +193,100 @@
   .fx-conclusion.warn { background: #f59e0b12; border: 1px solid #f59e0b44; }
   .fx-conclusion.danger { background: #ef444412; border: 1px solid #ef444444; }
 
+  /* ===== 应收账款 Tab 样式 ===== */
+  .ar-dashboard { padding: 24px 32px; display: grid; gap: 20px; }
 
+  .ar-intro-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+  }
+  .ar-intro-card h2 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+  .ar-intro-card .ar-value-points {
+    font-size: 13px; color: var(--muted); line-height: 1.8;
+  }
+  .ar-intro-card .ar-value-points strong { color: var(--text); }
+
+  .ar-import-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+  }
+  .ar-import-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
+  .ar-import-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-start; margin-bottom: 12px; }
+  .ar-csv-area {
+    flex: 1; min-width: 260px;
+    background: #12141e; border: 1px solid var(--border); border-radius: 8px;
+    color: var(--text); padding: 10px 12px; font-size: 12px;
+    font-family: 'Menlo', 'Consolas', monospace;
+    resize: vertical; min-height: 80px;
+  }
+  .ar-csv-area:focus { outline: none; border-color: var(--accent); }
+  .ar-btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+  .ar-btn {
+    padding: 7px 18px; border-radius: 7px; border: none; cursor: pointer;
+    font-size: 13px; font-weight: 600; transition: opacity 0.15s;
+  }
+  .ar-btn:hover { opacity: 0.85; }
+  .ar-btn.primary { background: var(--accent); color: #fff; }
+  .ar-btn.secondary { background: #12141e; border: 1px solid var(--border); color: var(--text); }
+  .ar-btn.danger { background: var(--danger); color: #fff; }
+  .ar-import-status { font-size: 13px; color: var(--accent2); margin-left: 4px; }
+
+  /* 敞口汇总看板 */
+  .ar-exposure-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+  }
+  .ar-exposure-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
+  .ar-buckets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+  .ar-bucket-card {
+    background: #12141e; border: 1px solid var(--border); border-radius: 10px; padding: 16px;
+  }
+  .ar-bucket-title { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .ar-bucket-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; font-size: 13px; }
+  .ar-bucket-label { color: var(--muted); }
+  .ar-bucket-val { font-weight: 600; }
+  .ar-pnl { font-size: 15px; font-weight: 700; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .ar-pnl.gain { color: var(--accent2); }
+  .ar-pnl.loss { color: var(--danger); }
+  .ar-summary-bar {
+    background: #12141e; border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 16px; font-size: 13px; font-weight: 600;
+    display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+  }
+  .ar-summary-bar .total-label { color: var(--muted); }
+  .ar-summary-bar .total-val { color: var(--text); }
+  .ar-summary-bar .total-pnl { font-weight: 700; }
+
+  /* 明细 + 策略双栏 */
+  .ar-detail-row { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
+  .ar-detail-card, .ar-hedge-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+  }
+  .ar-detail-card h3, .ar-hedge-card h3 {
+    font-size: 13px; color: var(--muted); margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px;
+  }
+  .ar-detail-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .ar-detail-table th { color: var(--muted); font-weight: 500; text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .ar-detail-table td { padding: 7px 10px; border-bottom: 1px solid rgba(42,45,58,0.5); }
+  .ar-detail-table tr:last-child td { border-bottom: none; }
+  .ar-detail-table tr.received td { color: var(--muted); font-style: italic; }
+  .ar-detail-table tr:hover td { background: rgba(99,102,241,0.05); }
+
+  .ar-hedge-item {
+    background: #12141e; border: 1px solid var(--border); border-radius: 8px;
+    padding: 14px; margin-bottom: 10px; font-size: 13px; line-height: 1.6;
+  }
+  .ar-hedge-item:last-child { margin-bottom: 0; }
+  .ar-hedge-item .hedge-title { font-weight: 700; margin-bottom: 6px; }
+  .ar-hedge-item .hedge-body { color: var(--muted); font-size: 12px; }
+  .ar-hedge-item.natural { border-color: var(--accent2); }
+  .ar-hedge-item.accelerate { border-color: var(--warn); }
+  .ar-hedge-item.pricing { border-color: var(--accent); }
+  .ar-hedge-item.ok { border-color: var(--accent2); background: #10b98108; }
+  .ar-hedge-item .hedge-title.natural { color: var(--accent2); }
+  .ar-hedge-item .hedge-title.accelerate { color: var(--warn); }
+  .ar-hedge-item .hedge-title.pricing { color: var(--accent); }
+  .ar-hedge-item .hedge-title.ok { color: var(--accent2); }
+
+  .ar-empty { color: var(--muted); font-size: 13px; padding: 40px 0; text-align: center; }
+</style>
 </head>
 <body>
 
@@ -178,6 +295,14 @@
   <div id="last-update">加载中...</div>
 </header>
 
+<!-- Tab Bar -->
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('market')">📡 市场雷达</button>
+  <button class="tab-btn" onclick="switchTab('ar')">📦 应收账款</button>
+</div>
+
+<!-- ========== Tab 1: 市场雷达 ========== -->
+<div id="tab-market" class="tab-content active">
 <div class="dashboard">
 
   <!-- ① 汇率板块：帐期流程图 -->
@@ -430,8 +555,94 @@
   </div>
 
 </div>
+</div><!-- end #tab-market -->
+
+<!-- ========== Tab 2: 应收账款 ========== -->
+<div id="tab-ar" class="tab-content">
+<div class="ar-dashboard">
+
+  <!-- 区块1：说明 -->
+  <div class="ar-intro-card">
+    <h2>② 应收账款汇率风险管理</h2>
+    <div class="ar-value-points">
+      <strong>① 实时掌握</strong>所有在途/待结算应收账款的汇率风险总敞口 &nbsp;|&nbsp;
+      <strong>② 量化</strong>每笔、每批次的浮动汇损/汇益 &nbsp;|&nbsp;
+      <strong>③ 获得</strong>针对性对冲策略建议
+    </div>
+  </div>
+
+  <!-- 区块2：数据导入 -->
+  <div class="ar-import-card">
+    <h3>📥 数据导入</h3>
+    <div class="ar-import-row">
+      <textarea id="ar-csv-input" class="ar-csv-area"
+        placeholder="粘贴 CSV 数据（含表头）&#10;格式：发货日期,运输方式,货值CNY,预计收款日,状态&#10;示例：2024-01-15,sea,80000,2024-03-20,transit&#10;&#10;运输方式：sea / air&#10;状态：transit（在途）/ customs（清关）/ pending（待结算）/ received（已收款）"></textarea>
+    </div>
+    <div class="ar-btn-row">
+      <button class="ar-btn primary" onclick="importArData()">导入</button>
+      <button class="ar-btn secondary" onclick="downloadArTemplate()">⬇ 下载 CSV 模板</button>
+      <button class="ar-btn danger" onclick="clearArData()">🗑 清空数据</button>
+      <span class="ar-import-status" id="ar-import-status"></span>
+    </div>
+  </div>
+
+  <!-- 区块3：敞口汇总看板 -->
+  <div class="ar-exposure-card">
+    <h3>📊 敞口汇总看板</h3>
+    <div class="ar-buckets" id="ar-buckets">
+      <div class="ar-bucket-card">
+        <div class="ar-bucket-title">⏱ 0–30 天敞口</div>
+        <div class="ar-empty">暂无数据</div>
+      </div>
+      <div class="ar-bucket-card">
+        <div class="ar-bucket-title">📆 31–60 天敞口</div>
+        <div class="ar-empty">暂无数据</div>
+      </div>
+      <div class="ar-bucket-card">
+        <div class="ar-bucket-title">🗓 60 天以上敞口</div>
+        <div class="ar-empty">暂无数据</div>
+      </div>
+    </div>
+    <div class="ar-summary-bar" id="ar-summary-bar">
+      <span class="total-label">总敞口：</span><span class="total-val" id="ar-total-exposure">-- 万 CNY</span>
+      <span style="color:var(--border)">|</span>
+      <span class="total-label">总浮动汇损益：</span><span class="total-pnl" id="ar-total-pnl">--</span>
+    </div>
+  </div>
+
+  <!-- 区块4：明细 + 对冲策略 -->
+  <div class="ar-detail-row">
+    <!-- 左栏：明细表 -->
+    <div class="ar-detail-card">
+      <h3>📋 应收账款明细</h3>
+      <div id="ar-detail-wrap">
+        <div class="ar-empty">请先导入数据</div>
+      </div>
+    </div>
+    <!-- 右栏：对冲策略 -->
+    <div class="ar-hedge-card">
+      <h3>🛡 对冲策略建议</h3>
+      <div id="ar-hedge-wrap">
+        <div class="ar-empty">等待数据加载...</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end #tab-ar -->
 
 <script>
+// ===== Tab 切换 =====
+function switchTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if (tab === 'ar' && window.allFxData && window.allFxData.length) {
+    renderArDashboard();
+  }
+}
+
 // ===== 帐期流程图计算 =====
 function getVal(id) { return parseInt(document.getElementById(id)?.value || 0); }
 
@@ -468,7 +679,7 @@ function updateFxAnalysis(allData) {
       const chg = (today - d30) / d30 * 100;
       const el = document.getElementById('fx-30d-diff');
       el.textContent = (chg >= 0 ? '▲' : '▼') + ' ' + Math.abs(chg).toFixed(2) + '% vs 今日';
-      el.style.color = chg < 0 ? 'var(--accent2)' : 'var(--danger)'; // 下跌对出口商有利（收款少但备货早）
+      el.style.color = chg < 0 ? 'var(--accent2)' : 'var(--danger)';
     }
   }
   if (d60) {
@@ -496,11 +707,8 @@ function updateSimulator() {
 
   if (!today || !refData) return;
 
-  // 备货时折算 MXN 预期（按备货时汇率推算）
-  const mxnExpected = amount / refData; // 预计收多少MXN
-  const mxnActual = amount / today;     // 按今日汇率对应MXN
-
-  // 帐期汇损（CNY口径）
+  const mxnExpected = amount / refData;
+  const mxnActual = amount / today;
   const diffCny = (today - refData) / refData * amount;
 
   document.getElementById('sim-expected').textContent = Math.round(mxnExpected).toLocaleString() + ' MXN';
@@ -518,7 +726,6 @@ function updateConclusion(today, d30, d60, allData) {
   const chg30 = d30 ? (today - d30) / d30 * 100 : null;
   const chg60 = d60 ? (today - d60) / d60 * 100 : null;
 
-  // 计算近30日波动率
   const recent = allData.slice(-30).map(d => d.fx?.mxn_cny).filter(Boolean);
   const mean = recent.reduce((a,b)=>a+b,0)/recent.length;
   const vol = Math.sqrt(recent.map(v=>(v-mean)**2).reduce((a,b)=>a+b,0)/recent.length) / mean * 100;
@@ -551,7 +758,6 @@ function updateConclusion(today, d30, d60, allData) {
 
 // ===== 数据加载 =====
 async function loadData() {
-  // 加载索引文件（包含所有历史日期）
   let index = [];
   try {
     const r = await fetch(`data/index.json?t=${Date.now()}`);
@@ -565,9 +771,8 @@ async function loadData() {
     return;
   }
 
-  // 加载所有历史数据
   const allData = [];
-  for (const date of index.slice(-60)) { // 最近60天
+  for (const date of index.slice(-60)) {
     try {
       const r = await fetch(`data/${date}.json?t=${Date.now()}`);
       const d = await r.json();
@@ -577,25 +782,17 @@ async function loadData() {
 
   if (allData.length === 0) { showEmpty(); return; }
 
+  // 暴露给全局，供应收账款 Tab 使用
+  window.allFxData = allData;
+
   const latest = allData[allData.length - 1];
   const prev = allData.length > 1 ? allData[allData.length - 2] : null;
 
-  // 更新指标卡
   updateMetrics(latest, prev);
-
-  // 更新图表
   updateCharts(allData);
-
-  // 更新汇率分析（三点对比 + 模拟器 + 结论）
   updateFxAnalysis(allData);
-
-  // 更新平台动态
   updatePlatform(latest);
-
-  // 更新节日日历
   updateCalendar();
-
-  // 更新历史表格
   updateHistory(allData);
 
   document.getElementById('last-update').textContent = `最后更新：${latest.date} ${latest.time || ''}`;
@@ -625,11 +822,10 @@ function setChange(id, pct) {
 }
 
 function updateCharts(allData) {
-  const labels = allData.map(d => d.date?.slice(5)); // MM-DD
+  const labels = allData.map(d => d.date?.slice(5));
   const cnyVals = allData.map(d => d.fx?.mxn_cny || null);
   const usdVals = allData.map(d => d.fx?.mxn_usd || null);
 
-  // 波动率
   const validCny = cnyVals.filter(v => v !== null).slice(-30);
   if (validCny.length > 1) {
     const mean = validCny.reduce((a,b) => a+b, 0) / validCny.length;
@@ -675,7 +871,6 @@ function updatePlatform(d) {
   const el = document.getElementById('platform-list');
   if (!list.length) { el.innerHTML = '<div class="empty-state">今日暂无平台动态</div>'; return; }
 
-  // 分组：公告/新闻 vs 政策兜底
   const announcements = list.filter(x => x.type === 'announcement' || x.type === 'news');
   const policies = list.filter(x => x.type === 'policy');
   const display = announcements.length ? announcements : policies;
@@ -697,7 +892,6 @@ function updatePlatform(d) {
 }
 
 function updateCalendar() {
-  // 静态节日日历（墨西哥重要节点）
   const today = new Date();
   const year = today.getFullYear();
   const events = [
@@ -767,7 +961,6 @@ function updateWeekly(w) {
     ? comp.map(x => `<div class="event-item"><div class="event-dot"></div><div><div class="event-text">${x.title}</div><div class="event-date">${x.source}</div></div></div>`).join('')
     : '<div class="empty-state">暂无竞争情报</div>';
 
-  // 更新平台动态（来自周报补充）
   if (platform.length) {
     const platEl = document.getElementById('platform-list');
     const existing = platEl.querySelector('.empty-state');
@@ -795,6 +988,332 @@ function showEmpty() {
   document.getElementById('history-tbody').innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px">暂无历史数据</td></tr>';
   document.getElementById('calendar-list').innerHTML = '';
   updateCalendar();
+}
+
+// ===== 应收账款模块 =====
+
+// 下载 CSV 模板
+function downloadArTemplate() {
+  const header = '发货日期,运输方式,货值CNY,预计收款日,状态';
+  const example = '2024-01-15,sea,80000,2024-03-20,transit';
+  const csv = header + '\n' + example;
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'ar_template.csv';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a); URL.revokeObjectURL(url);
+}
+
+// 解析 CSV
+function parseArCsv(raw) {
+  const lines = raw.trim().split('\n').map(l => l.trim()).filter(Boolean);
+  if (lines.length < 2) return [];
+  // Skip header line
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const cols = lines[i].split(',').map(c => c.trim());
+    if (cols.length < 5) continue;
+    const [发货日期, 运输方式, 货值CNY, 预计收款日, 状态] = cols;
+    const amount = parseFloat(货值CNY);
+    if (!发货日期 || !预计收款日 || isNaN(amount)) continue;
+    rows.push({ date: 发货日期, mode: 运输方式, amount, dueDate: 预计收款日, status: 状态 });
+  }
+  return rows;
+}
+
+// 导入数据
+function importArData() {
+  const raw = document.getElementById('ar-csv-input').value;
+  if (!raw.trim()) { alert('请先粘贴 CSV 数据'); return; }
+  const rows = parseArCsv(raw);
+  if (!rows.length) { alert('解析失败，请检查 CSV 格式'); return; }
+  localStorage.setItem('ar_data', JSON.stringify(rows));
+  const totalAmount = rows.reduce((s, r) => s + r.amount, 0);
+  document.getElementById('ar-import-status').textContent =
+    `已导入 ${rows.length} 笔，共 ${(totalAmount / 10000).toFixed(2)} 万元`;
+  renderArDashboard();
+}
+
+// 清空数据
+function clearArData() {
+  if (!confirm('确认清空所有应收账款数据？此操作不可撤销。')) return;
+  localStorage.removeItem('ar_data');
+  document.getElementById('ar-import-status').textContent = '数据已清空';
+  document.getElementById('ar-csv-input').value = '';
+  renderArDashboard();
+}
+
+// 获取发货时汇率（从 window.allFxData 按日期查找）
+function getFxAtDate(dateStr) {
+  if (!window.allFxData || !window.allFxData.length) return null;
+  // 精确匹配
+  let entry = window.allFxData.find(d => d.date === dateStr);
+  if (entry && entry.fx?.mxn_cny) return entry.fx.mxn_cny;
+  // 找最近的一条（日期最接近且不晚于目标日期）
+  const target = new Date(dateStr).getTime();
+  let best = null, bestDiff = Infinity;
+  for (const d of window.allFxData) {
+    if (!d.fx?.mxn_cny) continue;
+    const diff = Math.abs(new Date(d.date).getTime() - target);
+    if (diff < bestDiff) { bestDiff = diff; best = d.fx.mxn_cny; }
+  }
+  return best;
+}
+
+// 计算剩余天数
+function daysUntil(dateStr) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const due = new Date(dateStr);
+  return Math.round((due - today) / 86400000);
+}
+
+// 获取当前汇率
+function getCurrentFx() {
+  if (!window.allFxData || !window.allFxData.length) return null;
+  return window.allFxData[window.allFxData.length - 1]?.fx?.mxn_cny || null;
+}
+
+// 计算近30日波动率
+function getVol30() {
+  if (!window.allFxData || window.allFxData.length < 10) return 0;
+  const recent = window.allFxData.slice(-30).map(d => d.fx?.mxn_cny).filter(Boolean);
+  if (recent.length < 2) return 0;
+  const mean = recent.reduce((a,b) => a+b, 0) / recent.length;
+  return Math.sqrt(recent.map(v => (v-mean)**2).reduce((a,b)=>a+b,0) / recent.length) / mean * 100;
+}
+
+// 渲染应收账款看板
+function renderArDashboard() {
+  const rawData = localStorage.getItem('ar_data');
+  const records = rawData ? JSON.parse(rawData) : [];
+  const currentFx = getCurrentFx();
+
+  // 更新导入状态（如果有数据）
+  if (records.length) {
+    const totalAmount = records.reduce((s, r) => s + r.amount, 0);
+    const statusEl = document.getElementById('ar-import-status');
+    if (!statusEl.textContent) {
+      statusEl.textContent = `已导入 ${records.length} 笔，共 ${(totalAmount / 10000).toFixed(2)} 万元`;
+    }
+  }
+
+  // 为每条记录附加计算字段
+  const enriched = records.map(r => {
+    const remainDays = daysUntil(r.dueDate);
+    const shipFx = getFxAtDate(r.date);
+    let pnl = null;
+    if (shipFx && currentFx) {
+      pnl = (currentFx - shipFx) / shipFx * r.amount;
+    }
+    return { ...r, remainDays, shipFx, pnl };
+  });
+
+  // 按剩余天数升序
+  enriched.sort((a, b) => a.remainDays - b.remainDays);
+
+  // 活跃敞口（非 received）
+  const active = enriched.filter(r => r.status !== 'received');
+
+  // 分桶
+  const b0_30 = active.filter(r => r.remainDays >= 0 && r.remainDays <= 30);
+  const b31_60 = active.filter(r => r.remainDays > 30 && r.remainDays <= 60);
+  const b60plus = active.filter(r => r.remainDays > 60);
+  // 超期（已过收款日但未标 received）
+  const overdue = active.filter(r => r.remainDays < 0);
+
+  // 渲染敞口看板
+  renderBuckets(b0_30, b31_60, b60plus, currentFx);
+
+  // 总汇总
+  renderSummary(active, currentFx);
+
+  // 明细表
+  renderDetail(enriched);
+
+  // 对冲策略
+  renderHedge(active, currentFx);
+}
+
+function bucketStats(rows, currentFx) {
+  const totalAmount = rows.reduce((s, r) => s + r.amount, 0);
+  if (!totalAmount) return null;
+  // 加权平均发货汇率
+  const weightedShipFx = rows.reduce((s, r) => s + (r.shipFx || currentFx || 0) * r.amount, 0) / totalAmount;
+  // 浮动汇损益
+  const totalPnl = rows.reduce((s, r) => s + (r.pnl || 0), 0);
+  const pnlPct = weightedShipFx ? (currentFx - weightedShipFx) / weightedShipFx * 100 : 0;
+  return { totalAmount, weightedShipFx, totalPnl, pnlPct };
+}
+
+function renderBucketCard(containerEl, title, rows, currentFx) {
+  const stats = bucketStats(rows, currentFx);
+  if (!stats || !rows.length) {
+    containerEl.innerHTML = `<div class="ar-bucket-title">${title}</div><div class="ar-empty" style="padding:16px 0">无敞口</div>`;
+    return;
+  }
+  const sign = stats.totalPnl >= 0 ? '+' : '';
+  const pnlClass = stats.totalPnl >= 0 ? 'gain' : 'loss';
+  const pnlSign = stats.totalPnl >= 0 ? '+' : '';
+  containerEl.innerHTML = `
+    <div class="ar-bucket-title">${title}</div>
+    <div class="ar-bucket-row"><span class="ar-bucket-label">货值合计</span><span class="ar-bucket-val">${(stats.totalAmount/10000).toFixed(2)} 万CNY</span></div>
+    <div class="ar-bucket-row"><span class="ar-bucket-label">发货均价</span><span class="ar-bucket-val">${stats.weightedShipFx ? stats.weightedShipFx.toFixed(4) : '--'}</span></div>
+    <div class="ar-bucket-row"><span class="ar-bucket-label">当前汇率</span><span class="ar-bucket-val">${currentFx ? currentFx.toFixed(4) : '--'}</span></div>
+    <div class="ar-pnl ${pnlClass}">${pnlSign}${Math.round(stats.totalPnl).toLocaleString()} 元 (${pnlSign}${stats.pnlPct.toFixed(2)}%)</div>
+  `;
+}
+
+function renderBuckets(b0_30, b31_60, b60plus, currentFx) {
+  const bucketsEl = document.getElementById('ar-buckets');
+  bucketsEl.innerHTML = `
+    <div class="ar-bucket-card" id="ar-bucket-0-30"></div>
+    <div class="ar-bucket-card" id="ar-bucket-31-60"></div>
+    <div class="ar-bucket-card" id="ar-bucket-60plus"></div>
+  `;
+  renderBucketCard(document.getElementById('ar-bucket-0-30'), '⏱ 0–30 天敞口', b0_30, currentFx);
+  renderBucketCard(document.getElementById('ar-bucket-31-60'), '📆 31–60 天敞口', b31_60, currentFx);
+  renderBucketCard(document.getElementById('ar-bucket-60plus'), '🗓 60 天以上敞口', b60plus, currentFx);
+}
+
+function renderSummary(active, currentFx) {
+  const totalAmount = active.reduce((s, r) => s + r.amount, 0);
+  const totalPnl = active.reduce((s, r) => s + (r.pnl || 0), 0);
+  document.getElementById('ar-total-exposure').textContent = (totalAmount / 10000).toFixed(2) + ' 万 CNY';
+  const pnlEl = document.getElementById('ar-total-pnl');
+  if (totalAmount > 0) {
+    const sign = totalPnl >= 0 ? '+' : '';
+    pnlEl.textContent = sign + Math.round(totalPnl).toLocaleString() + ' 元';
+    pnlEl.style.color = totalPnl >= 0 ? 'var(--accent2)' : 'var(--danger)';
+  } else {
+    pnlEl.textContent = '--';
+    pnlEl.style.color = 'var(--muted)';
+  }
+}
+
+function renderDetail(enriched) {
+  const wrap = document.getElementById('ar-detail-wrap');
+  if (!enriched.length) {
+    wrap.innerHTML = '<div class="ar-empty">暂无数据，请先导入</div>';
+    return;
+  }
+
+  const statusLabel = { transit: '在途', customs: '清关', pending: '待结算', received: '已收款' };
+  const modeLabel = { sea: '🚢 海运', air: '✈️ 空运' };
+
+  const rows = enriched.map(r => {
+    const isReceived = r.status === 'received';
+    const remainStr = isReceived ? '<span style="color:var(--accent2)">已收款</span>' : (r.remainDays < 0 ? `<span style="color:var(--danger)">超期${Math.abs(r.remainDays)}天</span>` : r.remainDays + ' 天');
+    const pnlStr = r.pnl !== null
+      ? `<span style="color:${r.pnl >= 0 ? 'var(--accent2)' : 'var(--danger)'}">${r.pnl >= 0 ? '+' : ''}${Math.round(r.pnl).toLocaleString()}</span>`
+      : '--';
+    return `<tr class="${isReceived ? 'received' : ''}">
+      <td>${r.date}</td>
+      <td>${modeLabel[r.mode] || r.mode}</td>
+      <td>${r.amount.toLocaleString()}</td>
+      <td>${r.dueDate}</td>
+      <td>${remainStr}</td>
+      <td>${r.shipFx ? r.shipFx.toFixed(4) : '--'}</td>
+      <td>${isReceived ? '<span style="color:var(--muted)">已收款</span>' : pnlStr}</td>
+    </tr>`;
+  }).join('');
+
+  wrap.innerHTML = `
+    <div style="overflow-x:auto">
+      <table class="ar-detail-table">
+        <thead>
+          <tr>
+            <th>发货日期</th>
+            <th>运输方式</th>
+            <th>货值CNY</th>
+            <th>预计收款日</th>
+            <th>剩余天数</th>
+            <th>发货时汇率</th>
+            <th>浮动汇损益</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function renderHedge(active, currentFx) {
+  const wrap = document.getElementById('ar-hedge-wrap');
+  if (!active.length || !currentFx) {
+    wrap.innerHTML = '<div class="ar-empty">等待数据加载...</div>';
+    return;
+  }
+
+  const items = [];
+  const totalAmount = active.reduce((s, r) => s + r.amount, 0);
+  const totalPnl = active.reduce((s, r) => s + (r.pnl || 0), 0);
+  const vol30 = getVol30();
+
+  // ① 自然对冲
+  const hasMxnIncome = active.some(r => r.remainDays <= 30);
+  if (hasMxnIncome) {
+    items.push(`
+      <div class="ar-hedge-item natural">
+        <div class="hedge-title natural">🔄 自然对冲</div>
+        <div class="hedge-body">
+          您有近30天内到期的应收账款，建议将收到的MXN收入直接用于支付近期采购货款，
+          避免换汇损耗。若有MXN计价的采购合同，可与供应商商议直接MXN结算，
+          自然抵消汇率敞口，降低换汇频次。
+        </div>
+      </div>
+    `);
+  }
+
+  // ② 加速收款
+  const urgentBig = active.filter(r => r.remainDays >= 0 && r.remainDays <= 15 && r.amount > 50000);
+  if (urgentBig.length) {
+    const urgentTotal = urgentBig.reduce((s, r) => s + r.amount, 0);
+    items.push(`
+      <div class="ar-hedge-item accelerate">
+        <div class="hedge-title accelerate">⚡ 加速收款</div>
+        <div class="hedge-body">
+          检测到 ${urgentBig.length} 笔大额订单（共 ${(urgentTotal/10000).toFixed(1)} 万元）将在15天内到期。
+          建议主动联系平台申请速结或提前打款，
+          缩短MXN在账期内的汇率暴露窗口，降低汇损风险。
+        </div>
+      </div>
+    `);
+  }
+
+  // ③ 定价对冲
+  if (totalAmount > 100000 && vol30 > 1) {
+    const suggestPct = (vol30 * 2).toFixed(2);
+    const per100 = (100 * vol30 * 2 / 100).toFixed(2);
+    items.push(`
+      <div class="ar-hedge-item pricing">
+        <div class="hedge-title pricing">📈 定价对冲</div>
+        <div class="hedge-body">
+          总敞口 ${(totalAmount/10000).toFixed(1)} 万元，近30日MXN/CNY波动率 ${vol30.toFixed(2)}%（>1%阈值）。
+          建议在下一批次定价中上调 <strong>${suggestPct}%</strong>，
+          即每100 MXN售价提高约 <strong>${per100} MXN</strong>，
+          以定价缓冲对冲汇率波动风险。
+        </div>
+      </div>
+    `);
+  }
+
+  // 无需对冲
+  if (!items.length) {
+    wrap.innerHTML = `
+      <div class="ar-hedge-item ok">
+        <div class="hedge-title ok">✅ 当前风险可控</div>
+        <div class="hedge-body">
+          当前汇率风险在可控范围内，无需特殊对冲操作。
+          总敞口 ${(totalAmount/10000).toFixed(1)} 万元，近30日波动率 ${vol30.toFixed(2)}%，
+          建议保持正常备货节奏，定期复查敞口状况。
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  wrap.innerHTML = items.join('');
 }
 
 loadData();

@@ -605,18 +605,18 @@
   <!-- 汇率指标 + 三点分析 -->
   <div class="fx-analysis">
     <div class="section-purpose">
-      以下数据对应「备货当日」「30天前（约空运帐期起点）」「60天前（约海运帐期起点）」三个时间点的汇率，直接反映不同运输模式下的帐期汇损/汇益。
+      以下数据对应「备货当日」「空运帐期天数前」「海运帐期天数前」三个时间点的汇率，直接反映不同运输模式下的帐期汇损/汇益。
     </div>
 
     <!-- 三点对比 -->
     <div class="fx-compare">
       <div class="fx-compare-item">
-        <div class="fx-compare-label">60天前 MXN/CNY<br><span style="font-size:10px">海运帐期起点参考</span></div>
+        <div class="fx-compare-label" id="label-sea-days">--天前 MXN/CNY<br><span style="font-size:10px">海运帐期起点参考</span></div>
         <div class="fx-compare-val" id="fx-60d">--</div>
         <div class="fx-compare-diff" id="fx-60d-diff"></div>
       </div>
       <div class="fx-compare-item">
-        <div class="fx-compare-label">30天前 MXN/CNY<br><span style="font-size:10px">空运帐期起点参考</span></div>
+        <div class="fx-compare-label" id="label-air-days">--天前 MXN/CNY<br><span style="font-size:10px">空运帐期起点参考</span></div>
         <div class="fx-compare-val" id="fx-30d">--</div>
         <div class="fx-compare-diff" id="fx-30d-diff"></div>
       </div>
@@ -994,7 +994,11 @@ function updateExposure() {
 }
 
 document.querySelectorAll('.flow-config-input').forEach(el => {
-  el.addEventListener('input', updateExposure);
+  el.addEventListener('input', () => {
+    updateExposure();
+    _refreshFxCompare();
+    updateSimulator();
+  });
 });
 document.getElementById('sim-amount')?.addEventListener('input', updateSimulator);
 document.getElementById('sim-mode')?.addEventListener('change', updateSimulator);
@@ -1004,33 +1008,55 @@ let _allFxData = [];
 
 function updateFxAnalysis(allData) {
   _allFxData = allData;
+  _refreshFxCompare();
+}
+
+function _refreshFxCompare() {
+  const allData = _allFxData;
+  if (!allData.length) return;
+
+  const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
+  const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle') || 39;
+
+  // 更新标签文案
+  const seaLabel = document.getElementById('label-sea-days');
+  const airLabel = document.getElementById('label-air-days');
+  if (seaLabel) seaLabel.innerHTML = `${seaDays}天前 MXN/CNY<br><span style="font-size:10px">海运帐期起点参考</span>`;
+  if (airLabel) airLabel.innerHTML = `${airDays}天前 MXN/CNY<br><span style="font-size:10px">空运帐期起点参考</span>`;
+
   const today = allData[allData.length - 1]?.fx?.mxn_cny;
-  const d30 = allData.length >= 30 ? allData[allData.length - 30]?.fx?.mxn_cny : null;
-  const d60 = allData.length >= 60 ? allData[allData.length - 60]?.fx?.mxn_cny : null;
+  const dAir = allData.length >= airDays ? allData[allData.length - airDays]?.fx?.mxn_cny : null;
+  const dSea = allData.length >= seaDays ? allData[allData.length - seaDays]?.fx?.mxn_cny : null;
 
   document.getElementById('fx-today').textContent = today ? today.toFixed(4) : '--';
 
-  if (d30) {
-    document.getElementById('fx-30d').textContent = d30.toFixed(4);
+  if (dAir) {
+    document.getElementById('fx-30d').textContent = dAir.toFixed(4);
     if (today) {
-      const chg = (today - d30) / d30 * 100;
+      const chg = (today - dAir) / dAir * 100;
       const el = document.getElementById('fx-30d-diff');
       el.textContent = (chg >= 0 ? '▲' : '▼') + ' ' + Math.abs(chg).toFixed(2) + '% vs 今日';
       el.style.color = chg < 0 ? 'var(--accent2)' : 'var(--danger)';
     }
+  } else {
+    document.getElementById('fx-30d').textContent = '--';
+    document.getElementById('fx-30d-diff').textContent = `数据不足${airDays}天`;
   }
-  if (d60) {
-    document.getElementById('fx-60d').textContent = d60.toFixed(4);
+  if (dSea) {
+    document.getElementById('fx-60d').textContent = dSea.toFixed(4);
     if (today) {
-      const chg = (today - d60) / d60 * 100;
+      const chg = (today - dSea) / dSea * 100;
       const el = document.getElementById('fx-60d-diff');
       el.textContent = (chg >= 0 ? '▲' : '▼') + ' ' + Math.abs(chg).toFixed(2) + '% vs 今日';
       el.style.color = chg < 0 ? 'var(--accent2)' : 'var(--danger)';
     }
+  } else {
+    document.getElementById('fx-60d').textContent = '--';
+    document.getElementById('fx-60d-diff').textContent = `数据不足${seaDays}天`;
   }
 
   updateExposure();
-  updateConclusion(today, d30, d60, allData);
+  updateConclusion(today, dAir, dSea, allData);
 }
 
 function updateSimulator() {
@@ -1039,7 +1065,9 @@ function updateSimulator() {
   const mode = document.getElementById('sim-mode')?.value || 'sea';
   const amount = parseFloat(document.getElementById('sim-amount')?.value || 100000);
 
-  const refDays = mode === 'sea' ? 60 : 30;
+  const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
+  const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle') || 39;
+  const refDays = mode === 'sea' ? seaDays : airDays;
   const refData = _allFxData.length >= refDays ? _allFxData[_allFxData.length - refDays]?.fx?.mxn_cny : null;
 
   if (!today || !refData) return;
@@ -1060,8 +1088,8 @@ function updateConclusion(today, d30, d60, allData) {
   const el = document.getElementById('fx-conclusion');
   if (!today) { el.textContent = '数据不足，无法生成结论'; return; }
 
-  const chg30 = d30 ? (today - d30) / d30 * 100 : null;
-  const chg60 = d60 ? (today - d60) / d60 * 100 : null;
+  const chgAir = d30 ? (today - d30) / d30 * 100 : null;
+  const chgSea = d60 ? (today - d60) / d60 * 100 : null;
 
   const recent = allData.slice(-30).map(d => d.fx?.mxn_cny).filter(Boolean);
   const mean = recent.reduce((a,b)=>a+b,0)/recent.length;
@@ -1071,22 +1099,22 @@ function updateConclusion(today, d30, d60, allData) {
   const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
   const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle') || 39;
 
-  if (chg60 !== null && chg60 < -3) {
+  if (chgSea !== null && chgSea < -3) {
     level = 'danger';
     text = `⚠️ <strong>汇率风险较高，建议谨慎备货</strong><br>
-过去60天 MXN/CNY 已下跌 ${Math.abs(chg60).toFixed(2)}%，若按海运帐期（${seaDays}天）备货，每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chg60)/100*100000).toLocaleString()} 元</strong>。建议在定价中加入汇率缓冲，或分批备货降低敞口。`;
-  } else if (chg30 !== null && chg30 < -2) {
+过去${seaDays}天 MXN/CNY 已下跌 ${Math.abs(chgSea).toFixed(2)}%，若按海运帐期（${seaDays}天）备货，每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chgSea)/100*100000).toLocaleString()} 元</strong>。建议在定价中加入汇率缓冲，或分批备货降低敞口。`;
+  } else if (chgAir !== null && chgAir < -2) {
     level = 'warn';
     text = `⚡ <strong>近期汇率走弱，空运帐期内有一定汇损风险</strong><br>
-过去30天 MXN/CNY 下跌 ${Math.abs(chg30).toFixed(2)}%，空运帐期（${airDays}天）内每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chg30)/100*100000).toLocaleString()} 元</strong>。波动率 ${vol.toFixed(2)}%，${vol > 1.5 ? '波动偏高' : '尚在正常范围'}。建议关注趋势，按需调整定价。`;
-  } else if (chg60 !== null && chg60 > 2) {
+过去${airDays}天 MXN/CNY 下跌 ${Math.abs(chgAir).toFixed(2)}%，空运帐期（${airDays}天）内每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chgAir)/100*100000).toLocaleString()} 元</strong>。波动率 ${vol.toFixed(2)}%，${vol > 1.5 ? '波动偏高' : '尚在正常范围'}。建议关注趋势，按需调整定价。`;
+  } else if (chgSea !== null && chgSea > 2) {
     level = 'ok';
     text = `✅ <strong>汇率趋势向好，备货窗口较优</strong><br>
-过去60天 MXN/CNY 上涨 ${chg60.toFixed(2)}%，海运帐期内有汇益。当前结算汇率 ${today.toFixed(4)}，近30日波动率 ${vol.toFixed(2)}%，整体汇率环境对出口有利。可正常推进备货计划。`;
+过去${seaDays}天 MXN/CNY 上涨 ${chgSea.toFixed(2)}%，海运帐期内有汇益。当前结算汇率 ${today.toFixed(4)}，近30日波动率 ${vol.toFixed(2)}%，整体汇率环境对出口有利。可正常推进备货计划。`;
   } else {
     level = 'ok';
     text = `✅ <strong>汇率基本平稳，备货窗口正常</strong><br>
-近30天 MXN/CNY 变化 ${chg30 !== null ? (chg30>=0?'+':'')+chg30.toFixed(2)+'%' : 'N/A'}，60天 ${chg60 !== null ? (chg60>=0?'+':'')+chg60.toFixed(2)+'%' : 'N/A'}，波动率 ${vol.toFixed(2)}%，均在正常区间。当前汇率 ${today.toFixed(4)}，无明显汇率风险，可按计划备货。`;
+空运帐期（${airDays}天）变化 ${chgAir !== null ? (chgAir>=0?'+':'')+chgAir.toFixed(2)+'%' : 'N/A'}，海运帐期（${seaDays}天）变化 ${chgSea !== null ? (chgSea>=0?'+':'')+chgSea.toFixed(2)+'%' : 'N/A'}，波动率 ${vol.toFixed(2)}%，均在正常区间。当前汇率 ${today.toFixed(4)}，无明显汇率风险，可按计划备货。`;
   }
 
   el.className = `fx-conclusion ${level}`;

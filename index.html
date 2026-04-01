@@ -627,34 +627,58 @@
       </div>
     </div>
 
-    <!-- 帐期模拟器 -->
+    <!-- 帐期模拟器（多批次） -->
     <div class="fx-simulator">
-      <div class="fx-simulator-title">📐 帐期汇损模拟器 — 输入货值，即时计算汇损/汇益</div>
-      <div class="sim-row">
-        <div class="sim-field">
-          <label>货值（人民币元）</label>
-          <input type="number" id="sim-amount" value="100000" min="1000">
-        </div>
-        <div class="sim-field">
-          <label>运输方式</label>
-          <select id="sim-mode">
-            <option value="sea">🚢 海运（60天帐期）</option>
-            <option value="air">✈️ 空运（30天帐期）</option>
-          </select>
-        </div>
+      <div class="fx-simulator-title">📐 帐期汇损模拟器 — 多批次组合，综合汇损/汇益测算</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:12px">
+        按备货付款日精确取当日汇率；未来日期使用今日汇率估算。货值支持多币种，统一折算为 CNY 比较。
       </div>
-      <div class="sim-result">
-        <div class="sim-result-item">
-          <div class="sim-result-label">备货时按当时汇率<br>折算 MXN 收入预期</div>
-          <div class="sim-result-val" id="sim-expected">--</div>
-        </div>
-        <div class="sim-result-item">
-          <div class="sim-result-label">今日汇率<br>折算实际 MXN 收入</div>
-          <div class="sim-result-val" id="sim-actual">--</div>
-        </div>
-        <div class="sim-result-item">
-          <div class="sim-result-label">帐期内汇损/汇益<br>（人民币估算）</div>
-          <div class="sim-result-val" id="sim-diff">--</div>
+
+      <!-- 批次表格 -->
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12px" id="sim-batch-table">
+          <thead>
+            <tr style="color:var(--muted);border-bottom:1px solid var(--border)">
+              <th style="padding:6px 8px;text-align:left;font-weight:600">备货付款日</th>
+              <th style="padding:6px 8px;text-align:left;font-weight:600">运输方式</th>
+              <th style="padding:6px 8px;text-align:right;font-weight:600">货值</th>
+              <th style="padding:6px 8px;text-align:left;font-weight:600">币种</th>
+              <th style="padding:6px 8px;text-align:right;font-weight:600">预计收款日</th>
+              <th style="padding:6px 8px;text-align:right;font-weight:600">备货时汇率</th>
+              <th style="padding:6px 8px;text-align:right;font-weight:600">今日汇率</th>
+              <th style="padding:6px 8px;text-align:right;font-weight:600">汇损/汇益 (CNY)</th>
+              <th style="padding:6px 4px;text-align:center;font-weight:600"></th>
+            </tr>
+          </thead>
+          <tbody id="sim-batch-body"></tbody>
+        </table>
+      </div>
+
+      <!-- 添加批次按钮 -->
+      <button onclick="simAddRow()" style="margin-top:10px;padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;cursor:pointer">
+        ＋ 添加批次
+      </button>
+
+      <!-- 汇总 -->
+      <div id="sim-summary" style="margin-top:16px;display:none">
+        <div style="height:1px;background:var(--border);margin-bottom:14px"></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+          <div class="sim-result-item">
+            <div class="sim-result-label">批次数</div>
+            <div class="sim-result-val" id="sim-sum-batches">--</div>
+          </div>
+          <div class="sim-result-item">
+            <div class="sim-result-label">货值合计 (折 CNY)</div>
+            <div class="sim-result-val" id="sim-sum-amount">--</div>
+          </div>
+          <div class="sim-result-item">
+            <div class="sim-result-label">MXN 收入合计</div>
+            <div class="sim-result-val" id="sim-sum-mxn">--</div>
+          </div>
+          <div class="sim-result-item">
+            <div class="sim-result-label">综合汇损/汇益</div>
+            <div class="sim-result-val" id="sim-sum-diff">--</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1000,8 +1024,8 @@ document.querySelectorAll('.flow-config-input').forEach(el => {
     updateSimulator();
   });
 });
-document.getElementById('sim-amount')?.addEventListener('input', updateSimulator);
-document.getElementById('sim-mode')?.addEventListener('change', updateSimulator);
+// sim-amount / sim-mode 已移除（新多批次模拟器）
+
 
 // ===== 汇率三点对比 & 模拟器 =====
 let _allFxData = [];
@@ -1059,29 +1083,215 @@ function _refreshFxCompare() {
   updateConclusion(today, dAir, dSea, allData);
 }
 
-function updateSimulator() {
-  if (!_allFxData.length) return;
-  const today = _allFxData[_allFxData.length - 1]?.fx?.mxn_cny;
-  const mode = document.getElementById('sim-mode')?.value || 'sea';
-  const amount = parseFloat(document.getElementById('sim-amount')?.value || 100000);
+// ===== 多批次帐期汇损模拟器 =====
 
+// 支持币种：对 MXN 的汇率（从 fx 数据取，或用 window.latestFxRates 缓存）
+const SIM_CURRENCIES = [
+  { code: 'CNY', label: '人民币 CNY', field: null },       // 基准，直接用 mxn_cny
+  { code: 'CNH', label: '离岸人民币 CNH', field: 'mxn_cnh' },
+  { code: 'USD', label: '美元 USD', field: 'mxn_usd' },
+  { code: 'HKD', label: '港币 HKD', field: 'mxn_hkd' },
+  { code: 'EUR', label: '欧元 EUR', field: 'mxn_eur' },
+  { code: 'GBP', label: '英镑 GBP', field: 'mxn_gbp' },
+  { code: 'JPY', label: '日元 JPY', field: 'mxn_jpy' },
+  { code: 'CAD', label: '加元 CAD', field: 'mxn_cad' },
+  { code: 'AUD', label: '澳元 AUD', field: 'mxn_aud' },
+  { code: 'MXN', label: '比索 MXN', field: null },         // 特殊：货值本身就是 MXN
+];
+
+let _simRows = [];   // [{id, payDate, mode, amount, currency}]
+let _simIdSeq = 0;
+
+function simTodayStr() {
+  return new Date().toISOString().slice(0,10);
+}
+
+function simAddRow(payDate, mode, amount, currency) {
+  const id = ++_simIdSeq;
+  _simRows.push({
+    id,
+    payDate: payDate || simTodayStr(),
+    mode: mode || 'sea',
+    amount: amount || 100000,
+    currency: currency || 'CNY'
+  });
+  simRenderTable();
+  simRecalc();
+}
+
+function simRemoveRow(id) {
+  _simRows = _simRows.filter(r => r.id !== id);
+  simRenderTable();
+  simRecalc();
+}
+
+function simRowChanged(id, field, value) {
+  const row = _simRows.find(r => r.id === id);
+  if (!row) return;
+  row[field] = value;
+  simRecalcRow(id);
+  simRecalcSummary();
+}
+
+function simRenderTable() {
+  const tbody = document.getElementById('sim-batch-body');
+  if (!tbody) return;
   const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
   const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle') || 39;
-  const refDays = mode === 'sea' ? seaDays : airDays;
-  const refData = _allFxData.length >= refDays ? _allFxData[_allFxData.length - refDays]?.fx?.mxn_cny : null;
 
-  if (!today || !refData) return;
+  tbody.innerHTML = _simRows.map(row => {
+    const days = row.mode === 'sea' ? seaDays : airDays;
+    const settleDate = simAddDays(row.payDate, days);
+    const currOptions = SIM_CURRENCIES.map(c =>
+      `<option value="${c.code}" ${c.code === row.currency ? 'selected' : ''}>${c.label}</option>`
+    ).join('');
 
-  const mxnExpected = amount / refData;
-  const mxnActual = amount / today;
-  const diffCny = (today - refData) / refData * amount;
+    return `<tr id="sim-row-${row.id}" style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px 8px">
+        <input type="date" value="${row.payDate}" max="${simTodayStr()}"
+          onchange="simRowChanged(${row.id},'payDate',this.value)"
+          style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:3px 6px;font-size:12px;width:130px">
+      </td>
+      <td style="padding:6px 8px">
+        <select onchange="simRowChanged(${row.id},'mode',this.value)"
+          style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:3px 6px;font-size:12px">
+          <option value="sea" ${row.mode==='sea'?'selected':''}>🚢 海运 (${seaDays}天)</option>
+          <option value="air" ${row.mode==='air'?'selected':''}>✈️ 空运 (${airDays}天)</option>
+        </select>
+      </td>
+      <td style="padding:6px 8px;text-align:right">
+        <input type="number" value="${row.amount}" min="1"
+          onchange="simRowChanged(${row.id},'amount',parseFloat(this.value)||0)"
+          style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:3px 6px;font-size:12px;width:100px;text-align:right">
+      </td>
+      <td style="padding:6px 8px">
+        <select onchange="simRowChanged(${row.id},'currency',this.value)"
+          style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:3px 6px;font-size:12px">
+          ${currOptions}
+        </select>
+      </td>
+      <td style="padding:6px 8px;text-align:right;color:var(--muted);font-size:12px">${settleDate}</td>
+      <td style="padding:6px 8px;text-align:right;font-size:12px;font-family:'DM Mono',monospace" id="sim-r${row.id}-payrate">--</td>
+      <td style="padding:6px 8px;text-align:right;font-size:12px;font-family:'DM Mono',monospace" id="sim-r${row.id}-todayrate">--</td>
+      <td style="padding:6px 8px;text-align:right;font-size:13px;font-weight:700;font-family:'DM Mono',monospace" id="sim-r${row.id}-diff">--</td>
+      <td style="padding:6px 4px;text-align:center">
+        <button onclick="simRemoveRow(${row.id})"
+          style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;padding:2px 6px" title="删除">✕</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
 
-  document.getElementById('sim-expected').textContent = Math.round(mxnExpected).toLocaleString() + ' MXN';
-  document.getElementById('sim-actual').textContent = Math.round(mxnActual).toLocaleString() + ' MXN';
-  const diffEl = document.getElementById('sim-diff');
-  const sign = diffCny >= 0 ? '+' : '';
-  diffEl.textContent = sign + Math.round(diffCny).toLocaleString() + ' 元';
-  diffEl.style.color = diffCny >= 0 ? 'var(--accent2)' : 'var(--danger)';
+function simAddDays(dateStr, days) {
+  const d = new Date(dateStr);
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0,10);
+}
+
+// 取某日期的 mxn_cny 汇率（精确到日，不足则用最近日）
+function simGetFxOnDate(dateStr) {
+  if (!_allFxData.length) return null;
+  // 先找精确匹配
+  const exact = _allFxData.find(d => d.date === dateStr);
+  if (exact?.fx?.mxn_cny) return exact.fx;
+  // 找最近一个不超过该日期的数据
+  const sorted = _allFxData.filter(d => d.date <= dateStr && d.fx?.mxn_cny);
+  if (sorted.length) return sorted[sorted.length-1].fx;
+  return null;
+}
+
+// 某币种折算为 CNY（基于备货日汇率）
+function simToCny(amount, currency, fxOnDay, fxToday) {
+  if (currency === 'CNY' || currency === 'CNH') return amount;  // CNH ≈ CNY，直接用
+
+  const fx = fxOnDay || fxToday;  // 备货日汇率
+  if (!fx) return null;
+
+  if (currency === 'MXN') {
+    // 货值已是 MXN，换算：amount * mxn_cny
+    return amount * (fx.mxn_cny || 0);
+  }
+  // 其他外币：先算 外币/MXN（= 1 / mxn_外币），再乘 mxn_cny
+  const fieldMap = { USD:'mxn_usd', HKD:'mxn_hkd', EUR:'mxn_eur', GBP:'mxn_gbp', JPY:'mxn_jpy', CAD:'mxn_cad', AUD:'mxn_aud' };
+  const field = fieldMap[currency];
+  if (!field || !fx[field]) return null;
+  // amount 外币 → MXN：amount / fx[field]，再 MXN → CNY：* fx.mxn_cny
+  return (amount / fx[field]) * fx.mxn_cny;
+}
+
+// 计算单行，更新 DOM
+function simRecalcRow(id) {
+  const row = _simRows.find(r => r.id === id);
+  if (!row) return;
+  const todayFx = _allFxData.length ? _allFxData[_allFxData.length-1].fx : null;
+  const payFx = simGetFxOnDate(row.payDate);
+
+  const payRateEl = document.getElementById(`sim-r${id}-payrate`);
+  const todayRateEl = document.getElementById(`sim-r${id}-todayrate`);
+  const diffEl = document.getElementById(`sim-r${id}-diff`);
+  if (!payRateEl) return;
+
+  // 显示 mxn_cny 汇率（主要汇率）
+  const payRate = payFx?.mxn_cny;
+  const todayRate = todayFx?.mxn_cny;
+  const isEstimated = !simGetFxOnDate(row.payDate) || row.payDate > simTodayStr();
+
+  payRateEl.textContent = payRate ? payRate.toFixed(4) + (isEstimated ? '*' : '') : '--';
+  payRateEl.title = isEstimated ? '使用今日汇率估算' : '';
+  todayRateEl.textContent = todayRate ? todayRate.toFixed(4) : '--';
+
+  if (!payRate || !todayRate || !row.amount) {
+    diffEl.textContent = '--'; return;
+  }
+
+  // 货值折 CNY（用备货日汇率）
+  const cnyAmount = simToCny(row.amount, row.currency, payFx, todayFx);
+  if (cnyAmount === null) { diffEl.textContent = 'N/A'; return; }
+
+  // 汇损/汇益 = 以当日汇率 vs 今日汇率，回款 CNY 的变化
+  // 逻辑：当时预期收 MXN = cnyAmount / payRate
+  //        今日兑回 CNY = expectedMxn * todayRate
+  //        汇损 = todayValue - cnyAmount
+  const expectedMxn = cnyAmount / payRate;
+  const todayValue = expectedMxn * todayRate;
+  const diff = todayValue - cnyAmount;
+
+  diffEl.textContent = (diff >= 0 ? '+' : '') + Math.round(diff).toLocaleString() + ' CNY';
+  diffEl.style.color = diff >= 0 ? 'var(--accent2)' : 'var(--danger)';
+
+  // 存结果供汇总用
+  row._cnyAmount = cnyAmount;
+  row._expectedMxn = expectedMxn;
+  row._diff = diff;
+}
+
+function simRecalcSummary() {
+  const rows = _simRows.filter(r => r._diff !== undefined);
+  const summaryEl = document.getElementById('sim-summary');
+  if (!rows.length) { summaryEl.style.display = 'none'; return; }
+  summaryEl.style.display = '';
+
+  const totalCny = rows.reduce((s, r) => s + (r._cnyAmount || 0), 0);
+  const totalMxn = rows.reduce((s, r) => s + (r._expectedMxn || 0), 0);
+  const totalDiff = rows.reduce((s, r) => s + (r._diff || 0), 0);
+
+  document.getElementById('sim-sum-batches').textContent = rows.length + ' 批';
+  document.getElementById('sim-sum-amount').textContent = Math.round(totalCny).toLocaleString() + ' CNY';
+  document.getElementById('sim-sum-mxn').textContent = Math.round(totalMxn).toLocaleString() + ' MXN';
+  const diffEl = document.getElementById('sim-sum-diff');
+  diffEl.textContent = (totalDiff >= 0 ? '+' : '') + Math.round(totalDiff).toLocaleString() + ' CNY';
+  diffEl.style.color = totalDiff >= 0 ? 'var(--accent2)' : 'var(--danger)';
+}
+
+function simRecalc() {
+  _simRows.forEach(r => simRecalcRow(r.id));
+  simRecalcSummary();
+}
+
+function updateSimulator() {
+  // 帐期变化时重绘表格（行里的天数下拉要更新）
+  simRenderTable();
+  simRecalc();
 }
 
 function updateConclusion(today, d30, d60, allData) {
@@ -1285,6 +1495,17 @@ async function loadData() {
   document.getElementById('last-update').textContent = `最后更新：${latest.date} ${latest.time || ''}`;
   // 所有板块渲染完毕后更新总览
   setTimeout(() => { loadArSampleIfEmpty(); updateOverview(); }, 150);
+
+  // 初始化模拟器：加载2条示例批次
+  if (_simRows.length === 0) {
+    const seaDays = getVal('sea-transit') + getVal('sea-customs') + getVal('sea-sell') + getVal('sea-settle') || 70;
+    const airDays = getVal('air-transit') + getVal('air-customs') + getVal('air-sell') + getVal('air-settle') || 39;
+    // 示例：一批海运 USD，帐期前N天发；一批空运 CNY
+    const seaStartDate = simAddDays(simTodayStr(), -Math.round(seaDays * 0.7));
+    const airStartDate = simAddDays(simTodayStr(), -Math.round(airDays * 0.5));
+    simAddRow(seaStartDate, 'sea', 100000, 'USD');
+    simAddRow(airStartDate, 'air', 50000, 'CNY');
+  }
 }
 
 function updateMetrics(d, prev) {

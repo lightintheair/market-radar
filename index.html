@@ -1657,9 +1657,10 @@ async function loadData() {
 function updateMetrics(d, prev) {
   const mxnCny = d.fx?.mxn_cny;
   const mxnUsd = d.fx?.mxn_usd;
-  document.getElementById('val-mxn-cny').textContent = mxnCny ? mxnCny.toFixed(4) : '--';
-  document.getElementById('val-mxn-usd').textContent = mxnUsd ? mxnUsd.toFixed(4) : '--';
-  document.getElementById('val-date').textContent = d.date || '--';
+  const setEl = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  setEl('val-mxn-cny', mxnCny ? mxnCny.toFixed(4) : '--');
+  setEl('val-mxn-usd', mxnUsd ? mxnUsd.toFixed(4) : '--');
+  setEl('val-date', d.date || '--');
 
   if (prev) {
     const chgCny = mxnCny && prev.fx?.mxn_cny ? ((mxnCny - prev.fx.mxn_cny) / prev.fx.mxn_cny * 100) : null;
@@ -1671,6 +1672,7 @@ function updateMetrics(d, prev) {
 
 function setChange(id, pct) {
   const el = document.getElementById(id);
+  if (!el) return;
   if (pct === null) { el.textContent = '--'; return; }
   const sign = pct >= 0 ? '+' : '';
   el.textContent = `${sign}${pct.toFixed(2)}% 较昨日`;
@@ -1686,7 +1688,7 @@ function updateCharts(allData) {
   if (validCny.length > 1) {
     const mean = validCny.reduce((a,b) => a+b, 0) / validCny.length;
     const std = Math.sqrt(validCny.map(v => (v-mean)**2).reduce((a,b)=>a+b,0) / validCny.length);
-    document.getElementById('val-vol').textContent = (std / mean * 100).toFixed(2) + '%';
+    document.getElementById('val-vol')?.textContent != null && (document.getElementById('val-vol').textContent = (std / mean * 100).toFixed(2) + '%');
   }
 
   drawLine('chart-fx', labels, cnyVals, 'MXN/CNY', '#6366f1');

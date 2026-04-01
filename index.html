@@ -683,11 +683,6 @@
       </div>
     </div>
 
-    <!-- 结论 -->
-    <div class="fx-conclusion ok" id="fx-conclusion">
-      计算中...
-    </div>
-  </div>
 
   <!-- 汇率展望模块 -->
   <div class="fx-analysis" id="fx-outlook-card">
@@ -760,6 +755,12 @@
 
     <!-- 展望结论 -->
     <div class="fx-conclusion ok" id="fx-outlook-conclusion">计算中...</div>
+  </div>
+
+    <!-- 结论 -->
+    <div class="fx-conclusion ok" id="fx-conclusion">
+      计算中...
+    </div>
   </div>
 
   <!-- 顶部指标 -->
@@ -1311,20 +1312,25 @@ function updateConclusion(today, d30, d60, allData) {
 
   if (chgSea !== null && chgSea < -3) {
     level = 'danger';
-    text = `⚠️ <strong>汇率风险较高，建议谨慎备货</strong><br>
-过去${seaDays}天 MXN/CNY 已下跌 ${Math.abs(chgSea).toFixed(2)}%，若按海运帐期（${seaDays}天）备货，每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chgSea)/100*100000).toLocaleString()} 元</strong>。建议在定价中加入汇率缓冲，或分批备货降低敞口。`;
+    // 汇率缓冲建议：按实际跌幅计算每比索损失
+    const bufferPct = Math.abs(chgSea).toFixed(1);
+    const bufferPerMxn = (today * Math.abs(chgSea) / 100).toFixed(4);
+    text = `⚠️ <strong>汇率风险较高，建议谨慎备货</strong> — 海运帐期跌幅 <strong>${bufferPct}%</strong>，定价建议保留 ${bufferPct}% 汇率缓冲（约 ¥${bufferPerMxn}/比索）`;
   } else if (chgAir !== null && chgAir < -2) {
     level = 'warn';
-    text = `⚡ <strong>近期汇率走弱，空运帐期内有一定汇损风险</strong><br>
-过去${airDays}天 MXN/CNY 下跌 ${Math.abs(chgAir).toFixed(2)}%，空运帐期（${airDays}天）内每笔10万元货值预计汇损约 <strong>${Math.round(Math.abs(chgAir)/100*100000).toLocaleString()} 元</strong>。波动率 ${vol.toFixed(2)}%，${vol > 1.5 ? '波动偏高' : '尚在正常范围'}。建议关注趋势，按需调整定价。`;
+    const bufferPct = Math.abs(chgAir).toFixed(1);
+    const bufferPerMxn = (today * Math.abs(chgAir) / 100).toFixed(4);
+    text = `⚡ <strong>近期汇率走弱，注意定价缓冲</strong> — 空运帐期跌幅 <strong>${bufferPct}%</strong>，定价建议保留 ${bufferPct}% 汇率缓冲（约 ¥${bufferPerMxn}/比索）${vol > 1.5 ? '，波动偏高' : ''}`;
   } else if (chgSea !== null && chgSea > 2) {
     level = 'ok';
-    text = `✅ <strong>汇率趋势向好，备货窗口较优</strong><br>
-过去${seaDays}天 MXN/CNY 上涨 ${chgSea.toFixed(2)}%，海运帐期内有汇益。当前结算汇率 ${today.toFixed(4)}，近30日波动率 ${vol.toFixed(2)}%，整体汇率环境对出口有利。可正常推进备货计划。`;
+    const gainPct = chgSea.toFixed(1);
+    const gainPerMxn = (today * chgSea / 100).toFixed(4);
+    text = `✅ <strong>汇率趋势向好，备货窗口较优</strong> — 海运帐期涨幅 <strong>+${gainPct}%</strong>，每比索多收约 ¥${gainPerMxn}，可正常推进备货计划`;
   } else {
     level = 'ok';
-    text = `✅ <strong>汇率基本平稳，备货窗口正常</strong><br>
-空运帐期（${airDays}天）变化 ${chgAir !== null ? (chgAir>=0?'+':'')+chgAir.toFixed(2)+'%' : 'N/A'}，海运帐期（${seaDays}天）变化 ${chgSea !== null ? (chgSea>=0?'+':'')+chgSea.toFixed(2)+'%' : 'N/A'}，波动率 ${vol.toFixed(2)}%，均在正常区间。当前汇率 ${today.toFixed(4)}，无明显汇率风险，可按计划备货。`;
+    const airChgStr = chgAir !== null ? (chgAir>=0?'+':'')+chgAir.toFixed(1)+'%' : 'N/A';
+    const seaChgStr = chgSea !== null ? (chgSea>=0?'+':'')+chgSea.toFixed(1)+'%' : 'N/A';
+    text = `✅ <strong>汇率基本平稳，备货窗口正常</strong> — 空运帐期 ${airChgStr}，海运帐期 ${seaChgStr}，波动率 ${vol.toFixed(1)}%，当前汇率 ${today.toFixed(4)}`;
   }
 
   el.className = `fx-conclusion ${level}`;

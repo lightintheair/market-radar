@@ -1,0 +1,89 @@
+{
+  "date": "2026-04-03",
+  "time": "07:51",
+  "fx": {
+    "mxn_cny": 0.3853,
+    "mxn_usd": 0.05608,
+    "cny_usd": 0.145557,
+    "cny_cnh": 0.999406,
+    "cny_hkd": 1.138229,
+    "cny_eur": 0.125307,
+    "cny_gbp": 0.109275,
+    "cny_jpy": 23.039213,
+    "cny_cad": 0.201627,
+    "cny_aud": 0.209744,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU to impose 3 euro duty on e-commerce parcels from July 2026 - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObHVrVzRpUkdmQkhwMkFPR2JndFlEUVJ2aTZIdUp3YTRJYjJPN1RscG1TOUJLeW04YjhjakFldENiUjkxSkxENlg3ZXJXcU11LUUwX1N6VWNtMVp3Z3QtQXEtcXZoS3N5Y1RWYmUtQ0JqVUN5WnJqWllQSFN3OTRKTmp1WjB1MUJiWjl3SkUyWURWV2s0QmhTLVNySGVucEFUYnJXc0hsTQ?oc=5",
+      "date": "2026-04-03",
+      "type": "news"
+    },
+    {
+      "title": "Is AliExpress safe? What you need to know in 2026 - surfshark.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBhNEFYWmtnUmM5YlRpNFI0Zmc1ZFBpMDhzdDRrOXBqbVdRMlBaN2UwbVlDc3I4TmFJdm02UXYwUVcyS0ZXLXJpX1RFdERkRURtQzY5dWdKMlg?oc=5",
+      "date": "2026-04-03",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - corporate.vanguard.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated March 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Unveils Powerful New Tools for U.S. Sellers to Boost Growth and Efficiency - PR Newswire",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Under Pressure as Banxico Decision Approaches - forex.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZkVoT0l2OHNoV05PTE9lRVctVkh6Yy1LZjlUY0Q3QUEzUmZRODBLREZfZ214MjNhUmZ1MkNOT2MyTDlQQ1lySjJqeU1pTlBrbzZJY1FPeVBXc2xUZlUyMU1saUp6b19pbkFEZHdzcTZMaTZHVmtNdFduYTJpOEg0RmZxcjYzX3UwZXZERXl5TWJnT0JTbXlVMTRyRm5ZaXFwSVFVdWxScnZCVGNoVWxj0gG7AUFVX3lxTE5OTFhmdjJ3QzJaWnRDeXBXMzFuTVpMX25oYkRyckNZSlVxd211SVB3aDRPNk43UmZGakhqUjlMY1gxaGI5SnowTkg0TzJHU3QySDVid090OHphTGY2MkllTGNmM181WlpGNy1YekxoUzRtMDlWNUVVcXE5TEd3eTNiVUpxN1VxTFBTY3Rudno1MmI5VVI3QnozcXBZdDFnNnlDcHMybTI3X0YtX0JuQjRRbWhWOU81VGpEbWc?oc=5"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaUVobUdzRkRGbnNzUzNZeDRXUzBzYTdlVzZna0xGeUFyeVo5TENDQUxGZ0ZhQzNkZWIza1FsQlJXaWN1U0FVNmxkVDZrRWhTaHlIbjZPMnRzaEhhQ1NvcVBvOFo1Sm9nejdWdWpydzJrSTFMRUJVeGhkYmNaNWEtUTdPWW4teldIUDBSNGZMOUJBYW5OS0l4Qk9mQnJiRmhMVGZqM1c5dEFBdE8zYktFQS1YZFB1dXpqMEMtbkRn?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex taking 'wait-and-see' approach on oil exports as prices climb, minister says - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXk1NVFleGxhZFd1ZnBfYlFtdjZkN082NWJxeUczbHNmaTNFb2w5ay1jOFJPeHZKV3JCS1Z2ZFRrWUtoNnd5VE8tS0dXOG5LUmpEbHZSck9CaU1McFRPc3hvaHotYll2bDFqZkZSX0hLUnUyMW1tNW9zV1RSSVlJVjZObUhtaEN5Zi11Q3A0cmhYcG9wNDBPQml6eV9SdVFPNjJiQVRzT0NnQUVIQ1Jzc09YVEN3MUFtMWQ5LTNmQ2tlZ0JrYjlV?oc=5"
+    },
+    {
+      "title": "On Canada's tariff frontline, business stalls over US trade deal jitters - Reuters",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYkQ2ZWRHUUpRXzlyNG9pX2M3bUN3cGJ0MDdzMjMwdGxzOGQ4MjBMTmJaZUZCeEJTSVBKb095b01yclZZeTZ4Zkl0eWpnbnFzMGxlWnFlazUtU1lWWGpuQVVPdHhSYjNvcFVWU09aMmlDNkVhbjJ6Y3ZKMUNpTzNZYU5IWURFX3E4LWYxZjJYR3gyRDVwYlR0bC1HSzhveHJ3bUtHZ2dzeHB5SWoyNFBza3RjMjlNbjVkMGc?oc=5"
+    },
+    {
+      "title": "US Dollar Index (DXY) Price Forecast: Potential double top at 100.60 - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQWhMTC1sb3F0a25pQzAyTl9kaS14VVVtZUlHZDBXdnVfSUl6R3ZRRlZxVnFlek1JWnFHYVhWS3hUMEJoSDR2YzRHQzJNLTVfOE1NS3RkNzFObkNnZ3dKRkxtTnpmcHYxNWlYdU9uWnVZM2J4bEZhZWRxWm1UV1VfSUxMSjZxUEU5VWc5SC0zSGdrT1hnNnpLaFEyaHkycDM3aGhrdzNVNDBzUEU?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

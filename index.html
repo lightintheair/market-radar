@@ -639,14 +639,15 @@
   <div class="fx-section">
     <div class="fx-section-title">📊 模块A · 今天适合备货吗？</div>
     <div style="font-size:11px;color:var(--muted);margin-bottom:16px;padding:8px 12px;background:#ffffff08;border-radius:6px;line-height:1.7">
-      以下按<strong style="color:var(--text)">货币对组合</strong>平铺展开，每个组合分别呈现两类采购风险：
-      <strong style="color:var(--accent)">采购换汇风险</strong>（基准币 → 供应商报价币）和
-      <strong style="color:var(--warn)">成本定价隐含风险</strong>（供应商报价币 → 销售结算币 MXN）。
+      以下按<strong style="color:var(--text)">货币对组合</strong>平铺展开。每个组合分三列：
+      <strong style="color:var(--accent)">采购换汇风险</strong>（基准币 → 供应商报价币，展望看近7天）·
+      <strong style="color:var(--warn)">成本定价隐含风险</strong>（供应商报价币 → 销售结算币 MXN，展望按帐期窗口）·
+      <strong style="color:var(--accent2)">综合信号与执行建议</strong>。
     </div>
     <!-- 货币对卡片容器，由 JS 动态渲染 -->
     <div id="a-pair-blocks"></div>
-    <!-- A板块综合结论 -->
-    <div class="fx-conclusion ok" id="a-overall-conclusion" style="margin-top:4px">计算中...</div>
+    <!-- 备货策略汇总表 -->
+    <div id="a-summary-table" style="margin-top:4px"></div>
   </div>
 
   <!-- ══════════════════════════════════════════

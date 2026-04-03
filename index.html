@@ -1251,36 +1251,44 @@ function renderAPairBlocks() {
 
     // ══════════════════════════════════════════════
     // 中列：成本定价隐含风险（供应商报价币 → MXN）
-    // 使用 MXN/CNY 数据（主要敞口）
+    // 动态使用 MXN/quote 对应数据（CNY→mxn_cny, USD→mxn_usd, HKD→mxn_hkd）
     // ══════════════════════════════════════════════
-    const prev_mxn_cny = prices_mxn_cny.length>1 ? prices_mxn_cny[prices_mxn_cny.length-2] : null;
-    const chgPct_mxn = prev_mxn_cny ? ((today_mxn_cny-prev_mxn_cny)/prev_mxn_cny*100) : null;
+    const mxnQuoteKey = 'mxn_' + qLow;  // e.g. mxn_cny / mxn_usd / mxn_hkd
+    const prices_mxn_q = _allFxData.map(d => getPairRate(d, mxnQuoteKey)).filter(Boolean);
+    const today_mxn_q  = prices_mxn_q.length>0 ? prices_mxn_q[prices_mxn_q.length-1] : null;
+    const slope7_mxn_q = prices_mxn_q.length>=5 ? calcSlope(prices_mxn_q.slice(-7)) : 0;
+    const vol30_mxn_q  = prices_mxn_q.length>=10 ? calcVol(prices_mxn_q.slice(-30)) : 0;
+    const outlook_air_q = calcOutlook(prices_mxn_q, airDays);
+    const outlook_sea_q = calcOutlook(prices_mxn_q, seaDays);
+
+    const prev_mxn_q   = prices_mxn_q.length>1 ? prices_mxn_q[prices_mxn_q.length-2] : null;
+    const chgPct_mxn   = (prev_mxn_q && today_mxn_q) ? ((today_mxn_q-prev_mxn_q)/prev_mxn_q*100) : null;
     const chgColor_mxn = chgPct_mxn==null?'var(--muted)':chgPct_mxn>=0?'var(--accent2)':'var(--danger)';
-    const volState_mxn = vol30_mxn_cny>0.015?'⚡ 高波动':vol30_mxn_cny>0.008?'⚠️ 中等波动':'✅ 正常';
-    const volColor_mxn = vol30_mxn_cny>0.015?'var(--danger)':vol30_mxn_cny>0.008?'var(--warn)':'var(--accent2)';
+    const volState_mxn = vol30_mxn_q>0.015?'⚡ 高波动':vol30_mxn_q>0.008?'⚠️ 中等波动':'✅ 正常';
+    const volColor_mxn = vol30_mxn_q>0.015?'var(--danger)':vol30_mxn_q>0.008?'var(--warn)':'var(--accent2)';
 
     let trend7Txt_mxn, trend7Color_mxn, trend7Dot_mxn;
-    if (slope7_mxn_cny > 0.0003) { trend7Txt_mxn='↗ 比索走强（MXN升值）'; trend7Color_mxn='var(--accent2)'; trend7Dot_mxn='ok'; }
-    else if (slope7_mxn_cny < -0.0003) { trend7Txt_mxn='↘ 比索走弱（MXN贬值）'; trend7Color_mxn='var(--danger)'; trend7Dot_mxn='danger'; }
+    if (slope7_mxn_q > 0.0003) { trend7Txt_mxn='↗ 比索走强（MXN升值）'; trend7Color_mxn='var(--accent2)'; trend7Dot_mxn='ok'; }
+    else if (slope7_mxn_q < -0.0003) { trend7Txt_mxn='↘ 比索走弱（MXN贬值）'; trend7Color_mxn='var(--danger)'; trend7Dot_mxn='danger'; }
     else { trend7Txt_mxn='→ 震荡整理'; trend7Color_mxn='var(--warn)'; trend7Dot_mxn='warn'; }
 
-    const support_mxn = Math.min(...prices_mxn_cny.slice(-30)).toFixed(4);
-    const resist_mxn  = Math.max(...prices_mxn_cny.slice(-30)).toFixed(4);
+    const support_mxn = today_mxn_q && prices_mxn_q.length>=2 ? Math.min(...prices_mxn_q.slice(-30)).toFixed(4) : '--';
+    const resist_mxn  = today_mxn_q && prices_mxn_q.length>=2 ? Math.max(...prices_mxn_q.slice(-30)).toFixed(4) : '--';
     const fmtOL = (o) => o ? `${o.mean.toFixed(4)} <span style="font-size:10px;color:var(--muted)">(${o.lo.toFixed(4)}–${o.hi.toFixed(4)})</span>` : '--';
-    const pctAir = outlook_air ? ((outlook_air.mean-today_mxn_cny)/today_mxn_cny*100) : null;
-    const pctSea = outlook_sea ? ((outlook_sea.mean-today_mxn_cny)/today_mxn_cny*100) : null;
+    const pctAir = (outlook_air_q && today_mxn_q) ? ((outlook_air_q.mean-today_mxn_q)/today_mxn_q*100) : null;
+    const pctSea = (outlook_sea_q && today_mxn_q) ? ((outlook_sea_q.mean-today_mxn_q)/today_mxn_q*100) : null;
 
     const midHtml = `
       <!-- 当前汇率 -->
       <div style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap">
         <div style="flex:1;min-width:90px;background:#ffffff08;border-radius:6px;padding:8px 10px">
-          <div style="font-size:10px;color:var(--muted)">MXN / ${_cfg.base} 今日</div>
-          <div style="font-size:15px;font-weight:700;color:var(--text);margin-top:2px">${today_mxn_cny.toFixed(4)}</div>
+          <div style="font-size:10px;color:var(--muted)">MXN / ${quote} 今日</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-top:2px">${today_mxn_q ? today_mxn_q.toFixed(4) : '--'}</div>
           <div style="font-size:11px;color:${chgColor_mxn};margin-top:2px">${chgPct_mxn!=null?`${chgPct_mxn>=0?'+':''}${chgPct_mxn.toFixed(2)}% 较昨日`:'--'}</div>
         </div>
         <div style="flex:1;min-width:90px;background:#ffffff08;border-radius:6px;padding:8px 10px">
           <div style="font-size:10px;color:var(--muted)">30日波动率</div>
-          <div style="font-size:15px;font-weight:700;color:${volColor_mxn};margin-top:2px">${(vol30_mxn_cny*100).toFixed(2)}%</div>
+          <div style="font-size:15px;font-weight:700;color:${volColor_mxn};margin-top:2px">${(vol30_mxn_q*100).toFixed(2)}%</div>
           <div style="font-size:11px;color:${volColor_mxn};margin-top:2px">${volState_mxn}</div>
         </div>
       </div>
@@ -1288,8 +1296,8 @@ function renderAPairBlocks() {
       <div style="background:#ffffff08;border-radius:6px;padding:8px 10px;font-size:11px;margin-bottom:4px">
         <div class="event-item" style="padding:3px 0"><div class="event-dot ${trend7Dot_mxn}"></div><div><div class="event-text">近7天趋势</div><div style="font-size:12px;font-weight:600;margin-top:1px;color:${trend7Color_mxn}">${trend7Txt_mxn}</div></div></div>
         <div class="event-item" style="padding:3px 0"><div class="event-dot warn"></div><div><div class="event-text">支撑位 / 压力位（30日）</div><div style="font-size:12px;font-weight:600;margin-top:1px">${support_mxn} / ${resist_mxn}</div></div></div>
-        <div class="event-item" style="padding:3px 0"><div class="event-dot"></div><div><div class="event-text">空运帐期（${airDays}天）展望</div><div style="font-size:12px;font-weight:600;margin-top:1px">${fmtOL(outlook_air)} ${pctAir!=null?`<span style="color:${pctAir>=0?'var(--accent2)':'var(--danger)'}">${pctAir>=0?'+':''}${pctAir.toFixed(2)}%</span>`:''}</div></div></div>
-        <div class="event-item" style="padding:3px 0;border-bottom:none"><div class="event-dot"></div><div><div class="event-text">海运帐期（${seaDays}天）展望</div><div style="font-size:12px;font-weight:600;margin-top:1px">${fmtOL(outlook_sea)} ${pctSea!=null?`<span style="color:${pctSea>=0?'var(--accent2)':'var(--danger)'}">${pctSea>=0?'+':''}${pctSea.toFixed(2)}%</span>`:''}</div></div></div>
+        <div class="event-item" style="padding:3px 0"><div class="event-dot"></div><div><div class="event-text">空运帐期（${airDays}天）展望</div><div style="font-size:12px;font-weight:600;margin-top:1px">${fmtOL(outlook_air_q)} ${pctAir!=null?`<span style="color:${pctAir>=0?'var(--accent2)':'var(--danger)'}">${pctAir>=0?'+':''}${pctAir.toFixed(2)}%</span>`:''}</div></div></div>
+        <div class="event-item" style="padding:3px 0;border-bottom:none"><div class="event-dot"></div><div><div class="event-text">海运帐期（${seaDays}天）展望</div><div style="font-size:12px;font-weight:600;margin-top:1px">${fmtOL(outlook_sea_q)} ${pctSea!=null?`<span style="color:${pctSea>=0?'var(--accent2)':'var(--danger)'}">${pctSea>=0?'+':''}${pctSea.toFixed(2)}%</span>`:''}</div></div></div>
       </div>
       <div style="font-size:10px;color:var(--muted);margin-top:4px">⚠️ 展望基于近30日历史波动率+线性趋势，非精确预测</div>`;
 
@@ -1299,7 +1307,7 @@ function renderAPairBlocks() {
     // 综合判断：采购换汇（左列信号）+ 成本定价（中列信号）
     const slope7_cny_val = isCnyBase ? 0 : (getCnyPrices(quote).length>=5 ? calcSlope(getCnyPrices(quote).slice(-7)) : 0);
     const purchaseOk = isCnyBase || slope7_cny_val <= 0.0002;
-    const costOk = slope7_mxn_cny >= -0.0003;
+    const costOk = slope7_mxn_q >= -0.0003;
 
     let verdict, verdictColor, verdictBg, verdictIcon;
     if (purchaseOk && costOk) {
@@ -1322,12 +1330,12 @@ function renderAPairBlocks() {
       timingShort = '今天换汇（震荡，不值得等）';
     }
 
-    // 拆批策略（基于 MXN 走势）
+    // 拆批策略（基于 MXN/quote 走势）
     let batchStrategy, batchColor;
-    if (slope7_mxn_cny < -0.0003) {
+    if (slope7_mxn_q < -0.0003) {
       batchStrategy = `分 2–3 批备货，间隔 ${Math.round(airDays/3)} 天摊平成本`;
       batchColor = 'var(--warn)';
-    } else if (slope7_mxn_cny > 0.0003) {
+    } else if (slope7_mxn_q > 0.0003) {
       batchStrategy = '集中单批，尽早锁定汇率优势';
       batchColor = 'var(--accent2)';
     } else {
@@ -1354,7 +1362,7 @@ function renderAPairBlocks() {
       </div>`;
 
     // 综合得分（用于底部汇总表）
-    const isBear = slope7_mxn_cny < -0.0003, isBull = slope7_mxn_cny > 0.0003;
+    const isBear = slope7_mxn_q < -0.0003, isBull = slope7_mxn_q > 0.0003;
     overallScores.push({ quote, verdict, verdictColor, timingShort, batchStrategy, batchColor, isBear, isBull, isCnyBase });
 
     return `

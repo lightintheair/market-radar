@@ -1,0 +1,44 @@
+{
+  "week": "2026-W15",
+  "date": "2026-04-06",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Headline inflation approaches 5% amid agricultural and energy price pressures - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Borderlands Mexico: Tariff pressure shows up in customs data across North America - FreightWaves",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Finance Ministry forecasts economic rebound of up to 2.8% this year after a sluggish 2025 - Mexico News Daily",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "E-Commerce Giants Counter C-Commerce With Strategic Moves - 조선일보",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Meta Launches Facebook Affiliate Partnerships With Amazon, Shopee, eBay, Temu &amp; Mercado Libre - Value Added Resource",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Top retailers by most recent cross-border order 2025 - Statista",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

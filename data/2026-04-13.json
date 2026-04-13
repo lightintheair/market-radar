@@ -1,0 +1,89 @@
+{
+  "date": "2026-04-13",
+  "time": "09:30",
+  "fx": {
+    "mxn_cny": 0.3944,
+    "mxn_usd": 0.05743,
+    "cny_usd": 0.145606,
+    "cny_cnh": 0.999608,
+    "cny_hkd": 1.145663,
+    "cny_eur": 0.12531,
+    "cny_gbp": 0.109213,
+    "cny_jpy": 23.366731,
+    "cny_cad": 0.202856,
+    "cny_aud": 0.208278,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU to impose 3 euro duty on e-commerce parcels from July 2026 - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObHVrVzRpUkdmQkhwMkFPR2JndFlEUVJ2aTZIdUp3YTRJYjJPN1RscG1TOUJLeW04YjhjakFldENiUjkxSkxENlg3ZXJXcU11LUUwX1N6VWNtMVp3Z3QtQXEtcXZoS3N5Y1RWYmUtQ0JqVUN5WnJqWllQSFN3OTRKTmp1WjB1MUJiWjl3SkUyWURWV2s0QmhTLVNySGVucEFUYnJXc0hsTQ?oc=5",
+      "date": "2026-04-13",
+      "type": "news"
+    },
+    {
+      "title": "Is AliExpress safe? What you need to know in 2026 - Surfshark",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBhNEFYWmtnUmM5YlRpNFI0Zmc1ZFBpMDhzdDRrOXBqbVdRMlBaN2UwbVlDc3I4TmFJdm02UXYwUVcyS0ZXLXJpX1RFdERkRURtQzY5dWdKMlg?oc=5",
+      "date": "2026-04-13",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - corporate.vanguard.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "United States modifies steel, aluminum, and copper Section 232 tariffs - White &amp; Case LLP",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "TikTok Shop battles Shein and Temu in Latin America’s e-commerce race - Rest of World",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Unique visitors to Amazon, Temu, Shein, and AliExpress in the U.S. 2022-2023 - Statista",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/CAD &amp; USD/MXN Q2 2026 Outlook: Canadian dollar and Mexican peso begin to lose ground - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdjBhd2RqMGpnREl6REtfMDNjVDQzRHA4bm45TzNhYlRqZGZZdnpLN0VrS2lLU29JeEQ2WVNxNVBwaXptMHpwdVpXRUtTUmp1bEJud2stTlIzazdGY0pwVmJTVGkwRERFV3hpMEFvaVBvWllnV2F1V2xWa0JZb2w4ekwyZVBkT2FFTWFLOWlVMVY0S0E5ZE41cDREUVFwWkR4dzNhanhVY1hjWE14eTJ1X1hud0E1S0pTemZxS0FIREV6cFBwbUHSAdIBQVVfeXFMT1d0Y29FamVzcVZCbGNJZ2VBWjlodVNET3V4bWpvZWZxSEtLOHhyMnNCMlJvVXhSTmd1R0dmMmQzUkdTY1IwN3YyN1pkMDYwVW9EWXhoRDllZExWWktYLU9OVVlSLTlFTWFkcml4RWozZllzSm5SQnFONHRhUFlEV0ZOeEpkbkhCUkFTUFpYRmo0MnlldS1aLUdUS0UxTkVmWEFtVURDc2hkRUdkcmxtYTJySTRCR0VsMEMtdXB3TUc2VzAySnJfX1FHSXh5TFVvMjZR?oc=5"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaUVobUdzRkRGbnNzUzNZeDRXUzBzYTdlVzZna0xGeUFyeVo5TENDQUxGZ0ZhQzNkZWIza1FsQlJXaWN1U0FVNmxkVDZrRWhTaHlIbjZPMnRzaEhhQ1NvcVBvOFo1Sm9nejdWdWpydzJrSTFMRUJVeGhkYmNaNWEtUTdPWW4teldIUDBSNGZMOUJBYW5OS0l4Qk9mQnJiRmhMVGZqM1c5dEFBdE8zYktFQS1YZFB1dXpqMEMtbkRn?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex taking 'wait-and-see' approach on oil exports as prices climb, minister says - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXk1NVFleGxhZFd1ZnBfYlFtdjZkN082NWJxeUczbHNmaTNFb2w5ay1jOFJPeHZKV3JCS1Z2ZFRrWUtoNnd5VE8tS0dXOG5LUmpEbHZSck9CaU1McFRPc3hvaHotYll2bDFqZkZSX0hLUnUyMW1tNW9zV1RSSVlJVjZObUhtaEN5Zi11Q3A0cmhYcG9wNDBPQml6eV9SdVFPNjJiQVRzT0NnQUVIQ1Jzc09YVEN3MUFtMWQ5LTNmQ2tlZ0JrYjlV?oc=5"
+    },
+    {
+      "title": "Trump calls for 50% tariff on goods from nations arming Iran - Supply Chain Dive",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQejJGVmpNU3VHeHFxSkdsUUR0V0hYSHQ4UVkxNjl6RjlOaU5YS2o5aHhCNWkxY1FaSXRDSWdKaDNkNm5icVlzWkh4RkFDYmZrZVFTY2ljSDRxdWpuTWpXbEVJd3htRHRNN1Z0c3BPTF9TOXhpLUQxVUE3THdObWNaRGpFRV9YWlB0aU1V?oc=5"
+    },
+    {
+      "title": "US Dollar Index Forecast: DXY Plummets Below 99.00 to One-Month Low as Risk-On Sentiment Surges - CryptoRank",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1LQXIxdk1ZMDJDR3FiOXVJb1ZfbTBBT1lvcTV3OTlFbWpIbFVJNkU4UkFEYUUwMFhrYlZEVnp6VTU4NlhEUHB4M2dqY3NkRmtTUWJlWDh5SkVNVWZyT2JRSmI4dE9wTWM0cS1XZGR4bTRSWmlQVUx3aFBB?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

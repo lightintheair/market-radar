@@ -1,1 +1,29 @@
-{"date": "2026-01-26", "time": "00:00", "fx": {"mxn_cny": 0.40059, "mxn_usd": 0.05759, "mxn_eur": 0.048509, "mxn_gbp": 0.042117, "mxn_jpy": 8.873356, "mxn_hkd": 0.448929, "mxn_cad": 0.078786, "mxn_aud": 0.08317, "mxn_cnh": 0.400288, "source": "fawazahmed0/backfill"}, "platform": [], "macro": [], "competitor": [], "outlook": []}
+{
+  "date": "2026-01-26",
+  "time": "00:00",
+  "fx": {
+    "mxn_cny": 0.40059,
+    "mxn_usd": 0.05759,
+    "mxn_eur": 0.048509,
+    "mxn_gbp": 0.042117,
+    "mxn_jpy": 8.873356,
+    "mxn_hkd": 0.448929,
+    "mxn_cad": 0.078786,
+    "mxn_aud": 0.08317,
+    "mxn_cnh": 0.400288,
+    "source": "fawazahmed0/backfill",
+    "cny_usd": 0.143761,
+    "cny_cnh": 0.999241,
+    "cny_hkd": 1.120664,
+    "cny_eur": 0.121093,
+    "cny_gbp": 0.105136,
+    "cny_jpy": 22.150593,
+    "cny_cad": 0.196673,
+    "cny_aud": 0.207617,
+    "source_backfill": "fawazahmed0"
+  },
+  "platform": [],
+  "macro": [],
+  "competitor": [],
+  "outlook": []
+}

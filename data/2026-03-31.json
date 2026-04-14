@@ -4,7 +4,16 @@
   "fx": {
     "mxn_cny": 0.3815,
     "mxn_usd": 0.05517,
-    "source": "open.er-api.com"
+    "source": "open.er-api.com",
+    "cny_usd": 0.144799,
+    "cny_cnh": 1.000569,
+    "cny_hkd": 1.134899,
+    "cny_eur": 0.126153,
+    "cny_gbp": 0.109604,
+    "cny_jpy": 23.114121,
+    "cny_cad": 0.201626,
+    "cny_aud": 0.21103,
+    "source_backfill": "fawazahmed0"
   },
   "platform": [
     {

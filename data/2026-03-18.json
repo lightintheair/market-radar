@@ -3,7 +3,16 @@
   "time": "17:00",
   "fx": {
     "mxn_cny": 0.39016,
-    "mxn_usd": 0.05667
+    "mxn_usd": 0.05667,
+    "cny_usd": 0.145258,
+    "cny_cnh": 1.000067,
+    "cny_hkd": 1.138599,
+    "cny_eur": 0.125924,
+    "cny_gbp": 0.108762,
+    "cny_jpy": 23.087319,
+    "cny_cad": 0.198922,
+    "cny_aud": 0.204337,
+    "source_backfill": "fawazahmed0"
   },
   "platform": [],
   "source": "fawazahmed0/currency-api (ECB)"

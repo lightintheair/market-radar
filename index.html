@@ -535,7 +535,7 @@
           <div style="flex:1;min-width:160px;background:#6366f115;border:1px solid #6366f133;border-radius:8px 0 0 8px;padding:10px 12px">
             <div style="font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">采购换汇风险</div>
             <div style="font-size:12px;font-weight:700;color:var(--text)">基准币 → 供应商报价币</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">备货付款时，用基准币换供应商报价币产生的汇率风险。选用 CNY/CNH 报价可消除此段风险。</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">备货付款时，用基准币换供应商报价币产生的汇率风险。选用 CNY 报价可消除此段风险（CNH 离岸人民币虽同为人民币，但有真实汇差与出入境成本）。</div>
           </div>
           <div style="display:flex;align-items:center;padding:0 4px;color:var(--muted);font-size:16px">→</div>
           <div style="flex:1;min-width:160px;background:#f59e0b15;border:1px solid #f59e0b33;padding:10px 12px">
@@ -659,7 +659,7 @@
     <!-- B0: 全链路说明 -->
     <div style="font-size:11px;color:var(--muted);padding:8px 12px;background:#ffffff08;border-radius:6px;margin-bottom:16px;line-height:1.7">
       全链路三段风险：
-      <strong style="color:var(--accent)">① 基准币 → 供应商报价币</strong>（采购换汇风险，供应商报价币选用 CNY/CNH 可消除）→
+      <strong style="color:var(--accent)">① 基准币 → 供应商报价币</strong>（采购换汇风险，供应商报价币选用 CNY 可消除；CNH 有实际汇差，不视为零风险）→
       <strong style="color:var(--warn)">② 供应商报价币 → 销售结算币（MXN）</strong>（成本定价隐含风险）→
       <strong style="color:var(--accent2)">③ 销售结算币（MXN）→ 基准币</strong>（收款换汇风险，主要敞口）
     </div>
@@ -694,7 +694,7 @@
       </div>
       <div style="display:flex;gap:10px;margin-top:10px;align-items:center;flex-wrap:wrap">
         <button onclick="b1AddRow()" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;cursor:pointer">＋ 添加批次</button>
-        <span style="font-size:10px;color:var(--muted)">¹ 付款时花多少CNY换1单位报价币（CNY/CNH报价=1）　² 付款日报价币/MXN市场汇率（反映采购成本基准）　³ 展望均值（区间：下轨–上轨），基于历史波动率估算</span>
+        <span style="font-size:10px;color:var(--muted)">¹ 付款时花多少CNY换1单位报价币（CNY报价=1，CNH有实际汇差）　² 付款日报价币/MXN市场汇率（反映采购成本基准）　³ 展望均值（区间：下轨–上轨），基于历史波动率估算</span>
       </div>
       <!-- B1 汇总 -->
       <div id="b1-summary" style="display:none;margin-top:16px">
@@ -1009,7 +1009,7 @@ function getPairRate(dayData, pairKey) {
   // 直接字段优先
   if (fx[pairKey] != null && fx[pairKey] > 0) return fx[pairKey];
   // 通过 cny_* 交叉计算：MXN/X = mxn_cny / cny_x（精确，无近似误差）
-  if (pairKey==='mxn_cny'||pairKey==='mxn_cnh') return fx.mxn_cny||null;
+  if (pairKey==='mxn_cny') return fx.mxn_cny||null;
   if (pairKey==='mxn_usd') return fx.mxn_usd||null;
   const quote = pairKey.replace('mxn_',''); // e.g. 'hkd','eur','jpy'
   const cnyX = fx['cny_'+quote];
@@ -1154,12 +1154,12 @@ function renderAPairBlocks() {
   }
 
   // 静态近似值（当 cny_* 历史序列不足时的兜底）
-  const FX_APPROX = { 'CNY':1,'CNH':1,'USD':0.1379,'HKD':1.074,'EUR':0.1267,'GBP':0.1077,'JPY':20.8,'CAD':0.1917,'AUD':0.2082 };
+  const FX_APPROX = { 'CNY':1,'CNH':0.999,'USD':0.1379,'HKD':1.074,'EUR':0.1267,'GBP':0.1077,'JPY':20.8,'CAD':0.1917,'AUD':0.2082 };
 
   let overallScores = [];
 
   const pairBlocks = _cfg.quotes.map(quote => {
-    const isCnyBase = ['CNY','CNH'].includes(quote);
+    const isCnyBase = quote === 'CNY'; // CNH 离岸人民币有真实汇率，不等同于 CNY
     const qLow = quote.toLowerCase();
     const cnyKey = 'cny_' + qLow;   // e.g. cny_usd, cny_hkd
 
@@ -1254,7 +1254,8 @@ function renderAPairBlocks() {
         <div style="padding:8px 12px;background:#6366f115;border:1px solid #6366f133;border-radius:6px;font-size:12px;line-height:1.6;color:${timingColor};font-weight:600">
           ${timingAdvice}
         </div>
-        ${!hasCnyData ? '<div style="font-size:10px;color:var(--muted);margin-top:6px">⚠️ 历史序列不足，当前汇率为实时值，趋势分析精度有限</div>' : ''}`;
+        ${!hasCnyData ? '<div style="font-size:10px;color:var(--muted);margin-top:6px">⚠️ 历史序列不足，当前汇率为实时值，趋势分析精度有限</div>' : ''}
+        ${quote==='CNH' ? '<div style="font-size:10px;color:var(--muted);margin-top:6px;padding:6px 8px;background:#f59e0b08;border-radius:4px;border:1px solid #f59e0b22">&#x1F4CB; CNH为离岸人民币，与在岸CNY有汇差（通常在±0.3%~1%内）。若供应商报价币为CNH，付款时需要把 CNY 先兑换为 CNH（经香港或离岸市场），存在实际汇差和换汇手续费。</div>' : ''}`;
     }
 
     // ══════════════════════════════════════════════

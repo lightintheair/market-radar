@@ -1005,10 +1005,18 @@ function calcVol(arr) {
 // 根据 pair key 取汇率
 function getPairRate(dayData, pairKey) {
   if (!dayData?.fx) return null;
-  if (pairKey==='mxn_cny'||pairKey==='mxn_cnh') return dayData.fx.mxn_cny||null;
-  if (pairKey==='mxn_usd') return dayData.fx.mxn_usd||null;
-  if (pairKey==='mxn_hkd') return dayData.fx.mxn_hkd||dayData.fx.mxn_usd ? (dayData.fx.mxn_usd*7.78||null) : null;
-  if (pairKey==='mxn_eur') return dayData.fx.mxn_usd ? dayData.fx.mxn_usd*0.92 : null;
+  const fx = dayData.fx;
+  // 直接字段优先
+  if (fx[pairKey] != null && fx[pairKey] > 0) return fx[pairKey];
+  // 通过 cny_* 交叉计算：MXN/X = mxn_cny / cny_x（精确，无近似误差）
+  if (pairKey==='mxn_cny'||pairKey==='mxn_cnh') return fx.mxn_cny||null;
+  if (pairKey==='mxn_usd') return fx.mxn_usd||null;
+  const quote = pairKey.replace('mxn_',''); // e.g. 'hkd','eur','jpy'
+  const cnyX = fx['cny_'+quote];
+  if (cnyX && cnyX > 0 && fx.mxn_cny && fx.mxn_cny > 0) {
+    // mxn_x = mxn_cny / cny_x
+    return fx.mxn_cny / cnyX;
+  }
   return null;
 }
 
@@ -1708,6 +1716,34 @@ function calcVol(arr) {
   return Math.sqrt(arr.map(v => (v - mean) ** 2).reduce((a, b) => a + b, 0) / arr.length) / mean;
 }
 
+// ===== 前端实时补数据：检测缺少的 cny_* 字段，从 fawazahmed0 CDN 实时补充 =====
+async function patchMissingCnyRates(allData) {
+  const CNY_FIELDS = ['usd','cnh','hkd','eur','gbp','jpy','cad','aud'];
+  // 检查哪些日期缺少 cny_* 字段
+  const missing = allData.filter(d => !d.fx?.cny_usd);
+  if (missing.length === 0) return; // 全部完整，无需补充
+  console.log(`[patch] 发现 ${missing.length} 个日期缺少 cny_* 字段，尝试实时补充...`);
+  for (const dayData of missing) {
+    const date = dayData.date;
+    if (!date) continue;
+    try {
+      const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${date}/v1/currencies/cny.json`;
+      const resp = await fetch(url, { signal: AbortSignal.timeout(8000) });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const json = await resp.json();
+      const cny = json.cny || {};
+      for (const field of CNY_FIELDS) {
+        const val = cny[field];
+        if (val != null && val > 0) dayData.fx['cny_'+field] = +val.toFixed(6);
+      }
+      if (!dayData.fx.cny_usd) dayData.fx._patch_failed = true;
+      else console.log(`[patch] ✅ ${date}: cny_usd=${dayData.fx.cny_usd} cny_hkd=${dayData.fx.cny_hkd}`);
+    } catch(e) {
+      console.warn(`[patch] ⚠️ ${date} 补充失败: ${e.message}`);
+    }
+  }
+}
+
 // ===== 数据加载 =====
 async function loadData() {
   let index = [];
@@ -1736,6 +1772,9 @@ async function loadData() {
 
   // 暴露给全局，供应收账款 Tab 使用
   window.allFxData = allData;
+
+  // ② 前端实时补数据：检测 cny_* 序列不足时，从 fawazahmed0 CDN 实时拉取
+  await patchMissingCnyRates(allData);
 
   const latest = allData[allData.length - 1];
   const prev = allData.length > 1 ? allData[allData.length - 2] : null;

@@ -1,0 +1,89 @@
+{
+  "date": "2026-04-18",
+  "time": "09:30",
+  "fx": {
+    "mxn_cny": 0.3972,
+    "mxn_usd": 0.05789,
+    "cny_usd": 0.145753,
+    "cny_cnh": 0.99906,
+    "cny_hkd": 1.145746,
+    "cny_eur": 0.124282,
+    "cny_gbp": 0.108199,
+    "cny_jpy": 23.223066,
+    "cny_cad": 0.200329,
+    "cny_aud": 0.204214,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Cross-customs returns in place to boost e-tailers - China Daily - Global Edition",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTjZUVVRyNE1obmt5b2Rtc1J1TlJvU2NoUzlFMmR2eWFiTmFpamNxYzkyOXhRblJwa3U1bEYxLUZwV1ItVkMzN1FmUC1fVXB2RHA5ODhDVHVuaFVacmNmcHBYZnBfUXdLX0pTZUFsOVRSTFlpdHpGRmN6UEZjRTlBTw?oc=5",
+      "date": "2026-04-18",
+      "type": "news"
+    },
+    {
+      "title": "AliExpress: Between Global Reach and US Tariffs, Growth Gets Tricky - AD HOC NEWS",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOT1I5eEdnZzktcVhvVDVEa0RFaF9SZG0xSDlmdEY2eDM4ZVd0QlpWTVJpbVhtZzBJQzZkU00zSEhiS1gtd2U5UEc0Tlc1dW1Fa0Q5RHpBWV9EZWVPODZQTUZtbm16dmo0Umt2NzRPdlZmemZlajE4VDB1cVRjLURKbVdTaHRZYjNMUDR0VUhScXB2WENYWXpaT05KMy05bGVOOWRsMDR4Rjk1bUJ3Z0VqaWRDb1FUV1pFbXUw?oc=5",
+      "date": "2026-04-18",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Locked in Low Gear: Mexico’s Struggling Economy - Baker Institute",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated April 15, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Unique visitors to Amazon, Temu, Shein, and AliExpress in the U.S. 2022-2023 - Statista",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Under Pressure as Banxico Decision Approaches - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZkVoT0l2OHNoV05PTE9lRVctVkh6Yy1LZjlUY0Q3QUEzUmZRODBLREZfZ214MjNhUmZ1MkNOT2MyTDlQQ1lySjJqeU1pTlBrbzZJY1FPeVBXc2xUZlUyMU1saUp6b19pbkFEZHdzcTZMaTZHVmtNdFduYTJpOEg0RmZxcjYzX3UwZXZERXl5TWJnT0JTbXlVMTRyRm5ZaXFwSVFVdWxScnZCVGNoVWxj0gG7AUFVX3lxTE5OTFhmdjJ3QzJaWnRDeXBXMzFuTVpMX25oYkRyckNZSlVxd211SVB3aDRPNk43UmZGakhqUjlMY1gxaGI5SnowTkg0TzJHU3QySDVid090OHphTGY2MkllTGNmM181WlpGNy1YekxoUzRtMDlWNUVVcXE5TEd3eTNiVUpxN1VxTFBTY3Rudno1MmI5VVI3QnozcXBZdDFnNnlDcHMybTI3X0YtX0JuQjRRbWhWOU81VGpEbWc?oc=5"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaUVobUdzRkRGbnNzUzNZeDRXUzBzYTdlVzZna0xGeUFyeVo5TENDQUxGZ0ZhQzNkZWIza1FsQlJXaWN1U0FVNmxkVDZrRWhTaHlIbjZPMnRzaEhhQ1NvcVBvOFo1Sm9nejdWdWpydzJrSTFMRUJVeGhkYmNaNWEtUTdPWW4teldIUDBSNGZMOUJBYW5OS0l4Qk9mQnJiRmhMVGZqM1c5dEFBdE8zYktFQS1YZFB1dXpqMEMtbkRn?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex taking 'wait-and-see' approach on oil exports as prices climb, minister says - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXk1NVFleGxhZFd1ZnBfYlFtdjZkN082NWJxeUczbHNmaTNFb2w5ay1jOFJPeHZKV3JCS1Z2ZFRrWUtoNnd5VE8tS0dXOG5LUmpEbHZSck9CaU1McFRPc3hvaHotYll2bDFqZkZSX0hLUnUyMW1tNW9zV1RSSVlJVjZObUhtaEN5Zi11Q3A0cmhYcG9wNDBPQml6eV9SdVFPNjJiQVRzT0NnQUVIQ1Jzc09YVEN3MUFtMWQ5LTNmQ2tlZ0JrYjlV?oc=5"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated April 15, 2026) - Penn Wharton Budget Model",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObU9nNWJUUTJBbkZHMjRldUFGTWVnd0l3cm13bUY4WGFjS00zZVZTZ3oyV3BISjBXWWR6Z1paZ0NwVmVIZEI3MTdxa2FRWE1tc1kzbGVvRFpOSDd4NkxvQTN0Sm1IcFB0aE83enhPN0Uya2luajBLRklua1lCYWJtcm1jNEo2YkZ5TzFVb1NnZTI2b0IzUXdEaHAwdlNFSm5mVlY4UWdGSDlkbWw2N3c?oc=5"
+    },
+    {
+      "title": "US Dollar Index Forecast: Critical Battle Below 98.50 as Nine-Day EMA Caps Rally - CryptoRank",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1DQ3QtN3lnR05tSVhhSjFZaTdoOGhNdzJiNkUtNGx5d2Jtb0YteDg0a1I0NnpGY1BPMGFvM3VyZ3VTX0F2UjRqSW5RNzFIZkRRZGNDV1ZhdHBiZE9yNVo4TWNkeUlVMFFXQjc2UDVJeHVhdmYtT01vSVE0MGhZdk0?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

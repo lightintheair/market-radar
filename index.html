@@ -30,6 +30,10 @@
     --col-fx: #10b981;
     --col-ops: #f59e0b;
     --col-ar: #ec4899;
+    --seg1: #6366f1;
+    --seg2: #f59e0b;
+    --seg3: #10b981;
+    --info: #38bdf8;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -199,10 +203,7 @@
   /* B3 时间区间按钮 */
   .b3-range-btn { padding:4px 10px; background:var(--card); border:1px solid var(--border); border-radius:4px; color:var(--muted); font-size:11px; cursor:pointer; }
   .b3-range-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-  /* B2 换汇建议卡片 */
-  .b2-advice-card { background:#12141e; border:1px solid var(--border); border-radius:8px; padding:14px; margin-bottom:10px; font-size:12px; }
-  .b2-advice-date { font-size:11px; color:var(--muted); margin-bottom:6px; }
-  .b2-advice-body { line-height:1.7; }
+
   .shipment-flow .section-header {
     display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;
   }
@@ -378,6 +379,151 @@
     .charts-row, .bottom-row { grid-template-columns: 1fr; }
     .flow-modes, .fx-compare-grid { grid-template-columns: 1fr; }
     .dashboard { padding: 16px; }
+  }
+
+  /* ===== B1 卡片式批次看板 ===== */
+  .risk-legend { display: flex; gap: 16px; flex-wrap: wrap; }
+  .risk-pill { display: flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .risk-pill.seg1 { background: #6366f115; color: var(--seg1); border: 1px solid #6366f133; }
+  .risk-pill.seg2 { background: #f59e0b15; color: var(--seg2); border: 1px solid #f59e0b33; }
+  .risk-pill.seg3 { background: #10b98115; color: var(--seg3); border: 1px solid #10b98133; }
+  .risk-pill .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .risk-pill.seg1 .dot { background: var(--seg1); }
+  .risk-pill.seg2 .dot { background: var(--seg2); }
+  .risk-pill.seg3 .dot { background: var(--seg3); }
+
+  .chain-bar { display: flex; align-items: stretch; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin: 12px 0; }
+  .chain-seg { flex: 1; padding: 10px 14px; font-size: 11px; line-height: 1.6; }
+  .chain-seg.seg1 { background: #6366f112; border-right: 2px solid #6366f133; }
+  .chain-seg.seg2 { background: #f59e0b10; border-right: 2px solid #f59e0b33; }
+  .chain-seg.seg3 { background: #10b98112; }
+  .chain-seg-label { font-weight: 700; font-size: 10px; letter-spacing: .06em; margin-bottom: 2px; }
+  .chain-seg.seg1 .chain-seg-label { color: var(--seg1); }
+  .chain-seg.seg2 .chain-seg-label { color: var(--seg2); }
+  .chain-seg.seg3 .chain-seg-label { color: var(--seg3); }
+  .chain-arrow { display: flex; align-items: center; color: var(--muted); font-size: 16px; padding: 0 4px; }
+
+  .batch-list { display: flex; flex-direction: column; gap: 16px; }
+  .batch-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
+  .batch-card:hover { border-color: #6366f144; }
+  .batch-card.settled { opacity: .55; }
+  .batch-header { padding: 10px 16px; background: #ffffff05; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; cursor: pointer; }
+  .batch-id { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .06em; min-width: 32px; }
+  .batch-name-input { background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--text); font-size: 13px; font-weight: 600; font-family: 'DM Sans', sans-serif; width: 130px; padding: 2px 4px; }
+  .batch-name-input:focus { outline: none; border-bottom-color: var(--accent); }
+  .batch-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 11px; color: var(--muted); }
+  .batch-status-badge { padding: 2px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+  .status-transit  { background: #6366f118; color: var(--accent); }
+  .status-customs  { background: #f59e0b18; color: var(--warn); }
+  .status-selling  { background: #38bdf818; color: var(--info); }
+  .status-settled  { background: #10b98118; color: var(--accent2); }
+  .batch-quick-pnl { margin-left: auto; font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 700; }
+  .pnl-pos { color: var(--accent2); }
+  .pnl-neg { color: var(--danger); }
+  .pnl-neutral { color: var(--muted); }
+  .batch-body { padding: 14px 16px 16px; }
+
+  .input-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .input-field { display: flex; flex-direction: column; gap: 4px; }
+  .input-label { font-size: 10px; font-weight: 600; color: var(--muted); letter-spacing: .05em; display: flex; align-items: center; gap: 4px; }
+  .input-label .seg-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .input-label .seg-dot.s1 { background: var(--seg1); }
+  .input-label .seg-dot.s2 { background: var(--seg2); }
+  .input-label .seg-dot.s3 { background: var(--seg3); }
+  .input-label .seg-dot.sn { background: var(--muted); }
+  .inp { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 6px 10px; font-size: 12px; font-family: 'DM Sans', sans-serif; width: 100%; }
+  .inp:focus { outline: none; border-color: var(--accent); }
+  select.inp { cursor: pointer; }
+
+  .risk-display { margin-top: 14px; }
+  .risk-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .risk-block { border-radius: 8px; padding: 12px 14px; }
+  .risk-block.seg1 { background: #6366f10c; border: 1px solid #6366f125; }
+  .risk-block.seg2 { background: #f59e0b0c; border: 1px solid #f59e0b25; }
+  .risk-block.seg3 { background: #10b9810c; border: 1px solid #10b98125; }
+  .risk-block-title { font-size: 10px; font-weight: 700; letter-spacing: .05em; margin-bottom: 8px; }
+  .risk-block.seg1 .risk-block-title { color: var(--seg1); }
+  .risk-block.seg2 .risk-block-title { color: var(--seg2); }
+  .risk-block.seg3 .risk-block-title { color: var(--seg3); }
+  .risk-kv { display: flex; justify-content: space-between; align-items: baseline; font-size: 11px; margin-bottom: 4px; }
+  .risk-kv .lbl { color: var(--muted); }
+  .risk-kv .val { font-family: 'DM Mono', monospace; font-weight: 600; }
+  .risk-kv .val.pos { color: var(--accent2); }
+  .risk-kv .val.neg { color: var(--danger); }
+  .risk-kv .val.warn { color: var(--warn); }
+  .risk-kv .val.info { color: var(--info); }
+  .risk-kv .val.muted { color: var(--muted); }
+  .risk-footer { margin-top: 8px; padding-top: 8px; border-top: 1px solid #ffffff08; font-size: 10px; line-height: 1.6; color: var(--muted); }
+  .risk-conclusion { margin-top: 8px; font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 6px; }
+  .risk-conclusion.ok   { background: #10b98115; color: var(--accent2); }
+  .risk-conclusion.warn { background: #f59e0b15; color: var(--warn); }
+  .risk-conclusion.bad  { background: #ef444415; color: var(--danger); }
+  .risk-conclusion.na   { background: #ffffff08; color: var(--muted); }
+
+  .timeline { margin-top: 14px; }
+  .timeline-title { font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 10px; letter-spacing: .05em; }
+  .tl-track { position: relative; height: 4px; background: var(--border); border-radius: 2px; margin: 28px 0 36px; }
+  .tl-progress { position: absolute; left: 0; top: 0; height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--seg1), var(--seg2), var(--seg3)); transition: width .5s; }
+  .tl-node { position: absolute; top: 50%; transform: translate(-50%,-50%); }
+  .tl-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg); cursor: default; transition: transform .15s; }
+  .tl-dot:hover { transform: translate(-50%,-50%) scale(1.4) !important; }
+  .tl-label { position: absolute; font-size: 9.5px; white-space: nowrap; text-align: center; transform: translateX(-50%); }
+  .tl-label.above { bottom: 14px; }
+  .tl-label.below { top: 14px; color: var(--muted); }
+  .tl-node.past .tl-dot { background: var(--muted); }
+  .tl-node.current .tl-dot { background: white; box-shadow: 0 0 0 3px #6366f188; }
+
+  .strategy-table { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 14px; }
+  .strategy-table th { padding: 8px 10px; background: #ffffff08; color: var(--muted); font-weight: 600; text-align: left; border-bottom: 1px solid var(--border); font-size: 10px; letter-spacing: .04em; }
+  .strategy-table td { padding: 8px 10px; border-bottom: 1px solid #ffffff06; vertical-align: top; }
+  .strategy-table tr:last-child td { border-bottom: none; }
+  .strat-name { font-weight: 700; color: var(--text); }
+  .strat-rate { font-family: 'DM Mono', monospace; }
+  .strat-pnl  { font-family: 'DM Mono', monospace; font-weight: 700; }
+  .strat-rec  { padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 700; display: inline-block; }
+  .strat-rec.best { background: #10b98120; color: var(--accent2); border: 1px solid #10b98140; }
+  .strat-rec.ok   { background: #6366f115; color: var(--accent); border: 1px solid #6366f130; }
+  .strat-rec.warn { background: #f59e0b15; color: var(--warn);   border: 1px solid #f59e0b30; }
+  .strat-rec.bad  { background: #ef444415; color: var(--danger); border: 1px solid #ef444430; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .sum-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .sum-card-label { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: .05em; margin-bottom: 6px; }
+  .sum-card-value { font-size: 20px; font-family: 'DM Mono', monospace; font-weight: 700; }
+  .sum-card-sub { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  .btn { padding: 7px 16px; border-radius: 7px; border: none; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .btn-primary { background: var(--accent); color: white; }
+  .btn-primary:hover { background: #5254cc; }
+  .btn-ghost { background: #ffffff0a; color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost:hover { background: #ffffff15; }
+  .btn-danger { background: #ef444420; color: var(--danger); border: 1px solid #ef444430; }
+  .btn-danger:hover { background: #ef444435; }
+  .btn-sm { padding: 4px 10px; font-size: 11px; }
+
+  .action-panel { margin-top: 16px; border-radius: 10px; padding: 14px 16px; }
+  .ap-transit { background: #6366f108; border: 1px solid #6366f120; }
+  .ap-selling { background: #f59e0b08; border: 1px solid #f59e0b25; }
+  .ap-settled { background: #10b98108; border: 1px solid #10b98125; }
+  .ap-title { font-size: 12px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+  .ap-seg-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 3px 10px; border-radius: 20px; margin: 8px 0 4px; }
+  .seg1-tag { background: #6366f118; color: var(--seg1); border: 1px solid #6366f133; }
+  .seg2-tag { background: #f59e0b18; color: var(--seg2); border: 1px solid #f59e0b33; }
+  .seg3-tag { background: #10b98118; color: var(--seg3); border: 1px solid #10b98133; }
+  .ap-note { font-size: 11px; color: var(--muted); line-height: 1.7; margin: 4px 0; }
+  .ap-note strong { color: var(--text); }
+  .ap-price-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+  .ap-price-card { background: #ffffff06; border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; }
+  .ap-price-label { font-size: 10px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+  .ap-price-value { font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 700; }
+  .ap-price-value.ok   { color: var(--accent2); }
+  .ap-price-value.warn { color: var(--warn); }
+  .ap-price-value.danger { color: var(--danger); }
+  .ap-price-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+  @media (max-width: 700px) {
+    .risk-row { grid-template-columns: 1fr; }
+    .input-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -656,69 +802,58 @@
   <div class="fx-section">
     <div class="fx-section-title">📦 模块B · 当前帐期汇率风险敞口</div>
 
-    <!-- B0: 全链路说明 -->
-    <div style="font-size:11px;color:var(--muted);padding:8px 12px;background:#ffffff08;border-radius:6px;margin-bottom:16px;line-height:1.7">
-      全链路三段风险：
-      <strong style="color:var(--accent)">① 基准币 → 供应商报价币</strong>（采购换汇风险，供应商报价币选用 CNY 可消除；CNH 有实际汇差，不视为零风险）→
-      <strong style="color:var(--warn)">② 供应商报价币 → 销售结算币（MXN）</strong>（成本定价隐含风险）→
-      <strong style="color:var(--accent2)">③ 销售结算币（MXN）→ 基准币</strong>（收款换汇风险，主要敞口）
-    </div>
-
-    <!-- B1: 在途批次表 -->
-    <div style="margin-bottom:20px">
-      <div class="fx-subsection-title">B1 · 在途批次明细</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:10px">
-        预期收款日汇率 = 展望模型均值（格式：均值，区间：下轨–上轨）；鼠标悬停查看计算细节。浮动损益 = 按今日汇率折算；实际损益 = 收款后填入实际汇率计算。
+    <!-- B0: 全链路三段风险说明（可折叠） -->
+    <div style="margin-bottom:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:8px 12px;background:#ffffff08;border-radius:6px" onclick="toggleSection('b0-chain')">
+        <div style="font-size:12px;font-weight:700;color:var(--text)">🔗 全链路三段风险说明 <span style='font-size:10px;color:var(--muted);font-weight:400'>（每笔订单都经历三段汇率风险）</span></div>
+        <span id="b0-chain-toggle-icon" style="color:var(--muted);font-size:12px">▶</span>
       </div>
-      <div style="overflow-x:auto">
-        <table style="width:100%;border-collapse:collapse;font-size:12px" id="b1-batch-table">
-          <thead>
-            <tr style="color:var(--muted);border-bottom:1px solid var(--border)">
-              <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">备货付款日</th>
-              <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">运输方式</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">货值</th>
-              <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">供应商报价币</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">付款时CNY/报价币¹</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">付款时报价币/MXN²</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">预计收款日</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">今日MXN/基准币</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">预期收款日汇率³</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">浮动损益</th>
-              <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">实际损益</th>
-              <th style="padding:6px 4px;text-align:center;font-weight:600;white-space:nowrap">状态</th>
-              <th style="padding:6px 4px"></th>
-            </tr>
-          </thead>
-          <tbody id="b1-batch-body"></tbody>
-        </table>
-      </div>
-      <div style="display:flex;gap:10px;margin-top:10px;align-items:center;flex-wrap:wrap">
-        <button onclick="b1AddRow()" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;cursor:pointer">＋ 添加批次</button>
-        <span style="font-size:10px;color:var(--muted)">¹ 付款时花多少CNY换1单位报价币（CNY报价=1，CNH有实际汇差）　² 付款日报价币/MXN市场汇率（反映采购成本基准）　³ 展望均值（区间：下轨–上轨），基于历史波动率估算</span>
-      </div>
-      <!-- B1 汇总 -->
-      <div id="b1-summary" style="display:none;margin-top:16px">
-        <div style="height:1px;background:var(--border);margin-bottom:12px"></div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
-          <div class="sim-result-item"><div class="sim-result-label">在途批次</div><div class="sim-result-val" id="b1-sum-count">--</div></div>
-          <div class="sim-result-item"><div class="sim-result-label">总敞口（折CNY）</div><div class="sim-result-val" id="b1-sum-exposure">--</div></div>
-          <div class="sim-result-item"><div class="sim-result-label">浮动损益合计</div><div class="sim-result-val" id="b1-sum-float">--</div></div>
-          <div class="sim-result-item"><div class="sim-result-label">预期到账MXN</div><div class="sim-result-val" id="b1-sum-mxn">--</div></div>
+      <div id="b0-chain-body" style="display:none;padding:12px">
+        <div class="chain-bar">
+          <div class="chain-seg seg1">
+            <div class="chain-seg-label">① 采购换汇风险</div>
+            <div>基准币（CNY）→ 供应商报价币（USD/HKD等）</div>
+            <div style="margin-top:4px;font-size:10px;color:var(--muted)">时间点：采购付款日 · 可规避（选CNY报价供应商）</div>
+          </div>
+          <div class="chain-arrow">▶</div>
+          <div class="chain-seg seg2">
+            <div class="chain-seg-label">② 成本定价隐含风险</div>
+            <div>供应商报价币（USD/HKD等）→ 销售结算币（MXN）</div>
+            <div style="margin-top:4px;font-size:10px;color:var(--muted)">时间点：定价时的汇率预判 · 体现在定价是否足够覆盖成本</div>
+          </div>
+          <div class="chain-arrow">▶</div>
+          <div class="chain-seg seg3">
+            <div class="chain-seg-label">③ 收款换汇风险</div>
+            <div>销售结算币（MXN）→ 基准币（CNY）</div>
+            <div style="margin-top:4px;font-size:10px;color:var(--muted)">时间点：平台结算日 · 主要敞口，MXN/CNY波动直接影响利润</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.8;padding:8px 12px;background:#ffffff05;border-radius:6px">
+          <strong style="color:var(--text)">如何看这张表：</strong>
+          每一行 = 一笔货物批次。录入采购信息后，系统自动计算每一段的汇率风险，以及按帐期预测到收款日的浮动损益。
+          颜色标注：<span style="color:var(--accent2)">绿色 = 有利 / 低风险</span>，<span style="color:var(--warn)">橙色 = 注意</span>，<span style="color:var(--danger)">红色 = 高风险</span>。
         </div>
       </div>
     </div>
 
-    <!-- B2: 换汇决策建议 -->
+    <!-- B1: 汇总卡片 -->
+    <div class="summary-grid" id="b1-summary-cards"></div>
+
+    <!-- B1: 在途批次卡片式明细 -->
     <div style="margin-bottom:20px">
-      <div class="fx-subsection-title">B2 · 换汇决策建议 <span style="font-size:10px;color:var(--muted);font-weight:400">（按预期到账日联动）</span></div>
-      <div id="b2-advice-list">
-        <div class="empty-state">请先添加在途批次</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div class="fx-subsection-title" style="margin:0">B1 · 在途批次明细</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div class="risk-legend">
+            <span class="risk-pill seg1"><span class="dot"></span>采购换汇</span>
+            <span class="risk-pill seg2"><span class="dot"></span>成本定价</span>
+            <span class="risk-pill seg3"><span class="dot"></span>收款换汇</span>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="b1AddRow()">＋ 添加批次</button>
+        </div>
       </div>
-      <!-- 升级条件 mark -->
-      <div style="margin-top:12px;padding:10px 14px;background:#6366f108;border:1px solid #6366f133;border-radius:8px;font-size:11px;line-height:1.8;color:var(--muted)">
-        <div style="font-weight:700;color:var(--text);margin-bottom:4px">📈 风险管理升级路径</div>
-        <div><strong style="color:#a78bfa">B级</strong>（开通 Wise / 万里汇 账户后可用）：提前锁定远期汇率，适合单笔敞口 &gt;5万CNY等值，锁汇成本约 0.3–0.8%</div>
-        <div><strong style="color:#f59e0b">C级</strong>（年换汇规模 &gt;100万CNY + 银行企业账户）：申请银行远期结汇合约，锁汇成本更低，需要授信</div>
+      <div class="batch-list" id="b1-batch-list">
+        <div class="empty-state">暂无批次 · 点击「添加批次」开始记录</div>
       </div>
     </div>
 
@@ -1059,6 +1194,12 @@ function toggleSection(key) {
     const hidden = body.style.display==='none';
     body.style.display = hidden?'block':'none';
     icon.textContent = hidden?'▼ 折叠':'▶ 展开';
+  } else if (key==='b0-chain') {
+    const body = document.getElementById('b0-chain-body');
+    const icon = document.getElementById('b0-chain-toggle-icon');
+    const hidden = body.style.display==='none';
+    body.style.display = hidden?'block':'none';
+    icon.textContent = hidden?'▼':'▶';
   }
 }
 
@@ -1071,7 +1212,7 @@ function updateExposure() {
   const at = document.getElementById('air-total-days'); if(at) at.textContent = air;
   const a2s = document.getElementById('a2-sea-days'); if(a2s) a2s.textContent = sea;
   const a2a = document.getElementById('a2-air-days'); if(a2a) a2a.textContent = air;
-  if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); renderB2(); }
+  if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1106,7 +1247,7 @@ function initCfgUI() {
 
 function fxConfigChanged() {
   _cfg.base = document.getElementById('cfg-base-currency')?.value || 'CNY';
-  if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); renderB2(); }
+  if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); }
 }
 
 // ===== 主入口：数据加载完成后调用 =====
@@ -1115,7 +1256,6 @@ function updateFxAnalysis(allData) {
   _latestFx = allData[allData.length-1];
   renderAPairBlocks();
   renderB1Recalc();
-  renderB2();
   b3Refresh();
   renderHistory();
 }
@@ -1463,7 +1603,22 @@ function renderA1() { renderAPairBlocks(); }
 function renderA2() { /* 已整合进 renderAPairBlocks */ }
 function renderA3() { renderAPairBlocks(); }
 
-// ===== B1: 在途批次 =====
+// ===== B1: 在途批次（卡片式） =====
+
+// 工具函数：日期差
+function daysBetween(a,b){ return Math.round((new Date(b)-new Date(a))/86400000); }
+function daysUntil(d){ return daysBetween(todayStr(),d); }
+
+// 日波动率
+function calcVol30() {
+  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
+  return prices.length>=30 ? calcVol(prices.slice(-30)) : 0;
+}
+
+// 状态/模式标签
+function b1StatusLabel(s){ return {transit:'🚢 在途',customs:'🛃 清关中',selling:'🛒 在售',settled:'✅ 已结算'}[s]||s; }
+function b1ModeLabel(m){ return {sea:'🚢 海运',air:'✈️ 空运'}[m]||m; }
+
 function b1AddRow(payDate, shipMode, amount, quoteCcy, payRateCny, payRateMxn) {
   const id = _b1NextId++;
   const mode = shipMode || 'sea';
@@ -1473,15 +1628,15 @@ function b1AddRow(payDate, shipMode, amount, quoteCcy, payRateCny, payRateMxn) {
   _b1Rows.push({
     id, payDate: pDate, mode, amount: amount||100000, quoteCcy: quoteCcy||'CNY',
     payRateCny: payRateCny||1, payRateMxn: payRateMxn||null,
-    recvDate, actualRate: null, status: 'transit'
+    recvDate, actualRate: null, status: 'transit', name: '新批次'
   });
   renderB1();
-  renderB2();
+  setTimeout(()=>{ const el=document.getElementById(`batch-${id}`); if(el)el.scrollIntoView({behavior:'smooth',block:'center'}); },100);
 }
 
 function b1RemoveRow(id) {
   _b1Rows = _b1Rows.filter(r=>r.id!==id);
-  renderB1(); renderB2();
+  renderB1();
 }
 
 function b1FieldChange(id, field, val) {
@@ -1489,158 +1644,333 @@ function b1FieldChange(id, field, val) {
   if (!row) return;
   if (['amount','payRateCny','payRateMxn','actualRate'].includes(field)) row[field] = parseFloat(val)||null;
   else row[field] = val;
-  // 更新收款日
   if (['payDate','mode'].includes(field)) {
     const days = row.mode==='sea' ? getSeaDays() : getAirDays();
     row.recvDate = addDays(row.payDate, days);
   }
-  renderB1(); renderB2();
+  renderB1();
+}
+
+function b1ToggleBatch(id){
+  const body = document.getElementById(`batch-body-${id}`);
+  const icon = document.getElementById(`toggle-icon-${id}`);
+  if(!body)return;
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  if(icon) icon.textContent = open ? '▶' : '▼';
+}
+
+// 批次风险计算（基于主看板的真实数据）
+function calcB1Risk(row) {
+  const today = _latestFx?.fx?.mxn_cny;
+  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
+  const histRate = row.payDate ? getHistRate(row.payDate) : null;
+  const payBase = row.payRateCny || 1;
+  const payMxn = row.payRateMxn || histRate || today;
+  const cnyPaid = row.amount * payBase;
+  const mxnRecv = row.quoteCcy==='MXN' ? row.amount : (row.amount / payBase * (payMxn||0));
+  const daysToRecv = Math.max(0, Math.round((new Date(row.recvDate)-new Date())/86400000));
+  const outlook = prices.length>=10 && daysToRecv>0 ? calcOutlook(prices, daysToRecv) : null;
+
+  // 浮动损益
+let floatPnl = null, fcastPnl = null;
+  if (today && payMxn && row.amount) {
+    floatPnl = mxnRecv * today - cnyPaid;
+    fcastPnl = outlook ? mxnRecv * outlook.mean - cnyPaid : floatPnl;
+  }
+
+  // 段① 采购换汇风险
+  let seg1 = { risk: null, pct: null, payRate: payBase, curRate: payBase };
+  if (row.quoteCcy !== 'CNY' && row.quoteCcy !== 'MXN') {
+    const cnyToQuote = payBase;
+    // 近似：当前 1CNY 能换多少报价币（用最新数据估算）
+    const curRate = cnyToQuote; // 简化，用原始记录
+    seg1 = { risk: 0, pct: 0, payRate: payBase, curRate };
+  }
+
+  // 段② 成本定价风险
+  const mxnRateAtPay = histRate || today || 0;
+  const clearDays = Math.round(daysToRecv * 0.5);
+  const outlookClear = prices.length>=10 && clearDays>0 ? calcOutlook(prices, clearDays) : null;
+  const mxnRateAtClear = outlookClear ? outlookClear.mean : (today||0);
+  const seg2Pct = mxnRateAtPay ? (mxnRateAtClear - mxnRateAtPay) / mxnRateAtPay : 0;
+
+  // 段③ 收款换汇风险
+  const mxnRateAtRecv = outlook ? outlook.mean : (today||0);
+  const seg3Pct = mxnRateAtPay ? (mxnRateAtRecv - mxnRateAtPay) / mxnRateAtPay : 0;
+
+  return {
+    cnyPaid, mxnRecv, floatPnl, fcastPnl, daysToRecv, outlook, payMxn,
+    seg1, seg2: { pct: seg2Pct, mxnRateAtPay, mxnRateAtClear },
+    seg3: { pct: seg3Pct, mxnRateAtPay, mxnRateAtRecv, recvDaysUntil: daysToRecv,
+            cnyRecvLo: outlook ? mxnRecv * outlook.lo : null,
+            cnyRecvHi: outlook ? mxnRecv * outlook.hi : null }
+  };
 }
 
 function renderB1() {
-  const tbody = document.getElementById('b1-batch-body');
-  if (!tbody) return;
+  const el = document.getElementById('b1-batch-list');
+  if (!el) return;
+  if (!_b1Rows.length) {
+    el.innerHTML = '<div class="empty-state">暂无批次 · 点击「添加批次」开始记录</div>';
+    renderB1Summary();
+    return;
+  }
+  el.innerHTML = _b1Rows.map(row => renderB1Card(row)).join('');
+  renderB1Summary();
+}
+
+function renderB1Card(row) {
+  const r = calcB1Risk(row);
   const today = _latestFx?.fx?.mxn_cny;
-  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
+  const settled = row.status === 'settled';
+  const pnl = r.fcastPnl;
+  const pnlClass = pnl==null?'pnl-neutral':pnl>=200?'pnl-pos':pnl<=-200?'pnl-neg':'pnl-neutral';
 
-  tbody.innerHTML = _b1Rows.map(row => {
-    // 展望：按距收款日的天数
-    const daysToRecv = Math.max(0, Math.round((new Date(row.recvDate)-new Date())/86400000));
-    const outlook = prices.length>=10 && daysToRecv>0 ? calcOutlook(prices, daysToRecv) : null;
-    const outlookStr = outlook ? `${fmtNum(outlook.mean,4)}<br><span style="font-size:10px;color:var(--muted)">${fmtNum(outlook.lo,4)}–${fmtNum(outlook.hi,4)}</span>` : (today?fmtNum(today,4):'--');
+  // 帐期时间轴
+  const seaDays = getSeaDays(), airDays = getAirDays();
+  const totalDays_row = row.mode==='sea'?seaDays:airDays;
+  const elapsed = Math.max(0, Math.min(totalDays_row, daysBetween(row.payDate, todayStr())));
+  const progressPct = totalDays_row > 0 ? (elapsed/totalDays_row*100).toFixed(1) : 0;
 
-    // 付款时汇率（若未填，用历史数据补）
-    const histRate = row.payDate ? getHistRate(row.payDate) : null;
-    const payBase = row.payRateCny || 1;
-    const payMxn = row.payRateMxn || histRate || today;
+  const tlNodes = [
+    {label:'发货',date:row.payDate,above:true},
+    {label:'到港',date:addDays(row.payDate, row.mode==='sea'?30:10),above:false},
+    {label:'清关',date:addDays(row.payDate, row.mode==='sea'?37:15),above:true},
+    {label:'上架',date:addDays(row.payDate, row.mode==='sea'?37:15),above:false},
+    {label:'预计收款',date:row.recvDate,above:true},
+  ];
+  const tlNodeHtml = tlNodes.map((n,i) => {
+    const pct = i===0?0:i===tlNodes.length-1?100:(daysBetween(row.payDate,n.date)/totalDays_row*100).toFixed(1);
+    const isPast = n.date <= todayStr();
+    const isCurrent = i>0 && tlNodes[i-1].date <= todayStr() && n.date > todayStr();
+    const cls = isCurrent ? 'current' : isPast ? 'past' : '';
+    const dotColor = n.label==='发货'?'var(--seg1)':n.label==='清关'||n.label==='到港'?'var(--seg2)':n.label==='预计收款'?'var(--seg3)':'var(--muted)';
+    return `<div class="tl-node ${cls}" style="left:${pct}%">
+      <div class="tl-dot" style="background:${isPast||isCurrent?dotColor:'var(--border)'}"></div>
+      <div class="tl-label ${n.above?'above':'below'}" style="${isPast?'color:var(--text)':'color:var(--muted)'}">${n.label}<br><span style="font-family:DM Mono;font-size:9px">${n.date.slice(5)}</span></div>
+    </div>`;
+  }).join('');
 
-    // 浮动损益（CNY）：今日汇率下，货值对应MXN收入，换回CNY
-    let floatPnl = null;
-    if (today && payMxn && row.amount) {
-      // amount 是报价币金额 → 换算MXN金额 = amount * payMxn（若报价币是CNY则先除以payBase）
-      const cnyPaid = row.amount * payBase; // 实际付出CNY
-      const mxnRecv = row.quoteCcy==='MXN' ? row.amount : (row.amount / payBase * payMxn); // 预计收MXN
-      const cnyRecv = mxnRecv * today; // 今日汇率换回CNY
-      floatPnl = cnyRecv - cnyPaid;
-    }
+  // 段① HTML
+  const seg1Html = row.quoteCcy === 'CNY'
+    ? `<div class="risk-kv"><span class="lbl">采购货币</span><span class="val info">CNY（已消除）</span></div><div class="risk-footer">以CNY计价采购，无外汇兑换风险。</div>`
+    : `<div class="risk-kv"><span class="lbl">付款汇率</span><span class="val">1CNY=${fmtNum(row.payRateCny,4)} ${row.quoteCcy}</span></div>
+       <div class="risk-footer">CNY/报价币走弱 → 采购成本上升。</div>`;
 
-    // 实际损益
-    let actualPnl = null;
-    if (row.actualRate && payMxn && row.amount) {
-      const cnyPaid = row.amount * payBase;
-      const mxnRecv = row.quoteCcy==='MXN' ? row.amount : (row.amount / payBase * payMxn);
-      actualPnl = mxnRecv * row.actualRate - cnyPaid;
-    }
+  // 段② HTML
+  const seg2Html = `
+    <div class="risk-kv"><span class="lbl">定价基准汇率</span><span class="val">MXN/CNY ${fmtNum(r.seg2.mxnRateAtPay,4)}</span></div>
+    <div class="risk-kv"><span class="lbl">预计到货汇率</span><span class="val ${r.seg2.pct>0?'pos':'neg'}">~${fmtNum(r.seg2.mxnRateAtClear,4)}</span></div>
+    <div class="risk-kv"><span class="lbl">定价风险</span><span class="val ${r.seg2.pct>0?'pos':'neg'}">${fmtPct(r.seg2.pct*100)} 利润缓冲</span></div>
+    <div class="risk-footer">MXN贬值 → 同等MXN售价换回更少CNY，需提前在定价中预留缓冲。</div>`;
 
-    const pnlColor = (v) => v==null?'var(--muted)':v>=0?'var(--accent2)':'var(--danger)';
-    const statusOpts = ['transit','customs','selling','settled'].map(s =>
-      `<option value="${s}" ${row.status===s?'selected':''}>${{transit:'在途',customs:'清关',selling:'在售',settled:'已结算'}[s]}</option>`).join('');
+  // 段③ HTML
+  const seg3Html = `
+    <div class="risk-kv"><span class="lbl">定价日汇率</span><span class="val">MXN/CNY ${fmtNum(r.seg3.mxnRateAtPay,4)}</span></div>
+    <div class="risk-kv"><span class="lbl">预计收款日汇率</span><span class="val ${r.seg3.pct>0?'pos':'neg'}">~${fmtNum(r.seg3.mxnRateAtRecv,4)}</span></div>
+    <div class="risk-kv"><span class="lbl">距收款</span><span class="val info">${r.seg3.recvDaysUntil>0?r.seg3.recvDaysUntil+'天':'已到期'}</span></div>
+    <div class="risk-kv"><span class="lbl">预计损益</span><span class="val ${pnlClass}" style="font-size:13px">${pnl!=null?fmtCny(pnl):'--'}</span></div>
+    ${r.seg3.cnyRecvLo!=null?`<div class="risk-kv"><span class="lbl">95%区间</span><span class="val muted" style="font-size:10px">${fmtCny(r.seg3.cnyRecvLo-r.cnyPaid)} ~ ${fmtCny(r.seg3.cnyRecvHi-r.cnyPaid)}</span></div>`:''}
+    <div class="risk-footer">主要风险：MXN在收款前持续贬值。</div>`;
 
-    return `
-    <tr style="border-bottom:1px solid var(--border)">
-      <td style="padding:6px 8px"><input type="date" value="${row.payDate}" onchange="b1FieldChange(${row.id},'payDate',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:2px 6px;font-size:11px;width:110px"></td>
-      <td style="padding:6px 8px">
-        <select onchange="b1FieldChange(${row.id},'mode',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:2px 6px;font-size:11px">
+  const seg1ConcClass = row.quoteCcy==='CNY'?'ok':Math.abs(r.seg1.pct||0)<0.01?'ok':(r.seg1.pct||0)<-0.02?'bad':'warn';
+  const seg2ConcClass = r.seg2.pct>0.01?'ok':r.seg2.pct<-0.02?'bad':'warn';
+  const seg3ConcClass = pnl==null?'na':pnl>=0?'ok':pnl<-r.cnyPaid*0.03?'bad':'warn';
+
+  // 状态感知策略面板
+  let actionPanelHtml = '';
+  if (row.status === 'transit' || row.status === 'customs') {
+    const safeMarginPct = Math.max(0.05, Math.abs(r.seg2.pct) + calcVol30() * 0.5);
+    const safeMxnPrice = r.cnyPaid / ((today||0.4) * (1 - safeMarginPct));
+    const minMxnPrice  = r.cnyPaid / (today||0.4);
+    actionPanelHtml = `
+    <div class="action-panel ap-transit">
+      <div class="ap-title">🧭 现在能做什么（货在路上）</div>
+      <div class="ap-seg-tag seg1-tag">① 采购换汇：已定局</div>
+      <div class="ap-note">付款汇率已锁定，无法再操作。</div>
+      <div class="ap-seg-tag seg2-tag">② 上架定价：提前规划</div>
+      <div class="ap-note">货到后需设定 MXN 售价，建议保留汇率缓冲：</div>
+      <div class="ap-price-row">
+        <div class="ap-price-card">
+          <div class="ap-price-label">保本最低定价</div>
+          <div class="ap-price-value warn">${r.mxnRecv>0?fmtNum(safeMxnPrice/r.mxnRecv*100,0):'--'} MXN / 百元成本</div>
+          <div class="ap-price-sub">含 ${(safeMarginPct*100).toFixed(1)}% 汇率缓冲</div>
+        </div>
+        <div class="ap-price-card">
+          <div class="ap-price-label">无缓冲保本线（危险）</div>
+          <div class="ap-price-value danger">${r.mxnRecv>0?fmtNum(minMxnPrice/r.mxnRecv*100,0):'--'} MXN / 百元成本</div>
+          <div class="ap-price-sub">MXN再贬即亏损</div>
+        </div>
+      </div>
+      <div class="ap-seg-tag seg3-tag">③ 收款换汇：预计 ${row.recvDate} 到账，届时再决策</div>
+    </div>`;
+  } else if (row.status === 'selling') {
+    const safeMarginPct = Math.max(0.04, calcVol30() * 0.5);
+    const safeMxnPrice = r.cnyPaid / ((today||0.4) * (1 - safeMarginPct));
+    const minMxnPrice  = r.cnyPaid / (today||0.4);
+    actionPanelHtml = `
+    <div class="action-panel ap-selling">
+      <div class="ap-title">🧭 现在能做什么（货在售）</div>
+      <div class="ap-seg-tag seg2-tag">② 成本定价：当前核心决策</div>
+      <div class="ap-note">今日 MXN/CNY = ${today?fmtNum(today,4):'--'}，核心问题：<strong>当前定价够不够？</strong></div>
+      <div class="ap-price-row">
+        <div class="ap-price-card">
+          <div class="ap-price-label">建议定价（含${(safeMarginPct*100).toFixed(0)}%缓冲）</div>
+          <div class="ap-price-value ok">${r.mxnRecv>0?fmtNum(safeMxnPrice/r.mxnRecv*100,0):'--'} MXN / 百元成本</div>
+        </div>
+        <div class="ap-price-card">
+          <div class="ap-price-label">无缓冲保本线</div>
+          <div class="ap-price-value danger">${r.mxnRecv>0?fmtNum(minMxnPrice/r.mxnRecv*100,0):'--'} MXN / 百元成本</div>
+        </div>
+      </div>
+      <div class="ap-seg-tag seg3-tag">③ 收款换汇：预计 ${row.recvDate}，当前暂不决策</div>
+    </div>`;
+  } else if (row.status === 'settled') {
+    const mxnHeld = r.mxnRecv;
+    const cnyNow   = mxnHeld * (today||0);
+    const cnyHold7 = mxnHeld * (r.seg3.mxnRateAtRecv||today||0);
+    const cnyWorse = mxnHeld * (today||0) * 0.97;
+    const strategies3 = [
+      { name:'今日立即全额换汇', rate: today, cny: cnyNow, pnl: cnyNow - r.cnyPaid, rec: cnyNow>=r.cnyPaid?'best':'warn', label: cnyNow>=r.cnyPaid?'✓ 锁定盈利':'锁定亏损' },
+      { name:'持有等待（预测高点）', rate: r.seg3.mxnRateAtRecv, cny: cnyHold7, pnl: cnyHold7 - r.cnyPaid, rec: cnyHold7>cnyNow?'ok':'warn', label: cnyHold7>cnyNow?'↑ 更优':'不如立即换' },
+      { name:'悲观情景（MXN再跌3%）', rate: (today||0)*0.97, cny: cnyWorse, pnl: cnyWorse - r.cnyPaid, rec:'warn', label:'压力测试' },
+    ];
+    const rows3 = strategies3.map(s=>`
+      <tr>
+        <td><span class="strat-name">${s.name}</span></td>
+        <td><span class="strat-rate">${fmtNum(s.rate,4)}</span></td>
+        <td><span class="strat-pnl" style="color:${s.pnl>=0?'var(--accent2)':'var(--danger)'}">${fmtCny(s.pnl)}</span></td>
+        <td><span class="strat-rec ${s.rec}">${s.label}</span></td>
+      </tr>`).join('');
+    actionPanelHtml = `
+    <div class="action-panel ap-settled">
+      <div class="ap-title">🧭 现在能做什么（已收到MXN）</div>
+      <div class="ap-seg-tag seg3-tag">③ 收款换汇：当前核心决策</div>
+      <div class="ap-note">已收到约 <strong>${fmtNum(mxnHeld,0)} MXN</strong>，现在需要决定何时换回CNY：</div>
+      <table class="strategy-table" style="margin-top:10px">
+        <thead><tr><th>换汇策略</th><th>MXN/CNY 汇率</th><th>换回CNY（含损益）</th><th>建议</th></tr></thead>
+        <tbody>${rows3}</tbody>
+      </table>
+      <div class="ap-note" style="margin-top:8px">💡 分批换汇（如每周1/3）可平滑风险。</div>
+    </div>`;
+  }
+
+  return `
+<div class="batch-card ${settled?'settled':''}" id="batch-${row.id}">
+  <div class="batch-header" onclick="b1ToggleBatch(${row.id})">
+    <span class="batch-id">#${row.id}</span>
+    <input class="batch-name-input" value="${row.name||'批次'+row.id}" onclick="event.stopPropagation()" onchange="b1FieldChange(${row.id},'name',this.value)" placeholder="批次备注">
+    <div class="batch-meta">
+      <span>${b1ModeLabel(row.mode)}</span>
+      <span>发货 ${row.payDate}</span>
+      <span>采购 ${(r.cnyPaid/10000).toFixed(1)}万CNY</span>
+      <span class="batch-status-badge status-${row.status}">${b1StatusLabel(row.status)}</span>
+    </div>
+    <div class="batch-quick-pnl ${pnlClass}">${pnl!=null?fmtCny(pnl):'--'}</div>
+    <span style="color:var(--muted);font-size:12px;margin-left:4px" id="toggle-icon-${row.id}">▼</span>
+  </div>
+  <div id="batch-body-${row.id}" class="batch-body">
+
+    <!-- 录入表单 -->
+    <div class="input-grid">
+      <div class="input-field">
+        <div class="input-label"><span class="seg-dot sn"></span>发货日期</div>
+        <input class="inp" type="date" value="${row.payDate}" onchange="b1FieldChange(${row.id},'payDate',this.value)">
+      </div>
+      <div class="input-field">
+        <div class="input-label"><span class="seg-dot sn"></span>运输方式</div>
+        <select class="inp" onchange="b1FieldChange(${row.id},'mode',this.value)">
           <option value="sea" ${row.mode==='sea'?'selected':''}>🚢 海运</option>
           <option value="air" ${row.mode==='air'?'selected':''}>✈️ 空运</option>
         </select>
-      </td>
-      <td style="padding:6px 8px;text-align:right"><input type="number" value="${row.amount}" onchange="b1FieldChange(${row.id},'amount',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:2px 6px;font-size:11px;width:80px;text-align:right"></td>
-      <td style="padding:6px 8px">
-        <select onchange="b1FieldChange(${row.id},'quoteCcy',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:2px 6px;font-size:11px">
+      </div>
+      <div class="input-field">
+        <div class="input-label"><span class="seg-dot s1"></span>采购金额（报价币）</div>
+        <input class="inp" type="number" value="${row.amount}" onchange="b1FieldChange(${row.id},'amount',+this.value)" placeholder="如：50000">
+      </div>
+      <div class="input-field">
+        <div class="input-label"><span class="seg-dot s1"></span>供应商报价币</div>
+        <select class="inp" onchange="b1FieldChange(${row.id},'quoteCcy',this.value)">
           ${QUOTE_CURRENCIES.map(c=>`<option value="${c}" ${row.quoteCcy===c?'selected':''}>${c}</option>`).join('')}
         </select>
-      </td>
-      <td style="padding:6px 8px;text-align:right"><input type="number" step="0.0001" value="${row.payRateCny||1}" onchange="b1FieldChange(${row.id},'payRateCny',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:2px 6px;font-size:11px;width:70px;text-align:right" placeholder="1"></td>
-      <td style="padding:6px 8px;text-align:right"><input type="number" step="0.0001" value="${row.payRateMxn||histRate?.toFixed(4)||''}" onchange="b1FieldChange(${row.id},'payRateMxn',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--text);padding:2px 6px;font-size:11px;width:70px;text-align:right" placeholder="${histRate?histRate.toFixed(4):'--'}"></td>
-      <td style="padding:6px 8px;text-align:right;font-size:11px;color:var(--muted)">${row.recvDate}</td>
-      <td style="padding:6px 8px;text-align:right;font-size:13px;font-weight:700">${today?fmtNum(today,4):'--'}</td>
-      <td style="padding:6px 8px;text-align:right;font-size:11px">${outlookStr}</td>
-      <td style="padding:6px 8px;text-align:right;font-size:12px;font-weight:700;color:${pnlColor(floatPnl)}">${floatPnl!=null?fmtCny(floatPnl):'--'}</td>
-      <td style="padding:6px 8px;text-align:right"><input type="number" step="0.0001" value="${row.actualRate||''}" onchange="b1FieldChange(${row.id},'actualRate',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:${pnlColor(actualPnl)};padding:2px 6px;font-size:11px;width:70px;text-align:right" placeholder="收款后填"></td>
-      <td style="padding:6px 8px">
-        <select onchange="b1FieldChange(${row.id},'status',this.value)" style="background:#12141e;border:1px solid var(--border);border-radius:4px;color:var(--muted);padding:2px 4px;font-size:11px">${statusOpts}</select>
-      </td>
-      <td style="padding:6px 4px;text-align:center"><button onclick="b1RemoveRow(${row.id})" style="background:none;border:none;color:var(--danger);cursor:pointer;font-size:14px">✕</button></td>
-    </tr>`;
-  }).join('') || `<tr><td colspan="13" style="text-align:center;color:var(--muted);padding:20px;font-size:12px">暂无在途批次 · 点击「添加批次」开始记录</td></tr>`;
+      </div>
+      <div class="input-field">
+        <div class="input-label"><span class="seg-dot s1"></span>付款时汇率（1CNY=x报价币）</div>
+        <input class="inp" type="number" step="0.0001" value="${row.payRateCny||''}" onchange="b1FieldChange(${row.id},'payRateCny',+this.value)" placeholder="CNY报价=1">
+      </div>
+      <div class="input-field">
+        <div class="input-label"><span class="seg-dot sn"></span>状态</div>
+        <select class="inp" onchange="b1FieldChange(${row.id},'status',this.value)">
+          ${['transit','customs','selling','settled'].map(s=>`<option value="${s}" ${row.status===s?'selected':''}>${b1StatusLabel(s)}</option>`).join('')}
+        </select>
+      </div>
+    </div>
 
-  renderB1Summary();
+    <!-- 帐期时间轴 -->
+    <div class="timeline">
+      <div class="timeline-title">📅 帐期时间轴（今日：${todayStr()}，进度 ${progressPct}%）</div>
+      <div class="tl-track">
+        <div class="tl-progress" style="width:${progressPct}%"></div>
+        ${tlNodeHtml}
+      </div>
+    </div>
+
+    <!-- 三段风险 -->
+    <div class="risk-display">
+      <div style="font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.05em;margin-bottom:10px">三段风险分析</div>
+      <div class="risk-row">
+        <div class="risk-block seg1">
+          <div class="risk-block-title">① 采购换汇风险</div>
+          ${seg1Html}
+          <div class="risk-conclusion ${seg1ConcClass}">${seg1ConcClass==='ok'?'✓ 低风险':seg1ConcClass==='warn'?'⚠ 中等':'⛔ 高风险'}</div>
+        </div>
+        <div class="risk-block seg2">
+          <div class="risk-block-title">② 成本定价隐含风险</div>
+          ${seg2Html}
+          <div class="risk-conclusion ${seg2ConcClass}">${seg2ConcClass==='ok'?'✓ 定价充裕':seg2ConcClass==='warn'?'⚠ 定价偏紧':'⛔ 定价不足'}</div>
+        </div>
+        <div class="risk-block seg3">
+          <div class="risk-block-title">③ 收款换汇风险（主敞口）</div>
+          ${seg3Html}
+          <div class="risk-conclusion ${seg3ConcClass}">${seg3ConcClass==='ok'?'✓ 预计盈利':seg3ConcClass==='warn'?'⚠ 小幅亏损':seg3ConcClass==='bad'?'⛔ 较大亏损':'—'}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 状态感知策略面板 -->
+    ${actionPanelHtml}
+
+    <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+      <button class="btn btn-ghost btn-sm" onclick="event.stopPropagation();b1RemoveRow(${row.id})">🗑 删除批次</button>
+    </div>
+  </div>
+</div>`;
 }
 
 function renderB1Recalc() { renderB1(); }
 
 function renderB1Summary() {
+  const el = document.getElementById('b1-summary-cards');
+  if (!el) return;
+  if (!_b1Rows.length) { el.innerHTML = ''; return; }
   const today = _latestFx?.fx?.mxn_cny;
-  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
-  const sumEl = document.getElementById('b1-summary');
-  if (!sumEl || !_b1Rows.length) { if(sumEl) sumEl.style.display='none'; return; }
-  sumEl.style.display='block';
-
-  let totalCny=0, totalFloat=0, totalMxn=0;
-  _b1Rows.forEach(row => {
-    const histRate = getHistRate(row.payDate);
-    const payMxn = row.payRateMxn || histRate || today;
-    const payBase = row.payRateCny || 1;
-    const cnyPaid = row.amount * payBase;
-    const mxnRecv = row.quoteCcy==='MXN' ? row.amount : (row.amount / payBase * (payMxn||0));
-    totalCny += cnyPaid;
-    totalMxn += mxnRecv;
-    if (today && payMxn) totalFloat += mxnRecv*today - cnyPaid;
+  const active = _b1Rows.filter(r=>r.status!=='settled');
+  let totalCny=0, totalFloat=0, totalFcast=0, totalMxn=0;
+  active.forEach(row => {
+    const r = calcB1Risk(row);
+    totalCny += r.cnyPaid;
+    totalMxn += r.mxnRecv;
+    if (r.floatPnl!=null) totalFloat += r.floatPnl;
+    if (r.fcastPnl!=null) totalFcast += r.fcastPnl;
   });
-
-  const setEl=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
-  setEl('b1-sum-count', _b1Rows.length+'批');
-  setEl('b1-sum-exposure', (totalCny/10000).toFixed(1)+'万CNY');
-  const floatEl=document.getElementById('b1-sum-float');
-  if(floatEl){floatEl.textContent=fmtCny(totalFloat);floatEl.style.color=totalFloat>=0?'var(--accent2)':'var(--danger)';}
-  setEl('b1-sum-mxn', totalMxn.toFixed(0)+' MXN');
-}
-
-// ===== B2: 换汇决策建议 =====
-function renderB2() {
-  const container = document.getElementById('b2-advice-list');
-  if (!container) return;
-  if (!_b1Rows.length) { container.innerHTML='<div class="empty-state">请先添加在途批次</div>'; return; }
-
-  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
-  const today = _latestFx?.fx?.mxn_cny;
-  const slope7 = prices.length>=7 ? calcSlope(prices.slice(-7)) : 0;
-
-  // 按预期收款日排序，分组
-  const sorted = [..._b1Rows].sort((a,b)=>a.recvDate.localeCompare(b.recvDate));
-
-  container.innerHTML = sorted.map(row => {
-    const daysToRecv = Math.round((new Date(row.recvDate)-new Date())/86400000);
-    const outlook = prices.length>=10 && daysToRecv>0 ? calcOutlook(prices, daysToRecv) : null;
-    const outlookPct = outlook ? ((outlook.mean-today)/today*100) : (slope7*daysToRecv/today*100);
-
-    let advice='', adviceColor='var(--muted)', icon='';
-    if (daysToRecv <= 0) {
-      advice='已到期，请及时换汇或确认是否已入账'; adviceColor='var(--danger)'; icon='🔴';
-    } else if (outlookPct < -1.5) {
-      advice=`预期收款时比索偏弱（约 ${outlookPct.toFixed(1)}%），建议<strong>到账即换</strong>，不建议持有等待`;
-      adviceColor='var(--warn)'; icon='⚡';
-    } else if (outlookPct > 1.5) {
-      advice=`预期收款时比索走强（约 +${outlookPct.toFixed(1)}%），可<strong>分批换汇</strong>，建议 2 次，间隔 ${Math.round(daysToRecv/2)} 天`;
-      adviceColor='var(--accent2)'; icon='✅';
-    } else {
-      advice=`汇率走势不明朗，建议<strong>设置止损汇率</strong> ${today?(today*0.97).toFixed(4):'--'}（跌破即换，锁定-3%以内损失）`;
-      adviceColor='var(--text)'; icon='⚠️';
-    }
-
-    const mxnRecv = (() => {
-      const histRate = getHistRate(row.payDate); const payMxn=row.payRateMxn||histRate||today;
-      const payBase=row.payRateCny||1;
-      return row.quoteCcy==='MXN'?row.amount:(row.amount/payBase*(payMxn||0));
-    })();
-
-    return `
-    <div class="b2-advice-card">
-      <div class="b2-advice-date">${icon} 预计收款：<strong>${row.recvDate}</strong>（${daysToRecv>0?daysToRecv+'天后':'已到期'}）　|　预计到账：约 ${mxnRecv.toFixed(0)} MXN</div>
-      <div class="b2-advice-body" style="color:${adviceColor}">${advice}</div>
-    </div>`;
-  }).join('');
+  const pnlColor = v => v>=0?'var(--accent2)':'var(--danger)';
+  el.innerHTML = `
+    <div class="sum-card"><div class="sum-card-label">在途批次</div><div class="sum-card-value">${active.length}<span style="font-size:14px;color:var(--muted);margin-left:4px">笔</span></div><div class="sum-card-sub">共 ${_b1Rows.length} 笔（含已结算）</div></div>
+    <div class="sum-card"><div class="sum-card-label">总采购投入（CNY）</div><div class="sum-card-value" style="font-size:16px">${(totalCny/10000).toFixed(1)}<span style="font-size:12px;color:var(--muted);margin-left:4px">万元</span></div><div class="sum-card-sub">在途货物总成本</div></div>
+    <div class="sum-card"><div class="sum-card-label">预计MXN收入</div><div class="sum-card-value" style="font-size:16px">${(totalMxn/10000).toFixed(1)}<span style="font-size:12px;color:var(--muted);margin-left:4px">万MXN</span></div><div class="sum-card-sub">按目标定价</div></div>
+    <div class="sum-card"><div class="sum-card-label">预计总损益（收款日汇率）</div><div class="sum-card-value" style="font-size:16px;color:${pnlColor(totalFcast)}">${fmtCny(totalFcast)}</div><div class="sum-card-sub">今日换汇：<span style="color:${pnlColor(totalFloat)}">${fmtCny(totalFloat)}</span></div></div>
+  `;
 }
 
 // ===== B3: 历史走势图 =====
@@ -2183,12 +2513,7 @@ function getFxAtDate(dateStr) {
   return best;
 }
 
-// 计算剩余天数
-function daysUntil(dateStr) {
-  const today = new Date(); today.setHours(0,0,0,0);
-  const due = new Date(dateStr);
-  return Math.round((due - today) / 86400000);
-}
+// 计算剩余天数（复用全局 daysUntil）
 
 // 获取当前汇率
 function getCurrentFx() {

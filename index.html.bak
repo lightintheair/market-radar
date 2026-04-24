@@ -510,12 +510,53 @@
       <span id="bg-toggle-icon" style="color:var(--muted);font-size:14px">▶</span>
     </div>
     <div id="bg-body" style="display:none;margin-top:16px">
+      <!-- 三币种 + 三段风险说明 -->
+      <div style="background:#12141e;border:1px solid #6366f133;border-radius:10px;padding:16px;margin-bottom:16px;font-size:12px;line-height:1.8">
+        <div style="font-weight:700;color:var(--text);margin-bottom:10px;font-size:13px">💱 全链路货币结构与三段风险</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px">
+          <div style="background:#ffffff08;border-radius:8px;padding:10px">
+            <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">基准币</div>
+            <div style="font-size:15px;font-weight:700;color:var(--accent)">CNY</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">我方记账与最终收益结算的本位货币。所有利润最终折算回基准币衡量。</div>
+          </div>
+          <div style="background:#ffffff08;border-radius:8px;padding:10px">
+            <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">供应商报价币</div>
+            <div style="font-size:15px;font-weight:700;color:var(--warn)">CNH / USD / …</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">供应商开票并收款的货币，可多选。备货付款时需将基准币兑换为供应商报价币。</div>
+          </div>
+          <div style="background:#ffffff08;border-radius:8px;padding:10px">
+            <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">销售结算币</div>
+            <div style="font-size:15px;font-weight:700;color:var(--accent2)">MXN</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">墨西哥客户支付的货币，速卖通平台以 MXN 结算后换汇回基准币。</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:600">全链路三段风险：</div>
+        <div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap">
+          <div style="flex:1;min-width:160px;background:#6366f115;border:1px solid #6366f133;border-radius:8px 0 0 8px;padding:10px 12px">
+            <div style="font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">采购换汇风险</div>
+            <div style="font-size:12px;font-weight:700;color:var(--text)">基准币 → 供应商报价币</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">备货付款时，用基准币换供应商报价币产生的汇率风险。选用 CNY 报价可消除此段风险（CNH 离岸人民币虽同为人民币，但有真实汇差与出入境成本）。</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 4px;color:var(--muted);font-size:16px">→</div>
+          <div style="flex:1;min-width:160px;background:#f59e0b15;border:1px solid #f59e0b33;padding:10px 12px">
+            <div style="font-size:10px;font-weight:700;color:var(--warn);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">成本定价隐含风险</div>
+            <div style="font-size:12px;font-weight:700;color:var(--text)">供应商报价币 → 销售结算币（MXN）</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">采购成本以供应商报价币锁定，但售价以 MXN 定价，两者汇率变动影响实际利润率。</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 4px;color:var(--muted);font-size:16px">→</div>
+          <div style="flex:1;min-width:160px;background:#10b98115;border:1px solid #10b98133;border-radius:0 8px 8px 0;padding:10px 12px">
+            <div style="font-size:10px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">收款换汇风险</div>
+            <div style="font-size:12px;font-weight:700;color:var(--text)">销售结算币（MXN）→ 基准币</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">MXN 到账后换回基准币，帐期内 MXN 汇率波动直接影响最终收益，是最主要的敞口。</div>
+          </div>
+        </div>
+      </div>
       <!-- 业务模式 + 粗估说明 -->
       <div style="display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:20px">
         <div style="background:#12141e;border:1px solid var(--border);border-radius:8px;padding:14px;font-size:12px;line-height:1.8">
           <div style="font-weight:700;color:var(--text);margin-bottom:6px">📦 业务模式</div>
-          <div style="color:var(--muted)">公司提前预测市场需求，选品采购后发往<strong style="color:var(--text)">墨西哥自有仓库</strong>，在速卖通等本地电商平台售卖并对客交收，以 MXN 结算后换汇回 CNY。</div>
-          <div style="margin-top:8px;color:var(--muted)">⚠️ 货在墨西哥仓库期间属于 <strong style="color:var(--warn)">MXN 计价资产</strong>，库存周转速度直接影响汇率暴露窗口长度。</div>
+          <div style="color:var(--muted)">公司提前预测市场需求，选品采购后发往<strong style="color:var(--text)">墨西哥自有仓库</strong>，在速卖通等本地电商平台售卖并对客交收，以<strong style="color:var(--accent2)">销售结算币（MXN）</strong>收款后换汇回<strong style="color:var(--accent)">基准币（CNY）</strong>。</div>
+          <div style="margin-top:8px;color:var(--muted)">⚠️ 货在墨西哥仓库期间，预期收款以<strong style="color:var(--accent2)">销售结算币（MXN）</strong>结算，库存周转速度直接决定 <strong style="color:var(--warn)">收款换汇风险（MXN → 基准币）</strong>的暴露窗口长度。</div>
         </div>
         <div style="background:#12141e;border:1px solid var(--border);border-radius:8px;padding:14px;font-size:12px;line-height:1.8">
           <div style="font-weight:700;color:var(--text);margin-bottom:6px">📐 当前粗估方式</div>
@@ -584,7 +625,7 @@
         </select>
       </div>
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-        <span style="font-size:11px;color:var(--muted)">报价币（多选）</span>
+        <span style="font-size:11px;color:var(--muted)">供应商报价币（多选）</span>
         <div id="cfg-quote-currencies" style="display:flex;gap:6px;flex-wrap:wrap">
           <!-- 动态渲染 -->
         </div>
@@ -597,82 +638,16 @@
   ══════════════════════════════════════════ -->
   <div class="fx-section">
     <div class="fx-section-title">📊 模块A · 今天适合备货吗？</div>
-
-    <!-- A1: 当前汇率状态 -->
-    <div style="margin-bottom:20px">
-      <div class="fx-subsection-title">A1 · 当前汇率状态</div>
-      <div id="a1-rate-cards" style="display:flex;gap:12px;flex-wrap:wrap">
-        <!-- 动态渲染每个报价币的汇率卡片 -->
-      </div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:16px;padding:8px 12px;background:#ffffff08;border-radius:6px;line-height:1.7">
+      以下按<strong style="color:var(--text)">货币对组合</strong>平铺展开。每个组合分三列：
+      <strong style="color:var(--accent)">采购换汇风险</strong>（基准币 → 供应商报价币，展望看近7天）·
+      <strong style="color:var(--warn)">成本定价隐含风险</strong>（供应商报价币 → 销售结算币 MXN，展望按帐期窗口）·
+      <strong style="color:var(--accent2)">综合信号与执行建议</strong>。
     </div>
-
-    <!-- A2: 汇率展望 -->
-    <div style="margin-bottom:20px">
-      <div class="fx-subsection-title">A2 · 汇率展望 <span style="font-size:10px;color:var(--muted);font-weight:400">（按帐期窗口）</span></div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:12px;padding:6px 10px;background:#ffffff08;border-radius:6px">
-        ⚠️ 展望数据口径：基于近30日历史波动率（年化）+ 线性趋势（7日/30日斜率）计算概率区间，采用正态分布假设。为统计参考，非精确预测，不构成投资建议。
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px" id="a2-outlook-grid">
-        <!-- 技术信号 -->
-        <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px">
-          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">📊 技术信号（MXN/CNY）</div>
-          <div class="event-item" style="padding:6px 0"><div class="event-dot" id="sig-trend-dot"></div><div><div class="event-text">趋势方向</div><div style="font-size:14px;font-weight:700;margin-top:2px" id="sig-trend">计算中...</div></div></div>
-          <div class="event-item" style="padding:6px 0"><div class="event-dot warn"></div><div><div class="event-text">支撑位</div><div style="font-size:14px;font-weight:700;margin-top:2px" id="sig-support">--</div></div></div>
-          <div class="event-item" style="padding:6px 0"><div class="event-dot" style="background:var(--danger)"></div><div><div class="event-text">压力位</div><div style="font-size:14px;font-weight:700;margin-top:2px" id="sig-resist">--</div></div></div>
-          <div class="event-item" style="padding:6px 0;border-bottom:none"><div class="event-dot" id="sig-vol-dot"></div><div><div class="event-text">波动率状态</div><div style="font-size:13px;font-weight:600;margin-top:2px" id="sig-vol-state">--</div></div></div>
-        </div>
-        <!-- 概率区间 -->
-        <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px">
-          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">🎯 概率区间（95%）</div>
-          <div style="margin-bottom:14px">
-            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">空运帐期（<span id="a2-air-days">--</span>天）</div>
-            <div style="font-size:15px;font-weight:700" id="range-30d">--</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:2px" id="range-30d-sub"></div>
-          </div>
-          <div style="margin-bottom:14px">
-            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">海运帐期（<span id="a2-sea-days">--</span>天）</div>
-            <div style="font-size:15px;font-weight:700" id="range-60d">--</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:2px" id="range-60d-sub"></div>
-          </div>
-          <div style="font-size:10px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border)">格式：均值（下轨–上轨）</div>
-        </div>
-        <!-- 基本面 -->
-        <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px">
-          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">🌐 基本面驱动因子</div>
-          <div id="outlook-list"><div class="empty-state">加载中...</div></div>
-        </div>
-      </div>
-      <!-- 展望结论 -->
-      <div class="fx-conclusion ok" id="fx-outlook-conclusion" style="margin-top:12px">计算中...</div>
-    </div>
-
-    <!-- A3: 备货策略建议 -->
-    <div>
-      <div class="fx-subsection-title">A3 · 备货策略建议</div>
-
-      <!-- A3-1: 计价币优先级 -->
-      <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:10px">① 报价币优先级排序 <span style="font-weight:400;font-size:11px">— 按当前汇率走势，哪种计价方式成本最低</span></div>
-        <div style="font-size:11px;color:var(--muted);margin-bottom:10px;padding:6px 8px;background:#ffffff08;border-radius:4px">
-          口径：假设今日备货付款，帐期结束时收回基准币，对比各报价币的预期汇损/汇益。CNY/CNH报价=消除第零段风险（推荐）。
-        </div>
-        <div id="a3-currency-rank">
-          <!-- 动态渲染排序卡片 -->
-          <div class="empty-state">请先选择报价币</div>
-        </div>
-      </div>
-
-      <!-- A3-2: 拆批 vs 单批 -->
-      <div style="background:#12141e;border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:10px">② 拆批 vs 单批建议 <span style="font-weight:400;font-size:11px">— 基于当前趋势</span></div>
-        <div id="a3-batch-advice">
-          <div class="empty-state">加载汇率数据中...</div>
-        </div>
-      </div>
-
-      <!-- A3 结论 -->
-      <div class="fx-conclusion ok" id="a3-conclusion">计算中...</div>
-    </div>
+    <!-- 货币对卡片容器，由 JS 动态渲染 -->
+    <div id="a-pair-blocks"></div>
+    <!-- 备货策略汇总表 -->
+    <div id="a-summary-table" style="margin-top:4px"></div>
   </div>
 
   <!-- ══════════════════════════════════════════
@@ -684,9 +659,9 @@
     <!-- B0: 全链路说明 -->
     <div style="font-size:11px;color:var(--muted);padding:8px 12px;background:#ffffff08;border-radius:6px;margin-bottom:16px;line-height:1.7">
       全链路三段风险：
-      <strong style="color:var(--text)">① 基准币→报价币</strong>（采购换汇风险，CNY/CNH报价可消除）→
-      <strong style="color:var(--text)">② 报价币→MXN</strong>（成本定价隐含风险）→
-      <strong style="color:var(--text)">③ MXN→基准币</strong>（收款换汇风险，主要敞口）
+      <strong style="color:var(--accent)">① 基准币 → 供应商报价币</strong>（采购换汇风险，供应商报价币选用 CNY 可消除；CNH 有实际汇差，不视为零风险）→
+      <strong style="color:var(--warn)">② 供应商报价币 → 销售结算币（MXN）</strong>（成本定价隐含风险）→
+      <strong style="color:var(--accent2)">③ 销售结算币（MXN）→ 基准币</strong>（收款换汇风险，主要敞口）
     </div>
 
     <!-- B1: 在途批次表 -->
@@ -702,7 +677,7 @@
               <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">备货付款日</th>
               <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">运输方式</th>
               <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">货值</th>
-              <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">报价币</th>
+              <th style="padding:6px 8px;text-align:left;font-weight:600;white-space:nowrap">供应商报价币</th>
               <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">付款时CNY/报价币¹</th>
               <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">付款时报价币/MXN²</th>
               <th style="padding:6px 8px;text-align:right;font-weight:600;white-space:nowrap">预计收款日</th>
@@ -719,7 +694,7 @@
       </div>
       <div style="display:flex;gap:10px;margin-top:10px;align-items:center;flex-wrap:wrap">
         <button onclick="b1AddRow()" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;cursor:pointer">＋ 添加批次</button>
-        <span style="font-size:10px;color:var(--muted)">¹ 付款时花多少CNY换1单位报价币（CNY/CNH报价=1）　² 付款日报价币/MXN市场汇率（反映采购成本基准）　³ 展望均值（区间：下轨–上轨），基于历史波动率估算</span>
+        <span style="font-size:10px;color:var(--muted)">¹ 付款时花多少CNY换1单位报价币（CNY报价=1，CNH有实际汇差）　² 付款日报价币/MXN市场汇率（反映采购成本基准）　³ 展望均值（区间：下轨–上轨），基于历史波动率估算</span>
       </div>
       <!-- B1 汇总 -->
       <div id="b1-summary" style="display:none;margin-top:16px">
@@ -1030,10 +1005,18 @@ function calcVol(arr) {
 // 根据 pair key 取汇率
 function getPairRate(dayData, pairKey) {
   if (!dayData?.fx) return null;
-  if (pairKey==='mxn_cny'||pairKey==='mxn_cnh') return dayData.fx.mxn_cny||null;
-  if (pairKey==='mxn_usd') return dayData.fx.mxn_usd||null;
-  if (pairKey==='mxn_hkd') return dayData.fx.mxn_hkd||dayData.fx.mxn_usd ? (dayData.fx.mxn_usd*7.78||null) : null;
-  if (pairKey==='mxn_eur') return dayData.fx.mxn_usd ? dayData.fx.mxn_usd*0.92 : null;
+  const fx = dayData.fx;
+  // 直接字段优先
+  if (fx[pairKey] != null && fx[pairKey] > 0) return fx[pairKey];
+  // 通过 cny_* 交叉计算：MXN/X = mxn_cny / cny_x（精确，无近似误差）
+  if (pairKey==='mxn_cny') return fx.mxn_cny||null;
+  if (pairKey==='mxn_usd') return fx.mxn_usd||null;
+  const quote = pairKey.replace('mxn_',''); // e.g. 'hkd','eur','jpy'
+  const cnyX = fx['cny_'+quote];
+  if (cnyX && cnyX > 0 && fx.mxn_cny && fx.mxn_cny > 0) {
+    // mxn_x = mxn_cny / cny_x
+    return fx.mxn_cny / cnyX;
+  }
   return null;
 }
 
@@ -1088,7 +1071,7 @@ function updateExposure() {
   const at = document.getElementById('air-total-days'); if(at) at.textContent = air;
   const a2s = document.getElementById('a2-sea-days'); if(a2s) a2s.textContent = sea;
   const a2a = document.getElementById('a2-air-days'); if(a2a) a2a.textContent = air;
-  if (_allFxData.length) { renderA2(); renderA3(); renderB1Recalc(); renderB2(); }
+  if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); renderB2(); }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1115,7 +1098,7 @@ function initCfgUI() {
         _cfg.quotes.push(c);
       }
       initCfgUI();
-      if (_allFxData.length) { renderA1(); renderA3(); renderB1Recalc(); }
+      if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); }
     };
     container.appendChild(btn);
   });
@@ -1123,16 +1106,14 @@ function initCfgUI() {
 
 function fxConfigChanged() {
   _cfg.base = document.getElementById('cfg-base-currency')?.value || 'CNY';
-  if (_allFxData.length) { renderA1(); renderA2(); renderA3(); renderB1Recalc(); renderB2(); }
+  if (_allFxData.length) { renderAPairBlocks(); renderB1Recalc(); renderB2(); }
 }
 
 // ===== 主入口：数据加载完成后调用 =====
 function updateFxAnalysis(allData) {
   _allFxData = allData;
   _latestFx = allData[allData.length-1];
-  renderA1();
-  renderA2();
-  renderA3();
+  renderAPairBlocks();
   renderB1Recalc();
   renderB2();
   b3Refresh();
@@ -1144,205 +1125,343 @@ function updateFxOutlook(allData, latestDayData) {
   // 已整合进 updateFxAnalysis，此处空转
 }
 
-// ===== A1: 当前汇率状态 =====
-function renderA1() {
-  const container = document.getElementById('a1-rate-cards');
+// ===== 模块A：货币对卡片式渲染 =====
+// 每个供应商报价币对应一张卡，卡内左右两列：采购换汇风险 / 成本定价隐含风险
+function renderAPairBlocks() {
+  const container = document.getElementById('a-pair-blocks');
   if (!container || !_latestFx) return;
-  const today = _latestFx.fx?.mxn_cny;
-  const prev = _allFxData.length>1 ? _allFxData[_allFxData.length-2].fx?.mxn_cny : null;
-  const chgPct = (today && prev) ? (today-prev)/prev*100 : null;
 
-  container.innerHTML = '';
-  // MXN/基准币 主卡
-  const card0 = document.createElement('div');
-  card0.className = 'a1-rate-card';
-  const chgColor = chgPct==null?'var(--muted)':chgPct>=0?'var(--accent2)':'var(--danger)';
-  card0.innerHTML = `
-    <div class="a1-rate-label">MXN / ${_cfg.base}（今日）</div>
-    <div class="a1-rate-val" style="color:var(--text)">${fmtNum(today,4)}</div>
-    <div class="a1-rate-change" style="color:${chgColor}">${fmtPct(chgPct)} 较昨日</div>
-    <div style="font-size:10px;color:var(--muted);margin-top:4px">${_latestFx.date||''}</div>
-  `;
-  container.appendChild(card0);
+  const prices_mxn_cny = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
+  if (prices_mxn_cny.length < 5) { container.innerHTML = '<div class="empty-state">汇率数据加载中...</div>'; return; }
 
-  // 每个选中报价币 vs MXN
-  const FX_CROSS = { 'USD': _latestFx.fx?.mxn_usd, 'HKD': _latestFx.fx?.mxn_usd ? _latestFx.fx.mxn_usd*7.78 : null, 'EUR': _latestFx.fx?.mxn_usd ? _latestFx.fx.mxn_usd*0.92 : null };
-  _cfg.quotes.filter(c=>!['CNY','CNH'].includes(c)).forEach(c => {
-    const val = FX_CROSS[c];
-    const card = document.createElement('div');
-    card.className = 'a1-rate-card';
-    card.innerHTML = `
-      <div class="a1-rate-label">MXN / ${c}</div>
-      <div class="a1-rate-val" style="font-size:18px;color:var(--muted)">${val?fmtNum(val,5):'--'}</div>
-      <div style="font-size:10px;color:var(--muted);margin-top:8px">采购时参考</div>
-    `;
-    container.appendChild(card);
-  });
-
-  // 30日波动率
-  const prices = _allFxData.slice(-30).map(d=>d.fx?.mxn_cny).filter(Boolean);
-  const vol = prices.length>=5 ? (calcVol(prices)*100).toFixed(2) : '--';
-  const card2 = document.createElement('div');
-  card2.className = 'a1-rate-card';
-  card2.innerHTML = `
-    <div class="a1-rate-label">30日波动率</div>
-    <div class="a1-rate-val" style="font-size:20px">${vol}%</div>
-    <div style="font-size:10px;color:var(--muted);margin-top:4px">年化波动参考</div>
-  `;
-  container.appendChild(card2);
-}
-
-// ===== A2: 汇率展望 =====
-function renderA2() {
-  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
-  if (prices.length < 5) return;
-
-  const today = prices[prices.length-1];
-  const recent30 = prices.slice(-30), recent7 = prices.slice(-7);
-  const slope7 = calcSlope(recent7), slope30 = calcSlope(recent30);
-  const vol30 = calcVol(recent30);
+  const today_mxn_cny = prices_mxn_cny[prices_mxn_cny.length-1];
   const seaDays = getSeaDays(), airDays = getAirDays();
 
-  // 技术信号
-  let trendText, trendColor, dotClass;
-  if (slope7 > 0.0002) { trendText='↗ 短期上行（比索走强）'; trendColor='var(--accent2)'; dotClass='ok'; }
-  else if (slope7 < -0.0002) { trendText='↘ 短期下行（比索走弱）'; trendColor='var(--danger)'; dotClass='danger'; }
-  else { trendText='→ 短期震荡'; trendColor='var(--warn)'; dotClass='warn'; }
+  // MXN/CNY 用于成本定价隐含风险（右侧）
+  const slope7_mxn_cny = calcSlope(prices_mxn_cny.slice(-7));
+  const vol30_mxn_cny = calcVol(prices_mxn_cny.slice(-30));
+  const outlook_air = calcOutlook(prices_mxn_cny, airDays);
+  const outlook_sea = calcOutlook(prices_mxn_cny, seaDays);
 
-  const support = (Math.min(...recent30)*0.999).toFixed(4);
-  const resist  = (Math.max(...recent30)*1.001).toFixed(4);
-  const volState = vol30>0.015?'⚡ 高波动':vol30>0.008?'⚠️ 中等波动':'✅ 正常';
-  const volColor = vol30>0.015?'var(--danger)':vol30>0.008?'var(--warn)':'var(--accent2)';
+  // 当日 cny_* 实时汇率（1 CNY = x 外币）
+  const latestCnyRates = _latestFx?.fx || {};
 
-  const setEl = (id, v) => { const e=document.getElementById(id); if(e) e.innerHTML=v; };
-  const setDot = (id, cls) => { const e=document.getElementById(id); if(e) { e.className='event-dot'; if(cls) e.classList.add(cls); } };
-
-  setEl('sig-trend', `<span style="color:${trendColor}">${trendText}</span>`);
-  setDot('sig-trend-dot', dotClass);
-  setEl('sig-support', support);
-  setEl('sig-resist', resist);
-  setEl('sig-vol-state', `<span style="color:${volColor}">${volState}</span>`);
-  setDot('sig-vol-dot', vol30>0.015?'danger':vol30>0.008?'warn':'');
-
-  // 概率区间
-  const outlookAir = calcOutlook(prices, airDays);
-  const outlookSea = calcOutlook(prices, seaDays);
-  const fmtOutlook = (o) => o ? `<strong>${fmtNum(o.mean,4)}</strong> <span style="font-size:11px;color:var(--muted)">（${fmtNum(o.lo,4)}–${fmtNum(o.hi,4)}）</span>` : '--';
-  setEl('range-30d', fmtOutlook(outlookAir));
-  setEl('range-60d', fmtOutlook(outlookSea));
-
-  const pctAir = outlookAir ? ((outlookAir.mean-today)/today*100).toFixed(2) : null;
-  const pctSea = outlookSea ? ((outlookSea.mean-today)/today*100).toFixed(2) : null;
-  setEl('range-30d-sub', pctAir!=null?`预期变动 ${pctAir>=0?'+':''}${pctAir}%`:'');
-  setEl('range-60d-sub', pctSea!=null?`预期变动 ${pctSea>=0?'+':''}${pctSea}%`:'');
-
-  // 基本面
-  const outlook = _latestFx?.fx_outlook || [];
-  const outlookEl = document.getElementById('outlook-list');
-  if (outlookEl) {
-    if (outlook.length) {
-      outlookEl.innerHTML = outlook.slice(0,5).map(o=>`
-        <div class="event-item" style="padding:5px 0">
-          <div class="event-dot warn"></div>
-          <div><div class="event-text" style="font-size:11px">${o.factor||o.title||'未知因子'}</div>
-          <div style="font-size:10px;color:var(--muted)">${(o.summary||o.desc||'').slice(0,60)}</div></div>
-        </div>`).join('');
-    } else {
-      outlookEl.innerHTML = '<div class="empty-state" style="font-size:11px">暂无基本面数据</div>';
-    }
+  // 历史 cny_* 序列（用于采购换汇风险左列分析）
+  // key: quote.toLowerCase() => 历史价格数组 [1 CNY = x quote]
+  function getCnyPrices(quote) {
+    const key = 'cny_' + quote.toLowerCase();
+    return _allFxData.map(d => d.fx?.[key]).filter(v => v != null && v > 0);
   }
 
-  // 展望结论
-  const concEl = document.getElementById('fx-outlook-conclusion');
-  if (concEl) {
-    let lvl='ok', txt='';
-    if (slope7 < -0.0003) {
-      const bufPct = Math.abs(slope7*airDays/today*100).toFixed(1);
-      const bufPerMxn = (today*parseFloat(bufPct)/100).toFixed(4);
-      lvl='warn'; txt=`⚡ <strong>短期趋势偏弱</strong> — 空运帐期内预期下行 ${bufPct}%，定价建议保留 ${bufPct}% 汇率缓冲（约 ¥${bufPerMxn}/比索）`;
-    } else if (slope7 > 0.0003) {
-      lvl='ok'; txt=`✅ <strong>短期趋势向好</strong> — 比索走强，当前备货汇率占优，预期空运帐期内涨幅约 ${Math.abs(slope7*airDays/today*100).toFixed(1)}%`;
-    } else {
-      lvl='ok'; txt=`✅ <strong>汇率震荡</strong> — 无明显趋势，波动率 ${(vol30*100).toFixed(2)}%，当前汇率 ${today.toFixed(4)}，可按计划备货`;
-    }
-    concEl.className=`fx-conclusion ${lvl}`; concEl.innerHTML=txt;
-  }
-}
+  // 静态近似值（当 cny_* 历史序列不足时的兜底）
+  const FX_APPROX = { 'CNY':1,'CNH':0.999,'USD':0.1379,'HKD':1.074,'EUR':0.1267,'GBP':0.1077,'JPY':20.8,'CAD':0.1917,'AUD':0.2082 };
 
-// ===== A3: 备货策略建议 =====
-function renderA3() {
-  const prices = _allFxData.map(d=>d.fx?.mxn_cny).filter(Boolean);
-  if (prices.length < 5) return;
+  let overallScores = [];
 
-  const today = prices[prices.length-1];
-  const slope7 = calcSlope(prices.slice(-7));
-  const seaDays = getSeaDays(), airDays = getAirDays();
+  const pairBlocks = _cfg.quotes.map(quote => {
+    const isCnyBase = quote === 'CNY'; // CNH 离岸人民币有真实汇率，不等同于 CNY
+    const qLow = quote.toLowerCase();
+    const cnyKey = 'cny_' + qLow;   // e.g. cny_usd, cny_hkd
 
-  // ① 计价币优先级
-  const rankEl = document.getElementById('a3-currency-rank');
-  if (rankEl && _cfg.quotes.length > 0) {
-    // 对每个报价币，计算帐期内预期汇损（CNY为基准）
-    const FX_APPROX = { 'CNY':1,'CNH':1,'USD':7.24,'HKD':0.93,'MXN':today,'EUR':7.85,'GBP':9.12,'JPY':0.048,'CAD':5.26,'AUD':4.58 };
-    const rows = _cfg.quotes.map(c => {
-      const cnyPerUnit = FX_APPROX[c] || 1;
-      // 第零段风险：如果报价币不是CNY/CNH，付款时需换汇
-      const stage0Risk = ['CNY','CNH'].includes(c) ? 0 : Math.abs(slope7*30/today*100);
-      // 第二段预期：帐期结束时MXN/CNY的变动
-      const outlook = calcOutlook(prices, seaDays);
-      const stage2Pct = outlook ? (outlook.mean-today)/today*100 : slope7*seaDays/today*100;
-      const totalRisk = stage0Risk + (stage2Pct < 0 ? Math.abs(stage2Pct) : 0);
-      const netBenefit = -totalRisk; // 负数=风险，正数=收益
-      return { c, stage0Risk, stage2Pct, totalRisk, netBenefit, cnyPerUnit };
-    }).sort((a,b)=>a.totalRisk-b.totalRisk);
-
-    const medals = ['🥇','🥈','🥉'];
-    const colors = ['#10b981','#6366f1','#f59e0b','#ef4444','#8b5cf6'];
-    rankEl.innerHTML = rows.map((r,i) => {
-      const isCnyBase = ['CNY','CNH'].includes(r.c);
-      const riskColor = r.totalRisk<1?'var(--accent2)':r.totalRisk<3?'var(--warn)':'var(--danger)';
-      return `
-      <div class="a3-rank-item" style="background:${i===0?'#10b98110':'#12141e'}">
-        <div class="a3-rank-badge" style="background:${colors[i]||'#6b7280'}">${medals[i]||i+1}</div>
-        <div style="flex:1">
-          <span style="font-weight:700">${r.c}</span>
-          ${isCnyBase?'<span style="margin-left:6px;font-size:10px;color:var(--accent2);padding:1px 5px;background:#10b98120;border-radius:4px">✅ 消除第零段风险</span>':''}
+    // ══════════════════════════════════════════════
+    // 左列：采购换汇风险（基准币 → 供应商报价币）
+    // 使用真实 cny_* 历史序列
+    // ══════════════════════════════════════════════
+    let leftHtml;
+    if (isCnyBase) {
+      // 风险已消除
+      leftHtml = `
+        <div style="display:flex;align-items:center;gap:8px;padding:12px;background:#10b98110;border-radius:8px;margin-bottom:12px">
+          <span style="font-size:20px">✅</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--accent2)">此段风险为零</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px">供应商报价币（${quote}）与基准币相同，备货付款无需换汇。</div>
+          </div>
         </div>
-        <div style="text-align:right;font-size:11px">
-          <div>第零段风险：<span style="color:${r.stage0Risk<0.5?'var(--accent2)':'var(--danger)'}">${isCnyBase?'无':'+'+r.stage0Risk.toFixed(1)+'%'}</span></div>
-          <div>第二段预期：<span style="color:${r.stage2Pct>=0?'var(--accent2)':'var(--danger)'}">${fmtPct(r.stage2Pct)}</span></div>
-          <div style="font-weight:700;color:${riskColor}">综合风险：${r.totalRisk.toFixed(1)}%</div>
-        </div>
-      </div>`;
-    }).join('');
-  }
+        <div style="padding:8px 10px;background:#10b98110;border-radius:6px;font-size:11px;color:var(--accent2);font-weight:600">
+          采购换汇择时建议：无需择时，随时可以备货
+        </div>`;
+    } else {
+      // 有换汇风险，用真实 cny_* 历史
+      const cnyPrices = getCnyPrices(quote);
+      const hasCnyData = cnyPrices.length >= 5;
+      const cnyToday = hasCnyData ? cnyPrices[cnyPrices.length-1]
+                                  : latestCnyRates[cnyKey] || FX_APPROX[quote] || null;
+      const cnyPrev  = hasCnyData && cnyPrices.length>1 ? cnyPrices[cnyPrices.length-2] : null;
+      const slope7_cny = hasCnyData ? calcSlope(cnyPrices.slice(-7)) : 0;
+      const vol7_cny   = hasCnyData ? calcVol(cnyPrices.slice(-7))   : 0.005;
+      const vol30_cny  = hasCnyData ? calcVol(cnyPrices.slice(-30))  : 0.008;
 
-  // ② 拆批建议
-  const batchEl = document.getElementById('a3-batch-advice');
-  if (batchEl) {
-    let batchAdvice = '', batchColor = 'var(--text)';
-    if (slope7 < -0.0003) {
-      batchAdvice = `📉 <strong>趋势下行，建议分批备货</strong> — 比索走弱中，不建议一次性大额备货。建议分 2–3 批、间隔 ${Math.round(airDays/3)} 天，摊平汇率成本。`;
+      // 今日较昨日变动
+      const cnyChgPct = (cnyToday && cnyPrev) ? ((cnyToday-cnyPrev)/cnyPrev*100) : null;
+      const cnyChgColor = cnyChgPct==null?'var(--muted)':cnyChgPct>0?'var(--danger)':'var(--accent2)';
+      // 注意：1CNY=x外币，外币涨 = 换汇成本上升（风险上升）
+      const cnyChgStr = cnyChgPct!=null ? `${cnyChgPct>=0?'+':''}${cnyChgPct.toFixed(2)}% 较昨日` : (hasCnyData?'--':'近似值');
+
+      // 风险等级：用7日斜率+30日波动率综合判断
+      const riskScore = Math.abs(slope7_cny * 7 / (cnyToday||1) * 100) + vol30_cny * 100;
+      const riskLevel = riskScore < 1.5 ? 'ok' : riskScore < 4 ? 'warn' : 'danger';
+      const riskLabel = riskScore < 1.5 ? '低' : riskScore < 4 ? '中' : '高';
+      const riskColor = riskScore < 1.5 ? 'var(--accent2)' : riskScore < 4 ? 'var(--warn)' : 'var(--danger)';
+
+      // 近7天趋势描述（1 CNY = x 外币，外币涨 = 采购成本升）
+      let trendTxt, trendColor, trendDot;
+      if (slope7_cny > 0.0002) {
+        trendTxt = `↗ ${quote}走强（采购成本上升）`; trendColor='var(--danger)'; trendDot='danger';
+      } else if (slope7_cny < -0.0002) {
+        trendTxt = `↘ ${quote}走弱（采购成本下降）`; trendColor='var(--accent2)'; trendDot='ok';
+      } else {
+        trendTxt = '→ 近7天震荡，无明显趋势'; trendColor='var(--warn)'; trendDot='warn';
+      }
+
+      // 择时建议（今天换 or 等几天）
+      let timingAdvice, timingColor;
+      if (slope7_cny < -0.0002) {
+        timingAdvice = `📉 ${quote}走弱中，建议今天换汇锁定成本`;
+        timingColor = 'var(--accent2)';
+      } else if (slope7_cny > 0.0002) {
+        const waitDays = Math.min(Math.round(Math.abs(slope7_cny)/vol7_cny * 2)+1, 7);
+        timingAdvice = `⏳ ${quote}仍在走强，建议等待约 ${waitDays} 天后再换汇`;
+        timingColor = 'var(--warn)';
+      } else {
+        timingAdvice = `🔄 震荡区间，建议今天换汇（趋势不明，不值得等待）`;
+        timingColor = 'var(--text2)';
+      }
+
+      const sup7_cny = hasCnyData ? Math.min(...cnyPrices.slice(-7)).toFixed(4) : '--';
+      const res7_cny = hasCnyData ? Math.max(...cnyPrices.slice(-7)).toFixed(4) : '--';
+
+      leftHtml = `
+        <!-- 当前汇率 -->
+        <div style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+          <div style="flex:1;min-width:90px;background:#ffffff08;border-radius:6px;padding:8px 10px">
+            <div style="font-size:10px;color:var(--muted)">1 ${_cfg.base} → ${quote} 今日</div>
+            <div style="font-size:15px;font-weight:700;color:var(--text);margin-top:2px">${cnyToday ? cnyToday.toFixed(4) : '--'}</div>
+            <div style="font-size:11px;color:${cnyChgColor};margin-top:2px">${cnyChgStr}</div>
+          </div>
+          <div style="flex:1;min-width:90px;background:#ffffff08;border-radius:6px;padding:8px 10px">
+            <div style="font-size:10px;color:var(--muted)">7日波动率</div>
+            <div style="font-size:15px;font-weight:700;color:${riskColor};margin-top:2px">${(vol7_cny*100).toFixed(2)}%</div>
+            <div style="font-size:11px;color:${riskColor};margin-top:2px">风险：${riskLabel}</div>
+          </div>
+        </div>
+        <!-- 近7天趋势 -->
+        <div style="background:#ffffff08;border-radius:6px;padding:8px 10px;font-size:11px;margin-bottom:12px">
+          <div class="event-item" style="padding:3px 0"><div class="event-dot ${trendDot}"></div><div><div class="event-text">近7天趋势</div><div style="font-size:12px;font-weight:600;margin-top:1px;color:${trendColor}">${trendTxt}</div></div></div>
+          <div class="event-item" style="padding:3px 0;border-bottom:none"><div class="event-dot warn"></div><div><div class="event-text">7日支撑位 / 压力位</div><div style="font-size:12px;font-weight:600;margin-top:1px">${sup7_cny} / ${res7_cny}</div></div></div>
+        </div>
+        <!-- 择时建议 -->
+        <div style="padding:8px 12px;background:#6366f115;border:1px solid #6366f133;border-radius:6px;font-size:12px;line-height:1.6;color:${timingColor};font-weight:600">
+          ${timingAdvice}
+        </div>
+        ${!hasCnyData ? '<div style="font-size:10px;color:var(--muted);margin-top:6px">⚠️ 历史序列不足，当前汇率为实时值，趋势分析精度有限</div>' : ''}
+        ${quote==='CNH' ? '<div style="font-size:10px;color:var(--muted);margin-top:6px;padding:6px 8px;background:#f59e0b08;border-radius:4px;border:1px solid #f59e0b22">&#x1F4CB; CNH为离岸人民币，与在岸CNY有汇差（通常在±0.3%~1%内）。若供应商报价币为CNH，付款时需要把 CNY 先兑换为 CNH（经香港或离岸市场），存在实际汇差和换汇手续费。</div>' : ''}`;
+    }
+
+    // ══════════════════════════════════════════════
+    // 中列：成本定价隐含风险（供应商报价币 → MXN）
+    // 动态使用 MXN/quote 对应数据（CNY→mxn_cny, USD→mxn_usd, HKD→mxn_hkd）
+    // ══════════════════════════════════════════════
+    const mxnQuoteKey = 'mxn_' + qLow;  // e.g. mxn_cny / mxn_usd / mxn_hkd
+    const prices_mxn_q = _allFxData.map(d => getPairRate(d, mxnQuoteKey)).filter(Boolean);
+    const today_mxn_q  = prices_mxn_q.length>0 ? prices_mxn_q[prices_mxn_q.length-1] : null;
+    const slope7_mxn_q = prices_mxn_q.length>=5 ? calcSlope(prices_mxn_q.slice(-7)) : 0;
+    const vol30_mxn_q  = prices_mxn_q.length>=10 ? calcVol(prices_mxn_q.slice(-30)) : 0;
+    const outlook_air_q = calcOutlook(prices_mxn_q, airDays);
+    const outlook_sea_q = calcOutlook(prices_mxn_q, seaDays);
+
+    const prev_mxn_q   = prices_mxn_q.length>1 ? prices_mxn_q[prices_mxn_q.length-2] : null;
+    const chgPct_mxn   = (prev_mxn_q && today_mxn_q) ? ((today_mxn_q-prev_mxn_q)/prev_mxn_q*100) : null;
+    const chgColor_mxn = chgPct_mxn==null?'var(--muted)':chgPct_mxn>=0?'var(--accent2)':'var(--danger)';
+    const volState_mxn = vol30_mxn_q>0.015?'⚡ 高波动':vol30_mxn_q>0.008?'⚠️ 中等波动':'✅ 正常';
+    const volColor_mxn = vol30_mxn_q>0.015?'var(--danger)':vol30_mxn_q>0.008?'var(--warn)':'var(--accent2)';
+
+    let trend7Txt_mxn, trend7Color_mxn, trend7Dot_mxn;
+    if (slope7_mxn_q > 0.0003) { trend7Txt_mxn='↗ 比索走强（MXN升值）'; trend7Color_mxn='var(--accent2)'; trend7Dot_mxn='ok'; }
+    else if (slope7_mxn_q < -0.0003) { trend7Txt_mxn='↘ 比索走弱（MXN贬值）'; trend7Color_mxn='var(--danger)'; trend7Dot_mxn='danger'; }
+    else { trend7Txt_mxn='→ 震荡整理'; trend7Color_mxn='var(--warn)'; trend7Dot_mxn='warn'; }
+
+    const support_mxn = today_mxn_q && prices_mxn_q.length>=2 ? Math.min(...prices_mxn_q.slice(-30)).toFixed(4) : '--';
+    const resist_mxn  = today_mxn_q && prices_mxn_q.length>=2 ? Math.max(...prices_mxn_q.slice(-30)).toFixed(4) : '--';
+    const fmtOL = (o) => o ? `${o.mean.toFixed(4)} <span style="font-size:10px;color:var(--muted)">(${o.lo.toFixed(4)}–${o.hi.toFixed(4)})</span>` : '--';
+    const pctAir = (outlook_air_q && today_mxn_q) ? ((outlook_air_q.mean-today_mxn_q)/today_mxn_q*100) : null;
+    const pctSea = (outlook_sea_q && today_mxn_q) ? ((outlook_sea_q.mean-today_mxn_q)/today_mxn_q*100) : null;
+
+    const midHtml = `
+      <!-- 当前汇率 -->
+      <div style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+        <div style="flex:1;min-width:90px;background:#ffffff08;border-radius:6px;padding:8px 10px">
+          <div style="font-size:10px;color:var(--muted)">MXN / ${quote} 今日</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-top:2px">${today_mxn_q ? today_mxn_q.toFixed(4) : '--'}</div>
+          <div style="font-size:11px;color:${chgColor_mxn};margin-top:2px">${chgPct_mxn!=null?`${chgPct_mxn>=0?'+':''}${chgPct_mxn.toFixed(2)}% 较昨日`:'--'}</div>
+        </div>
+        <div style="flex:1;min-width:90px;background:#ffffff08;border-radius:6px;padding:8px 10px">
+          <div style="font-size:10px;color:var(--muted)">30日波动率</div>
+          <div style="font-size:15px;font-weight:700;color:${volColor_mxn};margin-top:2px">${(vol30_mxn_q*100).toFixed(2)}%</div>
+          <div style="font-size:11px;color:${volColor_mxn};margin-top:2px">${volState_mxn}</div>
+        </div>
+      </div>
+      <!-- 趋势 + 展望 -->
+      <div style="background:#ffffff08;border-radius:6px;padding:8px 10px;font-size:11px;margin-bottom:4px">
+        <div class="event-item" style="padding:3px 0"><div class="event-dot ${trend7Dot_mxn}"></div><div><div class="event-text">近7天趋势</div><div style="font-size:12px;font-weight:600;margin-top:1px;color:${trend7Color_mxn}">${trend7Txt_mxn}</div></div></div>
+        <div class="event-item" style="padding:3px 0"><div class="event-dot warn"></div><div><div class="event-text">支撑位 / 压力位（30日）</div><div style="font-size:12px;font-weight:600;margin-top:1px">${support_mxn} / ${resist_mxn}</div></div></div>
+        <div class="event-item" style="padding:3px 0"><div class="event-dot"></div><div><div class="event-text">空运帐期（${airDays}天）展望</div><div style="font-size:12px;font-weight:600;margin-top:1px">${fmtOL(outlook_air_q)} ${pctAir!=null?`<span style="color:${pctAir>=0?'var(--accent2)':'var(--danger)'}">${pctAir>=0?'+':''}${pctAir.toFixed(2)}%</span>`:''}</div></div></div>
+        <div class="event-item" style="padding:3px 0;border-bottom:none"><div class="event-dot"></div><div><div class="event-text">海运帐期（${seaDays}天）展望</div><div style="font-size:12px;font-weight:600;margin-top:1px">${fmtOL(outlook_sea_q)} ${pctSea!=null?`<span style="color:${pctSea>=0?'var(--accent2)':'var(--danger)'}">${pctSea>=0?'+':''}${pctSea.toFixed(2)}%</span>`:''}</div></div></div>
+      </div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px">⚠️ 展望基于近30日历史波动率+线性趋势，非精确预测</div>`;
+
+    // ══════════════════════════════════════════════
+    // 右列：综合信号 + 备货结论 + 拆批策略
+    // ══════════════════════════════════════════════
+    // 综合判断：采购换汇（左列信号）+ 成本定价（中列信号）
+    const slope7_cny_val = isCnyBase ? 0 : (getCnyPrices(quote).length>=5 ? calcSlope(getCnyPrices(quote).slice(-7)) : 0);
+    const purchaseOk = isCnyBase || slope7_cny_val <= 0.0002;
+    const costOk = slope7_mxn_q >= -0.0003;
+
+    let verdict, verdictColor, verdictBg, verdictIcon;
+    if (purchaseOk && costOk) {
+      verdict = '建议备货'; verdictColor='var(--accent2)'; verdictBg='#10b98120'; verdictIcon='✅';
+    } else if (!purchaseOk && !costOk) {
+      verdict = '建议观望'; verdictColor='var(--danger)'; verdictBg='#ef444420'; verdictIcon='⛔';
+    } else {
+      verdict = '谨慎备货'; verdictColor='var(--warn)'; verdictBg='#f59e0b20'; verdictIcon='⚠️';
+    }
+
+    // 采购换汇择时（简短版，放综合信号列）
+    let timingShort;
+    if (isCnyBase) {
+      timingShort = '无需择时换汇';
+    } else if (slope7_cny_val < -0.0002) {
+      timingShort = '今天换汇';
+    } else if (slope7_cny_val > 0.0002) {
+      timingShort = `等 ${Math.min(Math.round(Math.abs(slope7_cny_val)/0.001*2)+1,7)} 天后换汇`;
+    } else {
+      timingShort = '今天换汇（震荡，不值得等）';
+    }
+
+    // 拆批策略（基于 MXN/quote 走势）
+    let batchStrategy, batchColor;
+    if (slope7_mxn_q < -0.0003) {
+      batchStrategy = `分 2–3 批备货，间隔 ${Math.round(airDays/3)} 天摊平成本`;
       batchColor = 'var(--warn)';
-    } else if (slope7 > 0.0003) {
-      batchAdvice = `📈 <strong>趋势上行，建议单批集中备货</strong> — 比索走强中，当前汇率偏低，早买早受益。建议一次性或在近 7 天内完成备货。`;
+    } else if (slope7_mxn_q > 0.0003) {
+      batchStrategy = '集中单批，尽早锁定汇率优势';
       batchColor = 'var(--accent2)';
     } else {
-      batchAdvice = `➡️ <strong>趋势震荡，按需分批</strong> — 无明显方向，建议 2 批次拆分，间隔 ${Math.round(airDays/2)} 天，规避时机风险。`;
+      batchStrategy = `2 批分拆，间隔 ${Math.round(airDays/2)} 天`;
+      batchColor = 'var(--text2)';
     }
-    batchEl.innerHTML = `<div style="padding:10px 14px;background:#ffffff08;border-radius:8px;line-height:1.8;color:${batchColor}">${batchAdvice}</div>`;
-  }
 
-  // A3 结论
-  const concEl = document.getElementById('a3-conclusion');
-  if (concEl) {
-    const bestQuote = document.querySelector('#a3-currency-rank .a3-rank-item')?.querySelector('strong')?.textContent || _cfg.quotes[0];
-    const isBull = slope7 > 0.0003, isBear = slope7 < -0.0003;
-    const timing = isBull?'✅ 当前时机较优，建议近期备货':isBear?'⚡ 汇率走弱，建议谨慎控制备货量':'✅ 时机中性，按计划备货';
-    const strategy = isBull?'单批集中':isBear?'分2–3批摊平':'分2批';
-    concEl.className = `fx-conclusion ${isBear?'warn':'ok'}`;
-    concEl.innerHTML = `${timing}　|　推荐报价币：<strong>${bestQuote}</strong>　|　建议策略：<strong>${strategy}</strong>`;
+    const rightHtml = `
+      <!-- 综合结论 -->
+      <div style="padding:14px;background:${verdictBg};border-radius:8px;text-align:center;margin-bottom:12px">
+        <div style="font-size:22px;margin-bottom:4px">${verdictIcon}</div>
+        <div style="font-size:16px;font-weight:800;color:${verdictColor}">${verdict}</div>
+      </div>
+      <!-- 细节 -->
+      <div style="font-size:11px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:#ffffff08;border-radius:6px;padding:8px 10px">
+          <div style="color:var(--muted);margin-bottom:2px">采购换汇择时</div>
+          <div style="font-weight:700;color:var(--accent)">${timingShort}</div>
+        </div>
+        <div style="background:#ffffff08;border-radius:6px;padding:8px 10px">
+          <div style="color:var(--muted);margin-bottom:2px">拆批策略</div>
+          <div style="font-weight:700;color:${batchColor}">${batchStrategy}</div>
+        </div>
+      </div>`;
+
+    // 综合得分（用于底部汇总表）
+    const isBear = slope7_mxn_q < -0.0003, isBull = slope7_mxn_q > 0.0003;
+    overallScores.push({ quote, verdict, verdictColor, timingShort, batchStrategy, batchColor, isBear, isBull, isCnyBase });
+
+    return `
+    <!-- ══ 货币对：${_cfg.base} × ${quote} ══ -->
+    <div style="background:#12141e;border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:16px">
+        ${_cfg.base} × ${quote}
+        ${isCnyBase ? '<span style="background:#10b98120;color:var(--accent2);border:1px solid #10b98133;border-radius:4px;padding:1px 8px;font-size:10px;font-weight:600;margin-left:8px">✅ 采购换汇风险已消除</span>' : '<span style="background:#6366f115;color:var(--accent);border:1px solid #6366f133;border-radius:4px;padding:1px 8px;font-size:10px;font-weight:600;margin-left:8px">⚠️ 存在采购换汇风险</span>'}
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 200px;gap:14px">
+
+        <!-- 左列：采购换汇风险 -->
+        <div style="background:#0f1117;border:1px solid #6366f133;border-radius:10px;padding:14px">
+          <div style="font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">
+            采购换汇风险 · ${_cfg.base} → ${quote}
+          </div>
+          ${leftHtml}
+        </div>
+
+        <!-- 中列：成本定价隐含风险 -->
+        <div style="background:#0f1117;border:1px solid #f59e0b33;border-radius:10px;padding:14px">
+          <div style="font-size:10px;font-weight:700;color:var(--warn);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">
+            成本定价隐含风险 · ${quote} → MXN
+          </div>
+          ${midHtml}
+        </div>
+
+        <!-- 右列：综合信号 -->
+        <div style="background:#0f1117;border:1px solid var(--border2);border-radius:10px;padding:14px">
+          <div style="font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:12px">
+            综合信号
+          </div>
+          ${rightHtml}
+        </div>
+      </div>
+    </div>`;
+  });
+
+  // ══ 底部备货策略汇总表 ══
+  const summaryRows = overallScores.map(s => `
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:8px 10px;font-weight:600;color:var(--text)">${_cfg.base} × ${s.quote}</td>
+      <td style="padding:8px 10px;font-weight:700;color:${s.verdictColor}">${s.verdict}</td>
+      <td style="padding:8px 10px;color:var(--accent)">${s.timingShort}</td>
+      <td style="padding:8px 10px;color:${s.batchColor}">${s.batchStrategy}</td>
+    </tr>`).join('');
+
+  const summaryTable = overallScores.length ? `
+    <div style="margin-top:8px;background:#12141e;border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div style="padding:12px 16px;font-size:12px;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border)">📋 备货策略汇总</div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12px">
+          <thead>
+            <tr style="color:var(--muted);font-size:11px">
+              <th style="padding:8px 10px;text-align:left;font-weight:600">供应商报价币</th>
+              <th style="padding:8px 10px;text-align:left;font-weight:600">备货结论</th>
+              <th style="padding:8px 10px;text-align:left;font-weight:600">采购换汇择时</th>
+              <th style="padding:8px 10px;text-align:left;font-weight:600">拆批策略</th>
+            </tr>
+          </thead>
+          <tbody>${summaryRows}</tbody>
+        </table>
+      </div>
+    </div>` : '';
+
+  container.innerHTML = (pairBlocks.join('') + summaryTable) || '<div class="empty-state">请先在全局配置中选择供应商报价币</div>';
+
+  // 综合结论（A板块顶部）
+  const concEl = document.getElementById('a-overall-conclusion');
+  if (concEl && overallScores.length) {
+    const anyBear = overallScores.some(s=>s.isBear);
+    const allBull = overallScores.every(s=>s.isBull);
+    const quotes = overallScores.map(s=>s.quote).join('、');
+    if (allBull) {
+      concEl.className='fx-conclusion ok';
+      concEl.innerHTML=`✅ <strong>整体时机较优</strong> — 比索走强，当前备货汇率占优。建议抓住时机集中备货。`;
+    } else if (anyBear) {
+      concEl.className='fx-conclusion warn';
+      concEl.innerHTML=`⚡ <strong>注意成本定价风险</strong> — 比索走弱，成本定价隐含风险（供应商报价币 → MXN）有扩大趋势，建议分批备货、保留定价缓冲。`;
+    } else {
+      concEl.className='fx-conclusion ok';
+      concEl.innerHTML=`✅ <strong>时机中性</strong> — 汇率震荡，无明显趋势。各货币对风险均处于可控区间，按计划备货。`;
+    }
   }
 }
+
+// ===== 保留兼容桩（B1/B3等模块调用） =====
+function renderA1() { renderAPairBlocks(); }
+function renderA2() { /* 已整合进 renderAPairBlocks */ }
+function renderA3() { renderAPairBlocks(); }
 
 // ===== B1: 在途批次 =====
 function b1AddRow(payDate, shipMode, amount, quoteCcy, payRateCny, payRateMxn) {
@@ -1598,6 +1717,34 @@ function calcVol(arr) {
   return Math.sqrt(arr.map(v => (v - mean) ** 2).reduce((a, b) => a + b, 0) / arr.length) / mean;
 }
 
+// ===== 前端实时补数据：检测缺少的 cny_* 字段，从 fawazahmed0 CDN 实时补充 =====
+async function patchMissingCnyRates(allData) {
+  const CNY_FIELDS = ['usd','cnh','hkd','eur','gbp','jpy','cad','aud'];
+  // 检查哪些日期缺少 cny_* 字段
+  const missing = allData.filter(d => !d.fx?.cny_usd);
+  if (missing.length === 0) return; // 全部完整，无需补充
+  console.log(`[patch] 发现 ${missing.length} 个日期缺少 cny_* 字段，尝试实时补充...`);
+  for (const dayData of missing) {
+    const date = dayData.date;
+    if (!date) continue;
+    try {
+      const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${date}/v1/currencies/cny.json`;
+      const resp = await fetch(url, { signal: AbortSignal.timeout(8000) });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const json = await resp.json();
+      const cny = json.cny || {};
+      for (const field of CNY_FIELDS) {
+        const val = cny[field];
+        if (val != null && val > 0) dayData.fx['cny_'+field] = +val.toFixed(6);
+      }
+      if (!dayData.fx.cny_usd) dayData.fx._patch_failed = true;
+      else console.log(`[patch] ✅ ${date}: cny_usd=${dayData.fx.cny_usd} cny_hkd=${dayData.fx.cny_hkd}`);
+    } catch(e) {
+      console.warn(`[patch] ⚠️ ${date} 补充失败: ${e.message}`);
+    }
+  }
+}
+
 // ===== 数据加载 =====
 async function loadData() {
   let index = [];
@@ -1626,6 +1773,9 @@ async function loadData() {
 
   // 暴露给全局，供应收账款 Tab 使用
   window.allFxData = allData;
+
+  // ② 前端实时补数据：检测 cny_* 序列不足时，从 fawazahmed0 CDN 实时拉取
+  await patchMissingCnyRates(allData);
 
   const latest = allData[allData.length - 1];
   const prev = allData.length > 1 ? allData[allData.length - 2] : null;

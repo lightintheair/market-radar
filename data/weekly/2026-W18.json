@@ -1,0 +1,44 @@
+{
+  "week": "2026-W18",
+  "date": "2026-04-27",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Locked in Low Gear: Mexico’s Struggling Economy - Baker Institute",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated April 15, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - corporate.vanguard.com",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu challenges Amazon for cross-border e-commerce dominance - FreightWaves",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Top retailers by most recent cross-border order 2025 - Statista",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

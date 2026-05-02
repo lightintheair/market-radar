@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-02",
+  "time": "09:31",
+  "fx": {
+    "mxn_cny": 0.3911,
+    "mxn_usd": 0.0572,
+    "cny_usd": 0.146249,
+    "cny_cnh": 0.999742,
+    "cny_hkd": 1.145982,
+    "cny_eur": 0.124942,
+    "cny_gbp": 0.107992,
+    "cny_jpy": 23.057569,
+    "cny_cad": 0.199138,
+    "cny_aud": 0.203704,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Cross-customs returns in place to boost e-tailers - China Daily",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rY1l6YnowSU91OFNOa252MHZndFdtYWFyMks4UWtxTXJBUHFvM19Oekt3Yl9mUXNFYjlpc1BuZDZyWndrSjEyeEktWXFhRGY4T2JnVFYycldZZzVMRm5aWXJrLWtxU3pERnRUbm1pQ3R4NHhKcUI2bE56emsxUQ?oc=5",
+      "date": "2026-05-02",
+      "type": "news"
+    },
+    {
+      "title": "Is AliExpress safe? What you need to know in 2026 - Surfshark",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBhNEFYWmtnUmM5YlRpNFI0Zmc1ZFBpMDhzdDRrOXBqbVdRMlBaN2UwbVlDc3I4TmFJdm02UXYwUVcyS0ZXLXJpX1RFdERkRURtQzY5dWdKMlg?oc=5",
+      "date": "2026-05-02",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Locked in Low Gear: Mexico’s Struggling Economy - Baker Institute",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts to 7.00% and signals a pause in the easing cycle - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated April 15, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Unveils Powerful New Tools for U.S. Sellers to Boost Growth and Efficiency - PR Newswire",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Under Pressure as Banxico Decision Approaches - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZkVoT0l2OHNoV05PTE9lRVctVkh6Yy1LZjlUY0Q3QUEzUmZRODBLREZfZ214MjNhUmZ1MkNOT2MyTDlQQ1lySjJqeU1pTlBrbzZJY1FPeVBXc2xUZlUyMU1saUp6b19pbkFEZHdzcTZMaTZHVmtNdFduYTJpOEg0RmZxcjYzX3UwZXZERXl5TWJnT0JTbXlVMTRyRm5ZaXFwSVFVdWxScnZCVGNoVWxj0gG7AUFVX3lxTE5OTFhmdjJ3QzJaWnRDeXBXMzFuTVpMX25oYkRyckNZSlVxd211SVB3aDRPNk43UmZGakhqUjlMY1gxaGI5SnowTkg0TzJHU3QySDVid090OHphTGY2MkllTGNmM181WlpGNy1YekxoUzRtMDlWNUVVcXE5TEd3eTNiVUpxN1VxTFBTY3Rudno1MmI5VVI3QnozcXBZdDFnNnlDcHMybTI3X0YtX0JuQjRRbWhWOU81VGpEbWc?oc=5"
+    },
+    {
+      "title": "Mexico central bank cuts interest rate as its raises inflation forecasts - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNaHdqSUdlOWIwN0lsVWs4RG9XODlQLVdQUXBMa2lNdk1Fd2hLTVAxRV9SbEFId3prakVNWnBwVWFfVzk1QUQxaHdxQzdUMVVSYW0tMEg4M3RIajktSTAzaFJlWjRJVUhCSnRLa1hsdkRIUUVnVnVza3AybkY4YmxGMVJ5NlF0SENzX0VoOFhFRXNPUUtkMEQxQVRIMU1kUQ?oc=5"
+    },
+    {
+      "title": "Higher oil prices fail to lift Pemex as Q1 loss hits $2.6 billion - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNlRoT2ZXUmJoM2ZadWliNFJ6SzVUeDRGOW9SNnR2S0g5TlNCSmc0Wk5TUkhPV3RyaWNuay02M2l4elhpRzdLMVVtSy1ydGp0cTFnNzdRdFd5aFJGTUJoMzlGQ2dsXzJVbTNMeXlfVlEwUW5lb3poOVNBeXBtS2QwX3IzamhGcFh1cFhVbXNJTjlBUU1DMFh3MUxjZmo?oc=5"
+    },
+    {
+      "title": "What Is the Future of U.S.-Mexico-Canada Trade? - Council on Foreign Relations",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE41akZaVTliXzVYOVNWcWdFOG52cjM2U1BzbW84MmVnek43NUFiNmlXMkhXTjVhc0tIbXBpRjdBSW1PRDd4RVFWRFVJM2YzUmp1bHU2eDdOdXlJRDd3WFJ2TndHMy1UY0ZHa0FBWmtsSk1QMHltSlNJTVVULS1xMVE?oc=5"
+    },
+    {
+      "title": "US Dollar Index (DXY) Price Forecast: Bounces off 50% Fibo. on Iran tensions, hawkish Fed - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdV9ldjBEenBwVXNLLUZhSmhXUVJhWGp3dE5jRXNTWlEzaXhNb1JDb3c1Q0tKSXZCdkd6akVzVDloTDN1MUt5b3JpZWg1cjZJQ1pzdW9nc1hSU2IzWERBQS1lck95LWJRc0NrbGNYX2xvdkU1Nl85c3FyR0ljT3BiZWVlZW4xWlZQZlhyb2JBTkRKUEs3aEd3eEZyTk5xODdHTW9BOUN6em9nUVdfSG1MV3UxRFBwa3VSVG4ydWFoNGZGNHZ3?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

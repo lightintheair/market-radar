@@ -1,0 +1,44 @@
+{
+  "week": "2026-W19",
+  "date": "2026-05-04",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Locked in Low Gear: Mexico’s Struggling Economy - Baker Institute",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bucking expectations, central bank cuts interest rate despite inflationary pressures - Mexico News Daily",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated April 15, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico's economy contracts more than expected, recovery could hinge on World Cup - Reuters",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Sell Locally and Now Into Regional Markets: Temu’s Local Seller Program Explained (2026 Update) - Digital Commerce 360",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Latin America Ecommerce Market Shares 2026 - eMarketer",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

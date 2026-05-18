@@ -1,0 +1,44 @@
+{
+  "week": "2026-W21",
+  "date": "2026-05-18",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico Inflation Slows to 4.45% in April, INEGI Says - Mexico Business News",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Mexican January 2026 Tariff Tsunami: Maquilas Aren’t Immune - Foley &amp; Lardner LLP",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Latin America Ecommerce Market Shares 2026 - eMarketer",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "49ers to Face Minnesota Vikings in Mexico City in Week 11 'SNF' - San Francisco 49ers",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Mexico Algae Scraper - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

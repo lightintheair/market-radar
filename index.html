@@ -2500,19 +2500,22 @@ function updateWeekly(w) {
   const platform = w.platform || [];
   const kpi = w.kpi || {};
 
-  // ——— KPI 指标卡 ———
+  // ——— KPI 指标卡（含结论推导）———
   const setKpi = (id, value, trend) => {
     const el = document.getElementById(id);
     const tEl = document.getElementById(id + '-trend');
     if (el) el.textContent = value || '--';
-    if (tEl && trend) { tEl.textContent = trend; tEl.className = 'kpi-sub ' + (trend.includes('↓')||trend.includes('下') ? 'down' : trend.includes('↑')||trend.includes('上') ? 'up' : 'flat'); }
+    if (tEl && trend) {
+      tEl.textContent = trend;
+      tEl.className = 'kpi-sub ' + (/[↓下降回落]/.test(trend) ? 'down' : /[↑上升上涨]/.test(trend) ? 'up' : 'flat');
+    }
   };
-  setKpi('kpi-inflation', kpi.inflation || '4.45%', kpi.inflationTrend || '↓ 较上月回落');
-  setKpi('kpi-rate', kpi.rate || '10.5%', kpi.rateTrend || '↓ 本轮降息周期');
-  setKpi('kpi-gdp', kpi.gdp || '1.5%', kpi.gdpTrend || '→ 低增长区间');
-  setKpi('kpi-tariff', kpi.tariff || '16% IVA', kpi.tariffTrend || kpi.tariffNote || '→ de minimis $50 USD');
+  setKpi('kpi-inflation', kpi.inflation || '--', kpi.inflationTrend || '');
+  setKpi('kpi-rate', kpi.rate || '--', kpi.rateTrend || '');
+  setKpi('kpi-gdp', kpi.gdp || '--', kpi.gdpTrend || '');
+  setKpi('kpi-tariff', kpi.tariff || '--', kpi.tariffTrend || '');
 
-  // ——— 宏观动态分三栏 ———
+  // ——— 宏观分栏：按 source/category 分桶 ———
   const politicsEl = document.getElementById('macro-politics');
   const economyEl = document.getElementById('macro-economy');
   const policyEl = document.getElementById('macro-policy');
@@ -2521,46 +2524,57 @@ function updateWeekly(w) {
   macro.forEach(x => {
     const t = ((x.title||'') + ' ' + (x.source||'') + ' ' + (x.summary||'')).toLowerCase();
     if (/tariff|aranceles|关税|tax|vat|de minimis|customs|海关|贸易|trade|import|export|logistics|物流|quota|配额/.test(t)) policy.push(x);
-    else if (/gdp|inflation|inflación|通胀|growth|consumer|unemployment|失业|rate cut|recorte|降息|banxico|interest|利率|spending|消费|retail|零售/.test(t)) economy.push(x);
+    else if (/gdp|inflation|inflación|通胀|growth|consumer|unemployment|失业|rate.?cut|recorte|降息|banxico|interest|利率|spending|消费|retail|零售|outlook|经济/.test(t)) economy.push(x);
     else politics.push(x);
   });
 
-  const renderInsightList = (items, el) => {
+  // 渲染：显示 summary 作为结论短语，title 作为可点击来源
+  const renderInsightCol = (items, el, emptyNote) => {
     if (items.length) {
       el.innerHTML = items.map(x => {
-        const summary = x.summary || x.title;
-        const sentiment = /tariff|ban|sanction|restrict|risk|下降|下滑|恶化/.test((summary||'').toLowerCase()) ? 'negative' : /growth|增长|复苏|上升|利好/.test((summary||'').toLowerCase()) ? 'positive' : 'neutral';
-        const sourceLink = x.url ? `<a href="${x.url}" target="_blank">${x.source || '来源'}</a>` : `<span>${x.source || ''}</span>`;
+        const conclusion = x.summary || x.title;
+        const sentiment = /tariff|ban|sanction|restrict|risk|下降|下滑|恶化|上升风险|成本/.test((conclusion||'').toLowerCase()) ? 'negative' : /growth|增长|复苏|利好|回落|支撑|稳定/.test((conclusion||'').toLowerCase()) ? 'positive' : 'neutral';
+        const sourceLink = x.url ? `<a href="${x.url}" target="_blank" rel="noopener">${x.source || '查看来源'} ↗</a>` : `<span>${x.source || ''}</span>`;
         return `<div class="insight-item ${sentiment}">
-          <div class="insight-conclusion">${summary}</div>
-          <div class="insight-source">${sourceLink}${x.date ? ' · '+x.date : ''}</div>
+          <div class="insight-conclusion">${conclusion}</div>
+          <div class="insight-source">${sourceLink}</div>
         </div>`;
       }).join('');
     } else {
-      el.innerHTML = '<div style="font-size:10px;color:var(--muted);padding:8px 0">本周无相关动态</div>';
+      el.innerHTML = `<div style="font-size:10px;color:var(--muted);padding:8px 0">${emptyNote}</div>`;
     }
   };
-  renderInsightList(politics, politicsEl);
-  renderInsightList(economy, economyEl);
-  renderInsightList(policy, policyEl);
+  renderInsightCol(politics, politicsEl, '本周无政治类动态');
+  renderInsightCol(economy, economyEl, '本周无经济类动态');
+  renderInsightCol(policy, policyEl, '本周无政策类动态');
 
-  // 宏观结论
+  // 各栏小结论（基于栏内数据）
+  const makeColConclusion = (items) => {
+    if (!items.length) return { level: 'ok', text: '无异常' };
+    const all = items.map(x => (x.summary||x.title||'')).join(' ').toLowerCase();
+    if (/tariff|关税|sanction|制裁|ban|restrict|上升风险|成本上升/.test(all)) return { level: 'danger', text: '存在政策风险信号' };
+    if (/降息|rate.*cut|inflation.*slow|回落|支撑|稳定|增长/.test(all)) return { level: 'ok', text: '整体偏正面' };
+    if (/低增长|疲软|下滑|衰退/.test(all)) return { level: 'warn', text: '有疲软信号' };
+    return { level: 'ok', text: '无明显风险' };
+  };
+  const polConc = makeColConclusion(politics);
+  const ecoConc = makeColConclusion(economy);
+  const polcConc = makeColConclusion(policy);
+
+  // 宏观总结论（综合三栏）
   if (macro.length) {
-    const allText = macro.map(x => (x.title||'') + ' ' + (x.summary||'')).join(' ').toLowerCase();
-    let macroLevel = 'ok', macroText = '';
-    if (/tariff|aranceles|关税|sanction|制裁|ban.*china|restrict/.test(allText)) {
-      macroLevel = 'danger';
-      macroText = '⚠️ <strong>关税/制裁相关动态</strong>：可能影响商品进口成本或清关周期。';
-    } else if (/inflation|inflación|通胀|rate cut|recorte|降息/.test(allText)) {
-      macroLevel = 'warn';
-      macroText = '⚡ <strong>通胀/利率动态</strong>：Banxico 政策调整影响消费信贷和购买力。';
-    } else {
-      macroLevel = 'ok';
-      macroText = '✅ 近期宏观动态无重大异常，市场环境正常。';
-    }
+    const worstLevel = [polConc, ecoConc, polcConc].some(c=>c.level==='danger') ? 'danger' : [polConc, ecoConc, polcConc].some(c=>c.level==='warn') ? 'warn' : 'ok';
+    const parts = [];
+    if (polConc.level !== 'ok') parts.push(`政治面：${polConc.text}`);
+    if (ecoConc.level !== 'ok') parts.push(`经济面：${ecoConc.text}`);
+    if (polcConc.level !== 'ok') parts.push(`政策面：${polcConc.text}`);
+    const icons = { ok: '✅', warn: '⚡', danger: '⚠️' };
+    const summaryText = parts.length
+      ? `${icons[worstLevel]} <strong>需关注：</strong>${parts.join('；')}`
+      : '✅ 三维度（政治/经济/政策）均无重大风险信号，宏观环境正常。';
     macroConcEl.style.display = '';
-    macroConcEl.className = `fx-conclusion ${macroLevel}`;
-    macroConcEl.innerHTML = macroText;
+    macroConcEl.className = `fx-conclusion ${worstLevel}`;
+    macroConcEl.innerHTML = summaryText;
   }
 
   // ——— 竞争情报 ———
@@ -2568,59 +2582,47 @@ function updateWeekly(w) {
   const aliEl = document.getElementById('comp-aliexpress');
   const dailyPicksEl = document.getElementById('comp-daily-picks');
 
-  // 行业格局（支持新字段 w.industry / w.aliexpress，兼容旧 comp 数组）
-  const industryData = w.industry || comp.filter(x => /temu|shopee|mercado|market share|份额|渗透/.test((x.title||'').toLowerCase()));
-  const aliData = w.aliexpress || comp.filter(x => /aliexpress|速卖通|seller|卖家|ranking/.test((x.title||'').toLowerCase()));
-  const otherComp = comp.filter(x => !industryData.includes(x) && !aliData.includes(x));
+  // 过滤噪声数据
+  const validComp = comp.filter(x => !(x.summary||'').includes('噪声'));
+  const industryData = w.industry || validComp.filter(x => /temu|shopee|mercado|market share|份额|渗透|ecommerce/.test((x.title||'').toLowerCase()));
+  const aliData = w.aliexpress || validComp.filter(x => /aliexpress|速卖通|seller|卖家|ranking/.test((x.title||'').toLowerCase()));
+  const otherComp = validComp.filter(x => !industryData.includes(x) && !aliData.includes(x));
 
-  renderInsightList(industryData.length ? industryData : otherComp.slice(0,3), industryEl);
-  renderInsightList(aliData.length ? aliData : otherComp.slice(3,6), aliEl);
+  renderInsightCol(industryData.length ? industryData : otherComp.slice(0,3), industryEl, '本周无行业格局动态');
+  renderInsightCol(aliData.length ? aliData : otherComp.slice(3,6), aliEl, '本周无速卖通特定动态');
 
-  // 日常选品
+  // 日常选品 Top5
   if (dailyPicksEl) {
-    const picks = w.dailyPicks || null;
-    if (picks && picks.length) {
-      dailyPicksEl.innerHTML = picks.map((p,i) => `<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:8px 10px;background:var(--bg);border-radius:8px">
-        <div style="font-size:16px;font-weight:700;color:var(--accent);width:20px">#${i+1}</div>
-        <div style="flex:1">
-          <div style="font-size:12px;font-weight:600">${p.category}</div>
-          <div style="font-size:10px;color:var(--muted)">${p.priceRange || ''} · ${p.reason || ''}</div>
-        </div>
-        <div style="font-size:10px;color:var(--accent2);font-weight:700">${p.score ? p.score+'/10' : ''}</div>
-      </div>`).join('');
-    } else {
-      // 默认建议（硬编码兜底）
-      const defaultPicks = [
-        { category: '3C配件（手机壳/充电线/耳机套）', priceRange: '$5-25 USD', reason: '轻小·高频·国内供应链极强', score: 9 },
-        { category: '家居小物（收纳/LED灯饰/厨具）', priceRange: '$8-30 USD', reason: '客单适中·体积可控·差异化空间大', score: 8 },
-        { category: '美妆工具（刷具/收纳/美甲）', priceRange: '$5-20 USD', reason: '轻小·毛利高·复购强', score: 8 },
-        { category: '运动户外配件（瑜伽/骑行/露营小件）', priceRange: '$10-40 USD', reason: '墨西哥户外文化强·竞争度中等', score: 7 },
-        { category: '汽配小件（车载手机架/LED灯/装饰）', priceRange: '$10-35 USD', reason: '墨西哥汽车保有量高·刚需', score: 7 },
-      ];
-      dailyPicksEl.innerHTML = defaultPicks.map((p,i) => `<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:8px 10px;background:var(--bg);border-radius:8px">
-        <div style="font-size:16px;font-weight:700;color:var(--accent);width:20px">#${i+1}</div>
-        <div style="flex:1">
-          <div style="font-size:12px;font-weight:600">${p.category}</div>
-          <div style="font-size:10px;color:var(--muted)">${p.priceRange} · ${p.reason}</div>
-        </div>
-        <div style="font-size:10px;color:var(--accent2);font-weight:700">${p.score}/10</div>
-      </div>`).join('');
-    }
+    const picks = w.dailyPicks || [
+      { category: '3C配件（手机壳/充电线/耳机套）', priceRange: '$5-25', reason: '轻小·高频·国内供应链极强', score: 9 },
+      { category: '家居小物（收纳/LED灯饰/厨具）', priceRange: '$8-30', reason: '客单适中·体积可控·差异化空间大', score: 8 },
+      { category: '美妆工具（刷具/收纳盒/美甲）', priceRange: '$5-20', reason: '轻小·毛利高·复购强', score: 8 },
+      { category: '运动户外配件（瑜伽/骑行/露营小件）', priceRange: '$10-40', reason: '墨西哥户外文化强·竞争度中等', score: 7 },
+      { category: '汽配小件（车载手机架/LED灯/装饰）', priceRange: '$10-35', reason: '墨西哥汽车保有量高·刚需', score: 7 },
+    ];
+    dailyPicksEl.innerHTML = picks.map((p,i) => `<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:8px 10px;background:var(--bg);border-radius:8px">
+      <div style="font-size:16px;font-weight:700;color:var(--accent);width:20px">#${i+1}</div>
+      <div style="flex:1">
+        <div style="font-size:12px;font-weight:600">${p.category}</div>
+        <div style="font-size:10px;color:var(--muted)">${p.priceRange || ''} · ${p.reason || ''}</div>
+      </div>
+      <div style="font-size:10px;color:var(--accent2);font-weight:700">${p.score ? p.score+'/10' : ''}</div>
+    </div>`).join('');
   }
 
   // 竞争结论
-  const compText = comp.map(x => (x.title||'')).join(' ').toLowerCase();
-  let compLevel = 'ok', compConc = '';
-  if (/temu.*(mexico|expand|free|免费)|shopee.*(launch|enter|进入)/.test(compText)) {
+  const compAllText = validComp.map(x => (x.summary||x.title||'')).join(' ').toLowerCase();
+  let compLevel = 'ok', compConcText = '';
+  if (/temu.*(expand|份额.*上升|快速|增长)|shopee.*(launch|enter|进入)/.test(compAllText)) {
     compLevel = 'warn';
-    compConc = '⚡ <strong>竞争对手有扩张动作</strong>：建议在选品上差异化，避开已被低价渗透的标品。';
+    compConcText = '⚡ <strong>竞争对手份额上升</strong>：Temu 在墨西哥份额快速增长，但速卖通仍稳居第三。建议在选品上差异化，避开低价标品红海。';
   } else {
     compLevel = 'ok';
-    compConc = '✅ 近期无明显竞争威胁信号。持续关注 Temu 墨西哥扩张和速卖通品类榜单。';
+    compConcText = '✅ 近期竞争格局无剧烈变化。速卖通在墨西哥市场地位稳定。';
   }
   compConcEl.style.display = '';
   compConcEl.className = `fx-conclusion ${compLevel}`;
-  compConcEl.innerHTML = compConc;
+  compConcEl.innerHTML = compConcText;
 
   // 平台动态
   if (platform.length) {
@@ -2633,61 +2635,73 @@ function updateWeekly(w) {
     }
   }
 
-  // 综合评分
-  updateMarketScore(w);
+  // ——— 综合评分（基于实际数据推导）———
+  updateMarketScore(w, { polConc, ecoConc, polcConc, compLevel });
 }
 
-function updateMarketScore(w) {
+function updateMarketScore(w, ctx) {
   const badge = document.getElementById('market-score-badge');
   const breakdown = document.getElementById('market-score-breakdown');
   const text = document.getElementById('market-score-text');
   const freshness = document.getElementById('market-data-freshness');
+  const kpi = w.kpi || {};
 
-  const macro = w.macro || [];
-  const comp = w.competitor || [];
-  const allText = [...macro, ...comp].map(x=>(x.title||'')+' '+(x.summary||'')).join(' ').toLowerCase();
-
-  // 各维度评分
+  // 各维度评分（基于KPI数据和栏位结论，而非正则）
   const factors = [];
-  // 宏观-政策
+
+  // 1. 宏观政策稳定性（25分满）
   let policyScore = 20;
-  if (/tariff|关税|sanction|制裁|ban.*china|restrict/.test(allText)) { policyScore = 5; }
-  else if (/inflation|通胀|rate.*cut|降息/.test(allText)) { policyScore = 14; }
-  factors.push({ icon: '🏛', name: '宏观政策', score: policyScore, max: 25, note: policyScore >= 18 ? '稳定' : policyScore >= 10 ? '有波动' : '高风险' });
+  let policyNote = '环境稳定';
+  if (ctx.polcConc.level === 'danger') { policyScore = 8; policyNote = '关税/政策风险'; }
+  else if (ctx.polcConc.level === 'warn') { policyScore = 14; policyNote = '有政策波动'; }
+  else if (ctx.polConc.level === 'warn') { policyScore = 16; policyNote = '政治面有波动'; }
+  factors.push({ icon: '🏛', name: '宏观政策', score: policyScore, max: 25, note: policyNote });
 
-  // 经济需求
-  let demandScore = 20;
-  if (/recession|衰退|unemployment.*rise|失业.*上升/.test(allText)) demandScore = 8;
-  else if (/growth|增长|consumer.*spend/.test(allText)) demandScore = 23;
-  factors.push({ icon: '📈', name: '消费需求', score: demandScore, max: 25, note: demandScore >= 18 ? '健康' : demandScore >= 10 ? '疲软' : '萎缩' });
+  // 2. 消费需求（25分满）— 基于通胀率和GDP
+  let demandScore = 18;
+  let demandNote = '正常';
+  const inflNum = parseFloat(kpi.inflation);
+  const gdpNum = parseFloat((kpi.gdp||'').replace('~',''));
+  if (!isNaN(inflNum)) {
+    if (inflNum <= 4) { demandScore = 23; demandNote = '通胀低·购买力强'; }
+    else if (inflNum <= 5) { demandScore = 19; demandNote = '通胀可控'; }
+    else if (inflNum <= 7) { demandScore = 14; demandNote = '通胀偏高·购买力承压'; }
+    else { demandScore = 8; demandNote = '高通胀·消费萎缩'; }
+  }
+  if (!isNaN(gdpNum) && gdpNum < 1) { demandScore = Math.min(demandScore, 12); demandNote = 'GDP过低·需求疲软'; }
+  factors.push({ icon: '📈', name: '消费需求', score: demandScore, max: 25, note: demandNote });
 
-  // 竞争压力（反向）
+  // 3. 竞争格局（25分满）— 反向：竞争越激烈分越低
   let compScore = 18;
-  if (/temu.*(expand|mexico|free)|shopee.*(launch|enter)/.test(allText)) compScore = 10;
-  else if (/aliexpress.*(growth|record|增长)/.test(allText)) compScore = 22;
-  factors.push({ icon: '⚔️', name: '竞争格局', score: compScore, max: 25, note: compScore >= 18 ? '竞争适中' : compScore >= 10 ? '竞争加剧' : '红海' });
+  let compNote = '竞争适中';
+  if (ctx.compLevel === 'warn') { compScore = 13; compNote = '竞争加剧（Temu扩张）'; }
+  else if (ctx.compLevel === 'danger') { compScore = 7; compNote = '红海'; }
+  else { compScore = 20; compNote = '格局稳定'; }
+  factors.push({ icon: '⚔️', name: '竞争格局', score: compScore, max: 25, note: compNote });
 
-  // 窗口时机（节日备货）
+  // 4. 窗口时机（25分满）— 备货窗口期加分
   let windowScore = 15;
-  const today = new Date();
+  let windowNote = '平淡期';
   const calConc = document.getElementById('calendar-conclusion');
   if (calConc) {
-    if (calConc.classList.contains('warn')) windowScore = 22;
-    else if (calConc.classList.contains('danger')) windowScore = 25;
+    if (calConc.classList.contains('danger')) { windowScore = 25; windowNote = '节日冲刺期'; }
+    else if (calConc.classList.contains('warn')) { windowScore = 22; windowNote = '备货窗口期'; }
   }
-  factors.push({ icon: '📅', name: '窗口时机', score: windowScore, max: 25, note: windowScore >= 20 ? '备货窗口期' : '平淡期' });
+  factors.push({ icon: '📅', name: '窗口时机', score: windowScore, max: 25, note: windowNote });
 
   const total = factors.reduce((s, f) => s + f.score, 0);
 
-  // 渲染评分拆解
+  // 渲染评分拆解条
   breakdown.innerHTML = factors.map(f => {
     const pct = Math.round(f.score / f.max * 100);
-    const cls = pct >= 70 ? 'pos' : pct >= 40 ? 'neu' : 'neg';
+    const cls = pct >= 70 ? 'pos' : pct >= 50 ? 'neu' : 'neg';
+    const barColor = cls==='pos' ? 'var(--accent2)' : cls==='neu' ? 'var(--warn)' : 'var(--danger)';
     return `<div class="score-factor">
       <div class="score-factor-icon">${f.icon}</div>
       <div class="score-factor-info">
         <div class="score-factor-name">${f.name}</div>
-        <div style="background:var(--border);border-radius:3px;height:4px;margin:3px 0"><div style="background:${cls==='pos'?'var(--accent2)':cls==='neu'?'var(--warn)':'var(--danger)'};height:4px;border-radius:3px;width:${pct}%"></div></div>
+        <div style="background:var(--border);border-radius:3px;height:4px;margin:3px 0"><div style="background:${barColor};height:4px;border-radius:3px;width:${pct}%"></div></div>
+        <div style="font-size:9px;color:var(--muted)">${f.note}</div>
       </div>
       <div class="score-factor-val ${cls}">${f.score}<span style="font-size:9px;color:var(--muted)">/${f.max}</span></div>
     </div>`;
@@ -2696,15 +2710,20 @@ function updateMarketScore(w) {
   // badge
   let level, label;
   if (total >= 75) { level = 'ok'; label = `✅ ${total}分 · 适合进场`; }
-  else if (total >= 50) { level = 'warn'; label = `⚠️ ${total}分 · 谨慎进场`; }
+  else if (total >= 55) { level = 'warn'; label = `⚠️ ${total}分 · 谨慎进场`; }
   else { level = 'danger'; label = `⛔ ${total}分 · 建议观望`; }
   const colors = { ok: '#10b98118;color:var(--accent2);border:1px solid #10b98140', warn: '#f59e0b18;color:var(--warn);border:1px solid #f59e0b40', danger: '#ef444418;color:var(--danger);border:1px solid #ef444440' };
   badge.style.cssText = `padding:6px 18px;border-radius:20px;font-size:14px;font-weight:700;background:${colors[level]}`;
   badge.textContent = label;
 
-  // 文字说明
-  const noteMap = factors.filter(f => f.score < f.max * 0.6).map(f => f.name + '(' + f.note + ')');
-  text.textContent = noteMap.length ? `主要拖累：${noteMap.join('、')}` : '各维度均处于健康区间，综合环境利好。';
+  // 拖累说明
+  const drags = factors.filter(f => f.score < f.max * 0.7).map(f => `${f.name}(${f.note})`);
+  const boosts = factors.filter(f => f.score >= f.max * 0.85).map(f => `${f.name}(${f.note})`);
+  let summary = '';
+  if (drags.length) summary += `主要拖累：${drags.join('、')}`;
+  if (boosts.length) summary += `${drags.length ? ' | ' : ''}利好因素：${boosts.join('、')}`;
+  if (!summary) summary = '各维度均处于健康区间，综合环境利好。';
+  text.textContent = summary;
 
   if (freshness) freshness.textContent = `数据周期：${w.week || '--'} · ${w.date || new Date().toLocaleDateString('zh-CN')}`;
 }

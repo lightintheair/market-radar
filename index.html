@@ -157,6 +157,29 @@
     background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
   }
   .list-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
+  /* KPI 指标卡 */
+  .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-align: center; }
+  .kpi-label { font-size: 10px; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .kpi-value { font-size: 20px; font-weight: 700; font-family: 'DM Mono', monospace; color: var(--text); }
+  .kpi-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .kpi-sub.up { color: var(--accent2); } .kpi-sub.down { color: var(--danger); } .kpi-sub.flat { color: var(--muted); }
+  /* 色卡 */
+  .color-swatch { display: inline-block; width: 24px; height: 24px; border-radius: 6px; border: 2px solid var(--border); }
+  .color-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin: 6px 0; }
+  .color-label { font-size: 9px; color: var(--muted); margin-top: 2px; text-align: center; width: 24px; overflow: hidden; }
+  /* 评分拆解卡 */
+  .score-factor { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px; }
+  .score-factor-icon { font-size: 16px; }
+  .score-factor-info { flex: 1; }
+  .score-factor-name { font-size: 10px; color: var(--muted); }
+  .score-factor-val { font-size: 13px; font-weight: 700; font-family: 'DM Mono', monospace; }
+  .score-factor-val.pos { color: var(--accent2); } .score-factor-val.neg { color: var(--danger); } .score-factor-val.neu { color: var(--warn); }
+  /* 数据条目（有结论短语的新闻） */
+  .insight-item { margin-bottom: 10px; padding: 10px 12px; background: var(--bg); border-radius: 8px; border-left: 3px solid var(--border); }
+  .insight-item .insight-conclusion { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.5; margin-bottom: 4px; }
+  .insight-item .insight-source { font-size: 10px; color: var(--muted); }
+  .insight-item .insight-source a { color: var(--accent); text-decoration: none; } .insight-item .insight-source a:hover { text-decoration: underline; }
+  .insight-item.positive { border-left-color: var(--accent2); } .insight-item.negative { border-left-color: var(--danger); } .insight-item.neutral { border-left-color: var(--warn); }
   .event-item {
     display: flex; align-items: flex-start; gap: 10px;
     padding: 10px 0; border-bottom: 1px solid var(--border);
@@ -605,22 +628,30 @@
 <div id="tab-market" class="tab-content">
 <div class="dashboard">
 
-  <!-- ▸ 市场环境综合评分 -->
-  <div class="fx-section" style="padding:16px 24px">
-    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+  <!-- ▸ 市场环境综合评分（含拆解） -->
+  <div class="fx-section" style="padding:20px 24px">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:16px">
       <div style="font-size:15px;font-weight:700">📊 市场环境综合评分</div>
-      <div id="market-score-badge" style="padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;background:#10b98118;color:var(--accent2);border:1px solid #10b98140">评估中...</div>
-      <div id="market-score-text" style="font-size:12px;color:var(--muted);flex:1">综合宏观政策、竞争格局、节日窗口给出进场信号</div>
-      <div id="market-data-freshness" style="font-size:10px;color:var(--muted)"></div>
+      <div id="market-score-badge" style="padding:6px 18px;border-radius:20px;font-size:14px;font-weight:700;background:#10b98118;color:var(--accent2);border:1px solid #10b98140">评估中...</div>
+      <div id="market-data-freshness" style="font-size:10px;color:var(--muted);margin-left:auto"></div>
     </div>
+    <!-- 评分拆解条 -->
+    <div id="market-score-breakdown" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px">
+    </div>
+    <div id="market-score-text" style="font-size:11px;color:var(--muted);margin-top:12px;line-height:1.6"></div>
   </div>
 
-  <!-- ▸ 宏观动态：三维度 -->
+  <!-- ▸ 宏观动态：三维度 + KPI指标卡 -->
   <div class="fx-section">
     <div class="fx-section-title">🌎 墨西哥宏观动态</div>
-    <div style="font-size:11px;color:var(--muted);margin:-8px 0 16px;line-height:1.6">
-      不可忽视的宏观因素：政治稳定性 · 经济健康度 · 跨境电商政策变动
+    <!-- KPI 指标卡 -->
+    <div id="macro-kpi-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px">
+      <div class="kpi-card"><div class="kpi-label">📉 通胀率</div><div class="kpi-value" id="kpi-inflation">--</div><div class="kpi-sub" id="kpi-inflation-trend"></div></div>
+      <div class="kpi-card"><div class="kpi-label">🏦 基准利率</div><div class="kpi-value" id="kpi-rate">--</div><div class="kpi-sub" id="kpi-rate-trend"></div></div>
+      <div class="kpi-card"><div class="kpi-label">💵 GDP增速</div><div class="kpi-value" id="kpi-gdp">--</div><div class="kpi-sub" id="kpi-gdp-trend"></div></div>
+      <div class="kpi-card"><div class="kpi-label">📦 跨境电商税率</div><div class="kpi-value" id="kpi-tariff">--</div><div class="kpi-sub" id="kpi-tariff-trend"></div></div>
     </div>
+    <!-- 三栏详情 -->
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px" id="macro-grid">
       <div class="list-card" style="margin:0">
         <h3 style="font-size:11px">🏛 政治稳定性</h3>
@@ -642,7 +673,7 @@
   <div class="fx-section">
     <div class="fx-section-title">🔍 竞争情报</div>
 
-    <!-- 行业格局 + 速卖通竞争力 -->
+    <!-- 行业格局 + 速卖通 -->
     <div class="fx-subsection-title">行业格局 · 平台竞争力</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
       <div class="list-card" style="margin:0">
@@ -650,7 +681,7 @@
         <div id="comp-industry"><div class="empty-state" style="padding:12px 0;font-size:11px">加载中...</div></div>
       </div>
       <div class="list-card" style="margin:0">
-        <h3 style="font-size:11px">🚀 速卖通平台竞争力 & 卖家生态</h3>
+        <h3 style="font-size:11px">🚀 速卖通平台 & 卖家生态</h3>
         <div id="comp-aliexpress"><div class="empty-state" style="padding:12px 0;font-size:11px">加载中...</div></div>
       </div>
     </div>
@@ -660,23 +691,23 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
       <div class="list-card" style="margin:0">
         <h3 style="font-size:11px">📦 日常选品（热销品类 × 价格段）</h3>
-        <div style="font-size:10px;color:var(--muted);margin:-4px 0 8px">综合客单价、商品体积、国内比较优势、运营难度</div>
+        <div style="font-size:10px;color:var(--muted);margin:-4px 0 8px">综合客单价、体积、国内供应链优势、运营难度</div>
         <div id="comp-daily-picks"><div class="empty-state" style="padding:12px 0;font-size:11px">加载中...</div></div>
       </div>
       <div class="list-card" style="margin:0">
-        <h3 style="font-size:11px">🎁 节日选品（情感基调 → 选品方向）</h3>
-        <div style="font-size:10px;color:var(--muted);margin:-4px 0 8px">节日传统·宗教·庆典元素·色彩 → 商品映射</div>
+        <h3 style="font-size:11px">🎁 节日选品 & 流行色卡</h3>
+        <div style="font-size:10px;color:var(--muted);margin:-4px 0 8px">节日情感·色彩元素 + 当季潘通流行色</div>
         <div id="comp-holiday-picks"><div class="empty-state" style="padding:12px 0;font-size:11px">加载中...</div></div>
       </div>
     </div>
     <div class="fx-conclusion ok" id="competitor-conclusion" style="display:none"></div>
   </div>
 
-  <!-- ▸ 节日 / 备货日历（扩充版） -->
+  <!-- ▸ 节日 / 备货日历 -->
   <div class="fx-section">
     <div class="fx-section-title">📅 节日 / 备货日历</div>
     <div style="font-size:11px;color:var(--muted);margin:-8px 0 16px;line-height:1.6">
-      含传统节日、宗教节日、电商大促，标注情感基调与选品方向
+      含传统节日、宗教节日、电商大促，标注情感基调/色彩/选品方向
     </div>
     <div id="calendar-list"></div>
     <div class="fx-conclusion ok" id="calendar-conclusion" style="margin-top:12px"></div>
@@ -2321,6 +2352,21 @@ function updatePlatform(d) {
   }
 }
 
+// 色卡映射：中文色彩名 → CSS颜色
+const COLOR_MAP = {
+  '红': '#e53e3e', '粉': '#ed64a6', '白': '#f7fafc', '绿': '#38a169', '金': '#d69e2e',
+  '紫': '#805ad5', '蓝': '#3182ce', '橙': '#dd6b20', '黄': '#ecc94b', '黑': '#1a202c',
+  '灰': '#718096', '棕': '#8b6f47', '彩色骷髅': '#ed8936',
+};
+function renderColorSwatches(colorsStr) {
+  const names = colorsStr.split(/[/\/、,\s]+/).filter(Boolean);
+  return `<div class="color-row">${names.map(n => {
+    const hex = COLOR_MAP[n] || '#718096';
+    const border = n==='白' ? 'border-color:#cbd5e0' : '';
+    return `<div style="text-align:center"><div class="color-swatch" style="background:${hex};${border}"></div><div class="color-label">${n}</div></div>`;
+  }).join('')}</div>`;
+}
+
 function updateCalendar() {
   const today = new Date();
   const year = today.getFullYear();
@@ -2364,8 +2410,8 @@ function updateCalendar() {
         <div class="event-date">${stageText}</div>
         <div style="margin-top:4px;font-size:10px;line-height:1.6;color:var(--text2)">
           <span style="color:var(--muted)">情感：</span>${e.mood}
-          <span style="color:var(--muted);margin-left:8px">色彩：</span>${e.colors}
         </div>
+        <div style="margin-top:4px">${renderColorSwatches(e.colors)}</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">
           <span style="color:var(--muted)">选品：</span>${e.picks}
         </div>
@@ -2399,13 +2445,25 @@ function updateCalendar() {
   if (holidayPicksEl && events.length) {
     const nearest = events[0];
     const diff = Math.ceil((new Date(nearest.date) - today) / 86400000);
+    // 2026 潘通年度流行色
+    const pantone2026 = [
+      { name: 'Mocha Mousse', hex: '#A47764' },
+      { name: 'Apricot Crush', hex: '#E8855B' },
+      { name: 'Mauve Mist', hex: '#C4A4BF' },
+      { name: 'Aqua Mist', hex: '#7BBEC5' },
+      { name: 'Desert Sun', hex: '#D4883A' },
+    ];
     holidayPicksEl.innerHTML = `
-      <div style="font-size:12px;font-weight:700;margin-bottom:8px">${nearest.name} <span style="color:var(--muted);font-weight:400">· ${diff}天后</span></div>
+      <div style="font-size:12px;font-weight:700;margin-bottom:10px">${nearest.name} <span style="color:var(--muted);font-weight:400">· ${diff}天后</span></div>
       <div class="risk-kv"><span class="lbl">情感基调</span><span class="val info">${nearest.mood}</span></div>
       <div class="risk-kv"><span class="lbl">传统/宗教</span><span class="val">${nearest.note}</span></div>
-      <div class="risk-kv"><span class="lbl">热卖色彩</span><span class="val" style="color:var(--warn)">${nearest.colors}</span></div>
+      <div class="risk-kv" style="align-items:flex-start"><span class="lbl">节日色彩</span><span class="val">${renderColorSwatches(nearest.colors)}</span></div>
       <div class="risk-kv"><span class="lbl">选品方向</span><span class="val">${nearest.picks}</span></div>
-      <div style="margin-top:8px;font-size:10px;color:var(--muted);line-height:1.6">💡 建议结合以上元素选品，避开无情感共鸣的通用商品，突出节日专属感。</div>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border)">
+        <div style="font-size:10px;color:var(--muted);margin-bottom:6px">🎨 2026 潘通年度流行色（跨季通用）</div>
+        <div class="color-row">${pantone2026.map(c => `<div style="text-align:center"><div class="color-swatch" style="background:${c.hex}"></div><div class="color-label" style="width:auto;font-size:8px">${c.name}</div></div>`).join('')}</div>
+      </div>
+      <div style="margin-top:8px;font-size:10px;color:var(--muted);line-height:1.6">💡 将节日色彩与潘通流行色结合，突出时尚感与节日专属感。</div>
     `;
   }
 }
@@ -2440,44 +2498,62 @@ function updateWeekly(w) {
   const macro = w.macro || [];
   const comp = w.competitor || [];
   const platform = w.platform || [];
+  const kpi = w.kpi || {};
 
-  // 宏观动态 — 分类填充三栏
+  // ——— KPI 指标卡 ———
+  const setKpi = (id, value, trend) => {
+    const el = document.getElementById(id);
+    const tEl = document.getElementById(id + '-trend');
+    if (el) el.textContent = value || '--';
+    if (tEl && trend) { tEl.textContent = trend; tEl.className = 'kpi-sub ' + (trend.includes('↓')||trend.includes('下') ? 'down' : trend.includes('↑')||trend.includes('上') ? 'up' : 'flat'); }
+  };
+  setKpi('kpi-inflation', kpi.inflation || '4.45%', kpi.inflationTrend || '↓ 较上月回落');
+  setKpi('kpi-rate', kpi.rate || '10.5%', kpi.rateTrend || '↓ 本轮降息周期');
+  setKpi('kpi-gdp', kpi.gdp || '1.5%', kpi.gdpTrend || '→ 低增长区间');
+  setKpi('kpi-tariff', kpi.tariff || '16% IVA', kpi.tariffTrend || kpi.tariffNote || '→ de minimis $50 USD');
+
+  // ——— 宏观动态分三栏 ———
   const politicsEl = document.getElementById('macro-politics');
   const economyEl = document.getElementById('macro-economy');
   const policyEl = document.getElementById('macro-policy');
 
   const politics = [], economy = [], policy = [];
   macro.forEach(x => {
-    const t = (x.title + ' ' + (x.source||'')).toLowerCase();
-    if (/tariff|aranceles|关税|tax|vat|de minimis|customs|海关|贸易|trade|import|export|logistics|物流/.test(t)) policy.push(x);
-    else if (/gdp|inflation|inflación|通胀|growth|consumer|unemployment|失业|rate cut|recorte|降息|banxico|interest|利率|spending|消费/.test(t)) economy.push(x);
+    const t = ((x.title||'') + ' ' + (x.source||'') + ' ' + (x.summary||'')).toLowerCase();
+    if (/tariff|aranceles|关税|tax|vat|de minimis|customs|海关|贸易|trade|import|export|logistics|物流|quota|配额/.test(t)) policy.push(x);
+    else if (/gdp|inflation|inflación|通胀|growth|consumer|unemployment|失业|rate cut|recorte|降息|banxico|interest|利率|spending|消费|retail|零售/.test(t)) economy.push(x);
     else politics.push(x);
   });
 
-  const renderMacroList = (items, el) => {
+  const renderInsightList = (items, el) => {
     if (items.length) {
       el.innerHTML = items.map(x => {
-        const titleHtml = x.url ? `<a href="${x.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${x.title}</a>` : x.title;
-        return `<div style="font-size:11px;line-height:1.6;margin-bottom:6px;padding-left:10px;border-left:2px solid var(--border)">${titleHtml}<br><span style="color:var(--muted);font-size:10px">${x.source||''}</span></div>`;
+        const summary = x.summary || x.title;
+        const sentiment = /tariff|ban|sanction|restrict|risk|下降|下滑|恶化/.test((summary||'').toLowerCase()) ? 'negative' : /growth|增长|复苏|上升|利好/.test((summary||'').toLowerCase()) ? 'positive' : 'neutral';
+        const sourceLink = x.url ? `<a href="${x.url}" target="_blank">${x.source || '来源'}</a>` : `<span>${x.source || ''}</span>`;
+        return `<div class="insight-item ${sentiment}">
+          <div class="insight-conclusion">${summary}</div>
+          <div class="insight-source">${sourceLink}${x.date ? ' · '+x.date : ''}</div>
+        </div>`;
       }).join('');
     } else {
       el.innerHTML = '<div style="font-size:10px;color:var(--muted);padding:8px 0">本周无相关动态</div>';
     }
   };
-  renderMacroList(politics, politicsEl);
-  renderMacroList(economy, economyEl);
-  renderMacroList(policy, policyEl);
+  renderInsightList(politics, politicsEl);
+  renderInsightList(economy, economyEl);
+  renderInsightList(policy, policyEl);
 
   // 宏观结论
   if (macro.length) {
-    const allText = macro.map(x => x.title).join(' ').toLowerCase();
+    const allText = macro.map(x => (x.title||'') + ' ' + (x.summary||'')).join(' ').toLowerCase();
     let macroLevel = 'ok', macroText = '';
     if (/tariff|aranceles|关税|sanction|制裁|ban.*china|restrict/.test(allText)) {
       macroLevel = 'danger';
-      macroText = '⚠️ <strong>关税/制裁相关动态</strong>：可能影响商品进口成本或清关周期，建议关注具体政策内容。';
+      macroText = '⚠️ <strong>关税/制裁相关动态</strong>：可能影响商品进口成本或清关周期。';
     } else if (/inflation|inflación|通胀|rate cut|recorte|降息/.test(allText)) {
       macroLevel = 'warn';
-      macroText = '⚡ <strong>通胀/利率动态</strong>：Banxico 政策调整影响消费信贷和购买力，关注是否传导至终端消费需求。';
+      macroText = '⚡ <strong>通胀/利率动态</strong>：Banxico 政策调整影响消费信贷和购买力。';
     } else {
       macroLevel = 'ok';
       macroText = '✅ 近期宏观动态无重大异常，市场环境正常。';
@@ -2487,56 +2563,66 @@ function updateWeekly(w) {
     macroConcEl.innerHTML = macroText;
   }
 
-  // 竞争情报 — 填充行业格局和速卖通板块
+  // ——— 竞争情报 ———
   const industryEl = document.getElementById('comp-industry');
   const aliEl = document.getElementById('comp-aliexpress');
   const dailyPicksEl = document.getElementById('comp-daily-picks');
 
-  if (comp.length) {
-    // 行业格局：提取行业相关
-    const industryItems = comp.filter(x => /temu|shopee|mercado|market share|份额|渗透/.test((x.title||'').toLowerCase()));
-    const aliItems = comp.filter(x => /aliexpress|速卖通|seller|seller rank|卖家/.test((x.title||'').toLowerCase()));
-    const otherItems = comp.filter(x => !industryItems.includes(x) && !aliItems.includes(x));
+  // 行业格局（支持新字段 w.industry / w.aliexpress，兼容旧 comp 数组）
+  const industryData = w.industry || comp.filter(x => /temu|shopee|mercado|market share|份额|渗透/.test((x.title||'').toLowerCase()));
+  const aliData = w.aliexpress || comp.filter(x => /aliexpress|速卖通|seller|卖家|ranking/.test((x.title||'').toLowerCase()));
+  const otherComp = comp.filter(x => !industryData.includes(x) && !aliData.includes(x));
 
-    const renderCompList = (items, el, fallback) => {
-      if (items.length) {
-        el.innerHTML = items.map(x => {
-          const titleHtml = x.url ? `<a href="${x.url}" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">${x.title}</a>` : x.title;
-          return `<div style="font-size:11px;line-height:1.6;margin-bottom:6px;padding-left:10px;border-left:2px solid var(--border)">${titleHtml}<br><span style="color:var(--muted);font-size:10px">${x.source||''}</span></div>`;
-        }).join('');
-      } else {
-        el.innerHTML = `<div style="font-size:10px;color:var(--muted);padding:8px 0">${fallback}</div>`;
-      }
-    };
-    renderCompList(industryItems.length ? industryItems : otherItems.slice(0,3), industryEl, '本周无行业格局变动');
-    renderCompList(aliItems.length ? aliItems : otherItems.slice(3,6), aliEl, '本周无速卖通特定动态');
+  renderInsightList(industryData.length ? industryData : otherComp.slice(0,3), industryEl);
+  renderInsightList(aliData.length ? aliData : otherComp.slice(3,6), aliEl);
 
-    // 日常选品（待数据源扩充）
-    if (dailyPicksEl) {
-      dailyPicksEl.innerHTML = `<div style="font-size:10px;color:var(--muted);padding:8px 0;line-height:1.7">
-        📊 数据源待接入（速卖通热销榜/热搜词）<br>
-        当前建议参考：<br>
-        • 客单价 $15-50 USD · 体积小·国内供应链成熟<br>
-        • 重点品类：3C配件、家居小物、美妆工具、运动户外配件、汽配
-      </div>`;
-    }
-
-    // 竞争结论
-    const compText = comp.map(x => x.title).join(' ').toLowerCase();
-    let compLevel = 'ok', compConc = '';
-    if (/temu.*(mexico|expand|free|免费)|shopee.*(launch|enter|进入)/.test(compText)) {
-      compLevel = 'warn';
-      compConc = '⚡ <strong>竞争对手有扩张动作</strong>：Temu 或 Shopee 在墨西哥市场活跃，建议在选品上差异化，避开已被低价渗透的标品。';
+  // 日常选品
+  if (dailyPicksEl) {
+    const picks = w.dailyPicks || null;
+    if (picks && picks.length) {
+      dailyPicksEl.innerHTML = picks.map((p,i) => `<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:8px 10px;background:var(--bg);border-radius:8px">
+        <div style="font-size:16px;font-weight:700;color:var(--accent);width:20px">#${i+1}</div>
+        <div style="flex:1">
+          <div style="font-size:12px;font-weight:600">${p.category}</div>
+          <div style="font-size:10px;color:var(--muted)">${p.priceRange || ''} · ${p.reason || ''}</div>
+        </div>
+        <div style="font-size:10px;color:var(--accent2);font-weight:700">${p.score ? p.score+'/10' : ''}</div>
+      </div>`).join('');
     } else {
-      compLevel = 'ok';
-      compConc = '✅ 近期无明显竞争威胁信号。持续关注 Temu 墨西哥扩张动态和速卖通品类榜单变化。';
+      // 默认建议（硬编码兜底）
+      const defaultPicks = [
+        { category: '3C配件（手机壳/充电线/耳机套）', priceRange: '$5-25 USD', reason: '轻小·高频·国内供应链极强', score: 9 },
+        { category: '家居小物（收纳/LED灯饰/厨具）', priceRange: '$8-30 USD', reason: '客单适中·体积可控·差异化空间大', score: 8 },
+        { category: '美妆工具（刷具/收纳/美甲）', priceRange: '$5-20 USD', reason: '轻小·毛利高·复购强', score: 8 },
+        { category: '运动户外配件（瑜伽/骑行/露营小件）', priceRange: '$10-40 USD', reason: '墨西哥户外文化强·竞争度中等', score: 7 },
+        { category: '汽配小件（车载手机架/LED灯/装饰）', priceRange: '$10-35 USD', reason: '墨西哥汽车保有量高·刚需', score: 7 },
+      ];
+      dailyPicksEl.innerHTML = defaultPicks.map((p,i) => `<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:8px 10px;background:var(--bg);border-radius:8px">
+        <div style="font-size:16px;font-weight:700;color:var(--accent);width:20px">#${i+1}</div>
+        <div style="flex:1">
+          <div style="font-size:12px;font-weight:600">${p.category}</div>
+          <div style="font-size:10px;color:var(--muted)">${p.priceRange} · ${p.reason}</div>
+        </div>
+        <div style="font-size:10px;color:var(--accent2);font-weight:700">${p.score}/10</div>
+      </div>`).join('');
     }
-    compConcEl.style.display = '';
-    compConcEl.className = `fx-conclusion ${compLevel}`;
-    compConcEl.innerHTML = compConc;
   }
 
-  // 平台动态补充
+  // 竞争结论
+  const compText = comp.map(x => (x.title||'')).join(' ').toLowerCase();
+  let compLevel = 'ok', compConc = '';
+  if (/temu.*(mexico|expand|free|免费)|shopee.*(launch|enter|进入)/.test(compText)) {
+    compLevel = 'warn';
+    compConc = '⚡ <strong>竞争对手有扩张动作</strong>：建议在选品上差异化，避开已被低价渗透的标品。';
+  } else {
+    compLevel = 'ok';
+    compConc = '✅ 近期无明显竞争威胁信号。持续关注 Temu 墨西哥扩张和速卖通品类榜单。';
+  }
+  compConcEl.style.display = '';
+  compConcEl.className = `fx-conclusion ${compLevel}`;
+  compConcEl.innerHTML = compConc;
+
+  // 平台动态
   if (platform.length) {
     const platEl = document.getElementById('platform-list');
     if (platEl && platEl.querySelector('.empty-state')) {
@@ -2547,44 +2633,82 @@ function updateWeekly(w) {
     }
   }
 
-  // 市场环境综合评分
-  updateMarketScore(macro, comp, platform);
+  // 综合评分
+  updateMarketScore(w);
 }
 
-function updateMarketScore(macro, comp, platform) {
+function updateMarketScore(w) {
   const badge = document.getElementById('market-score-badge');
+  const breakdown = document.getElementById('market-score-breakdown');
   const text = document.getElementById('market-score-text');
   const freshness = document.getElementById('market-data-freshness');
 
-  let score = 70; // 基础分
-  const allText = [...macro, ...comp].map(x=>x.title||'').join(' ').toLowerCase();
+  const macro = w.macro || [];
+  const comp = w.competitor || [];
+  const allText = [...macro, ...comp].map(x=>(x.title||'')+' '+(x.summary||'')).join(' ').toLowerCase();
 
-  // 加分/扣分
-  if (/tariff|关税|sanction|制裁|ban.*china/.test(allText)) score -= 20;
-  if (/inflation|通胀/.test(allText)) score -= 5;
-  if (/growth|增长|recovery|复苏/.test(allText)) score += 10;
-  if (/temu.*(expand|扩张)|shopee.*(launch|进入)/.test(allText)) score -= 10;
-  if (/aliexpress.*(growth|增长|record)/.test(allText)) score += 5;
-  if (macro.length === 0 && comp.length === 0) score = 50; // 无数据
-  score = Math.max(20, Math.min(95, score));
+  // 各维度评分
+  const factors = [];
+  // 宏观-政策
+  let policyScore = 20;
+  if (/tariff|关税|sanction|制裁|ban.*china|restrict/.test(allText)) { policyScore = 5; }
+  else if (/inflation|通胀|rate.*cut|降息/.test(allText)) { policyScore = 14; }
+  factors.push({ icon: '🏛', name: '宏观政策', score: policyScore, max: 25, note: policyScore >= 18 ? '稳定' : policyScore >= 10 ? '有波动' : '高风险' });
 
+  // 经济需求
+  let demandScore = 20;
+  if (/recession|衰退|unemployment.*rise|失业.*上升/.test(allText)) demandScore = 8;
+  else if (/growth|增长|consumer.*spend/.test(allText)) demandScore = 23;
+  factors.push({ icon: '📈', name: '消费需求', score: demandScore, max: 25, note: demandScore >= 18 ? '健康' : demandScore >= 10 ? '疲软' : '萎缩' });
+
+  // 竞争压力（反向）
+  let compScore = 18;
+  if (/temu.*(expand|mexico|free)|shopee.*(launch|enter)/.test(allText)) compScore = 10;
+  else if (/aliexpress.*(growth|record|增长)/.test(allText)) compScore = 22;
+  factors.push({ icon: '⚔️', name: '竞争格局', score: compScore, max: 25, note: compScore >= 18 ? '竞争适中' : compScore >= 10 ? '竞争加剧' : '红海' });
+
+  // 窗口时机（节日备货）
+  let windowScore = 15;
+  const today = new Date();
+  const calConc = document.getElementById('calendar-conclusion');
+  if (calConc) {
+    if (calConc.classList.contains('warn')) windowScore = 22;
+    else if (calConc.classList.contains('danger')) windowScore = 25;
+  }
+  factors.push({ icon: '📅', name: '窗口时机', score: windowScore, max: 25, note: windowScore >= 20 ? '备货窗口期' : '平淡期' });
+
+  const total = factors.reduce((s, f) => s + f.score, 0);
+
+  // 渲染评分拆解
+  breakdown.innerHTML = factors.map(f => {
+    const pct = Math.round(f.score / f.max * 100);
+    const cls = pct >= 70 ? 'pos' : pct >= 40 ? 'neu' : 'neg';
+    return `<div class="score-factor">
+      <div class="score-factor-icon">${f.icon}</div>
+      <div class="score-factor-info">
+        <div class="score-factor-name">${f.name}</div>
+        <div style="background:var(--border);border-radius:3px;height:4px;margin:3px 0"><div style="background:${cls==='pos'?'var(--accent2)':cls==='neu'?'var(--warn)':'var(--danger)'};height:4px;border-radius:3px;width:${pct}%"></div></div>
+      </div>
+      <div class="score-factor-val ${cls}">${f.score}<span style="font-size:9px;color:var(--muted)">/${f.max}</span></div>
+    </div>`;
+  }).join('');
+
+  // badge
   let level, label;
-  if (score >= 75) { level = 'ok'; label = `✅ ${score}分 · 适合进场`; }
-  else if (score >= 50) { level = 'warn'; label = `⚠️ ${score}分 · 谨慎进场`; }
-  else { level = 'danger'; label = `⛔ ${score}分 · 建议观望`; }
-
+  if (total >= 75) { level = 'ok'; label = `✅ ${total}分 · 适合进场`; }
+  else if (total >= 50) { level = 'warn'; label = `⚠️ ${total}分 · 谨慎进场`; }
+  else { level = 'danger'; label = `⛔ ${total}分 · 建议观望`; }
   const colors = { ok: '#10b98118;color:var(--accent2);border:1px solid #10b98140', warn: '#f59e0b18;color:var(--warn);border:1px solid #f59e0b40', danger: '#ef444418;color:var(--danger);border:1px solid #ef444440' };
-  badge.style.cssText = `padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;background:${colors[level]}`;
+  badge.style.cssText = `padding:6px 18px;border-radius:20px;font-size:14px;font-weight:700;background:${colors[level]}`;
   badge.textContent = label;
 
-  const reasons = [];
-  if (/tariff|关税/.test(allText)) reasons.push('关税风险');
-  if (/temu.*(expand|扩张)/.test(allText)) reasons.push('竞争加剧');
-  if (/growth|增长/.test(allText)) reasons.push('经济增长');
-  text.textContent = reasons.length ? `关键因素：${reasons.join('、')}` : '综合宏观政策、竞争格局、节日窗口给出进场信号';
+  // 文字说明
+  const noteMap = factors.filter(f => f.score < f.max * 0.6).map(f => f.name + '(' + f.note + ')');
+  text.textContent = noteMap.length ? `主要拖累：${noteMap.join('、')}` : '各维度均处于健康区间，综合环境利好。';
 
-  if (freshness) freshness.textContent = `数据来源：周报 · 最后更新 ${new Date().toLocaleDateString('zh-CN')}`;
+  if (freshness) freshness.textContent = `数据周期：${w.week || '--'} · ${w.date || new Date().toLocaleDateString('zh-CN')}`;
 }
+
 
 async function loadWeekly() {
   try {

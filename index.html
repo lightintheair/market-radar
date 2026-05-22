@@ -2739,7 +2739,7 @@ async function loadWeekly() {
       const w = await r2.json();
       updateWeekly(w);
     }
-  } catch(e) { console.log('no weekly data yet'); }
+  } catch(e) { console.error('loadWeekly error:', e); }
 }
 
 function showEmpty() {

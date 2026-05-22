@@ -8,28 +8,28 @@
       "source": "墨西哥通胀",
       "category": "macro",
       "summary": "通胀率降至4.45%，低于预期→消费信心有支撑",
-      "url": "https://mexicobusiness.news/economy/news/mexico-inflation-slows-445"
+      "url": "https://www.google.com/search?q=Mexico+Inflation+Slows+to+4.45%25+in+April%2C+INEGI+Says+-+Mexico+Business+News"
     },
     {
       "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
       "source": "Banxico利率",
       "category": "macro",
       "summary": "Banxico再次降息至10.5%，分歧投票→宽松周期或近尾声",
-      "url": "https://www.reuters.com/markets/rates-bonds/bank-of-mexico-cuts-rate"
+      "url": "https://www.google.com/search?q=Bank+of+Mexico+cuts+interest+rate+in+split+vote%2C+ending+easing+cycle+-+Reuters"
     },
     {
       "title": "Mexican January 2026 Tariff Tsunami: Maquilas Aren’t Immune - Foley &amp; Lardner LLP",
       "source": "墨西哥海关/关税",
       "category": "macro",
       "summary": "2026年1月新关税措施影响出口加工区→清关成本上升风险",
-      "url": "https://www.foley.com/insights/publications/2026/01/mexican-tariff-tsunami-maquilas"
+      "url": "https://www.google.com/search?q=Mexican+January+2026+Tariff+Tsunami%3A+Maquilas+Aren%E2%80%99t+Immune+-+Foley+%26amp%3B+Lardne"
     },
     {
       "title": "Our economic outlook for Mexico - Vanguard Corporate",
       "source": "墨西哥经济",
       "category": "macro",
       "summary": "Vanguard预测2026墨西哥GDP增速1.5%→低增长但未衰退",
-      "url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/articles/economic-outlook-mexico.html"
+      "url": "https://www.google.com/search?q=Our+economic+outlook+for+Mexico+-+Vanguard+Corporate"
     }
   ],
   "competitor": [
@@ -37,19 +37,22 @@
       "title": "Latin America Ecommerce Market Shares 2026 - eMarketer",
       "source": "Temu墨西哥",
       "category": "competitor",
-      "summary": "拉美电商市场Temu份额快速上升，Mercado Libre仍主导→速卖通排第三"
+      "summary": "拉美电商市场Temu份额快速上升，Mercado Libre仍主导→速卖通排第三",
+      "url": "https://www.google.com/search?q=Latin+America+Ecommerce+Market+Shares+2026+-+eMarketer"
     },
     {
       "title": "49ers to Face Minnesota Vikings in Mexico City in Week 11 'SNF' - San Francisco 49ers",
       "source": "Shopee墨西哥",
       "category": "competitor",
-      "summary": "（噪声数据，非电商相关）"
+      "summary": "（噪声数据，非电商相关）",
+      "url": "https://www.google.com/search?q=49ers+to+Face+Minnesota+Vikings+in+Mexico+City+in+Week+11+%27SNF%27+-+San+Francisco+"
     },
     {
       "title": "Mexico Algae Scraper - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
       "source": "速卖通墨西哥市场",
       "category": "competitor",
-      "summary": "（噪声数据，非电商相关）"
+      "summary": "（噪声数据，非电商相关）",
+      "url": "https://www.google.com/search?q=Mexico+Algae+Scraper+-+Market+Analysis%2C+Forecast%2C+Size%2C+Trends+and+Insights+-+In"
     }
   ],
   "kpi": {

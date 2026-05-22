@@ -1688,11 +1688,20 @@ let floatPnl = null, fcastPnl = null;
     seg1 = { risk: 0, pct: 0, payRate: payBase, curRate };
   }
 
-  // 段② 成本定价风险
-  const mxnRateAtPay = histRate || today || 0;
+  // 段② 成本定价风险（供应商报价币 → MXN）
+  // 应使用 MXN/quoteCcy 汇率序列，而非固定 MXN/CNY
+  const seg2Key = 'mxn_' + (row.quoteCcy||'CNY').toLowerCase();
+  const seg2Prices = _allFxData.map(d => d.fx?.[seg2Key] || (typeof getPairRate==='function' ? getPairRate(d, seg2Key) : null)).filter(Boolean);
+  const seg2Today = seg2Prices.length > 0 ? seg2Prices[seg2Prices.length - 1] : (today || 0);
+  const seg2HistRate = row.payDate ? (function(){
+    const pd = row.payDate;
+    for(const d of _allFxData){ if(d.date===pd && d.fx?.[seg2Key]) return d.fx[seg2Key]; }
+    return null;
+  })() : null;
+  const mxnRateAtPay = seg2HistRate || seg2Today || 0;
   const clearDays = Math.round(daysToRecv * 0.5);
-  const outlookClear = prices.length>=10 && clearDays>0 ? calcOutlook(prices, clearDays) : null;
-  const mxnRateAtClear = outlookClear ? outlookClear.mean : (today||0);
+  const outlookClear = seg2Prices.length>=10 && clearDays>0 ? calcOutlook(seg2Prices, clearDays) : null;
+  const mxnRateAtClear = outlookClear ? outlookClear.mean : (seg2Today||0);
   const seg2Pct = mxnRateAtPay ? (mxnRateAtClear - mxnRateAtPay) / mxnRateAtPay : 0;
 
   // 段③ 收款换汇风险
@@ -1759,11 +1768,12 @@ function renderB1Card(row) {
        <div class="risk-footer">CNY/报价币走弱 → 采购成本上升。</div>`;
 
   // 段② HTML
+  const seg2Pair = `MXN/${row.quoteCcy||'CNY'}`;
   const seg2Html = `
-    <div class="risk-kv"><span class="lbl">定价基准汇率</span><span class="val">MXN/CNY ${fmtNum(r.seg2.mxnRateAtPay,4)}</span></div>
+    <div class="risk-kv"><span class="lbl">定价基准汇率</span><span class="val">${seg2Pair} ${fmtNum(r.seg2.mxnRateAtPay,4)}</span></div>
     <div class="risk-kv"><span class="lbl">预计到货汇率</span><span class="val ${r.seg2.pct>0?'pos':'neg'}">~${fmtNum(r.seg2.mxnRateAtClear,4)}</span></div>
     <div class="risk-kv"><span class="lbl">定价风险</span><span class="val ${r.seg2.pct>0?'pos':'neg'}">${fmtPct(r.seg2.pct*100)} 利润缓冲</span></div>
-    <div class="risk-footer">MXN贬值 → 同等MXN售价换回更少CNY，需提前在定价中预留缓冲。</div>`;
+    <div class="risk-footer">MXN贬值 → 同等MXN售价换回更少${row.quoteCcy||'CNY'}，需提前在定价中预留缓冲。</div>`;
 
   // 段③ HTML
   const seg3Html = `

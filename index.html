@@ -1106,6 +1106,18 @@ let _allFxData = [];
 let _latestFx = null;
 let _b1Rows = [];  // 在途批次
 let _b1NextId = 1;
+
+// B1 持久化
+function b1Save() {
+  localStorage.setItem('b1_rows', JSON.stringify(_b1Rows));
+  localStorage.setItem('b1_next_id', String(_b1NextId));
+}
+function b1Load() {
+  try {
+    const raw = localStorage.getItem('b1_rows');
+    if (raw) { _b1Rows = JSON.parse(raw); _b1NextId = parseInt(localStorage.getItem('b1_next_id'))||(_b1Rows.length?Math.max(..._b1Rows.map(r=>r.id))+1:1); }
+  } catch(e) { _b1Rows = []; }
+}
 let _b3Range = 7;
 let _b3Chart = null;
 
@@ -1630,12 +1642,15 @@ function b1AddRow(payDate, shipMode, amount, quoteCcy, payRateCny, payRateMxn) {
     payRateCny: payRateCny||1, payRateMxn: payRateMxn||null,
     recvDate, actualRate: null, status: 'transit', name: '新批次'
   });
+  b1Save();
   renderB1();
   setTimeout(()=>{ const el=document.getElementById(`batch-${id}`); if(el)el.scrollIntoView({behavior:'smooth',block:'center'}); },100);
 }
 
 function b1RemoveRow(id) {
+  if (!confirm('确定删除该批次？')) return;
   _b1Rows = _b1Rows.filter(r=>r.id!==id);
+  b1Save();
   renderB1();
 }
 
@@ -1648,6 +1663,7 @@ function b1FieldChange(id, field, val) {
     const days = row.mode==='sea' ? getSeaDays() : getAirDays();
     row.recvDate = addDays(row.payDate, days);
   }
+  b1Save();
   renderB1();
 }
 
@@ -1878,6 +1894,7 @@ function renderB1Card(row) {
       <span class="batch-status-badge status-${row.status}">${b1StatusLabel(row.status)}</span>
     </div>
     <div class="batch-quick-pnl ${pnlClass}">${pnl!=null?fmtCny(pnl):'--'}</div>
+    <button class="btn btn-danger btn-sm" style="margin-left:8px;padding:2px 8px;font-size:10px" onclick="event.stopPropagation();b1RemoveRow(${row.id})" title="删除批次">✕</button>
     <span style="color:var(--muted);font-size:12px;margin-left:4px" id="toggle-icon-${row.id}">▼</span>
   </div>
   <div id="batch-body-${row.id}" class="batch-body">
@@ -2134,7 +2151,8 @@ async function loadData() {
   // 所有板块渲染完毕后更新总览
   setTimeout(() => { loadArSampleIfEmpty(); updateOverview(); }, 150);
 
-  // 初始化B1示例批次
+  // 加载已保存的B1批次数据，无数据时才生成示例
+  b1Load();
   if (_b1Rows.length === 0) {
     const seaDays = getSeaDays(), airDays = getAirDays();
     const seaStartDate = addDays(todayStr(), -Math.round(seaDays * 0.7));

@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-24",
+  "time": "09:31",
+  "fx": {
+    "mxn_cny": 0.3946,
+    "mxn_usd": 0.05772,
+    "cny_usd": 0.146277,
+    "cny_cnh": 0.998778,
+    "cny_hkd": 1.149994,
+    "cny_eur": 0.126629,
+    "cny_gbp": 0.109393,
+    "cny_jpy": 23.367245,
+    "cny_cad": 0.202611,
+    "cny_aud": 0.206269,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress as a shopping platform for US buyers in 2026 - AD HOC NEWS",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTHpZQllHMkl5VTVySThIQW1vdV9CcXJWNU1UWnRLTl9tXzhySGVJMUVoNHpBTHpSd1VGTDhlcFlqLW1EN0k3QzdnTVY2aXp6M3ZtT0lXT2lqeG5qeENyWlBDN3FiT0pGejlTYTZjaTVEQkJTeVN0aEs0Qi1kbUttR1Yyd0VtMmtwRFQ4S29ndWIzNmFmNkE2Tk1PZ3B5TjZPQXhPR2RVWThzWHZTeUF4bnRYTHo?oc=5",
+      "date": "2026-05-24",
+      "type": "news"
+    },
+    {
+      "title": "Cross-customs returns in place to boost e-tailers - China Daily",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rY1l6YnowSU91OFNOa252MHZndFdtYWFyMks4UWtxTXJBUHFvM19Oekt3Yl9mUXNFYjlpc1BuZDZyWndrSjEyeEktWXFhRGY4T2JnVFYycldZZzVMRm5aWXJrLWtxU3pERnRUbm1pQ3R4NHhKcUI2bE56emsxUQ?oc=5",
+      "date": "2026-05-24",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexican Economy Contracted Less Than Expected in First Quarter - Bloomberg.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Tracking the Economic Impact of the Trump Tariffs - Tax Foundation",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Captures 15.9% of Mexico’s E-Commerce in 2Q25 - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee shuts down in two countries - The Low Down - Momentum Works",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Unveils Powerful New Tools for U.S. Sellers to Boost Growth and Efficiency - PR Newswire",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/CAD &amp; USD/MXN Q2 2026 Outlook: Canadian Dollar and Mexican Peso Begin to Lose Ground - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPd1BrWm93WnVPbU5MUU1lYTN3LWhPWWdBUEZkdzJlajM3LTBJa1RlODJSU2JDa3BTWGowYjVJWGRPLWVjQkZSY0RacnRpbHVieW5tcGxiUHlvdmNVY21HaEN6U3FRT2NfR0RCdGtVc05CeTN2c3VQSGxYUzFYN1l6U0o1OVYxU0FzSmlTUGNzcnViM2xHdHhKUlAzS2t5V2d4OUVjWXVWb2gwQzRKLXoxSk56cHY3aGt6MllqcEd3?oc=5"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZkt3Um0tczE4Z2FIVTdlcTNTRDFVY0lacFdkY3gzMXZQcTQxWExyN0w2RUg0V3BnRnBrdWVLMGdla29RbFlaRF9HaVZsSk1hTHJ4WmFVanBfdm12UUpFLTFLSnAtSlpqODNUbzBwQUdCbG14NVI1TGJkNnpKYTBETGFRLVpEeWlIc0pQMUMzYjloOVVUSHB2VVY3WDRvYnFUTjJ6YUM4M1p1UQ?oc=5"
+    },
+    {
+      "title": "Higher oil prices fail to lift Pemex as Q1 loss hits $2.6 billion - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNlRoT2ZXUmJoM2ZadWliNFJ6SzVUeDRGOW9SNnR2S0g5TlNCSmc0Wk5TUkhPV3RyaWNuay02M2l4elhpRzdLMVVtSy1ydGp0cTFnNzdRdFd5aFJGTUJoMzlGQ2dsXzJVbTNMeXlfVlEwUW5lb3poOVNBeXBtS2QwX3IzamhGcFh1cFhVbXNJTjlBUU1DMFh3MUxjZmo?oc=5"
+    },
+    {
+      "title": "Supreme Court Strikes Down Mexico Tariff Authority - Legis1",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE40TFJmcGRSN0FSMEFPY1NQeXFCUlVpdm50RDNrbC1hTUQ1c19NenQ5V05HQW10al8xX0dIVzE4dU51NEFDMGNjaG55VUFHYWZJS01aQ1ZfUEJ0QWZYOVRYZXMxMkFNSFZfZmJIUGtGTFgxQQ?oc=5"
+    },
+    {
+      "title": "US Dollar Technical Forecast: USD Rebound Pressures Resistance—May Range Breakout in Focus - FOREX.com",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNczNLQzZqQTU0a0oyUnFpbmw4TlVTOUplTE1SZG5kenJtWU50VzhwenZRQXozbVhlUXI5Vk05VXdaYmt6VnNoeGhLd3g2YVQzV1lOR0hoaWRYSGE4clBkMnhNQ3FTV1lqVmtDeXFTMFAxWjZQU2JRdnpzM000WVZjUVFFdXNwY2NSY2N5Ri1GZzJXQ0VPdDBIS0s0ZFVXV3d5cmNNNjRjM3BGcHM5OWoyYWVuSWtXTUhtWEdMWi1uMzNkQ2dyeHh2SWhXdW9CT2w1ZzV3RldPMlJxWFVzeVpj0gHrAUFVX3lxTE9ad1ZYMjg4ZXZ6SkhQMFJ3OHU4OTVzRTdxaXUwbWxDbnhwYkt0bXFONm1LUEtia2VOXzRaNlZwRXhFZ0hvUzl6dV9oQXRGQkllb1A3LXZ1U084UzZWdEF6ZVhteVpVS3ZTbC1CdWZLSGJpZ1A0MHVIR3l0WUVjWXc2ZlZSSW5RelRQcy1ER0lBclhIdnpieWNtMkk4TWNnLWRZLVJUQjFxeXdMdlVOS29hQmc0R0FkMk5lRFdvb2VyWXh6dmh6YXp0ak83UXlxQUQ3X2Vqa3hZc3pSTW9XTTlTd19nTWJTamN0UHc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

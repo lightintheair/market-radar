@@ -1,0 +1,44 @@
+{
+  "week": "2026-W22",
+  "date": "2026-05-25",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico’s manufacturing activity rose 1.3% annually in April after 3 months of decline - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Tracking the Economic Impact of the Trump Tariffs - Tax Foundation",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Sell Locally and Now Into Regional Markets: Temu’s Local Seller Program Explained (2026 Update) - Digital Commerce 360",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Mexico Social Commerce Intelligence Report 2026: A $96.95 Billion Market by 2031 - Meta, Amazon and Mercado Libre Continue to Shape Conversion Dynamics, New Entrants Expand Through TikTok - Yahoo Finance",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Latin America Ecommerce Market Shares 2026 - eMarketer",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

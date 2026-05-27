@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-27",
+  "time": "09:31",
+  "fx": {
+    "mxn_cny": 0.3945,
+    "mxn_usd": 0.05778,
+    "cny_usd": 0.146471,
+    "cny_cnh": 0.999272,
+    "cny_hkd": 1.152538,
+    "cny_eur": 0.126508,
+    "cny_gbp": 0.109309,
+    "cny_jpy": 23.425174,
+    "cny_cad": 0.203084,
+    "cny_aud": 0.205482,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress: How to Shop Safely and Smartly on the Global Marketplace in 2026 - AD HOC NEWS",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQR1RWaVdGR3VPb29zTDVDMWoxY0hwWlBpdS13OFVWQi13bmFhZF9lRWlqZlZIVzU1dW5EM3A4b3ZVMXRRcFd1VlJOS3djbU02SmtzODVpc3I0NXVzdjMzX0lEWGlFZkVpTmlLdFZHb3lJaVBLRHBVMncta2VKWlF5aFFoREE0QjJYaUlXSG82SlRBMUgweTIyc3pFSExURVVxcVNFY0JDdHp6QWZMTTVTOEMzRmpZNG5iN1dtamM4d1NrVXVQSkFaVw?oc=5",
+      "date": "2026-05-27",
+      "type": "news"
+    },
+    {
+      "title": "Cross-customs returns in place to boost e-tailers - China Daily",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rY1l6YnowSU91OFNOa252MHZndFdtYWFyMks4UWtxTXJBUHFvM19Oekt3Yl9mUXNFYjlpc1BuZDZyWndrSjEyeEktWXFhRGY4T2JnVFYycldZZzVMRm5aWXJrLWtxU3pERnRUbm1pQ3R4NHhKcUI2bE56emsxUQ?oc=5",
+      "date": "2026-05-27",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Mexican Imports of Chinese Cars Drop 53.5% in the First Two Months of 2026 - Opportimes",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Captures 15.9% of Mexico’s E-Commerce in 2Q25 - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee shuts down in two countries - The Low Down - Momentum Works",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Unique visitors to Amazon, Temu, Shein, and AliExpress in the U.S. 2022-2023 - Statista",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/CAD &amp; USD/MXN Q2 2026 Outlook: Canadian Dollar and Mexican Peso Begin to Lose Ground - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPd1BrWm93WnVPbU5MUU1lYTN3LWhPWWdBUEZkdzJlajM3LTBJa1RlODJSU2JDa3BTWGowYjVJWGRPLWVjQkZSY0RacnRpbHVieW5tcGxiUHlvdmNVY21HaEN6U3FRT2NfR0RCdGtVc05CeTN2c3VQSGxYUzFYN1l6U0o1OVYxU0FzSmlTUGNzcnViM2xHdHhKUlAzS2t5V2d4OUVjWXVWb2gwQzRKLXoxSk56cHY3aGt6MllqcEd3?oc=5"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZkt3Um0tczE4Z2FIVTdlcTNTRDFVY0lacFdkY3gzMXZQcTQxWExyN0w2RUg0V3BnRnBrdWVLMGdla29RbFlaRF9HaVZsSk1hTHJ4WmFVanBfdm12UUpFLTFLSnAtSlpqODNUbzBwQUdCbG14NVI1TGJkNnpKYTBETGFRLVpEeWlIc0pQMUMzYjloOVVUSHB2VVY3WDRvYnFUTjJ6YUM4M1p1UQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "US to keep tariffs on USMCA countries, issues with Canada 'significant', Greer says - Reuters",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZEJVOXkzN0twSExVQ29ud1ZmckM0Y3VjNmUzOW1ubllsQUNweWFhNkxYYXBlRXhFM1FBLUZoT2xLVFh3MFRtcmxZSXU3NER1UkU5VG5zTnlTYUhHZU5EeWkzdjZ0YUtoMHZ1Z3BZYzZ6Tm5CcWdvT1FqRHgwZEVMY3ZZWEdWYmVlYnpsRG5qWkVjMVVaQk5XRTN3bW5VWVFjTWc?oc=5"
+    },
+    {
+      "title": "USD Dollar Index (DXY) Price Forecast: Clings to gains above 99.00, near 23.6% Fibo. - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0VJWkxsSE5aem1wcDExREsyZjVkQkpteGNGZEc2Ri1kTHdnYXBRanpjWXBkOEtOV0RsQzJHV2NiRDVFbTBXYVRwWWJqUUFVaGlPeGJva3lPcXZiWXdaNWxWM05xZkttYnRfZWpPcUM3bmlKdDVyOUdHREswUE5oX0ZZX3pPb1lIa09XcjJpWHRiZ2M0eGdIckYteXI2c0ppM0RiLWpqQW44ejlrUHV2UlplRkF2V1VWcHhJ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

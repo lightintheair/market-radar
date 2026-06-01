@@ -1,0 +1,44 @@
+{
+  "week": "2026-W23",
+  "date": "2026-06-01",
+  "platform": [],
+  "macro": [
+    {
+      "title": "The MND Sheinbaum Index™: Sheinbaum scores 60.0 for April 2026 - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated April 15, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Sell Locally and Now Into Regional Markets: Temu’s Local Seller Program Explained (2026 Update) - Digital Commerce 360",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Brazil Social Commerce Market Intelligence Report 2026: Mercado Livre, Shopee and Temu Compete with Meta, YouTube and TikTok as Platform Ecosystems Integrate Commerce Infrastructure - Forecast to 2031 - Yahoo Finance UK",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Mexico Vanilla Creatine - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-08",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3935,
+    "mxn_usd": 0.05723,
+    "cny_usd": 0.145449,
+    "cny_cnh": 0.999888,
+    "cny_hkd": 1.153488,
+    "cny_eur": 0.127685,
+    "cny_gbp": 0.110334,
+    "cny_jpy": 23.595952,
+    "cny_cad": 0.2052,
+    "cny_aud": 0.208907,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "TikTok Shop US Logistics Policy Change - channelx.world",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9wRkRnMkJjRWpla2I1VGd4NDVQZG0zcmZNRFNBUUVhSkdEdndmeG81UU5BdHJzay1teHBYRXpqTEw0UUwyTXZlVDF1MEtvSFVLak1RYWdYVzA2OUhjV2VYMWFGQllyaXVJWEVoYUZpSUxqV0J1X1BSTzZB?oc=5",
+      "date": "2026-06-08",
+      "type": "news"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start in 2026 - Shopify",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTE9JSDZMbXVYRm12YzVObk5DVTBleTdtLUVqZm9nRkZISHFVaDZmUFNjT2JxVk40MmZCRzRhNmozaHUtU0d0R0cxZnpzUmhwdVdzRmxsMEd2OXhOMS1HNXdJa1VGU2lBcnRvR01VeFZKVGRjb3RtOG04MVNKVGs3dXNiWDBFZHlocnYxN3JEbzZoVm9kZlp0d3VR?oc=5",
+      "date": "2026-06-08",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexican peso weakens to 17.47 per dollar amid Banxico's moderating interest rate strategy - eciks.org",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Tariffs on Car Imports in Mexico Contribute to 11.7% Drop - Opportimes",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Captures 15.9% of Mexico’s E-Commerce in 2Q25 - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start in 2026 - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Under Pressure as Banxico Decision Approaches - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZkVoT0l2OHNoV05PTE9lRVctVkh6Yy1LZjlUY0Q3QUEzUmZRODBLREZfZ214MjNhUmZ1MkNOT2MyTDlQQ1lySjJqeU1pTlBrbzZJY1FPeVBXc2xUZlUyMU1saUp6b19pbkFEZHdzcTZMaTZHVmtNdFduYTJpOEg0RmZxcjYzX3UwZXZERXl5TWJnT0JTbXlVMTRyRm5ZaXFwSVFVdWxScnZCVGNoVWxj0gG7AUFVX3lxTE5OTFhmdjJ3QzJaWnRDeXBXMzFuTVpMX25oYkRyckNZSlVxd211SVB3aDRPNk43UmZGakhqUjlMY1gxaGI5SnowTkg0TzJHU3QySDVid090OHphTGY2MkllTGNmM181WlpGNy1YekxoUzRtMDlWNUVVcXE5TEd3eTNiVUpxN1VxTFBTY3Rudno1MmI5VVI3QnozcXBZdDFnNnlDcHMybTI3X0YtX0JuQjRRbWhWOU81VGpEbWc?oc=5"
+    },
+    {
+      "title": "Mexican peso weakens to 17.47 per dollar amid Banxico's moderating interest rate strategy - eciks.org",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1JMzVDeHdLZU1nODIzLUtsbGJ4aERvLTcxWnZOeXgtTzY3SVFhZkdVNFhteHR2ZjBNeENfd0ZTMFpWMEtjX0tJMHhpZjZWaTU0NWhMd2dacWF0bUdPMkU3NnBTcFp5QXdOQW5PT0hJYUhUdw?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "US, Mexico, Canada to Miss July USMCA Date, Ramping Up Trade Tension - Claims Journal",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZTzI5OTFwek5KaDYzclExbjFXamxiUWJoWlRmdVd3RGQ5NU53UFpQYTR3RUR3WDBrWm1sNTEzOHhpRmljZ1hBcURadDNsWEVQTkJ6X21IczN5SS1FNkh3SzZ6ZjNVd3pOcXVPbUszdlJQRTQ?oc=5"
+    },
+    {
+      "title": "US Dollar Technical Forecast: USD Surges to Fresh Yearly High – 100 Break at Stake - FOREX.com",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTlVQUkdLVElvZG1oakhDTGxTaEgwLXFEZ05mMklzQUtJc3h1VmRiSUROdXNOUklSTEpvbkhTazRoTGl0WmNERF80MzRPc3RYVVhCRzhrTzBmOHZXVWJGLVZlbHVfekk4M0RGblNLbzRpcE5yS05sX3I4MTJFbFJ1Zm1SdnMyWG10RzV4bkNna194bDdfQ0xwcDJaM1ViaWkzSTIxMWFLTjZ2czNKWVlFWUpHS0NrdlhyRm9nSThwckplUzRKUzJzaEhXYy1rMTUtRHfSAd4BQVVfeXFMTmNLWVY1a25DeDNVdGZEX1BGaEhpV1I0N09CYU1hS19BbXJFS1AwNXFTb00xRGYzSGc3aFFoRXNTZGFwWHFONFJod3lCb1pRWERqOW15aVRhVndJZ1NYcE9wd09vLVMtYzY5MEpNSXpmOE1Td3NHWHM3OGRuZnpKZHJLTjFiQzF4SjFwa0RzLVZBbU05dXUxWHFkVGo2WUtkNW9OVnFFQVUwaDVNVjlWaE5FZzBILXpyRmttOE9DdGVZWFhwM2c4LWdad09mVUh0MXdVckp6ekFlNkkyYUNn?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

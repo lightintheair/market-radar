@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-10",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3898,
+    "mxn_usd": 0.05737,
+    "cny_usd": 0.147178,
+    "cny_cnh": 0.999312,
+    "cny_hkd": 1.154966,
+    "cny_eur": 0.12773,
+    "cny_gbp": 0.110268,
+    "cny_jpy": 23.633198,
+    "cny_cad": 0.205597,
+    "cny_aud": 0.209844,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's E-Commerce Export Engine Stalls: Temu, Shein, AliExpress Hit by Iran War and Tariffs - News and Statistics - IndexBox",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0dqNFk1MDdrREljckNtQjRWbEhNb2RMTnRtT0R3a3F4YlMxWjlESGY3NlIzTUdvYzFPcnh5aDl6MGd6dUNFZGFRSkxiZ0N6X0hQYzV4aUpQeEhoWXJtLWhuUXpWTFQ4MVdKWFBVckJSZVFvcDBnOFpRRzNlQjB3OVF1UE1CZFdtbklmalpsNnNHY1h5b09VQjVxUzhobGdxcVhXZ015TmRuSkcyY3pfVDk5OGVyc1EzVXc?oc=5",
+      "date": "2026-06-10",
+      "type": "news"
+    },
+    {
+      "title": "China’s global e-commerce push stalls as Iran war lifts costs, dampens demand - Free Malaysia Today",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOXzlKQm1BNHNWQUVvLTJyVmhzVXotb0lwVURqQW5aRjFGZGZJWkV3RmhFc0E2bmVoTFQyVXpmeXNaZkVCaEswQnFaZ3BhdDZLYmJqdi1oWXVMQTctck1jTWZPcjZjTEk4NlE0ak91UFhHUTA1RXVXMlhjUkt4S2tEU3FHNnVaRXNEYzB1UnpaakpLanFTa3VTZENHaGtwYTV1dFZ0NTlLYWE0Z3BvSXVzQ1N0dnp1VWlHWGprTlNfbXZBanJZWFJOekVCZDdYbGxzeXdGNQ?oc=5",
+      "date": "2026-06-10",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexican Economy Contracted Less Than Expected in First Quarter - Bloomberg.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexican peso weakens to 17.47 per dollar amid Banxico's moderating interest rate strategy - eciks.org",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Tariffs on Car Imports in Mexico Contribute to 11.7% Drop - Opportimes",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Captures 15.9% of Mexico’s E-Commerce in 2Q25 - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start in 2026 - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Mexican peso holds near 17.46 per dollar amid modest June trading - eciks.org",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5WMWdydlR0RkRGbjZmQTcxQTNaYkVkWktJQlpLbm44WXc3d1VraDNRanJ5bERrZDZUS3V1YmplZU1wSkxqbVZ4Rks4djJCSUVCSlR5Qm9YenlNVlNQTWNfZ3htZVFicFI2TjJpbGdjSHppQUpEaklvbA?oc=5"
+    },
+    {
+      "title": "Mexican peso weakens to 17.47 per dollar amid Banxico's moderating interest rate strategy - eciks.org",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1JMzVDeHdLZU1nODIzLUtsbGJ4aERvLTcxWnZOeXgtTzY3SVFhZkdVNFhteHR2ZjBNeENfd0ZTMFpWMEtjX0tJMHhpZjZWaTU0NWhMd2dacWF0bUdPMkU3NnBTcFp5QXdOQW5PT0hJYUhUdw?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "US, Mexico, Canada to Miss July USMCA Date, Ramping Up Trade Tension - Claims Journal",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZTzI5OTFwek5KaDYzclExbjFXamxiUWJoWlRmdVd3RGQ5NU53UFpQYTR3RUR3WDBrWm1sNTEzOHhpRmljZ1hBcURadDNsWEVQTkJ6X21IczN5SS1FNkh3SzZ6ZjNVd3pOcXVPbUszdlJQRTQ?oc=5"
+    },
+    {
+      "title": "USD Dollar Index (DXY) Forecast: Holds above 99.00, around 23.6% Fibo. - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0VJWkxsSE5aem1wcDExREsyZjVkQkpteGNGZEc2Ri1kTHdnYXBRanpjWXBkOEtOV0RsQzJHV2NiRDVFbTBXYVRwWWJqUUFVaGlPeGJva3lPcXZiWXdaNWxWM05xZkttYnRfZWpPcUM3bmlKdDVyOUdHREswUE5oX0ZZX3pPb1lIa09XcjJpWHRiZ2M0eGdIckYteXI2c0ppM0RiLWpqQW44ejlrUHV2UlplRkF2V1VWcHhJ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

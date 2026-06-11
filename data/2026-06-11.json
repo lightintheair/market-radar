@@ -1,0 +1,70 @@
+{
+  "date": "2026-06-11",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3898,
+    "mxn_usd": 0.05739,
+    "cny_usd": 0.147222,
+    "cny_cnh": 0.999356,
+    "cny_hkd": 1.154226,
+    "cny_eur": 0.127724,
+    "cny_gbp": 0.110222,
+    "cny_jpy": 23.646163,
+    "cny_cad": 0.205364,
+    "cny_aud": 0.210595,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVVScGhlUWlOQl9KZk9nY2dHdV96RG9VWFVPSW9jaU80R3ZxQnlXTV84OVNldmtSQWpIZEFaNGhvYzljWVB1ajdWV01ueWVEY2JyaURkNnVxc0RBQl9NN2c5X2o1RWlGdzhiS1o2VVNnSzJ3a0lLYjQ3clRySG9pczJLLWg5WnFzOFZNbld1ZGZHYkFmNUFYVE9RazZxVTZXaDJrMU9aeDdxTUJqeXpKb1RVS01pdkI2OXM3NkcyNzNNZlJDU09aVkt2ai1UMTkxa3pWLQ?oc=5",
+      "date": "2026-06-11",
+      "type": "news"
+    },
+    {
+      "title": "China's E-Commerce Export Engine Stalls: Temu, Shein, AliExpress Hit by Iran War and Tariffs - News and Statistics - IndexBox",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0dqNFk1MDdrREljckNtQjRWbEhNb2RMTnRtT0R3a3F4YlMxWjlESGY3NlIzTUdvYzFPcnh5aDl6MGd6dUNFZGFRSkxiZ0N6X0hQYzV4aUpQeEhoWXJtLWhuUXpWTFQ4MVdKWFBVckJSZVFvcDBnOFpRRzNlQjB3OVF1UE1CZFdtbklmalpsNnNHY1h5b09VQjVxUzhobGdxcVhXZ015TmRuSkcyY3pfVDk5OGVyc1EzVXc?oc=5",
+      "date": "2026-06-11",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexican Economy Contracted Less Than Expected in First Quarter - Bloomberg",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexican peso weakens to 17.47 per dollar amid Banxico's moderating interest rate strategy - eciks.org",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Tariffs on Car Imports in Mexico Contribute to 11.7% Drop - Opportimes",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Captures 15.9% of Mexico’s E-Commerce in 2Q25 - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN To Rise To 17.90 In Three Months: Rabobank Mexican Peso Forecast - Exchange Rates Org UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQR2xyUVFiTWdGak5zWGx0aVFwRHFXTWVldkZEYTZSVHdZbTE2RTJSdTJEbmlDR3Bsa0RsU1JseWJPVVVnX2lPQ1lYOWJYUFRsck5EaGNTb3lzZXRGLWk5dlFDZDBLbTF0MVVzeGFGc0J4U0lkR25qRkdNa2kzX0xfSzlzVGtNTS1wN0c4eEgwcXR2OFNYajdkcmgwOXdJaC1XMkQxalN6WEtkeE5wSlp5WGNBSXFEOEZCb0RSRVBBdFE1YXB1TGpfQUFvQQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-20",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3933,
+    "mxn_usd": 0.05769,
+    "cny_usd": 0.146687,
+    "cny_cnh": 0.999538,
+    "cny_hkd": 1.15518,
+    "cny_eur": 0.128526,
+    "cny_gbp": 0.111438,
+    "cny_jpy": 23.767686,
+    "cny_cad": 0.208684,
+    "cny_aud": 0.210493,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's E-Commerce Export Engine Stalls: Temu, Shein, AliExpress Hit by Iran War and Tariffs - News and Statistics - IndexBox",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0dqNFk1MDdrREljckNtQjRWbEhNb2RMTnRtT0R3a3F4YlMxWjlESGY3NlIzTUdvYzFPcnh5aDl6MGd6dUNFZGFRSkxiZ0N6X0hQYzV4aUpQeEhoWXJtLWhuUXpWTFQ4MVdKWFBVckJSZVFvcDBnOFpRRzNlQjB3OVF1UE1CZFdtbklmalpsNnNHY1h5b09VQjVxUzhobGdxcVhXZ015TmRuSkcyY3pfVDk5OGVyc1EzVXc?oc=5",
+      "date": "2026-06-20",
+      "type": "news"
+    },
+    {
+      "title": "AliExpress in 2026: Is the ultra-cheap marketplace still worth it for US shoppers? - AD HOC NEWS",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTk5UWjIzVVhwbmhZU0dSRzBKV0d4TWYwaGRTWjQ3UVNhSWJpcWo1S0hWTWtobVF5d1FJQUkyNVhhQjhHcWk5Mjd2cU0xZzR1OGVtS1ZmOXNCRHZWcFlweXUwRHpIUUsyQ2dMMlF3M0V4eUpQTUdDSmEyY3dPcHdfTUR3aUpLZ1I0TEpiMF93ZUlEOXBPbmV5ZFlCMlVfS3lOb21aUmlRQURQLUQySjlvcnU0MFU3QmJiS2hLM1BNVjJiODVhczN6Nmp3?oc=5",
+      "date": "2026-06-20",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated June 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "EU fines Temu €200m for dangerous baby toys and faulty chargers - Euronews",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee shuts down in two countries - The Low Down - Momentum Works",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Police Investigate 8.6 Billion Won AliExpress Seller Account Hack - 조선일보",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican peso shows signs of weakness ahead of the Fed decision - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVV81Rll5OXQ5TWRaU1VEVUZ4ZkdSa3p5Q3ZQQ21IX25ab1VYcENqX0V2X1k4amYtd0J0a19jbjY4TFlaVEpQTXZvdFQ4OC03emI4WWNrd1BMM0owWkFfT09FcjJnRTJOUk55LWxjaEpDc3ExenU1el8wNXYtN2ZYaUVhODZvSkRqamFKeDdtWktyV3RPTklDNWRRRVJ5RDdGX0RwS3ZXVDBmTnU5OXpMcjBsZnRkNUlLN2lJeFMyWlYwQjDSAc8BQVVfeXFMTjhFdFBOTllmMnQ0NERNVnRYeDM1ckN1M0h2SmpjVnJ6a3dObFZhazJsdnJERFJ0Rk5kRExsalUtODdadVJpNS1iWjhkT1ZzTk5DNTFkaTlwZlZSaEgyLUdla0h2bjc2WFlMQnVSOHVFblFaejdLVkg0RHBhdTdqMnNkMVVkVGJxN3VsVHd2SjdzZkZQUXM3Z1RPRGR3aFU0Mk9pODl0UndpTndPU1NOVUY2S3hkTElCZ1NtQXBqbmVmY2ZQTGdvaXlYcUZseE5V?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "Congress Is Anxious as U.S.-Canada-Mexico Trade Talks Intensify - The New York Times",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYkVOTDZxTDY0ZllsdWtXaUVyeWFUZmdTYlR2SHdUXzNfNDg3cjgxWTNlMjUzZXRCWVFJZXdyX0xSMGgwUVRMNDh4aTc5NkJ0eTZaRS1RVXNoRHdhbURwcmpzaC02ZkF1TWxoOUdQSm1NXzlUQ3RoZ1V2SlVVSjBjR2hEbVVTXzl1Vk9v?oc=5"
+    },
+    {
+      "title": "United States Dollar Index (DXY) Price Forecast: Consolidates near 99.50 ahead of Fed - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOTc5dGgxOERWUWpNQllKYWxGYU50b0xVLWFkblE2N1FqeEp4amRVY29QTGtOLU82dHl6UzZFQVdHQ3JHNTB3am0yQ1RheWRNLWNvU1NwYVF2Vk41cVJFOGtpa0syRFF2R25McEpkZ2FyZkJicWREMUNCT3ZPY3lhd0R1eF90WGlMaFZlcmdNZjdBVnZ6SEJja3gxTEVhTDRyMTZId283cjV0aU1xakl4cDRid0NRaVBxSjh5RXRxNUx1Zw?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

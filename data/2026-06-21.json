@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-21",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3933,
+    "mxn_usd": 0.05769,
+    "cny_usd": 0.146692,
+    "cny_cnh": 0.999125,
+    "cny_hkd": 1.154024,
+    "cny_eur": 0.128459,
+    "cny_gbp": 0.111354,
+    "cny_jpy": 23.740253,
+    "cny_cad": 0.208418,
+    "cny_aud": 0.21056,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's E-Commerce Export Engine Stalls: Temu, Shein, AliExpress Hit by Iran War and Tariffs - News and Statistics - IndexBox",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0dqNFk1MDdrREljckNtQjRWbEhNb2RMTnRtT0R3a3F4YlMxWjlESGY3NlIzTUdvYzFPcnh5aDl6MGd6dUNFZGFRSkxiZ0N6X0hQYzV4aUpQeEhoWXJtLWhuUXpWTFQ4MVdKWFBVckJSZVFvcDBnOFpRRzNlQjB3OVF1UE1CZFdtbklmalpsNnNHY1h5b09VQjVxUzhobGdxcVhXZ015TmRuSkcyY3pfVDk5OGVyc1EzVXc?oc=5",
+      "date": "2026-06-21",
+      "type": "news"
+    },
+    {
+      "title": "AliExpress in 2026: Is the ultra-cheap marketplace still worth it for US shoppers? - AD HOC NEWS",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTk5UWjIzVVhwbmhZU0dSRzBKV0d4TWYwaGRTWjQ3UVNhSWJpcWo1S0hWTWtobVF5d1FJQUkyNVhhQjhHcWk5Mjd2cU0xZzR1OGVtS1ZmOXNCRHZWcFlweXUwRHpIUUsyQ2dMMlF3M0V4eUpQTUdDSmEyY3dPcHdfTUR3aUpLZ1I0TEpiMF93ZUlEOXBPbmV5ZFlCMlVfS3lOb21aUmlRQURQLUQySjlvcnU0MFU3QmJiS2hLM1BNVjJiODVhczN6Nmp3?oc=5",
+      "date": "2026-06-21",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Inflation decelerates in May from April - FocusEconomics",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated June 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "EU fines Temu €200m for dangerous baby toys and faulty chargers - Euronews.com",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee shuts down in two countries - The Low Down - Momentum Works",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start Your Store (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USDMXN Forecast Mexican peso shows signs of weakness ahead of the Fed decision - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUjltUUpfUHgxUFhoQ3FKVmc5aktDVjV3OHdVR2pCVFhxZTlJMHhVNDRwWTB0S0FtRTlIYkMwLVg4QnVlb3V4LWN3a0xhcm5kY1dyQ0Zhb05jWEF0UXBZOGRFenpHZk1FZHJncF9meUZ5ODJ0YURHbmZTaWV2U3VyVkR1R2FaNG53d3NfWWYyTW5yYlFMY0sxU0swU1dGVFpKNFJmVDJSSm1tRWRpRGpveXcyRnJwWGFHbE1YQTNDRQ?oc=5"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZkt3Um0tczE4Z2FIVTdlcTNTRDFVY0lacFdkY3gzMXZQcTQxWExyN0w2RUg0V3BnRnBrdWVLMGdla29RbFlaRF9HaVZsSk1hTHJ4WmFVanBfdm12UUpFLTFLSnAtSlpqODNUbzBwQUdCbG14NVI1TGJkNnpKYTBETGFRLVpEeWlIc0pQMUMzYjloOVVUSHB2VVY3WDRvYnFUTjJ6YUM4M1p1UQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "Trump split on trade deal behind HVAC’s tariff exemptions - Homepros",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZFZ5bHRlek9rTGtWeWVvVVBNczJzZ1RFbEotTDNDdU5jdVYxVVZOelg3NHFXcU5PdTgxV2pFMDl4dkE4dFFMRnN6N19nSU5yR0hBQ2VvNVNWQnNjQldHRnRSVUZ0SldTV0tkT1JpNEQzU0d4QWFXdGlEaVY1WktsY0d3TUdmQQ?oc=5"
+    },
+    {
+      "title": "Currency Volatility: Dollar Strength, Euro Weakness? - J.P. Morgan",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYmdpajY1ZGcyREx0QnY2a3J3ZFRsWnVsdEM2R3hXUWdaQ0xpcXlXZXhlU1RaWGtSTGtKeUNqR2lwVG9kRkJMT01MVmRoY2hpMm12OWVRbGQ5QUJhQUxZRkc0QnpQcDdzM2NIZXlwUHVjeTVENE1fVjNYTHpSQWlTUW93NE16TUZYcXpTWTJ5Szd5b2Y3UW1ybTNGWVc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

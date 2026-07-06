@@ -1,0 +1,44 @@
+{
+  "week": "2026-W28",
+  "date": "2026-07-06",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico’s inflation rate dropped below 4% in May - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated June 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "EU slaps €3 fee on cheap ecommerce parcels in blow to Shein, Temu, AliExpress - Reuters",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Nubank launches Vantagens Nu with exclusive offers in the app and discounts in partnership with Shopee for May 5th - Nubank",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "EU slaps €3 fee on cheap ecommerce parcels in blow to Shein, Temu, AliExpress - Reuters",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

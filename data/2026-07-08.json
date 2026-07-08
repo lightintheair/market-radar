@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-08",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3912,
+    "mxn_usd": 0.05716,
+    "cny_usd": 0.146122,
+    "cny_cnh": 0.999368,
+    "cny_hkd": 1.152865,
+    "cny_eur": 0.128787,
+    "cny_gbp": 0.110016,
+    "cny_jpy": 23.837444,
+    "cny_cad": 0.208777,
+    "cny_aud": 0.212141,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU ends tax loophole exploited by SHEIN, Temu, and Aliexpress - Euronews",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSy1BSDBwLVV0NUNhdG9BTjBtWXVGWVc1QkhIbHc5MFJhMHNCc3hjYU5fSHlIeU14aFFENkU4X2dvT3FfbWU1cUlDTTNtSk0xR0pLeU9ZcWV3d2R2QkJNQkJ4LUFKcjJVXzI4WVFxVUI1ckFkczYydmV2RlJBVlRiN1NPMFZNN3hlODQ4OVpIOXN4U1hfeDRDdzI2dkY2THgySXNINDh0eG8?oc=5",
+      "date": "2026-07-08",
+      "type": "news"
+    },
+    {
+      "title": "AliExpress ramps up local seller model in Australia - Ragtrader.com.au",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQS1LNi1iSU45S2dWa0VVa3RXYjJ2Y1ZFZGFoTUhJeVBEZEFSSjl3bGJkaDRpeHR2T3lrVVhoc0tTbHluYkNCRjNsNHFnUG1OcnBOLXh6Rmw1eDcySVNCNDZ3SnRCOVNBMXBySElPQjktbmMwSkRCcUN4V2hnYi1FQUE3MnNXNENxX2RIcUJn?oc=5",
+      "date": "2026-07-08",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexican inflation slows more than expected in early June, pushes back rate hike pressures - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico set to reiterate preference for a prolonged pause - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated June 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee shuts down in two countries - The Low Down - Momentum Works",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start Your Store (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: JP Morgan Says Stay Bullish On The Mexican Peso - Exchange Rates Org UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY2YxakprdEV6ZERWc0F2TVZQZjlGYzV5WnRCdWdNX082ZGx1cm9RbE1yNnIxSmYxY21VNjJKM0JpMHNFNUQxNkRLQklrLUZIY213Q1pvZXp0UEY0UzlvYUY3RUQ3NVlCcmozOGFFcVhmNE5ldmxjdDU1MXhEem03aThfTjh2RVEtSTNZY0dYb1g2VkNqd0FPVnM1dy1tQXpHVnB5dkw4S3d0RUlUNkY1cm9Lbmg5WFFaNkYtdFdGRUVGQQ?oc=5"
+    },
+    {
+      "title": "Mexico’s central bank holds interest rate at 6.50% while inflation continues to decline - Mexico News Daily",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSnJHa2dpeXhYOER0NUEyTFREY0d1bC12cGRsLVh6aWNVZktaV0pJNUtXQ0lWOG42TnZ4cXhuUVJnTnBockNVMWRuR1l1RTh4Q2twSjNKNkJ2UzZLNDlOYzRaaHRwTEFuNXZMeGwzLVZpTkVrenZ0Ym00aUxJa1Z5WlE3RW4yTTU0VGI5TkU3V0RzaHVIWTJ4U3FFS09oN3pYZ25oVzcxeW02WE91TDkwT1g5Ujg?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex taking 'wait-and-see' approach on oil exports as prices climb, minister says - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXk1NVFleGxhZFd1ZnBfYlFtdjZkN082NWJxeUczbHNmaTNFb2w5ay1jOFJPeHZKV3JCS1Z2ZFRrWUtoNnd5VE8tS0dXOG5LUmpEbHZSck9CaU1McFRPc3hvaHotYll2bDFqZkZSX0hLUnUyMW1tNW9zV1RSSVlJVjZObUhtaEN5Zi11Q3A0cmhYcG9wNDBPQml6eV9SdVFPNjJiQVRzT0NnQUVIQ1Jzc09YVEN3MUFtMWQ5LTNmQ2tlZ0JrYjlV?oc=5"
+    },
+    {
+      "title": "U.S. Declines to Renew Trade Pact With Mexico And Canada. Here's What It Means for Each Country - Time Magazine",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbkpIREo4NF9PaDgtNTI2am1yQUJ3TF9BXzI5aUdqVXRyMkYyZ1FoNTJXWTZCcEV0ZllSWUx6SklnRXJSWGtFbkNLY3RmM3NYZmZoeVVlRzNaUWNySTVhY3Jyb3F6UmZsLUZDWl9kUUtKNTNzVl8yQk1CMjVUXzljbVRFTHN0VERJSEIyUmxheGtNUQ?oc=5"
+    },
+    {
+      "title": "Will the US Dollar Rally Continue? - Morningstar",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NckxFdjE4a0g2ekxHanhXVHJaRHR0clpSaFAzU0F2dzZFbVE4TGlFM3IyNlFDakdUbTh0Y0ROQ2NJWEM1MlR1WWNIWUduc1d3SW53Z25RMmtSeVVJZHVOZjlhV3FCTHdZVWJnMTZrU0hKWmdHVnhDZmJCam9mVVk?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

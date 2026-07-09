@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-09",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3885,
+    "mxn_usd": 0.05689,
+    "cny_usd": 0.146427,
+    "cny_cnh": 0.999384,
+    "cny_hkd": 1.151189,
+    "cny_eur": 0.12871,
+    "cny_gbp": 0.109856,
+    "cny_jpy": 23.86424,
+    "cny_cad": 0.20802,
+    "cny_aud": 0.2122,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU ends tax loophole exploited by SHEIN, Temu, and Aliexpress - Euronews",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSy1BSDBwLVV0NUNhdG9BTjBtWXVGWVc1QkhIbHc5MFJhMHNCc3hjYU5fSHlIeU14aFFENkU4X2dvT3FfbWU1cUlDTTNtSk0xR0pLeU9ZcWV3d2R2QkJNQkJ4LUFKcjJVXzI4WVFxVUI1ckFkczYydmV2RlJBVlRiN1NPMFZNN3hlODQ4OVpIOXN4U1hfeDRDdzI2dkY2THgySXNINDh0eG8?oc=5",
+      "date": "2026-07-09",
+      "type": "news"
+    },
+    {
+      "title": "TikTok offers European fulfillment for Asian sellers - Ecommerce News - Europe",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPREtaVTdVdDdJb2V6Um43LUltUHN5ajdRZGJkMmtZT1lidmhHT3RqdFFTYWdZTDJxWW8xNngwdF9ZQjJRd2lZMmMwMk9IbDM4TkVkcWNWWUF3eFhnZVJQTDVkcVByRXdQRzdVREE5aE5oVHdnZ1RaNGlxR0xCYnVkRGs3V1Y?oc=5",
+      "date": "2026-07-09",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexican inflation slows more than expected in early June, pushes back rate hike pressures - Reuters",
+      "source": "墨西哥宏观"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "AliExpress Dropshipping: How to Start Your Store (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Mexico’s central bank holds interest rate at 6.50% while inflation continues to decline - Mexico News Daily",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSnJHa2dpeXhYOER0NUEyTFREY0d1bC12cGRsLVh6aWNVZktaV0pJNUtXQ0lWOG42TnZ4cXhuUVJnTnBockNVMWRuR1l1RTh4Q2twSjNKNkJ2UzZLNDlOYzRaaHRwTEFuNXZMeGwzLVZpTkVrenZ0Ym00aUxJa1Z5WlE3RW4yTTU0VGI5TkU3V0RzaHVIWTJ4U3FFS09oN3pYZ25oVzcxeW02WE91TDkwT1g5Ujg?oc=5"
+    },
+    {
+      "title": "Will the US Dollar Rally Continue? - Morningstar",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NckxFdjE4a0g2ekxHanhXVHJaRHR0clpSaFAzU0F2dzZFbVE4TGlFM3IyNlFDakdUbTh0Y0ROQ2NJWEM1MlR1WWNIWUduc1d3SW53Z25RMmtSeVVJZHVOZjlhV3FCTHdZVWJnMTZrU0hKWmdHVnhDZmJCam9mVVk?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

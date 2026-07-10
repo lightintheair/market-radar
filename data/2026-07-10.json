@@ -1,0 +1,75 @@
+{
+  "date": "2026-07-10",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3873,
+    "mxn_usd": 0.057,
+    "cny_usd": 0.147165,
+    "cny_cnh": 0.999416,
+    "cny_hkd": 1.152465,
+    "cny_eur": 0.128671,
+    "cny_gbp": 0.109725,
+    "cny_jpy": 23.883516,
+    "cny_cad": 0.208352,
+    "cny_aud": 0.212095,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico expects economy to outperform IMF projections - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico set to reiterate preference for a prolonged pause - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated June 16, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "AliExpress Dropshipping: How to Start Your Store (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: JP Morgan Says Stay Bullish On The Mexican Peso - Exchange Rates UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY2YxakprdEV6ZERWc0F2TVZQZjlGYzV5WnRCdWdNX082ZGx1cm9RbE1yNnIxSmYxY21VNjJKM0JpMHNFNUQxNkRLQklrLUZIY213Q1pvZXp0UEY0UzlvYUY3RUQ3NVlCcmozOGFFcVhmNE5ldmxjdDU1MXhEem03aThfTjh2RVEtSTNZY0dYb1g2VkNqd0FPVnM1dy1tQXpHVnB5dkw4S3d0RUlUNkY1cm9Lbmg5WFFaNkYtdFdGRUVGQQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex taking 'wait-and-see' approach on oil exports as prices climb, minister says - Reuters",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXk1NVFleGxhZFd1ZnBfYlFtdjZkN082NWJxeUczbHNmaTNFb2w5ay1jOFJPeHZKV3JCS1Z2ZFRrWUtoNnd5VE8tS0dXOG5LUmpEbHZSck9CaU1McFRPc3hvaHotYll2bDFqZkZSX0hLUnUyMW1tNW9zV1RSSVlJVjZObUhtaEN5Zi11Q3A0cmhYcG9wNDBPQml6eV9SdVFPNjJiQVRzT0NnQUVIQ1Jzc09YVEN3MUFtMWQ5LTNmQ2tlZ0JrYjlV?oc=5"
+    },
+    {
+      "title": "Mexico will press the US to remove tariffs on autos and steel during the USMCA review - EL PAÍS English",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMTQ3amMyUEtjUU9VSEdQMHhxOWxlNVhrdExENkVxRkhlNHNKSm40OE5VVXBJN3ZKd1RUSm04OWFfVUN4bzJrWDhCeG9kU1ZCRXpJNUw1b244cll0S2dnejNHYXlmempMZ0R1LUNHaktWOVV6QW1FcFFNY0ExSVIzdFJFUWJyR25oSTJWSGEyLTRzSFlIWlcyNnZxRHBZY05PZHFUei04RnJVak9nanNqWmxmZmkweHRuUVd5RklBY3VRVXFlbmRuLV9yaXZXb05udXFTUDBHcnhWZWk3bnBqaGNoa9IB9wFBVV95cUxPbF9wbTE2VEkwRlJTZHNNN18zdWJTY3RxUmlrNGNIdEpkSVprMEViQzVIRGhmUmp0X05Vczk1ZDV0UnhpalNDTHFFdzk0bFNSM1htVDRybkd5TnFWM19WMFIzemI3bFJqUzJxckdCdEE1cFdwRjJxSlpNZlZ1SGxXNDQ5b05VRXFHb0R0Wm5Od3poZjNmS2ROSkktaDhkMFNUV2I4U1BaakZac08xdEhXTU9TZEphQ1RQV3RTaUl1RURtSUNOOXVuNmUwR29BSy1iM2xvTVhEcVdZa0lFT3RxbmhTR0lMYVpDRTNVaXNqUjUybURncUtV?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

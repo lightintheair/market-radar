@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-12",
+  "time": "09:35",
+  "fx": {
+    "mxn_cny": 0.3877,
+    "mxn_usd": 0.05715,
+    "cny_usd": 0.147421,
+    "cny_cnh": 0.998866,
+    "cny_hkd": 1.15431,
+    "cny_eur": 0.128979,
+    "cny_gbp": 0.109906,
+    "cny_jpy": 23.852109,
+    "cny_cad": 0.208388,
+    "cny_aud": 0.212387,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [],
+  "competitor": [],
+  "outlook": [],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-17",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3901,
+    "mxn_usd": 0.0574,
+    "cny_usd": 0.147129,
+    "cny_cnh": 0.999428,
+    "cny_hkd": 1.156192,
+    "cny_eur": 0.128862,
+    "cny_gbp": 0.109352,
+    "cny_jpy": 23.945812,
+    "cny_cad": 0.207055,
+    "cny_aud": 0.210924,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-07-17",
+      "type": "news"
+    },
+    {
+      "title": "South Korea E-Commerce Rules Force Temu and Shein to Answer for Korean Consumers - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaWxxZHk1cGpuWC1RSnNpd3NiVVpDYU8tTkk0SUNDQ0pnRW5yODBuRXEwSk5kVWNvZldNOE56Q2pPVDMzWE40ekc1aWF2THVSSlN0VGtsbEc0YVU4cDJwSDdOSW1KenJXT2twT3ZUcjZKTDBfZzNCU0cya1UtS040cVNtR1hqbGw0VE9WelcyakItN1RLX0dLUkw3WFF6Rkt5MTNNMzhPZUhscnZLN05RbFJ6eTBQVGhoNk1OZzZERFp4dw?oc=5",
+      "date": "2026-07-17",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated July 13, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start Your Store (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Experts see a peso at just under 18 to the dollar a year from now - Mexico News Daily",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9jNm9EcUo2czJadGRlMHJxdXdSVnRQdHd1dVExUlBHZ3JkdzNGT0Jtck5rOFVqeFl2bzVnUnBwa1VRVVVhVFU0eFpHbHkwVlJmMGVRaVdZRWhaSTlMYVdKWnE3WlVqWHVobmExaDc4Q0JNeEM0LVhr?oc=5"
+    },
+    {
+      "title": "Mexico’s central bank holds interest rate at 6.50% while inflation continues to decline - Mexico News Daily",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSnJHa2dpeXhYOER0NUEyTFREY0d1bC12cGRsLVh6aWNVZktaV0pJNUtXQ0lWOG42TnZ4cXhuUVJnTnBockNVMWRuR1l1RTh4Q2twSjNKNkJ2UzZLNDlOYzRaaHRwTEFuNXZMeGwzLVZpTkVrenZ0Ym00aUxJa1Z5WlE3RW4yTTU0VGI5TkU3V0RzaHVIWTJ4U3FFS09oN3pYZ25oVzcxeW02WE91TDkwT1g5Ujg?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "US refusal to renew USMCA trade deal brings uncertainty for Mexico. But the treaty is far from dead - Chatham House",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQld1ZktpLWprZk9vcFlEYVVjcloxX1NBRGhyWFBhanRuMWxEbUdqMEItY1B5bVZFRTRWOUJ4SW1iYjRtWlJvdEVfSWF6bjh3Z3VVS1FKVlQtYUEzekY1Q3U5dGdsUEgwd2l0VXdfa1hkRHE2ZU5oY0pTM2wtbFBUdTJmSEp1RlpfWkJ3WDhoS25oQURpb2M5T3ZxVXlxcHdaM2JzWTJiaFlTSEtITU14d1p3?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Retail Sales Could Decide DXY What’s Next for GBP/USD and EUR/USD? - Yahoo Finance Singapore",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWGFPNTM4ZVJ6OTFKb1htYkdWMHhJZjEtb1YtYkpEOTNBQURDQ1NXZ3NPNkpybm9CZHE3MlJlMUdBZ2JSdlNqLUNGWXVLRGdFRjBqdjBGa3JHRHBoM3d6dE9UTzFqdUYyb0ZidXAyaFdFU0JqRF9wbVBJbWNKbnpDWlB3S19mWnM?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

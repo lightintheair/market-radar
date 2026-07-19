@@ -1,0 +1,50 @@
+{
+  "date": "2026-07-19",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3896,
+    "mxn_usd": 0.05707,
+    "cny_usd": 0.146491,
+    "cny_cnh": 0.998769,
+    "cny_hkd": 1.1546,
+    "cny_eur": 0.128843,
+    "cny_gbp": 0.109574,
+    "cny_jpy": 23.929158,
+    "cny_cad": 0.206471,
+    "cny_aud": 0.211371,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated July 13, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [],
+  "outlook": [],
+  "source": "open.er-api.com"
+}

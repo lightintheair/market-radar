@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-25",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3877,
+    "mxn_usd": 0.0572,
+    "cny_usd": 0.147532,
+    "cny_cnh": 0.999292,
+    "cny_hkd": 1.156363,
+    "cny_eur": 0.129687,
+    "cny_gbp": 0.110762,
+    "cny_jpy": 24.162212,
+    "cny_cad": 0.207712,
+    "cny_aud": 0.211472,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-07-25",
+      "type": "news"
+    },
+    {
+      "title": "Europe slaps AliExpress with €550 million fine for selling dodgy goods - The Register",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNU2poY1M1RktGTDJneGdhSEVEa3hwbTl0Mlc5OVkxQldWR09meE9QYThtUjA0eEpMZWY4SXFZRnNHVVN2eGxQTnBGRmNGWVAtVWpNdE9vWC1FRTFDdmFDQVJCTnlrMC1CcHo0T1l6UGFQNVg0WDlXRWcxX0dOUkVFNjlYcGRjalE5bFVxSEpKUzhzUWZnSy1PdnNvOXItbjJuaVVMMWlqQ2ctSlJ2SnlRT1VEWFdvSllOLW5OSmFIdw?oc=5",
+      "date": "2026-07-25",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated July 13, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Captures 15.9% of Mexico’s E-Commerce in 2Q25 - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping: How to Start Your Store (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican peso stays neutral as uncertainty persists - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTWpMQmctOHp6OUd2UG5xSlZ0MFBaeTVwb01mNkJhRUVJTVB1Znl4RHBJWWFRMG9qQllkWlAwVFdudnZxcXpMLXpoS0JiN3I1NmpteU90bWdpQzhoUDF2U01ldTVBSGtNYUg5b0p4UW9fek9zdElzOVFNcEZoTzFVYS1fSWlrbzVfVVlZcU53cFpTek1zN1k1ZlltbzZLdHJFbDc3cUwxaW44X0VJd0pz?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "US, Mexico resume USMCA trade talks as Trump hits Canada with new tariffs - Reuters",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLTlwelkwN2NBdS1QaUlkVkdWOGVOUFJ6eWtYZzNsbUtpWkpjLW9FbFRHWlY5UEZCOS1zc0xHRzZ3UkdqRUZwQ2tmd1IxLWJTRXI0ZnlHZEZzNDk0QkZuTktUc3d5RTJsZXZVVWtLRTNGaTVQNW5HamNVZUFRdERzV09jejJ6cUVuYk5uLVkyMmdwWmh2eTV1YXVUSGF0MHBKTUZGRXBTUF9lRWRIMGhJbFNtejd5b1Bx?oc=5"
+    },
+    {
+      "title": "United States Dollar Index Forecast: 101.00 holds the key for bulls - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVWVzZVpMTDBWV3M3UW9JdFRmTEllNFJpNy1DYmhUbkVrd3RTcmdWNFNMVDZDc0NtNGxnZHZ1RWdxQnh5dkNZeVZHSlNKYVBNUmRlT2ZQUE9lN2ZTZFlHakU1SDhzelBsdDA1Ykt2TzgySjRfREFqOE1TVEZ2ZHNWRTd5UzdLSk91Z2g4N0hwMmFtRm4tUDNMRFU3aHU3bkl4STZfUEhqMEZ1bDI1aHFBSnNUSWRQaTFUNC01SXh4S2JjNTYw?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

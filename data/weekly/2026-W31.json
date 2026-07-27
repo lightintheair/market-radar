@@ -1,0 +1,44 @@
+{
+  "week": "2026-W31",
+  "date": "2026-07-27",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico’s inflation falls to its lowest level since 2020 - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated July 13, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico economy to grow less than previously expected on trade concerns - Reuters",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "US$1 trillion in cross-border e-commerce: What the 2026 forecasts actually show - TyN Magazine",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Fresh foods boost Amazon Now demand in Brazil, executive says - WKZO",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Alibaba’s AliExpress hit with €550 million EU fine over sales of illegal, counterfeit products - The Economic Times",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

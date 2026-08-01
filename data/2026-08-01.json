@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-01",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3902,
+    "mxn_usd": 0.05767,
+    "cny_usd": 0.147799,
+    "cny_cnh": 0.999278,
+    "cny_hkd": 1.159339,
+    "cny_eur": 0.128447,
+    "cny_gbp": 0.109873,
+    "cny_jpy": 23.492443,
+    "cny_cad": 0.207357,
+    "cny_aud": 0.21065,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "Pemex revenue jumps 30% to US$29.2bn on higher fuel sales - BNamericas",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMF9aaUd0blBQMnRrejVqSHVXa2pJOEEyeWNKd3VRZEt5ZzZMdXAwRXhFb1JWbGNhMEUxRFFSMDljZi1MR0tXenZqdElBbExVZHV0QTV4ZE1xN05CQzhUODdhWUhBRmk1VUVQUXlWLWFDTEp3SUxfX21tekRiWDdaUk5Ga2xscF9rN0hmeDR4VjBUZUQwUHlySQ?oc=5"
+    },
+    {
+      "title": "With future of U.S.-Mexico-Canada trade in limbo, Texas businesses navigate choppy waters - Houston Public Media",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUHFrNzhUOFN2TFVDb3UyVUZCbDVTbVgyVHozakxXVFpGTmNEendtQUY4dXNGSWloN1hhSHgxZTR5ZVBkdFhBbUxsOXc2RHhaclVwOTByclN6RFJrUE1JTW15NHJlYklMUkZaejVrYUtSckhLeUh3NEdETWNRZGkzSnVpcVV2ZWRiRjlYcTRMMDFvcUNfMTd1TER0R012c2ttY3lzYzRKTVlJODJuUmp0eTZ6U2hkeW00a0hJ0gHDAUFVX3lxTE91QjVKUWlsanl5eFM5aHd4WDVoWjRuMGpwTUFUM0JlS3loVkREMUdjRDBMYXZfZTRjVDZfWlhQU2FYUF9EYlhNSnZXT2xKXzl6Mmw1SEhDNGJCal9Sdll4czhDLUlQVHhIc0RPYk1UNVdZRDA4X2xkcjVEck1pTUtyWHhuSFlOSVM3QU5oeGtTNkd2aVFfeU1pWFdHMjJ4SlVWOTZ6bHh4VENOZWpodkZmWkNSN3BNZzJpQ2ZWdTMyb0FWVQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,57 @@
+{
+  "date": "2026-08-02",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3902,
+    "mxn_usd": 0.05767,
+    "cny_usd": 0.147806,
+    "cny_cnh": 0.998762,
+    "cny_hkd": 1.158407,
+    "cny_eur": 0.128446,
+    "cny_gbp": 0.109873,
+    "cny_jpy": 23.543866,
+    "cny_cad": 0.207174,
+    "cny_aud": 0.210758,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - tradingview.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-08-02",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-08-02",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico says 1.5% GDP growth secure unless economy shrinks in second half - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Trump Administration’s New Section 301 Tariffs Reach Nearly All U.S. Imports - Ward and Smith, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "Experts see a peso at just under 18 to the dollar a year from now - Mexico News Daily",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9jNm9EcUo2czJadGRlMHJxdXdSVnRQdHd1dVExUlBHZ3JkdzNGT0Jtck5rOFVqeFl2bzVnUnBwa1VRVVVhVFU0eFpHbHkwVlJmMGVRaVdZRWhaSTlMYVdKWnE3WlVqWHVobmExaDc4Q0JNeEM0LVhr?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

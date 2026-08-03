@@ -1,0 +1,44 @@
+{
+  "week": "2026-W32",
+  "date": "2026-08-03",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico’s inflation falls to its lowest level since 2020 - Mexico News Daily",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Trump Administration’s New Section 301 Tariffs Reach Nearly All U.S. Imports - Ward and Smith, P.A.",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico says 1.5% GDP growth secure unless economy shrinks in second half - Reuters",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Top retailers by most recent cross-border order 2025 - Statista",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

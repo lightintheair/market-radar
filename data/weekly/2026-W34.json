@@ -1,0 +1,44 @@
+{
+  "week": "2026-W34",
+  "date": "2026-08-17",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico inflation slows to six-year low as Banxico holds rates - WKZO",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Gross domestic product (GDP) in current prices in Mexico from 1980 to 2031 - Statista",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Top retailers by most recent cross-border order 2025 - Statista",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

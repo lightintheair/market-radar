@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-17",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3978,
+    "mxn_usd": 0.05876,
+    "cny_usd": 0.14771,
+    "cny_cnh": 0.999668,
+    "cny_hkd": 1.162955,
+    "cny_eur": 0.128111,
+    "cny_gbp": 0.109488,
+    "cny_jpy": 23.603203,
+    "cny_cad": 0.205658,
+    "cny_aud": 0.209268,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-08-17",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - techtimes.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-08-17",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu, Shein Take 40% of Mexico’s E-commerce Market - Mexico Business News",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Citi Mexico Survey sees Banxico hold, USD/MXN ending 2026 at 17.90 - tmgm.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQWdwTS1DZXpPc0pDYXJLVkJXTjcyaFVaWVozYmM3TklUNnJLN3dzTGhpdDN0QzBUOUprRGtPQ0E1RDRlZVNrNGN3VDQ4U29USE5aZFBCXzdPeWpDRjVOTFdLb2VfbXhuOFdaeEtmNTNHdlAxbEVmNkItRnVrWmd4MHdGcHRLVlJMN25oMzR3VFdvQjVtdDFuVkZJcWNsVkxNeVBKQlNQSXA3WWF3SVBKMkZwemJ5WlRxQ2MtZENPMVprbzVFTkJIY3Bn?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "Mexico Urges US Tariff Freeze and Relief in USMCA Talks - Mexico Business News",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN3M4a2VQdy1oREFHVnR5YWkyeWhTckdBZGVEYmVRNjNuWG5pVFczeEVHdjVmX0xnako0NGthZWVHYmtPbTBoVmdYWDFYTzJRN1licXozWFI3aElGTy1RcWU2YjRnX3BUcWh0VXV2QnFKWlhRUEVXMXRUVUdwd01IcGFpc0pzc2tHMzZKUTZpR2p2bzdHOXN6b1JaWEhiZkt5a1drRmk4NDV1Zw?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY declines to 99.75-99.70 amid receding Fed hike bets - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbmZsX3BZYkl4ZTVaRDdIZFV5M0FKR0dCVHdfQV9nQTRsTlF4THF1ZnFHOHhYeXF3WDNxeWZ3dXZBUDBHRWlQNFU1UXBWODFhaGxJY1Q5am1la09lbzQwc0tBdUx4MzhjeWh6NGxmaXZoSXZ6YVhRTTVIZl9vR1FWcTlFNTc0REJ6eWh0U1ZCX0ctM05CY0ZlZjFodnhCa2RSZFNFWUxJVV9ZeVZiUTFjZThpUmp5YkR1T24zUnp3bG5ZSVZqZWc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

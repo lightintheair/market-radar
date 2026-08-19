@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-19",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3979,
+    "mxn_usd": 0.05861,
+    "cny_usd": 0.147308,
+    "cny_cnh": 0.999341,
+    "cny_hkd": 1.160884,
+    "cny_eur": 0.127914,
+    "cny_gbp": 0.109412,
+    "cny_jpy": 23.626026,
+    "cny_cad": 0.205518,
+    "cny_aud": 0.208923,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU packaging law forces sellers to register in up to 27 countries - PPC Land",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWTEzS09RSmx4SHBUQWZNaUpEenQ1ZEt4ZHlDU28zTVI5NkhCTTBlWFJ2VUZ4dFFKZnNja2xJTmZOSDRIQUZGeTNQcEtwdC1SYVRNTHN6Zkw2WlY2MmUxbVZ5R1VSUHdLeVdaVHpGQ3NUOVRoVGxHWHZsOGtYdEFjQmNLY3pPTUo0WlFn?oc=5",
+      "date": "2026-08-19",
+      "type": "news"
+    },
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-08-19",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican peso shows signs of weakness ahead of the Fed decision - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVV81Rll5OXQ5TWRaU1VEVUZ4ZkdSa3p5Q3ZQQ21IX25ab1VYcENqX0V2X1k4amYtd0J0a19jbjY4TFlaVEpQTXZvdFQ4OC03emI4WWNrd1BMM0owWkFfT09FcjJnRTJOUk55LWxjaEpDc3ExenU1el8wNXYtN2ZYaUVhODZvSkRqamFKeDdtWktyV3RPTklDNWRRRVJ5RDdGX0RwS3ZXVDBmTnU5OXpMcjBsZnRkNUlLN2lJeFMyWlYwQjDSAc8BQVVfeXFMTjhFdFBOTllmMnQ0NERNVnRYeDM1ckN1M0h2SmpjVnJ6a3dObFZhazJsdnJERFJ0Rk5kRExsalUtODdadVJpNS1iWjhkT1ZzTk5DNTFkaTlwZlZSaEgyLUdla0h2bjc2WFlMQnVSOHVFblFaejdLVkg0RHBhdTdqMnNkMVVkVGJxN3VsVHd2SjdzZkZQUXM3Z1RPRGR3aFU0Mk9pODl0UndpTndPU1NOVUY2S3hkTElCZ1NtQXBqbmVmY2ZQTGdvaXlYcUZseE5V?oc=5"
+    },
+    {
+      "title": "Mexican peso hits 26-month high as Banxico holds rates steady - eciks.org",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fRjhLTkpBOGl3MDJicndnMEowb1lQdGtsbzJac3prUHhwckpHTmJ1aXBORGlvVmlUSDRsbURhWUlBMzFaRE5YXzU3MDFSb0RXTEl6UUNZQzFYS2lvQUstXzRFQURzLU9Ld0dB?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex Still Struggles Despite the Oil Price Surge - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3AzbkxfMWEwdzZ0VlpMd1Q3X2phblpiMDVIa3VJZ0E1WjFvTFk4Wlg4c2h4c1hrX0RhTUdWMVVrdGJDVkZfOFB6X180THZFSmp4Z2VVcUpONEprY3dHakd2bW0yaEtza0RkZW9GZTZaLTJ2Y01fNkVaejFPMFc3NmxNNHZjYTB5ZWlQbXAtSVBPMHZsbFBfTkF0Q2hOM3Ftbmx3RzRTOUbSAa4BQVVfeXFMUGFnUkJYTWhFWGFxYVdKcWgwOVV5ak1ydi1LS1JTWU9BNFB5SDJ3cnAzMXJ5VWZjVTRIMVhJdVFjajFkQnoyQm5wN0VHY0dhVGFwTjZPQzNnYUxYUFBtUjJ1QS10WW52c3NmUld5SmJfdzBaUlFKSnk4YWR5X0trdzZHNWRac3kwYURKQ1h2WVl0OEI0ZDJ4YnBBa19ZT3l4azBEZWNuRHNYRnVnaTN3?oc=5"
+    },
+    {
+      "title": "U.S. Declines To Renew USMCA And Imposes Mexico Tariffs - Legis1",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0zcTRFa1Z2SUVjazJUUjgtYjc2QjRfa0FrTkVWdGdoTDBnTmptbDZ6VlNOTXYzR3dIaWwtRzhKSVZKa2VGcXhOZXN3Qm9La1dTODRRejZTYXBMQUJDTTM5MDNtN29YY05XQjl2R1V6TVFubnpiaTZDUWZn?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY declines to 99.75-99.70 amid receding Fed hike bets - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbmZsX3BZYkl4ZTVaRDdIZFV5M0FKR0dCVHdfQV9nQTRsTlF4THF1ZnFHOHhYeXF3WDNxeWZ3dXZBUDBHRWlQNFU1UXBWODFhaGxJY1Q5am1la09lbzQwc0tBdUx4MzhjeWh6NGxmaXZoSXZ6YVhRTTVIZl9vR1FWcTlFNTc0REJ6eWh0U1ZCX0ctM05CY0ZlZjFodnhCa2RSZFNFWUxJVV9ZeVZiUTFjZThpUmp5YkR1T24zUnp3bG5ZSVZqZWc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

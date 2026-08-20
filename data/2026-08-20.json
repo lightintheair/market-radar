@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-20",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3972,
+    "mxn_usd": 0.05892,
+    "cny_usd": 0.148341,
+    "cny_cnh": 0.999166,
+    "cny_hkd": 1.162295,
+    "cny_eur": 0.12737,
+    "cny_gbp": 0.109179,
+    "cny_jpy": 23.519395,
+    "cny_cad": 0.20509,
+    "cny_aud": 0.208771,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU packaging law forces sellers to register in up to 27 countries - PPC Land",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWTEzS09RSmx4SHBUQWZNaUpEenQ1ZEt4ZHlDU28zTVI5NkhCTTBlWFJ2VUZ4dFFKZnNja2xJTmZOSDRIQUZGeTNQcEtwdC1SYVRNTHN6Zkw2WlY2MmUxbVZ5R1VSUHdLeVdaVHpGQ3NUOVRoVGxHWHZsOGtYdEFjQmNLY3pPTUo0WlFn?oc=5",
+      "date": "2026-08-20",
+      "type": "news"
+    },
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-08-20",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexican peso hits 26-month high as Banxico holds rates steady - eciks.org",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fRjhLTkpBOGl3MDJicndnMEowb1lQdGtsbzJac3prUHhwckpHTmJ1aXBORGlvVmlUSDRsbURhWUlBMzFaRE5YXzU3MDFSb0RXTEl6UUNZQzFYS2lvQUstXzRFQURzLU9Ld0dB?oc=5"
+    },
+    {
+      "title": "Oil Falls Below US$90/b as US-Iran Pause Calms Energy Markets - Mexico Business News",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaTNVZy1yWkpOYUcxZXVDbVZzbk5vSkluQ3AtMWRLcVlvRmdLUWJnamlmNk1XTDRuUmU4bFNockNhdER0YmlFb0N5V3hVd3FEaGotTzdxdEJPZ2NhdGJ6dmtDdWsxaS00dFc4bjZ2MktOVFplQ3FxVGFzZ0RpV0xOdXlYaFVXcmM5cEdyeGF5X0FVazRnVGJ3c1J0Tmc2cHRv?oc=5"
+    },
+    {
+      "title": "U.S. Declines To Renew USMCA And Imposes Mexico Tariffs - Legis1",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0zcTRFa1Z2SUVjazJUUjgtYjc2QjRfa0FrTkVWdGdoTDBnTmptbDZ6VlNOTXYzR3dIaWwtRzhKSVZKa2VGcXhOZXN3Qm9La1dTODRRejZTYXBMQUJDTTM5MDNtN29YY05XQjl2R1V6TVFubnpiaTZDUWZn?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: DXY Near 99.38 as Fed Minutes and UK Inflation Loom; EUR/USD and GBP/USD Hold Firm - FXEmpire",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQQ0JGUnBwVUFqZl9XOW04Zi1zeEdhS2hZU19Fam9uU0tTNnh6TWlfV2hLbmtfRV9TX243d0Jma0Nyano3UGJiMGI2UHZCVWo4b0lCLVV2YUVfaFNvbXB3cVE3NlotLWUwOGwtYTIyaHFsSUtXdjVIMEZzeVZRbzFqZEdCNk5mWGVzcTZSaDRsTGVaeXBGWHM5X2VDVnBLT1JnRXBrN0gtMzk3TndUVkVnXzlNUmEzZlFHWndXdTVNM2lVWmNmRDN1TGZPV25LOVJCa0E0aS0zaEZQSmRtSG1PZmRVWFo1Rm96S05GN2ln?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

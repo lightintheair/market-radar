@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-22",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3992,
+    "mxn_usd": 0.05909,
+    "cny_usd": 0.148026,
+    "cny_cnh": 0.999254,
+    "cny_hkd": 1.163674,
+    "cny_eur": 0.127193,
+    "cny_gbp": 0.108914,
+    "cny_jpy": 23.605255,
+    "cny_cad": 0.204443,
+    "cny_aud": 0.207711,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-08-22",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-08-22",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico inflation slows to six-year low as Banxico holds rates - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYTR0MGJPNnRtUjRjYUZjcU1ONEZ0WE9ucWtIZkt1WDY5aUF4XzVtTlVGTDl4Qy1lZzMyb2tSQmQwTDFnVkVVTkh6eW01MnZzZGFlNTdPcWloZ21EcFFuM3Zad2ZRcFM2Y0VVSEsyOFhENnJZaXBReFJKNVpQV2cxaExTSG43T3AyUDNiUllR?oc=5"
+    },
+    {
+      "title": "Oil Falls Below US$90/b as US-Iran Pause Calms Energy Markets - Mexico Business News",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaTNVZy1yWkpOYUcxZXVDbVZzbk5vSkluQ3AtMWRLcVlvRmdLUWJnamlmNk1XTDRuUmU4bFNockNhdER0YmlFb0N5V3hVd3FEaGotTzdxdEJPZ2NhdGJ6dmtDdWsxaS00dFc4bjZ2MktOVFplQ3FxVGFzZ0RpV0xOdXlYaFVXcmM5cEdyeGF5X0FVazRnVGJ3c1J0Tmc2cHRv?oc=5"
+    },
+    {
+      "title": "U.S. Declines To Renew USMCA And Imposes Mexico Tariffs - Legis1",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0zcTRFa1Z2SUVjazJUUjgtYjc2QjRfa0FrTkVWdGdoTDBnTmptbDZ6VlNOTXYzR3dIaWwtRzhKSVZKa2VGcXhOZXN3Qm9La1dTODRRejZTYXBMQUJDTTM5MDNtN29YY05XQjl2R1V6TVFubnpiaTZDUWZn?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Falling Treasury Yields Sink DXY as EUR/USD Breaks Higher - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZk1aQ1dhamh1dmNHa2pacVJBTmw5WUR4VVVUbHg4NnZaZV9PbVBDZmF5OU9xNG9LUWNYbklyeUNmOXAwajQwdm5QZDF2VUpiTnNwVDJsRXhrNmJqVGk2SDFXTTItUDI5OUUxTk9pRmU2Mm5MbDhOV0Q0ckpIVGlWdmxRU3l3bExMSHBZUlI2UFVHb0JjWWFabl9tRDhaRlBaU0k0?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

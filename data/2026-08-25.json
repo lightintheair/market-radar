@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-25",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3998,
+    "mxn_usd": 0.059,
+    "cny_usd": 0.147576,
+    "cny_cnh": 0.999259,
+    "cny_hkd": 1.162941,
+    "cny_eur": 0.127306,
+    "cny_gbp": 0.108933,
+    "cny_jpy": 23.624439,
+    "cny_cad": 0.205337,
+    "cny_aud": 0.207712,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-08-25",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-08-25",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico GDP Growth Q2 2026 | Inflation Update | Banxico Rate Decision - News and Statistics - IndexBox",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping in 2026 With Shopify - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYTR0MGJPNnRtUjRjYUZjcU1ONEZ0WE9ucWtIZkt1WDY5aUF4XzVtTlVGTDl4Qy1lZzMyb2tSQmQwTDFnVkVVTkh6eW01MnZzZGFlNTdPcWloZ21EcFFuM3Zad2ZRcFM2Y0VVSEsyOFhENnJZaXBReFJKNVpQV2cxaExTSG43T3AyUDNiUllR?oc=5"
+    },
+    {
+      "title": "Pemex and Petrobras Bet Big on High-Risk High-Reward Drilling Off Mexico - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbjkxamtOaXJsRjFtal8yNWFkZXJZVElZbXVMZVlHbXpkNlctV3RkV0hIc3phQndUeko0MGJ4R29oWXJ5dXdnTmMyTXV3enBUYk16VmFKODMtS29pOXFrWnRHS2NOMDc2a2hjeE1udHktSXlXYmJNRG84dzN5RW1GbFRuZEFCcndPcjRQUFhBU2hhQ1N6d2ZEMnIxTUdDVGkwR21ER2U4ckE3aEd1Q2hCSEZQVUNIUdIBuwFBVV95cUxPME9nYTlabGJJT0xqZkpXVDEwUnREWC15QzlhX2xJNXd1aThDN0tBbU9UNUMwMDhhRDN2alNObjFUaHNHMDRpVDNwREJPMkFaME1acGwyckNRNG1YdERCWFdmNDgyUUhvanhmYTNIMHU5UGJTVmU2c05RQ09BT0NiS3FhYXF3aXlUMGFZcEhEYUNTdE5QZjVjNHhSRW9CZDd0bkszNXQweVNxbEtSTXBUTDZvUFN3YVI1cDNj?oc=5"
+    },
+    {
+      "title": "What to know about Trump's 50% tariffs on Canadian goods that just went into effect - ABC7 Bay Area",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORE90blBXTFFNTVdlRkZOMWxlckVqSWFTM1c3QzZydFROTzdyNGZNQWRLY2ZzbVZlVUo3cS0wTms3OXltRHQwVzY4cjhaOXhOVmFkcnhxT0VMcWp6ZmRjMmZNU05vR1NUWlhIdjAwVUhIYlBLcmZCXzFUU1EyTEpKM01jOHkwTXY3bTQzTTFPazlwUC03Y0NUVy1uWWNOcjZReWlj?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Falling Treasury Yields Sink DXY as EUR/USD Breaks Higher - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZk1aQ1dhamh1dmNHa2pacVJBTmw5WUR4VVVUbHg4NnZaZV9PbVBDZmF5OU9xNG9LUWNYbklyeUNmOXAwajQwdm5QZDF2VUpiTnNwVDJsRXhrNmJqVGk2SDFXTTItUDI5OUUxTk9pRmU2Mm5MbDhOV0Q0ckpIVGlWdmxRU3l3bExMSHBZUlI2UFVHb0JjWWFabl9tRDhaRlBaU0k0?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

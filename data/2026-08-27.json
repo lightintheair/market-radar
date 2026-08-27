@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-27",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3994,
+    "mxn_usd": 0.059,
+    "cny_usd": 0.147724,
+    "cny_cnh": 0.999239,
+    "cny_hkd": 1.163408,
+    "cny_eur": 0.127428,
+    "cny_gbp": 0.10917,
+    "cny_jpy": 23.647362,
+    "cny_cad": 0.205927,
+    "cny_aud": 0.207147,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-08-27",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-08-27",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "How Does Shopee Make Money? 7 Revenue Streams - FourWeekMBA",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "Pemex and Petrobras Bet Big on High-Risk High-Reward Drilling Off Mexico - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbjkxamtOaXJsRjFtal8yNWFkZXJZVElZbXVMZVlHbXpkNlctV3RkV0hIc3phQndUeko0MGJ4R29oWXJ5dXdnTmMyTXV3enBUYk16VmFKODMtS29pOXFrWnRHS2NOMDc2a2hjeE1udHktSXlXYmJNRG84dzN5RW1GbFRuZEFCcndPcjRQUFhBU2hhQ1N6d2ZEMnIxTUdDVGkwR21ER2U4ckE3aEd1Q2hCSEZQVUNIUdIBuwFBVV95cUxPME9nYTlabGJJT0xqZkpXVDEwUnREWC15QzlhX2xJNXd1aThDN0tBbU9UNUMwMDhhRDN2alNObjFUaHNHMDRpVDNwREJPMkFaME1acGwyckNRNG1YdERCWFdmNDgyUUhvanhmYTNIMHU5UGJTVmU2c05RQ09BT0NiS3FhYXF3aXlUMGFZcEhEYUNTdE5QZjVjNHhSRW9CZDd0bkszNXQweVNxbEtSTXBUTDZvUFN3YVI1cDNj?oc=5"
+    },
+    {
+      "title": "Mexico watches US–Canada trade tension with uncertainty - EL PAÍS English",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNng0S3B4VVhMTzNvMUxocEtTclV6enNOMWN4cXUyVU5YSi1ZcU9KNGN3aHMwZVdIUXFPN1psdGJYZC1zS1RHUlRjNVU5a0NwSXhPbjJDTTBvOUdQNi1TY2ROYmc0QllBSll5NXY2ME5wYU1iVjdSN2xZOXRnSy1YWC1IeVlOREJ1OXVDdDdRY3ZXeHJ2WHVPYVpLN2Z3Qmt2T3hEU0hrbHhWaWdxWlpvdHp1amVBb2NaWUHSAc4BQVVfeXFMTU9OSUR5dVRFZHZfNlp2M2M2emhmQV9FSlhYRFlZTmRwUks3a2NwZDBvalFLWjNBaVRWSWZqU2RFajR0WVh2Y29MZzhIYi1NRExfS25hY1ZZeVBvR290N2thTV9rQjd4alNtNUpsc0syaVRSYVBvU0J1WVhEVFBrbF9QVjlIUENld25TWFAwX1YwVW1VcTZWTjZOazV5NTV4QWxyRkEtaVF6eDhyMm9rVXk1Q3RRUVgyZmhEUEtsWDQ5eVhZZHpWYjl0RE1OaFE?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Fiscal Risks Weigh on DXY; EUR/USD and GBP/USD Test Key Resistance - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR3MyRWNEc0x5eXUyMmo3M3NVNTBfUU92Y2JMcWdnT1plS29jbC1neXR2dzB2ZHdXbmhPMDNpUzdZUVV2R1pyLUhYbHpXQ1VZMFprTEdQMEFnMVMxaXZyWEtHc3dNZ1NoZURKSEdyY0JsanRsSEtWT3FpZUk4TkY2UkQ0LUlsSnV0RFA3N2RNdXVqNEpua1h2cTNjX0k4UEpfeUE?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

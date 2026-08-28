@@ -1,0 +1,57 @@
+{
+  "date": "2026-08-28",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3996,
+    "mxn_usd": 0.05894,
+    "cny_usd": 0.147495,
+    "cny_cnh": 0.999215,
+    "cny_hkd": 1.163512,
+    "cny_eur": 0.127502,
+    "cny_gbp": 0.109311,
+    "cny_jpy": 23.666078,
+    "cny_cad": 0.205828,
+    "cny_aud": 0.206816,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "Pemex and Petrobras Bet Big on High-Risk High-Reward Drilling Off Mexico - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbjkxamtOaXJsRjFtal8yNWFkZXJZVElZbXVMZVlHbXpkNlctV3RkV0hIc3phQndUeko0MGJ4R29oWXJ5dXdnTmMyTXV3enBUYk16VmFKODMtS29pOXFrWnRHS2NOMDc2a2hjeE1udHktSXlXYmJNRG84dzN5RW1GbFRuZEFCcndPcjRQUFhBU2hhQ1N6d2ZEMnIxTUdDVGkwR21ER2U4ckE3aEd1Q2hCSEZQVUNIUdIBuwFBVV95cUxPME9nYTlabGJJT0xqZkpXVDEwUnREWC15QzlhX2xJNXd1aThDN0tBbU9UNUMwMDhhRDN2alNObjFUaHNHMDRpVDNwREJPMkFaME1acGwyckNRNG1YdERCWFdmNDgyUUhvanhmYTNIMHU5UGJTVmU2c05RQ09BT0NiS3FhYXF3aXlUMGFZcEhEYUNTdE5QZjVjNHhSRW9CZDd0bkszNXQweVNxbEtSTXBUTDZvUFN3YVI1cDNj?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Fiscal Risks Weigh on DXY; EUR/USD and GBP/USD Test Key Resistance - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR3MyRWNEc0x5eXUyMmo3M3NVNTBfUU92Y2JMcWdnT1plS29jbC1neXR2dzB2ZHdXbmhPMDNpUzdZUVV2R1pyLUhYbHpXQ1VZMFprTEdQMEFnMVMxaXZyWEtHc3dNZ1NoZURKSEdyY0JsanRsSEtWT3FpZUk4TkY2UkQ0LUlsSnV0RFA3N2RNdXVqNEpua1h2cTNjX0k4UEpfeUE?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

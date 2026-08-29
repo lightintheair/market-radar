@@ -1,0 +1,61 @@
+{
+  "date": "2026-08-29",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.399,
+    "mxn_usd": 0.05878,
+    "cny_usd": 0.147328,
+    "cny_cnh": 0.999252,
+    "cny_hkd": 1.162857,
+    "cny_eur": 0.127904,
+    "cny_gbp": 0.10954,
+    "cny_jpy": 23.728819,
+    "cny_cad": 0.206057,
+    "cny_aud": 0.207119,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYTR0MGJPNnRtUjRjYUZjcU1ONEZ0WE9ucWtIZkt1WDY5aUF4XzVtTlVGTDl4Qy1lZzMyb2tSQmQwTDFnVkVVTkh6eW01MnZzZGFlNTdPcWloZ21EcFFuM3Zad2ZRcFM2Y0VVSEsyOFhENnJZaXBReFJKNVpQV2cxaExTSG43T3AyUDNiUllR?oc=5"
+    },
+    {
+      "title": "The Real Cost of the U.S.-Canada Trade Breakdown - Council on Foreign Relations",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWnczbGIyajU5WHVTVGxHd2xBelBzWENkRFlqRERzZFYzNWhUbHpubjhRWkp1YkpvZEZ3cmhITnBsY05MZHViUzBQQVhfdVE0MFEwV0lXMVJsUWU3MUdzYmN0ZUg3eTRHM2JZeTExV3BGUGJxMXVGSzdlWmc5alRRcWhn?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

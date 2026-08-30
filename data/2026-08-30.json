@@ -1,0 +1,61 @@
+{
+  "date": "2026-08-30",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.399,
+    "mxn_usd": 0.05876,
+    "cny_usd": 0.147281,
+    "cny_cnh": 0.998674,
+    "cny_hkd": 1.161946,
+    "cny_eur": 0.127721,
+    "cny_gbp": 0.109383,
+    "cny_jpy": 23.704872,
+    "cny_cad": 0.205729,
+    "cny_aud": 0.206943,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "How Does Shopee Make Money? 7 Revenue Streams - FourWeekMBA",
+      "source": "Shopee墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "The Real Cost of the U.S.-Canada Trade Breakdown - Council on Foreign Relations",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWnczbGIyajU5WHVTVGxHd2xBelBzWENkRFlqRERzZFYzNWhUbHpubjhRWkp1YkpvZEZ3cmhITnBsY05MZHViUzBQQVhfdVE0MFEwV0lXMVJsUWU3MUdzYmN0ZUg3eTRHM2JZeTExV3BGUGJxMXVGSzdlWmc5alRRcWhn?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

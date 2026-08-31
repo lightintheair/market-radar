@@ -1,0 +1,62 @@
+{
+  "date": "2026-08-31",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.399,
+    "mxn_usd": 0.05872,
+    "cny_usd": 0.14716,
+    "cny_cnh": 0.999669,
+    "cny_hkd": 1.164122,
+    "cny_eur": 0.128113,
+    "cny_gbp": 0.109659,
+    "cny_jpy": 23.778846,
+    "cny_cad": 0.206338,
+    "cny_aud": 0.20735,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Global Economics Intelligence executive summary (July 2026) - McKinsey &amp; Company",
+      "source": "墨西哥宏观"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "The Real Cost of the U.S.-Canada Trade Breakdown - Council on Foreign Relations",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWnczbGIyajU5WHVTVGxHd2xBelBzWENkRFlqRERzZFYzNWhUbHpubjhRWkp1YkpvZEZ3cmhITnBsY05MZHViUzBQQVhfdVE0MFEwV0lXMVJsUWU3MUdzYmN0ZUg3eTRHM2JZeTExV3BGUGJxMXVGSzdlWmc5alRRcWhn?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Falling Treasury Yields Sink DXY as EUR/USD Breaks Higher - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZk1aQ1dhamh1dmNHa2pacVJBTmw5WUR4VVVUbHg4NnZaZV9PbVBDZmF5OU9xNG9LUWNYbklyeUNmOXAwajQwdm5QZDF2VUpiTnNwVDJsRXhrNmJqVGk2SDFXTTItUDI5OUUxTk9pRmU2Mm5MbDhOV0Q0ckpIVGlWdmxRU3l3bExMSHBZUlI2UFVHb0JjWWFabl9tRDhaRlBaU0k0?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

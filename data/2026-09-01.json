@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-01",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3976,
+    "mxn_usd": 0.0588,
+    "cny_usd": 0.14788,
+    "cny_cnh": 0.99923,
+    "cny_hkd": 1.16364,
+    "cny_eur": 0.128,
+    "cny_gbp": 0.109699,
+    "cny_jpy": 23.736045,
+    "cny_cad": 0.205995,
+    "cny_aud": 0.207494,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "How to dropship from AliExpress in the UK: A complete guide - WorldFirst",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Remains Under Pressure Following Jackson Hole - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQlJENm8wSFNlZzcxenZMdk4weUx0ZGYwZkd5R0lydlRQbms1Tm9JRVZobXJzSldEdFBpc0ZGR1NaRnNDMkhjMEoyc25MWXVyV3NzbGtqdnVRN205S1dHdGwzakgxOFBQWjJ2eDB4QjBmT1ExRWg0QUM2S1Zwdk52SjVYRjN3a2tKcXJsak8xUlBHanFlbnNkNVlWRlMzcVFZR1dXRVVqWDJZOHBvYmtxd0dGbkR2N2RoQjBqeTln?oc=5"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYTR0MGJPNnRtUjRjYUZjcU1ONEZ0WE9ucWtIZkt1WDY5aUF4XzVtTlVGTDl4Qy1lZzMyb2tSQmQwTDFnVkVVTkh6eW01MnZzZGFlNTdPcWloZ21EcFFuM3Zad2ZRcFM2Y0VVSEsyOFhENnJZaXBReFJKNVpQV2cxaExTSG43T3AyUDNiUllR?oc=5"
+    },
+    {
+      "title": "Pemex and Petrobras Bet Big on High-Risk High-Reward Drilling Off Mexico - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbjkxamtOaXJsRjFtal8yNWFkZXJZVElZbXVMZVlHbXpkNlctV3RkV0hIc3phQndUeko0MGJ4R29oWXJ5dXdnTmMyTXV3enBUYk16VmFKODMtS29pOXFrWnRHS2NOMDc2a2hjeE1udHktSXlXYmJNRG84dzN5RW1GbFRuZEFCcndPcjRQUFhBU2hhQ1N6d2ZEMnIxTUdDVGkwR21ER2U4ckE3aEd1Q2hCSEZQVUNIUdIBuwFBVV95cUxPME9nYTlabGJJT0xqZkpXVDEwUnREWC15QzlhX2xJNXd1aThDN0tBbU9UNUMwMDhhRDN2alNObjFUaHNHMDRpVDNwREJPMkFaME1acGwyckNRNG1YdERCWFdmNDgyUUhvanhmYTNIMHU5UGJTVmU2c05RQ09BT0NiS3FhYXF3aXlUMGFZcEhEYUNTdE5QZjVjNHhSRW9CZDd0bkszNXQweVNxbEtSTXBUTDZvUFN3YVI1cDNj?oc=5"
+    },
+    {
+      "title": "The Real Cost of the U.S.-Canada Trade Breakdown - Council on Foreign Relations",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWnczbGIyajU5WHVTVGxHd2xBelBzWENkRFlqRERzZFYzNWhUbHpubjhRWkp1YkpvZEZ3cmhITnBsY05MZHViUzBQQVhfdVE0MFEwV0lXMVJsUWU3MUdzYmN0ZUg3eTRHM2JZeTExV3BGUGJxMXVGSzdlWmc5alRRcWhn?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Hawkish Warsh Lifts DXY as EUR/USD and GBP/USD Fall - Yahoo Finance Singapore",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMjRsV1hvbUU1cWI2dE1rR05aMl9WaU81TWgxYWV0LWpZckVIbk1XUlhQcmxLbkhxNTAyY25HMFZPXzg4YnE1dU0zQ2d0aVFVS05Oc2VMOUYxRTNMVnFHUUNJWE1sa1JKN2ROaVpwOGY2NlRIZ0xMQVVjaXVyZlVWUmxCVjd0Z3l5?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

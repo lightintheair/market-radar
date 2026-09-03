@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-03",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3983,
+    "mxn_usd": 0.05885,
+    "cny_usd": 0.147766,
+    "cny_cnh": 0.999212,
+    "cny_hkd": 1.16412,
+    "cny_eur": 0.128259,
+    "cny_gbp": 0.110136,
+    "cny_jpy": 23.651564,
+    "cny_cad": 0.206052,
+    "cny_aud": 0.207828,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-09-03",
+      "type": "news"
+    },
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-03",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated August 10, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "How Does Shopee Make Money? 7 Revenue Streams - FourWeekMBA",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Remains Under Pressure Following Jackson Hole - City Index UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQbS1aTkFSLVd6Rk94VzZrUjNJeENlcFc2TDF2ZUV4TGsxRFo1akE4aE56YUlwOHUwUFBGUjNxZG9hWlBfbU9PV2c1SzVqd0c5WWZLY1pUTHRSUUVycHBaVjhBYW1mX092ZU9CS2JoVC00RC1JUl9qemhlWTRDRFVsSE01WmVXUGZHdDBlX3REdk5SeFFBdlhIQWgwTzRHbFRGXzE0cXN3X1dJY1hsaTlhYnNXQzY1ZzR4c0VHY0JMOHN5R2s?oc=5"
+    },
+    {
+      "title": "Mexican Oil Price Over US$100/b Threshold - Mexico Business News",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQlhtLUlJMU9ZdU1neThKZG0xTDhuTjlJdFI2dmhrMi1nVTdmTVd5eWc0U2JKNXFKWjZEYnd0U3BEVWZTc0lDbE1EclNGT0JaYThvZzNRUGtOUWx1Um1GcEdDUmNQemZGaUZIT25EbC1VR1pCYUxiU3BzSHR2d3pfbFBvdFE1N3Vlanc?oc=5"
+    },
+    {
+      "title": "Mexico presses US on auto, steel tariffs in meeting with Lutnick - Reuters",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ1hNYVRva3ZoSnZOWU9xX1dLdUpsWGtiVGJMQkoyazlFYUNxSDYyS2wtc2M4OHhseTdhaGVDanEzMU45SFlhZmU1NVZ6aEtreklDR2lUMTR1T21CakxPRXJmdUtvb1R4allORENCSnFkYmxsV194b01oc2Vrb2xsQlZrRW8tYmVyLVZLRXdpUkxYemVheHNRUkh4c29rUFE4ZTN5THZpSDdtYmR3?oc=5"
+    },
+    {
+      "title": "US Dollar Index Forecast: DXY sticks to losses; downside seen limited - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVm5NMF9RVERlbFhkRWhMYXZEb1FtLTNrSWt0dGFqSVA3aXVEb1JnLWh1VWwxZC1lZ2c1dTV6amFWWDh2Z2x6ZXFYSHhqa29XMll4WExFUFp0LXN2Z2ttQ0cxdmgtbDRoRkplSGZyNzJEVnVSdTBOTXUxX1hwQ182cnFkN0daak9icEEtV00xdzhQdEJJcXJRR1lNX0dZX2JZUlZ5M3NTUlNVc01UY1F2RG1IenZXVHR4T21lY19VZlF2cjE3clZSdVMwN0E?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

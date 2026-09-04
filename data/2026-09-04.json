@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-04",
+  "time": "09:35",
+  "fx": {
+    "mxn_cny": 0.3983,
+    "mxn_usd": 0.05901,
+    "cny_usd": 0.148142,
+    "cny_cnh": 0.99928,
+    "cny_hkd": 1.164028,
+    "cny_eur": 0.127975,
+    "cny_gbp": 0.110024,
+    "cny_jpy": 23.258316,
+    "cny_cad": 0.205059,
+    "cny_aud": 0.206898,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-04",
+      "type": "news"
+    },
+    {
+      "title": "South Korea E-Commerce Rules Force Temu and Shein to Answer for Korean Consumers - techtimes.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaWxxZHk1cGpuWC1RSnNpd3NiVVpDYU8tTkk0SUNDQ0pnRW5yODBuRXEwSk5kVWNvZldNOE56Q2pPVDMzWE40ekc1aWF2THVSSlN0VGtsbEc0YVU4cDJwSDdOSW1KenJXT2twT3ZUcjZKTDBfZzNCU0cya1UtS040cVNtR1hqbGw0VE9WelcyakItN1RLX0dLUkw3WFF6Rkt5MTNNMzhPZUhscnZLN05RbFJ6eTBQVGhoNk1OZzZERFp4dw?oc=5",
+      "date": "2026-09-04",
+      "type": "news"
+    }
+  ],
+  "macro": [],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "U.S.-Canada trade tensions complicate USMCA talks - Brownfield Ag News",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNYkdDZHlwTERpZ2w3Z2x4QWc4VHpjV0N5dnhncHRGYXYySkdGYkVuNHJ1YkxSRXdoTVJuNGt3d25QRjgySTNtdHItdEYtVmtDdS1rLS11dkhFcEJHMTU0TVZ3WFdDZDZiYnV1N1B4WER5RU5ScHZLT25qVkxWZ2NhZ2FHTlhBYnZQRlVnd3R5X0o?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

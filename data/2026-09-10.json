@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-10",
+  "time": "09:35",
+  "fx": {
+    "mxn_cny": 0.3996,
+    "mxn_usd": 0.05918,
+    "cny_usd": 0.148088,
+    "cny_cnh": 0.999166,
+    "cny_hkd": 1.16599,
+    "cny_eur": 0.127932,
+    "cny_gbp": 0.10987,
+    "cny_jpy": 22.846816,
+    "cny_cad": 0.205214,
+    "cny_aud": 0.206331,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - bbvaresearch.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

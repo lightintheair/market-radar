@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-11",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.4,
+    "mxn_usd": 0.05893,
+    "cny_usd": 0.14733,
+    "cny_cnh": 0.999363,
+    "cny_hkd": 1.165506,
+    "cny_eur": 0.128029,
+    "cny_gbp": 0.11001,
+    "cny_jpy": 22.933435,
+    "cny_cad": 0.205552,
+    "cny_aud": 0.2074,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress gets record €550m fine from EU for allowing sale of illegal products - BBC",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hc0l2S2xKbEhYY2REMWEwVWwwbzNNSHRjOEh2S1dobWZFSFp6c1RuRUIyS05adHRXbzlKWDZXbVk0bXJNdklUOE9adEVBWWc4RGJYYXZoVjJydw?oc=5",
+      "date": "2026-09-11",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-09-11",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Global Economics Intelligence executive summary (July 2026) - mckinsey.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - oilprice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "With Canada trade on the rocks, Lutnick heads to Mexico - Politico",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMVhmMkllVkZJSTZkcktzTTRFb2g0QlF2dHBUUkNzeGZOUU41QkZKZFdOQk1PdEpWVVAtZFQwcDFKVm5iSkRqdDFrQV9wc2ZjNlV6UnRNT1BpQW5FQVZDYV9ZamppcFFwY1YtdFVrV0ZrQndSVVZ5RFk3am5xSGJKTzJGTmR0ekFFcHpxUVZzOFhsZVkxaHh2NW01aWw?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: Holds losses below 99.00 as bearish bias prevails - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQa19KQlNMdkxRQkZOT2QzMjFwRS1JaU41eEdaaVRsc0FoQkZheVNmZTlHUzNFUWZLR3JxWVc4YlJRekxldHpzS3JIaW4xNG1WRDFlQzZZdFpPRWdLSmRHcHplWXFBdmdWbzZoVTdBQ3VicGt4UW9uZGtacXI3dE1wbHd1bHAzNjJFd0ZNODJGYTBzQ3U0WU8yQjhIbmNFVmpDdkhUck5YTE9GMXlJVDRuS01udTJkbmtUY250UW5NOA?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-15",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.398,
+    "mxn_usd": 0.05838,
+    "cny_usd": 0.146671,
+    "cny_cnh": 0.999359,
+    "cny_hkd": 1.166186,
+    "cny_eur": 0.128806,
+    "cny_gbp": 0.110259,
+    "cny_jpy": 22.974127,
+    "cny_cad": 0.206684,
+    "cny_aud": 0.2087,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress ramps up local seller model in Australia - Ragtrader.com.au",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQS1LNi1iSU45S2dWa0VVa3RXYjJ2Y1ZFZGFoTUhJeVBEZEFSSjl3bGJkaDRpeHR2T3lrVVhoc0tTbHluYkNCRjNsNHFnUG1OcnBOLXh6Rmw1eDcySVNCNDZ3SnRCOVNBMXBySElPQjktbmMwSkRCcUN4V2hnYi1FQUE3MnNXNENxX2RIcUJn?oc=5",
+      "date": "2026-09-15",
+      "type": "news"
+    },
+    {
+      "title": "Best Online Marketplaces in Malaysia for SMEs - WorldFirst",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORjNtU0hXdHBOZEFiU28xbk9KX3RObm5wbHlXZFpKV0pINGJLeWI1UndEbDBJNEhGcXNMc3lRQnZvUHFrdDYzeFBiUmR6MVZ0ekhKWll3cXhhbHRvTmdadGE1VkdadHZwUHAyZ05vN0pxLVpOeHVwZGU5c0dhbWdZaExBOGxGVThhb3Q5VmpmdF9qS2gzNVRTLXRLNA?oc=5",
+      "date": "2026-09-15",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Global Economics Intelligence executive summary (July 2026) - mckinsey.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - bbvaresearch.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Fed Hike Odds Lift DXY as EUR/USD and GBP/USD Weaken - Yahoo! Finance Canada",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLXBvZkxnSmF4SzFscHFUTl9XSDU3RFNwYWtGOUZQM25USk9IVFBTQUNoM2lrQ2cza3lHS1FpTm1rdlh6cTBaYnZRY2JORm4wczdGSnJnaEpXLUZ3YVoyQURRS1RjVS1rdExNRWdPN01UQXV1ZHFmZ3pXbjdqSVlxOHJfaw?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

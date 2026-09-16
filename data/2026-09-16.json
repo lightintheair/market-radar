@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-16",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3942,
+    "mxn_usd": 0.05828,
+    "cny_usd": 0.147851,
+    "cny_cnh": 0.999314,
+    "cny_hkd": 1.166059,
+    "cny_eur": 0.128932,
+    "cny_gbp": 0.110365,
+    "cny_jpy": 23.060338,
+    "cny_cad": 0.206933,
+    "cny_aud": 0.208845,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Global Economics Intelligence executive summary (July 2026) - McKinsey &amp; Company",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Temu墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexico | Banxico cuts rates: what changes for companies and investors? - BBVA Research",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORWpwLWtOT1pWMXQzQk1NNXBUQ0UwLVZsSUR2MjFDTUxkV1kxTTZLdEswR0s5WGdjS0doVEFMV3ZKbDB0Y2xXTldocHppV2ZWYmd3elhxYlFtVFRzQjNuRnZQb0VEMW9nSUNIVmRSWElpWUd0VG5FY3Vvbk9FbWI2QjNmMDlVNm5YUHpMR1hta0ItX194Si1WUXJvSzllN0FRblowS1NMczNhOUtsdUlMQV9TRQ?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY eyes 99.80 confluence hurdle as focus remains on Fed - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYVNMRTJSdVJyZFo3VkhrX3BFQjVRUkZXOURNNXppOC1fT3lLOVBrQzlZNFAtM0pKWGlvZ1lNeXVMNE9IdVJRaEhTSTRoSnpNd3YxQkxxMnRFODBlX2FIYUQ1SllvbDV4SUMyMFpKa3UtMXdHQTRYLVl4QTlJN3VfTG1SSkNHcWNoYkVJa0NFZkQ1YUxLR2hMcEIwdFlBaTF5UjN1SzFFem5COFJaQXRCekNrdXpNaEdKZ2VtM2JNM09ZbVFlNkFZcg?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-17",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3939,
+    "mxn_usd": 0.05817,
+    "cny_usd": 0.147664,
+    "cny_cnh": 0.999222,
+    "cny_hkd": 1.166927,
+    "cny_eur": 0.12939,
+    "cny_gbp": 0.110877,
+    "cny_jpy": 23.166083,
+    "cny_cad": 0.207658,
+    "cny_aud": 0.209462,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico inflation accelerates in early August - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Get an Imported Xbox Series X From $315, PS5 Slim Disc Edition for $398 at AliExpress - IGN Southeast Asia",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZkt3Um0tczE4Z2FIVTdlcTNTRDFVY0lacFdkY3gzMXZQcTQxWExyN0w2RUg0V3BnRnBrdWVLMGdla29RbFlaRF9HaVZsSk1hTHJ4WmFVanBfdm12UUpFLTFLSnAtSlpqODNUbzBwQUdCbG14NVI1TGJkNnpKYTBETGFRLVpEeWlIc0pQMUMzYjloOVVUSHB2VVY3WDRvYnFUTjJ6YUM4M1p1UQ?oc=5"
+    },
+    {
+      "title": "Trump's 50% tariffs on Canada take effect as Carney vows to retaliate - ABC News - Breaking News, Latest News and Videos",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeDdPQV9hVEo4eEFTSlhrVkowRE9mVVlJQzJkZTJnOG1TTUl1ZWYtNG1CcWk2MWlmZG51eVd2S0NJT0pWeHphblVQWThQMTc2OVhDd3VQQXZRU0gteVYtQlkxa29fcVpVV3VKSkl6NVdRTWhvT0E5X3VfVVI0UlVVdnhoUERGMFpxWVR1YXFiSENWQ2lTUTFNLTBEcU1ObHlfTW9OZ01VcmLSAa4BQVVfeXFMT0NxQThhZzl5Q29YNEt0Nl9FV3NrYzRMa1JXX0Vmd2pROGhvVHM3TFJ5NGRrOWVnY0FCOS1LM25MdVdINW8tNjZSS2NDSmhZbUZ4cFdOMWU4N1RObVVpNG43YTJRelY2R21VRDVjcm51cVk0b0ZISVdmNWFFcTdVOFJRdEZLamtrZXg0eER4cW9RbEt2R0lONGxjSXpYZ3RZbXRxbk9iaWdmREw0YVZB?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

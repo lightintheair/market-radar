@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-18",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3919,
+    "mxn_usd": 0.05819,
+    "cny_usd": 0.148482,
+    "cny_cnh": 0.999132,
+    "cny_hkd": 1.167123,
+    "cny_eur": 0.129684,
+    "cny_gbp": 0.111354,
+    "cny_jpy": 23.195555,
+    "cny_cad": 0.208104,
+    "cny_aud": 0.209556,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress fined record €550m by EU for allowing sale of illegal goods - BBC",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hc0l2S2xKbEhYY2REMWEwVWwwbzNNSHRjOEh2S1dobWZFSFp6c1RuRUIyS05adHRXbzlKWDZXbVk0bXJNdklUOE9adEVBWWc4RGJYYXZoVjJydw?oc=5",
+      "date": "2026-09-18",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - letemsvetemapplem.eu",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-09-18",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico inflation accelerates in early August - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Get an Imported Xbox Series X From $315, PS5 Slim Disc Edition for $398 at AliExpress - IGN Southeast Asia",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Mexican Peso to Dollar Forecast: MXN/USD Expected to Reach 0.057900 - Expert Analysis &amp; Predictions - Exchange Rates UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTE1NN05yQTNkemJ1T1pra3pBdnB0NDFXcHhqZmpHdFYxejFkOUxyZTZRRmpjbnA3R3VhOVMyanBGeWJsRTA0WS11WlQyU2tvZ0xLcTZEQVJxLUdBQjhrV2lVZWlLY3JIOFZWQ1loYTVNWEJSLUlBeER2bjI0dnlITm0zZEtmdnJUSVNIOXc3cw?oc=5"
+    },
+    {
+      "title": "Bank of Mexico cuts interest rate in split vote, ending easing cycle - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZkt3Um0tczE4Z2FIVTdlcTNTRDFVY0lacFdkY3gzMXZQcTQxWExyN0w2RUg0V3BnRnBrdWVLMGdla29RbFlaRF9HaVZsSk1hTHJ4WmFVanBfdm12UUpFLTFLSnAtSlpqODNUbzBwQUdCbG14NVI1TGJkNnpKYTBETGFRLVpEeWlIc0pQMUMzYjloOVVUSHB2VVY3WDRvYnFUTjJ6YUM4M1p1UQ?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "Trump Says He Does Not Care About USMCA as US, Canada Plan Trade Talks - EnergyNow",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUW9JV3ZqZXctbEZTeGh4NUZoX24wbC1XSWJLaVpqVDRpMEsyc2VsM0xQaUFGeEZnaXFNU21ZWUN5WkNqR1VfX0k4WEMzckpfSXNoYTdCVmQyTWl5MWlZVWQ3WWxuYWdveWwwVU84eElDQ2JQZWdwdno4UUFOV2dYZWthSHZmbU5LUm5rOWFPam85SHVFY3V1bjBKOUY0eURv?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Fed Hike Bets Lift DXY as EUR and GBP Weaken - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTWR0NENtV1Zvd1dJYVZuR2pHbDd6OE5qQ09kNW5QYTVhbFIyeDZCUmNwVk9pb2djdFN2eE5ONE5TRmFwV2x5djV2S0dScUhwZk1xZENiNGRiTjVlRU8xZDRiYXlILUgzaTRlZnlsSWlaOUExUEU3NmZJR3hYbHBSLXlTbXljSXdzbURoMEE5d1hROU8wR1JzazM0eTFRQQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

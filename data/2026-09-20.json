@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-20",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3928,
+    "mxn_usd": 0.05807,
+    "cny_usd": 0.147831,
+    "cny_cnh": 0.998853,
+    "cny_hkd": 1.167596,
+    "cny_eur": 0.129843,
+    "cny_gbp": 0.111432,
+    "cny_jpy": 23.404702,
+    "cny_cad": 0.20832,
+    "cny_aud": 0.209632,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico inflation accelerates in early August - reuters.com",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - reuters.com",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - FashionNetwork - The World's Fashion Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - reuters.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYTR0MGJPNnRtUjRjYUZjcU1ONEZ0WE9ucWtIZkt1WDY5aUF4XzVtTlVGTDl4Qy1lZzMyb2tSQmQwTDFnVkVVTkh6eW01MnZzZGFlNTdPcWloZ21EcFFuM3Zad2ZRcFM2Y0VVSEsyOFhENnJZaXBReFJKNVpQV2cxaExTSG43T3AyUDNiUllR?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "Mexico’s Sheinbaum says she spoke with Trump as trade negotiations continue - Al Jazeera",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVS11Ylp0OUJaUlB3QnZRVDhDZV9TdHRlYThXSTFWNy1YYkY5U20wcldPbk9EMjliUGUyS0VTM1d1U0RSS3pkTWRPQjJ0cWp0MW5ldnZ0TGhiOFhja3pYZ296aWxtR2ZQMmJWbUl4TE9rcXdwejkwTnN0SUs1NERnX0F4TmlGRTFPeVctemc1NFZFZ3NNSTZ2T2VZWndZQ0FfQWRURFZzMDQ2U2FvVkdBOVd0clZnZ9IBuwFBVV95cUxQSHJQS1dEX3U4TVVFbDRmVlRFM0NqaVNIbHNYZWNudTZsRk42SDF1S0hralZqbFljYWJ2RG92OW9QX3BIOGRBSW4wbHZEb1llR1IzWUxhQVVuRDR0N21QaUhObGlGeFRVeGQyYmFtd0dXRmFBc3YyNFRkeG5tN0kwT21sdldtVEt4czZxVDhxQ3k5OUhSTlVZMkN6TjhQZWNVdmx4bE1MUE1XaHZXcVhId3pRNlBwVUtGM0Nj?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: DXY Holds Above 100 as EUR and GBP Face Policy Tests - Yahoo Finance Singapore",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ1dpanRyX1g4QWNPazJMNlJWT2Z4SlJoWXczSm9kdGNONHYwNHI5OWMySklGSS1iLUhiLUZKZzBPOXdQdm9XdTNodzFkeWRxWXVYakFrUjlRcDFFTXRxb1M2T0Rod2liT3BwM3VPd2YyTzNnU05qazFqUjBQYnRLbXpyWQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

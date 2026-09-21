@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-21",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3928,
+    "mxn_usd": 0.05804,
+    "cny_usd": 0.147772,
+    "cny_cnh": 0.999769,
+    "cny_hkd": 1.170289,
+    "cny_eur": 0.129987,
+    "cny_gbp": 0.111467,
+    "cny_jpy": 23.416401,
+    "cny_cad": 0.208742,
+    "cny_aud": 0.209606,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress fined record €550m by EU for allowing sale of illegal goods - BBC",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hc0l2S2xKbEhYY2REMWEwVWwwbzNNSHRjOEh2S1dobWZFSFp6c1RuRUIyS05adHRXbzlKWDZXbVk0bXJNdklUOE9adEVBWWc4RGJYYXZoVjJydw?oc=5",
+      "date": "2026-09-21",
+      "type": "news"
+    },
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-21",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "How Does Shopee Make Money? 7 Revenue Streams - fourweekmba.com",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress bans Chinese sex doll seller after Reuters investigation - ww.fashionnetwork.com",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

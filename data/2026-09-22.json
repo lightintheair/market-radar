@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-22",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3911,
+    "mxn_usd": 0.05809,
+    "cny_usd": 0.148527,
+    "cny_cnh": 0.999199,
+    "cny_hkd": 1.169106,
+    "cny_eur": 0.130012,
+    "cny_gbp": 0.111506,
+    "cny_jpy": 23.450739,
+    "cny_cad": 0.209012,
+    "cny_aud": 0.209538,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress fined record €550m by EU for allowing sale of illegal goods - BBC",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hc0l2S2xKbEhYY2REMWEwVWwwbzNNSHRjOEh2S1dobWZFSFp6c1RuRUIyS05adHRXbzlKWDZXbVk0bXJNdklUOE9adEVBWWc4RGJYYXZoVjJydw?oc=5",
+      "date": "2026-09-22",
+      "type": "news"
+    },
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-22",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    }
+  ],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYTR0MGJPNnRtUjRjYUZjcU1ONEZ0WE9ucWtIZkt1WDY5aUF4XzVtTlVGTDl4Qy1lZzMyb2tSQmQwTDFnVkVVTkh6eW01MnZzZGFlNTdPcWloZ21EcFFuM3Zad2ZRcFM2Y0VVSEsyOFhENnJZaXBReFJKNVpQV2cxaExTSG43T3AyUDNiUllR?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: DXY Holds Above 100 as EUR and GBP Face Policy Tests - Yahoo Finance Singapore",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ1dpanRyX1g4QWNPazJMNlJWT2Z4SlJoWXczSm9kdGNONHYwNHI5OWMySklGSS1iLUhiLUZKZzBPOXdQdm9XdTNodzFkeWRxWXVYakFrUjlRcDFFTXRxb1M2T0Rod2liT3BwM3VPd2YyTzNnU05qazFqUjBQYnRLbXpyWQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

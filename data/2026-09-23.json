@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-23",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3911,
+    "mxn_usd": 0.05786,
+    "cny_usd": 0.147939,
+    "cny_cnh": 0.999314,
+    "cny_hkd": 1.168348,
+    "cny_eur": 0.130157,
+    "cny_gbp": 0.111654,
+    "cny_jpy": 23.444213,
+    "cny_cad": 0.209367,
+    "cny_aud": 0.209696,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress fined record €550m by EU for allowing sale of illegal goods - BBC",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hc0l2S2xKbEhYY2REMWEwVWwwbzNNSHRjOEh2S1dobWZFSFp6c1RuRUIyS05adHRXbzlKWDZXbVk0bXJNdklUOE9adEVBWWc4RGJYYXZoVjJydw?oc=5",
+      "date": "2026-09-23",
+      "type": "news"
+    },
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-23",
+      "type": "news"
+    }
+  ],
+  "macro": [],
+  "competitor": [
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - businessofapps.com",
+      "source": "Shopee墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Yahoo Finance",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFhtUU5VbDYtZkx6NUw2Nm02YmhncGNoUHZDU29RM0VmcVlaYVVlUXpHNHlzdnNDem9zcURTTUItMFlUWk1MQW4wSmM1UHdUNWpleGVWdlJfUkJqSzE3V25LNzREeGVvMXFQcXFrWjQ5U0xCSm5KOXVGS0YyNXgzMXh6MmxFVG9SamhGXzl3?oc=5"
+    },
+    {
+      "title": "Trump Says He Does Not Care About USMCA as US, Canada Plan Trade Talks - EnergyNow",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUW9JV3ZqZXctbEZTeGh4NUZoX24wbC1XSWJLaVpqVDRpMEsyc2VsM0xQaUFGeEZnaXFNU21ZWUN5WkNqR1VfX0k4WEMzckpfSXNoYTdCVmQyTWl5MWlZVWQ3WWxuYWdveWwwVU84eElDQ2JQZWdwdno4UUFOV2dYZWthSHZmbU5LUm5rOWFPam85SHVFY3V1bjBKOUY0eURv?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

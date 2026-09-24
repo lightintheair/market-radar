@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-24",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3892,
+    "mxn_usd": 0.05714,
+    "cny_usd": 0.146806,
+    "cny_cnh": 0.999309,
+    "cny_hkd": 1.166593,
+    "cny_eur": 0.130583,
+    "cny_gbp": 0.112215,
+    "cny_jpy": 23.523984,
+    "cny_cad": 0.209649,
+    "cny_aud": 0.211026,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "How to dropship from AliExpress in the UK: A complete guide - WorldFirst",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Yahoo Finance",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFhtUU5VbDYtZkx6NUw2Nm02YmhncGNoUHZDU29RM0VmcVlaYVVlUXpHNHlzdnNDem9zcURTTUItMFlUWk1MQW4wSmM1UHdUNWpleGVWdlJfUkJqSzE3V25LNzREeGVvMXFQcXFrWjQ5U0xCSm5KOXVGS0YyNXgzMXh6MmxFVG9SamhGXzl3?oc=5"
+    },
+    {
+      "title": "What Would an Interim U.S.-Mexico Trade Deal Actually Involve? - CSIS | Center for Strategic and International Studies",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc3RfMHVTanNSZVJnOTN2NkdQekE3MXNaOWtLZko1NV9LTFJ4S1RUdlVJcFZNYUhDSWV5aTdhOEdXMjM1V29XOFNDcmlTS3plMGttUXpCVmZwaHVGNGNfTTc5aWFPdDFDUEhVd0l0WW5TUDVSZGt0NXk2MHFZN3BDZDVDems3RnNYLW5NVE15Zw?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Hawkish Fed Supports DXY as EUR and GBP Struggle - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZzU5UmRLaEJSVG5xMURPTU91clkycEdGaE92b0dUalJNMXhSUEFURmdjMF9fS09HV2Zoelh1blI0X29mcDhJWkU4cXZDVjlCdk5VZUpyVHotZE1teDU5dzNwRjgxdmxqZlplQWRNWV81T05RWW8tNndfRjN3UTgwY3NVM3c2YUw4eS03eGpzNWRPcTFNby1iR1lCcS1iaFduZjlN?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-25",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3842,
+    "mxn_usd": 0.05659,
+    "cny_usd": 0.14728,
+    "cny_cnh": 0.999782,
+    "cny_hkd": 1.167722,
+    "cny_eur": 0.13094,
+    "cny_gbp": 0.11265,
+    "cny_jpy": 23.632848,
+    "cny_cad": 0.210395,
+    "cny_aud": 0.212252,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-25",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-09-25",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping in 2026 With Shopify - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Loses Momentum Ahead of Banxico Decision - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX01DaTJyb2paODZrZWw0cERqOUdrRUNIdlZrdFkzMFM4ejlMRlh4TVQtTm9vb2hQUmViNTdKTmVRdGkzdHRzTk5TTVY3MklfMlBQYmoxa0dvWS1saUlKWE1vWmxEMVp2V1g1QzU1akpjM3NldXVKZFJmeW1NckN1NVBPVDkxNWh6QmxGaTlxbFJxNlVyMEFXeGRtbG1RNFUtOXBtSk14ZVQwUQ?oc=5"
+    },
+    {
+      "title": "Banxico unanimously holds benchmark rate at 6.50% - fxstreet.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPLUc1RGFKVjhMOERiMHZWdjNORjZCMlEzSjRNYU4zUnlMTmJXanktWFY0dUJTUUFUY2FFazdUbXNqQnpfbVBRM3NDaHV5X1Rnc0F2MTVSSE5CbHdpLXQzLUxCempjZWJYSzM0Wm1EZm5yU0d5SXYyZzI2QU9xY2dYZ1BMRlVTTFExX0RaR1Z4MkZ0LUhYMkE?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Yahoo Finance",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFhtUU5VbDYtZkx6NUw2Nm02YmhncGNoUHZDU29RM0VmcVlaYVVlUXpHNHlzdnNDem9zcURTTUItMFlUWk1MQW4wSmM1UHdUNWpleGVWdlJfUkJqSzE3V25LNzREeGVvMXFQcXFrWjQ5U0xCSm5KOXVGS0YyNXgzMXh6MmxFVG9SamhGXzl3?oc=5"
+    },
+    {
+      "title": "What Would an Interim U.S.-Mexico Trade Deal Actually Involve? - CSIS | Center for Strategic and International Studies",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc3RfMHVTanNSZVJnOTN2NkdQekE3MXNaOWtLZko1NV9LTFJ4S1RUdlVJcFZNYUhDSWV5aTdhOEdXMjM1V29XOFNDcmlTS3plMGttUXpCVmZwaHVGNGNfTTc5aWFPdDFDUEhVd0l0WW5TUDVSZGt0NXk2MHFZN3BDZDVDems3RnNYLW5NVE15Zw?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Hawkish Fed Supports DXY as EUR and GBP Struggle - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZzU5UmRLaEJSVG5xMURPTU91clkycEdGaE92b0dUalJNMXhSUEFURmdjMF9fS09HV2Zoelh1blI0X29mcDhJWkU4cXZDVjlCdk5VZUpyVHotZE1teDU5dzNwRjgxdmxqZlplQWRNWV81T05RWW8tNndfRjN3UTgwY3NVM3c2YUw4eS03eGpzNWRPcTFNby1iR1lCcS1iaFduZjlN?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

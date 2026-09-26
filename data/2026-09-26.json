@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-26",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3842,
+    "mxn_usd": 0.05659,
+    "cny_usd": 0.147296,
+    "cny_cnh": 0.99948,
+    "cny_hkd": 1.166485,
+    "cny_eur": 0.130629,
+    "cny_gbp": 0.112363,
+    "cny_jpy": 23.436619,
+    "cny_cad": 0.210183,
+    "cny_aud": 0.21197,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [],
+  "competitor": [
+    {
+      "title": "How to dropship from AliExpress in the UK: A complete guide - WorldFirst",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Loses Momentum Ahead of Banxico Decision - stonex.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc3AwM25BSG94eXA4QWp1VDcyS0gtQlVKMTBwQnFQeElmQ0dHX1NFUHpKal9PSE1mdG1iYmdZVkJpVkphNnJuWFEwQVZ6Rm5kTElwaEVXRC0ycnpHLVlNbk9iRzZ3NmtmX1h2Z09feUthcHFPeVpjaDM0dXU1cFhRYkdQYnNEcm5wVDIxSXlxUEd3dnB6S0hJejVhdGc5aFNqdE9ROVdtaVVCYUFFZmtWdGw3cWItNTVETFNWdl9R?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Strong U.S. Data Lifts DXY as EUR/USD and GBP/USD Weaken - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQeXRhZFdSVWRNNHl0TmRGZzd4Rnppb0J1TTJieWQxdzJPMENwOXY5Zzc3NXJ4eENrR0N2Q1h6c29xak1VdFBXVlZYVVBEUmhST2UzTjd3X3RLWHpRR3lMLVZNVm1SVkpzT3FySjd4bXg4NTE1R2dHTE1CaXJUNGJISGYwU3drSlpKaEtEQjhsQ1hnbEpEajRqMDR0cXp0b1Uxbmc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

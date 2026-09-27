@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-27",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3842,
+    "mxn_usd": 0.05652,
+    "cny_usd": 0.147119,
+    "cny_cnh": 0.999069,
+    "cny_hkd": 1.165337,
+    "cny_eur": 0.130531,
+    "cny_gbp": 0.112301,
+    "cny_jpy": 23.416463,
+    "cny_cad": 0.209809,
+    "cny_aud": 0.211976,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-09-27",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-09-27",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - ecommercenews.eu",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "How to dropship from AliExpress in the UK: A complete guide - WorldFirst",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Loses Momentum Ahead of Banxico Decision - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUUlTUjhEckdOT3RTT2hoX2ZDdnZqNnVtcU1TUWF6OVJZeHJGS1Q1QTQtUU0xOGhEekhza1Zoem9yMks3S2JlMUNFbWlVMWpsLXVsOGVVT1cwY0J4cUkxUEpISzdpMWJRX3FjLXg4WTc3amdkaUMzeEpYRThkMWNRVHpxMkRLSnlsZllzWVBva1EyOXl5M3Z3Zm1rWnB2VUM3anNqQ0ZXWVpBZ9IBtgFBVV95cUxPY3llM1h1ZXBmaTA2bTlQN2xTQzJZdHZzOHNRRmpLZDhiMWdHN2tQV0gyU0N5QWEwSmlud2hza3ZpVlRLRUxlVll5bUMtdU1oSlhUQjROWEYyNFhfS09tckRzZEI3WFlvN0J3VE1MY2pHMzZ4OEJUNVNoSzRwdGN3bXVpeWR3X01LdkdDY2pxeXpXQTl4blJCQk8wMlpucWp1Y2dvQXdvWjJmdURPUktKTGxJN2tFdw?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Yahoo Finance",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFhtUU5VbDYtZkx6NUw2Nm02YmhncGNoUHZDU29RM0VmcVlaYVVlUXpHNHlzdnNDem9zcURTTUItMFlUWk1MQW4wSmM1UHdUNWpleGVWdlJfUkJqSzE3V25LNzREeGVvMXFQcXFrWjQ5U0xCSm5KOXVGS0YyNXgzMXh6MmxFVG9SamhGXzl3?oc=5"
+    },
+    {
+      "title": "What Would an Interim U.S.-Mexico Trade Deal Actually Involve? - CSIS | Center for Strategic and International Studies",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc3RfMHVTanNSZVJnOTN2NkdQekE3MXNaOWtLZko1NV9LTFJ4S1RUdlVJcFZNYUhDSWV5aTdhOEdXMjM1V29XOFNDcmlTS3plMGttUXpCVmZwaHVGNGNfTTc5aWFPdDFDUEhVd0l0WW5TUDVSZGt0NXk2MHFZN3BDZDVDems3RnNYLW5NVE15Zw?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Strong U.S. Data Lifts DXY as EUR/USD and GBP/USD Weaken - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQeXRhZFdSVWRNNHl0TmRGZzd4Rnppb0J1TTJieWQxdzJPMENwOXY5Zzc3NXJ4eENrR0N2Q1h6c29xak1VdFBXVlZYVVBEUmhST2UzTjd3X3RLWHpRR3lMLVZNVm1SVkpzT3FySjd4bXg4NTE1R2dHTE1CaXJUNGJISGYwU3drSlpKaEtEQjhsQ1hnbEpEajRqMDR0cXp0b1Uxbmc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

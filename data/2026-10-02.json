@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-02",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3728,
+    "mxn_usd": 0.05465,
+    "cny_usd": 0.146599,
+    "cny_cnh": 0.999503,
+    "cny_hkd": 1.168522,
+    "cny_eur": 0.132209,
+    "cny_gbp": 0.112763,
+    "cny_jpy": 23.502685,
+    "cny_cad": 0.211737,
+    "cny_aud": 0.21487,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Mexico's 2026 Asia Tariffs: Importer Guide - GetTransport.com",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "ProveedorPro Chosen as Best AliExpress Alternative for Dropshipping Sellers in 2026 - The Killeen Daily Herald",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast 2026-2027: UBS Raises Year-End Target To 17.50 - Exchange Rates UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZlFGMERZSjRqSXU2c0x6WVhUZjhMYjA2cWFrZUwyRjZ6M3AwUFhteEs3a0pPaUlINTRxX1hTVE5aenJHUW9sWEZ0NGk5ZHZFbURYRHRJejQtMDdwZ1NObExfcEFidVRHUWsxaVpPS21wZWw4TDdxdlZGNEpJRjVlZUFBYVhteGRqcGNtT2ZwRC1rZk5FaVJVcnNFemkxX2d5bkZYX0VCc3VScndDSTNRYUZtRVdIN3VRMEFTZWwxaw?oc=5"
+    },
+    {
+      "title": "What Would an Interim U.S.-Mexico Trade Deal Actually Involve? - CSIS | Center for Strategic and International Studies",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc3RfMHVTanNSZVJnOTN2NkdQekE3MXNaOWtLZko1NV9LTFJ4S1RUdlVJcFZNYUhDSWV5aTdhOEdXMjM1V29XOFNDcmlTS3plMGttUXpCVmZwaHVGNGNfTTc5aWFPdDFDUEhVd0l0WW5TUDVSZGt0NXk2MHFZN3BDZDVDems3RnNYLW5NVE15Zw?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,44 @@
+{
+  "week": "2026-W41",
+  "date": "2026-10-05",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico inflation accelerates in early August - Reuters",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "What is the average US tariff rate for Mexico? - USAFacts",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "AliExpress Dropshipping in 2026 With Shopify - Shopify",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

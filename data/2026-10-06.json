@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-06",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3728,
+    "mxn_usd": 0.05523,
+    "cny_usd": 0.148149,
+    "cny_cnh": 0.998941,
+    "cny_hkd": 1.168675,
+    "cny_eur": 0.132821,
+    "cny_gbp": 0.112715,
+    "cny_jpy": 23.529815,
+    "cny_cad": 0.21222,
+    "cny_aud": 0.214043,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - tradingview.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-10-06",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-10-06",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "What is the average US tariff rate for Mexico? - USAFacts",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - ecommercenews.eu",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "10 Top Ecommerce Companies List and Guide (2026) - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Loses Momentum Ahead of Banxico Decision - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUUlTUjhEckdOT3RTT2hoX2ZDdnZqNnVtcU1TUWF6OVJZeHJGS1Q1QTQtUU0xOGhEekhza1Zoem9yMks3S2JlMUNFbWlVMWpsLXVsOGVVT1cwY0J4cUkxUEpISzdpMWJRX3FjLXg4WTc3amdkaUMzeEpYRThkMWNRVHpxMkRLSnlsZllzWVBva1EyOXl5M3Z3Zm1rWnB2VUM3anNqQ0ZXWVpBZ9IBtgFBVV95cUxPY3llM1h1ZXBmaTA2bTlQN2xTQzJZdHZzOHNRRmpLZDhiMWdHN2tQV0gyU0N5QWEwSmlud2hza3ZpVlRLRUxlVll5bUMtdU1oSlhUQjROWEYyNFhfS09tckRzZEI3WFlvN0J3VE1MY2pHMzZ4OEJUNVNoSzRwdGN3bXVpeWR3X01LdkdDY2pxeXpXQTl4blJCQk8wMlpucWp1Y2dvQXdvWjJmdURPUktKTGxJN2tFdw?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Rising Fuel Prices Pressure PEMEX Refining Push: Experts - Mexico Business News",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS2VMMHBuanBieE8yNUQ1TTBGZy1qV3dpYjEyWWdxamoxRVo1VEMtbk84R2VGa1duSUhSQ1hMRnZaRU13Y182OFpHd3hJWjM3cWFjeE5RbFk1S3Nfck5FZGpCZjdrWFQ1QldvT1JVcTZSRVFlSDI5bVdTTjRaWlE0SFZkbUdFczN5bUtGeWtQTFZNZ29tcTlpSWtlM0JncVE?oc=5"
+    },
+    {
+      "title": "What Would an Interim U.S.-Mexico Trade Deal Actually Involve? - CSIS | Center for Strategic and International Studies",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc3RfMHVTanNSZVJnOTN2NkdQekE3MXNaOWtLZko1NV9LTFJ4S1RUdlVJcFZNYUhDSWV5aTdhOEdXMjM1V29XOFNDcmlTS3plMGttUXpCVmZwaHVGNGNfTTc5aWFPdDFDUEhVd0l0WW5TUDVSZGt0NXk2MHFZN3BDZDVDems3RnNYLW5NVE15Zw?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: DXY Holds Firm Ahead of NFP, Can GBP/USD and EUR/USD Recover? - Yahoo Finance Singapore",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQQ2FJVklHU0lKQktkYV9nUU1oVXRadmVlLXNLSnY3UkdhUmdBZzRFN3lZNjlnUkk1ay03Vm1GSXk2aFE3bEU1U0xlajd4dmdTVWFTM3dZLXJWT01yUnpNVlV4a29RODN4cllGc0hoSGw1ckdsSEV2aVFyMjZLMXFtRmJQNA?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

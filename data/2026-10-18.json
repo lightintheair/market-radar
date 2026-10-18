@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-18",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3642,
+    "mxn_usd": 0.05416,
+    "cny_usd": 0.148699,
+    "cny_cnh": 0.998513,
+    "cny_hkd": 1.170641,
+    "cny_eur": 0.132828,
+    "cny_gbp": 0.112054,
+    "cny_jpy": 23.58408,
+    "cny_cad": 0.211466,
+    "cny_aud": 0.215138,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-10-18",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-10-18",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "What is the average US tariff rate for Mexico? - USAFacts",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex sets November crude oil prices for international buyers - TradingView",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVmZUSzN1U2F2V3FwN0VlZjFoa2EzdjJqZ2QxVnlGVThPZmswNEd5azdmMHJzdjZfam12X3RGWmlmWXdjY0JaZEpMUUxRRVFyV0dVZURLaHlFQXVqRHZHNVEySmFtUEFYdWhDMHZxOHlNWjFaNmVEZjktSmlUN0VwV3puMklZcFBUdWkxTUdUay1DMTBQUHdhNzE2MmtZWXZ1Z0hobk5JbE94VTZGRzRqeXdqZVgtTHVKdjBTOGg3Qk1FU1Jjb2p6WGZySnEzcERLd3hTSkJTWQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

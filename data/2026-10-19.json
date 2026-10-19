@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-19",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3642,
+    "mxn_usd": 0.05418,
+    "cny_usd": 0.148764,
+    "cny_cnh": 0.999629,
+    "cny_hkd": 1.172854,
+    "cny_eur": 0.133236,
+    "cny_gbp": 0.112181,
+    "cny_jpy": 23.602879,
+    "cny_cad": 0.211217,
+    "cny_aud": 0.214792,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-10-19",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-10-19",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "BE gjobit “AliExpress” me 550 milionë euro për shitjen e produkteve të paligjshme - Reporteri",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-22",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3641,
+    "mxn_usd": 0.05362,
+    "cny_usd": 0.147278,
+    "cny_cnh": 0.999212,
+    "cny_hkd": 1.173012,
+    "cny_eur": 0.133244,
+    "cny_gbp": 0.111751,
+    "cny_jpy": 23.656858,
+    "cny_cad": 0.210155,
+    "cny_aud": 0.213223,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "What is the average US tariff rate for Mexico? - USAFacts",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "The Biggest Ecommerce Markets: Country-Wise Penetration Rates for 2025 - Netguru",
+      "source": "Shopee墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Trump Says He Does Not Care About USMCA as US, Canada Plan Trade Talks - EnergyNow",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUW9JV3ZqZXctbEZTeGh4NUZoX24wbC1XSWJLaVpqVDRpMEsyc2VsM0xQaUFGeEZnaXFNU21ZWUN5WkNqR1VfX0k4WEMzckpfSXNoYTdCVmQyTWl5MWlZVWQ3WWxuYWdveWwwVU84eElDQ2JQZWdwdno4UUFOV2dYZWthSHZmbU5LUm5rOWFPam85SHVFY3V1bjBKOUY0eURv?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY bulls seem uncommitted below 23.6% Fibo., near 101.75 - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONkhRdTk3dFpaZTg5UlJEeEY1a3pEMXM5OXhSd19KZHJkOXh6akxxb0JoUkpHVHRkREZWa2tCb3ZGZFhuWkJuZzVfNzVqS0JSYjlvdDlEc1dtMVlSeXZfZzBsWDNNVE1uazl4cTlwUThsM3RkOEFZY09KUjJwZTY4YUd4WFdBNG81Sy15S254X2ZadnNncm1qZ0NOSzVSM0Q0VEZiV1UzMDFvblNUS0I2aGlsbFUtd2lzYlNlV3VaMkQwWmVj?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

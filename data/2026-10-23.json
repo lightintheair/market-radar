@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-23",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3588,
+    "mxn_usd": 0.05338,
+    "cny_usd": 0.148771,
+    "cny_cnh": 0.999229,
+    "cny_hkd": 1.171944,
+    "cny_eur": 0.13338,
+    "cny_gbp": 0.11175,
+    "cny_jpy": 23.489187,
+    "cny_cad": 0.209635,
+    "cny_aud": 0.213427,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-10-23",
+      "type": "news"
+    },
+    {
+      "title": "TikTok Shop US Logistics Policy Change - Tamebay",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9wRkRnMkJjRWpla2I1VGd4NDVQZG0zcmZNRFNBUUVhSkdEdndmeG81UU5BdHJzay1teHBYRXpqTEw0UUwyTXZlVDF1MEtvSFVLak1RYWdYVzA2OUhjV2VYMWFGQllyaXVJWEVoYUZpSUxqV0J1X1BSTzZB?oc=5",
+      "date": "2026-10-23",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "What is the average US tariff rate for Mexico? - USAFacts",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Google, Shopee-owner Sea to develop AI tools for e-commerce - FashionNetwork - The World's Fashion Business News",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Mexico Inflation Ticks Up as Banxico Weighs Next Rate Move - Bloomberg.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORHQ3bTNpdDRiV3lXbm43WGpKRkVZMGtfLTM5Z2liejM5NXJTblBNRG5YRWN5aHVicWdOWHpTbmtVTmdTS01zcDdGRzNSdVNzRGh2d2RDeElMVlk5ZktRMlhnQmdkOFNZQkhmOWdmMThPQmloQ1Z5MEZJdzNJdGcydy1ldzRsdk9ocFQtdHg4aXZ1YlJnSF9NS0c4SV94NnlOZ2RKSkZuQTdlZVhDRnc?oc=5"
+    },
+    {
+      "title": "Oil Prices Rise as Iran-US Tensions Threaten Supply - Mexico Business News",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPd0ZDMzNtM0lxNVdSNDV4ZmxvZU84V3c3UDZrUUIyWlVJSzRUYk9lTXhRSUFvcnhJeTd1QUJWRzVHdmtnMmkwZXhWek9EOG5xa0YxdVhSd0J0TmNhMzFkZk9vejl4VjNnWWZoQVNTYTl2TXdGXzFhNEZpdldVNGtDZnRDLS05cFJ2Q1QyNG5GV0ZsQ19yS0E?oc=5"
+    },
+    {
+      "title": "Trump's 50% tariffs on Canada take effect as Carney vows to retaliate - ABC News - Breaking News, Latest News and Videos",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeDdPQV9hVEo4eEFTSlhrVkowRE9mVVlJQzJkZTJnOG1TTUl1ZWYtNG1CcWk2MWlmZG51eVd2S0NJT0pWeHphblVQWThQMTc2OVhDd3VQQXZRU0gteVYtQlkxa29fcVpVV3VKSkl6NVdRTWhvT0E5X3VfVVI0UlVVdnhoUERGMFpxWVR1YXFiSENWQ2lTUTFNLTBEcU1ObHlfTW9OZ01VcmLSAa4BQVVfeXFMT0NxQThhZzl5Q29YNEt0Nl9FV3NrYzRMa1JXX0Vmd2pROGhvVHM3TFJ5NGRrOWVnY0FCOS1LM25MdVdINW8tNjZSS2NDSmhZbUZ4cFdOMWU4N1RObVVpNG43YTJRelY2R21VRDVjcm51cVk0b0ZISVdmNWFFcTdVOFJRdEZLamtrZXg0eER4cW9RbEt2R0lONGxjSXpYZ3RZbXRxbk9iaWdmREw0YVZB?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY bulls seem uncommitted below 23.6% Fibo., near 101.75 - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONkhRdTk3dFpaZTg5UlJEeEY1a3pEMXM5OXhSd19KZHJkOXh6akxxb0JoUkpHVHRkREZWa2tCb3ZGZFhuWkJuZzVfNzVqS0JSYjlvdDlEc1dtMVlSeXZfZzBsWDNNVE1uazl4cTlwUThsM3RkOEFZY09KUjJwZTY4YUd4WFdBNG81Sy15S254X2ZadnNncm1qZ0NOSzVSM0Q0VEZiV1UzMDFvblNUS0I2aGlsbFUtd2lzYlNlV3VaMkQwWmVj?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

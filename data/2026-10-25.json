@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-25",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3582,
+    "mxn_usd": 0.05353,
+    "cny_usd": 0.14943,
+    "cny_cnh": 0.998659,
+    "cny_hkd": 1.172038,
+    "cny_eur": 0.133576,
+    "cny_gbp": 0.11183,
+    "cny_jpy": 23.448292,
+    "cny_cad": 0.209242,
+    "cny_aud": 0.213264,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "BABA's International Commerce Narrows Losses: Can It Sustain Momentum? - TradingView",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcFliSUF0bU9GbzdRTUh0amRtY1N0U0E1d29GSUZuS2t4eDBqXzNaRGhZNUNYekE4X19PaWpqa3YyckM2eDdkRnhIYWJxd0pMbWFSRVhZVVJhUWFhVzc0MXdUUkFOeng1X3ZqWkM4SmVvek1zNC1pamxlSjBFSmZLYzRVLVd5eDF1VlJEOXUxeTV5Z0otTkRtSDR4R0FCOE9fTXd4MVBUb3ZtRGJPZ0JXLTdTcDBBOFRkbGVLcHVsakVDUQ?oc=5",
+      "date": "2026-10-25",
+      "type": "news"
+    },
+    {
+      "title": "Temu found a way to circumvent the new tariff. Cheap purchases from China are not ending, they are just changing - Letem světem Applem",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVzNwSU9IaDRXbDNPQmdabVNaU0U0dFVtb0hOTU12cE53ZVVPdnA2Tk9OektoczQ2Y04yUnJ6bEIybG9CRFh3el83Tzd0QTR4OWdLQ190eEp4VWJCR1pfYVprdGtXZw?oc=5",
+      "date": "2026-10-25",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated October 14, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee shuts down in two countries - The Low Down - Momentum Works",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Mexico Inflation Ticks Up as Banxico Weighs Next Rate Move - Bloomberg",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORHQ3bTNpdDRiV3lXbm43WGpKRkVZMGtfLTM5Z2liejM5NXJTblBNRG5YRWN5aHVicWdOWHpTbmtVTmdTS01zcDdGRzNSdVNzRGh2d2RDeElMVlk5ZktRMlhnQmdkOFNZQkhmOWdmMThPQmloQ1Z5MEZJdzNJdGcydy1ldzRsdk9ocFQtdHg4aXZ1YlJnSF9NS0c4SV94NnlOZ2RKSkZuQTdlZVhDRnc?oc=5"
+    },
+    {
+      "title": "Oil Prices Rise as Iran-US Tensions Threaten Supply - Mexico Business News",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPd0ZDMzNtM0lxNVdSNDV4ZmxvZU84V3c3UDZrUUIyWlVJSzRUYk9lTXhRSUFvcnhJeTd1QUJWRzVHdmtnMmkwZXhWek9EOG5xa0YxdVhSd0J0TmNhMzFkZk9vejl4VjNnWWZoQVNTYTl2TXdGXzFhNEZpdldVNGtDZnRDLS05cFJ2Q1QyNG5GV0ZsQ19yS0E?oc=5"
+    },
+    {
+      "title": "Trump's 50% tariffs on Canada take effect as Carney vows to retaliate - ABC News - Breaking News, Latest News and Videos",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeDdPQV9hVEo4eEFTSlhrVkowRE9mVVlJQzJkZTJnOG1TTUl1ZWYtNG1CcWk2MWlmZG51eVd2S0NJT0pWeHphblVQWThQMTc2OVhDd3VQQXZRU0gteVYtQlkxa29fcVpVV3VKSkl6NVdRTWhvT0E5X3VfVVI0UlVVdnhoUERGMFpxWVR1YXFiSENWQ2lTUTFNLTBEcU1ObHlfTW9OZ01VcmLSAa4BQVVfeXFMT0NxQThhZzl5Q29YNEt0Nl9FV3NrYzRMa1JXX0Vmd2pROGhvVHM3TFJ5NGRrOWVnY0FCOS1LM25MdVdINW8tNjZSS2NDSmhZbUZ4cFdOMWU4N1RObVVpNG43YTJRelY2R21VRDVjcm51cVk0b0ZISVdmNWFFcTdVOFJRdEZLamtrZXg0eER4cW9RbEt2R0lONGxjSXpYZ3RZbXRxbk9iaWdmREw0YVZB?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Dollar Pauses Before Central Bank Week as UK Inflation Firms Hike Bets, DXY Tests 101.51 - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTjVEcFFxRHNZeVRSZzVrQm5ueF90aExjRlZvd1l4WWZYRnhGSmJzTkdrVDVVMzFabS1TQWxrUUZtQkJlZTBrWjJYX1Y1bzlYS0FUTTJhZU9WOEFRdGF0anFSam1ieTlhVF90eTZqTlFJYW4yOUZsN3UxQ3pWdlBlN3YwZEJmeWd2TTFTenBoUHJhcU9kUElQaHI5SWVmRmhyVWc?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

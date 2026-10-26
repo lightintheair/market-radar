@@ -1,0 +1,44 @@
+{
+  "week": "2026-W44",
+  "date": "2026-10-26",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico inflation accelerates in early August - Reuters",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico central bank holds rate at 6.5%, delays inflation target return - Reuters",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated October 14, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "How to sell on Temu UK: A step-by-step seller guide - WorldFirst",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Brazil Social Commerce Market Intelligence Report 2026: Mercado Livre, Shopee and Temu Compete with Meta, YouTube and TikTok as Platform Ecosystems Integrate Commerce Infrastructure - Forecast to 2031 - Yahoo Finance UK",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "AliExpress launches first free membership programme in Europe - Retail Insight Network",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

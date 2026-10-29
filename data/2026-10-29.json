@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-29",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3588,
+    "mxn_usd": 0.05361,
+    "cny_usd": 0.149412,
+    "cny_cnh": 0.999174,
+    "cny_hkd": 1.174284,
+    "cny_eur": 0.134458,
+    "cny_gbp": 0.112564,
+    "cny_jpy": 23.646703,
+    "cny_cad": 0.209973,
+    "cny_aud": 0.212883,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVVScGhlUWlOQl9KZk9nY2dHdV96RG9VWFVPSW9jaU80R3ZxQnlXTV84OVNldmtSQWpIZEFaNGhvYzljWVB1ajdWV01ueWVEY2JyaURkNnVxc0RBQl9NN2c5X2o1RWlGdzhiS1o2VVNnSzJ3a0lLYjQ3clRySG9pczJLLWg5WnFzOFZNbld1ZGZHYkFmNUFYVE9RazZxVTZXaDJrMU9aeDdxTUJqeXpKb1RVS01pdkI2OXM3NkcyNzNNZlJDU09aVkt2ai1UMTkxa3pWLQ?oc=5",
+      "date": "2026-10-29",
+      "type": "news"
+    },
+    {
+      "title": "EU ends tax loophole exploited by SHEIN, Temu, and Aliexpress - Euronews.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYzg2NDhFci1oWVpxa21NSGJqc1Y4czFWYWgyLVQ2bjI2bEdNQ25rVUd1MnJlZzBmRXFfdXJ6S2JwekxzU1NVby1uMmx5VHI4dWs4c2RGOXEzOFVyaDl0S2ZCcUZpcjJhenFGbEpGbkpuNmYyTHRzUUJLZUpKMjljZnZxb2dEbTZmR3c4LXhoY0k4SUM2TGZUZ0JwRQ?oc=5",
+      "date": "2026-10-29",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Mexico Cuts Auto Import Duty to 0% to Attract Nearshoring Plants - Mexico Business News",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Mexico Inflation Ticks Up as Banxico Weighs Next Rate Move - Bloomberg",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORHQ3bTNpdDRiV3lXbm43WGpKRkVZMGtfLTM5Z2liejM5NXJTblBNRG5YRWN5aHVicWdOWHpTbmtVTmdTS01zcDdGRzNSdVNzRGh2d2RDeElMVlk5ZktRMlhnQmdkOFNZQkhmOWdmMThPQmloQ1Z5MEZJdzNJdGcydy1ldzRsdk9ocFQtdHg4aXZ1YlJnSF9NS0c4SV94NnlOZ2RKSkZuQTdlZVhDRnc?oc=5"
+    },
+    {
+      "title": "Pemex Needs Nearly $110 Billion to Hit Mexico's Output Targets - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVktBNHZUeG9JX1ZwNzNHYTR5U2NUVVp0VnlnX1VNQzJNMXZjeEU4THdTNFN3eFdFSTd2eEFsV0NpQlQ5VmVmYzMzcm1UNGxhNGJaTVJzaG9UWWpwSWJ0U3NRUHZLLUhXV3Q1d1hnUGVwelN0RVh5UUJZS0RGczFtaFhFTE4xa2pIdFNsZTNWbzdvcU5MSFBLWVVjbzRQSkZpR3dLYzZ30gGrAUFVX3lxTE9xLUp6OWE5cm9Xc0kzWG54dGJSRlNxN09fNmJqTmlPMjhNWmo0a2xJTXlRODNGMUxVLXY0SHpPTG56WVpYd2VmaXctWWh0ZW1SNzBZQnNYWk9aU3JKZV9uZF9rSENCd1NldmdlUnk4dkhiOUluTjh1UktwNTB3OER0QTQtMmRsd19IVHRNajBTY2RScUp4M3dlbEFlYVp3TEtBaXBVRy1ialVaSQ?oc=5"
+    },
+    {
+      "title": "Mexico, US assess viability of trade deal before midterms - Reuters",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNa05kdXI0NWFnYkZHMmRpUjlJRUR1YWRDT3haWEwtYmZyNFF6OWc2b2drMEV0LUJ1eVg5cUQxeVVkZmkxTUNRejZIZDByZG1hcFhBWUNBQklpN2h2c1dfRDVWVnI2OFFzUTRZYy05TnpXeWU2OVRidXk2LXN4WjBKb2oxV01kWnIwX2FGMDNSZ3R1LVhOQjBwVEo4RjdaMXk2Y0U1TjVmQQ?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY sits near two-week top, above 102.00 ahead of FOMC - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcnhmRzN4Mi1aZVh6OENXejZMVXAxOERmX25rZDhJeDh6a2ItUGpHbzVSTnBDNDktMTA3WXJ5RUVWaEZ6VnRabE9rellJbm02QmJheW8wZnRJZHNncXJTUmFTLVdFU2FJbHVRQ1V4czQzMDQyTV8tbXBtRlpRWGpCUWI4V3Buc3dwMjRuOE43Y2RZb1VJZG1zdHBhcWxfNFhIOHZWQnZCWnMya2FpWVA4Tnplam1YeFl2bEx4UDhjaFMwb18t?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

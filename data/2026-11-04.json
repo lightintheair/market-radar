@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-04",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3606,
+    "mxn_usd": 0.05331,
+    "cny_usd": 0.147826,
+    "cny_cnh": 0.99925,
+    "cny_hkd": 1.173828,
+    "cny_eur": 0.133849,
+    "cny_gbp": 0.111655,
+    "cny_jpy": 23.716114,
+    "cny_cad": 0.209531,
+    "cny_aud": 0.214886,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Mexico Inflation Ticks Up as Banxico Weighs Next Rate Move - Bloomberg.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORHQ3bTNpdDRiV3lXbm43WGpKRkVZMGtfLTM5Z2liejM5NXJTblBNRG5YRWN5aHVicWdOWHpTbmtVTmdTS01zcDdGRzNSdVNzRGh2d2RDeElMVlk5ZktRMlhnQmdkOFNZQkhmOWdmMThPQmloQ1Z5MEZJdzNJdGcydy1ldzRsdk9ocFQtdHg4aXZ1YlJnSF9NS0c4SV94NnlOZ2RKSkZuQTdlZVhDRnc?oc=5"
+    },
+    {
+      "title": "Pemex Needs Nearly $110 Billion to Hit Mexico's Output Targets - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVktBNHZUeG9JX1ZwNzNHYTR5U2NUVVp0VnlnX1VNQzJNMXZjeEU4THdTNFN3eFdFSTd2eEFsV0NpQlQ5VmVmYzMzcm1UNGxhNGJaTVJzaG9UWWpwSWJ0U3NRUHZLLUhXV3Q1d1hnUGVwelN0RVh5UUJZS0RGczFtaFhFTE4xa2pIdFNsZTNWbzdvcU5MSFBLWVVjbzRQSkZpR3dLYzZ30gGrAUFVX3lxTE9xLUp6OWE5cm9Xc0kzWG54dGJSRlNxN09fNmJqTmlPMjhNWmo0a2xJTXlRODNGMUxVLXY0SHpPTG56WVpYd2VmaXctWWh0ZW1SNzBZQnNYWk9aU3JKZV9uZF9rSENCd1NldmdlUnk4dkhiOUluTjh1UktwNTB3OER0QTQtMmRsd19IVHRNajBTY2RScUp4M3dlbEFlYVp3TEtBaXBVRy1ialVaSQ?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY slides to 101.75; seems vulnerable below 100-hour SMA - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNczhERTJxZVVhbVJBd3plLTZ6bEZZVkV3VFZlWEFNMmxrOFNQUmt3VmxOZUhDVG5QbUdjV0x1b1BLa0t0QUFjUGh4aFFnNEROZDJSamFURDFjc2w5ekxTeUE4OHZ1LXNkWEdOZGs0M05KV20wZVozUE5TSFg0RThMNXRZbmxSWENZalgteDhjUXNkYk95VHBTNGd4NHVMVXUwVDdCbEFkMHdVakpfMEt2ZGx0ZEhYajBWV2ZmdzBMYVd5QU10TWdTWA?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

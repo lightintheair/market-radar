@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-06",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3603,
+    "mxn_usd": 0.05343,
+    "cny_usd": 0.148279,
+    "cny_cnh": 0.999208,
+    "cny_hkd": 1.173674,
+    "cny_eur": 0.133417,
+    "cny_gbp": 0.111252,
+    "cny_jpy": 23.643258,
+    "cny_cad": 0.209431,
+    "cny_aud": 0.215148,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "AliExpress Commission & Fee Structure",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?spm=a2700.seller_en_help_v2.0.0.3e4438e2lR7Tic&articleId=91105",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Seller Shipping & Logistics Policy",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91302",
+      "type": "policy"
+    },
+    {
+      "title": "AliExpress Return & Refund Policy for Sellers",
+      "source": "AliExpress Help",
+      "url": "https://sell.aliexpress.com/en/help/alibaba-help-details.html?articleId=91306",
+      "type": "policy"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico economy beats forecasts in third quarter, cooling rate-cut pressure - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Effective Tariff Rates and Revenues (Updated September 9, 2026) - Penn Wharton Budget Model",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Banxico Interest Rate Decision Mexico Keluar sebesar 6.25%, di Bawah Harapan (6.5%) - TradingView",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfNFQzQVljWkdBeHZPd2M2MU1pQVV2WmtNZEJvTk42ZWVsWDRfRnNLUXEyYi1wNTEwVzlBOGEtVy10N3lyRkhsTkluTkk3WWlTam1DN0ZPakU1S1ViNXZsQVhLNFJLdUhqSnc?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY slides to 101.75; seems vulnerable below 100-hour SMA - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNczhERTJxZVVhbVJBd3plLTZ6bEZZVkV3VFZlWEFNMmxrOFNQUmt3VmxOZUhDVG5QbUdjV0x1b1BLa0t0QUFjUGh4aFFnNEROZDJSamFURDFjc2w5ekxTeUE4OHZ1LXNkWEdOZGs0M05KV20wZVozUE5TSFg0RThMNXRZbmxSWENZalgteDhjUXNkYk95VHBTNGd4NHVMVXUwVDdCbEFkMHdVakpfMEt2ZGx0ZEhYajBWV2ZmdzBMYVd5QU10TWdTWA?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

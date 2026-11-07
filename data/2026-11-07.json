@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-07",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3572,
+    "mxn_usd": 0.0536,
+    "cny_usd": 0.150059,
+    "cny_cnh": 0.999177,
+    "cny_hkd": 1.172435,
+    "cny_eur": 0.134141,
+    "cny_gbp": 0.111908,
+    "cny_jpy": 23.689217,
+    "cny_cad": 0.210887,
+    "cny_aud": 0.217672,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVVScGhlUWlOQl9KZk9nY2dHdV96RG9VWFVPSW9jaU80R3ZxQnlXTV84OVNldmtSQWpIZEFaNGhvYzljWVB1ajdWV01ueWVEY2JyaURkNnVxc0RBQl9NN2c5X2o1RWlGdzhiS1o2VVNnSzJ3a0lLYjQ3clRySG9pczJLLWg5WnFzOFZNbld1ZGZHYkFmNUFYVE9RazZxVTZXaDJrMU9aeDdxTUJqeXpKb1RVS01pdkI2OXM3NkcyNzNNZlJDU09aVkt2ai1UMTkxa3pWLQ?oc=5",
+      "date": "2026-11-07",
+      "type": "news"
+    },
+    {
+      "title": "Ecommerce Marketplaces: 12 Top Sites To Sell On (2026) - Shopify",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5NN2NwNmdRT180MnRCckhudXlVV2VNS3pLdlhiamVpQXpabDZyRlVpa1NJZU56ZnNYWjk4SnJkczBRZGo0R0I3V1dEVjFGekdnZ01CdGFGclRzSE5hcjZFWXNnR0NCa20taXdzZDVGSXItRWdCNjNvd0ppSQ?oc=5",
+      "date": "2026-11-07",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico economy beats forecasts in third quarter, cooling rate-cut pressure - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Customs Regulatory Updates - DHL",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Reaches Levels Not Seen Since 2024 - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaGJfT1I1b2lNOGJmR3o5WEdzbmhXN21LUHJGS1V1SnJCMThQdHYzS3Y5cWNYMzJGbUNlZm5WUE1kWm9WcWlVS3cxR0tZSTZhbDVvNHBVVENQZGpmcHgwY2hWdDFlT0U0ME10akNIdzdWVzIyU2RDcXBJY1dMWER5MDlsZDR5Wm5hMFVsTzhjenpFYUN2TlZZSmRkOENlZ1BiaHgtd2Q2ZUdsWlgwblNn?oc=5"
+    },
+    {
+      "title": "Bank of Mexico Cuts Benchmark Interest Rate in Split Decision - WSJ",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2hQTEptR2FGeGh5WjN5X1AteU5uRHlLUFBraXhFWEowcWNfRW5Dc0N3UXUzNWgwMzRYbHgwc2FKcVd3czU0TFdvR0xrU1FjZlItTFM2dFFybW5jbWRsMUl0SjQ5aW5SYjA3WDg3bHUyYzBYd3c5eFI2RXc0UDU1djVCWVBhMW1uWXhCLVg3NldKSXdXbHRUa2VHUzJ4RXZEVi1ubzZiNVc2a2VGdGYw?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "Mexico Posts Record $184B Surplus With the U.S. — and Trump Is Furious - Latin Times",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9VNXRzQTcyM1Q2T2MwMHNCVkgxbVlQOXd4S1hjenFsQmVVRG9KRDRGU1ZuT05yV0JYUFljZ2VkMm8wNEZNTWQ5UmVsZS1aLTlwWUp0a0pzQlIxWjF1TlBYSXo0aWZJN2l4NEhhOHBNSkR2UjEtcnc?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY slides to 101.75; seems vulnerable below 100-hour SMA - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNczhERTJxZVVhbVJBd3plLTZ6bEZZVkV3VFZlWEFNMmxrOFNQUmt3VmxOZUhDVG5QbUdjV0x1b1BLa0t0QUFjUGh4aFFnNEROZDJSamFURDFjc2w5ekxTeUE4OHZ1LXNkWEdOZGs0M05KV20wZVozUE5TSFg0RThMNXRZbmxSWENZalgteDhjUXNkYk95VHBTNGd4NHVMVXUwVDdCbEFkMHdVakpfMEt2ZGx0ZEhYajBWV2ZmdzBMYVd5QU10TWdTWA?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

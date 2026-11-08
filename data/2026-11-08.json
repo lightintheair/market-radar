@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-08",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3572,
+    "mxn_usd": 0.05361,
+    "cny_usd": 0.150092,
+    "cny_cnh": 0.998542,
+    "cny_hkd": 1.171391,
+    "cny_eur": 0.13397,
+    "cny_gbp": 0.111777,
+    "cny_jpy": 23.66114,
+    "cny_cad": 0.21049,
+    "cny_aud": 0.217427,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVVScGhlUWlOQl9KZk9nY2dHdV96RG9VWFVPSW9jaU80R3ZxQnlXTV84OVNldmtSQWpIZEFaNGhvYzljWVB1ajdWV01ueWVEY2JyaURkNnVxc0RBQl9NN2c5X2o1RWlGdzhiS1o2VVNnSzJ3a0lLYjQ3clRySG9pczJLLWg5WnFzOFZNbld1ZGZHYkFmNUFYVE9RazZxVTZXaDJrMU9aeDdxTUJqeXpKb1RVS01pdkI2OXM3NkcyNzNNZlJDU09aVkt2ai1UMTkxa3pWLQ?oc=5",
+      "date": "2026-11-08",
+      "type": "news"
+    },
+    {
+      "title": "EU ends tax loophole exploited by SHEIN, Temu, and Aliexpress - Euronews.com",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYzg2NDhFci1oWVpxa21NSGJqc1Y4czFWYWgyLVQ2bjI2bEdNQ25rVUd1MnJlZzBmRXFfdXJ6S2JwekxzU1NVby1uMmx5VHI4dWs4c2RGOXEzOFVyaDl0S2ZCcUZpcjJhenFGbEpGbkpuNmYyTHRzUUJLZUpKMjljZnZxb2dEbTZmR3c4LXhoY0k4SUM2TGZUZ0JwRQ?oc=5",
+      "date": "2026-11-08",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico economy beats forecasts in third quarter, cooling rate-cut pressure - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Customs Regulatory Updates - DHL",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Banxico Interest Rate Decision Mexico Keluar sebesar 6.25%, di Bawah Harapan (6.5%) - TradingView",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfNFQzQVljWkdBeHZPd2M2MU1pQVV2WmtNZEJvTk42ZWVsWDRfRnNLUXEyYi1wNTEwVzlBOGEtVy10N3lyRkhsTkluTkk3WWlTam1DN0ZPakU1S1ViNXZsQVhLNFJLdUhqSnc?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "US Midterm Shift Raises Stakes for Mexico Trade, USMCA Review - Mexico Business News",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcnkwY0FqQXhLQjQ2by03WWZqeDdzaF9kNXZxQTI1WWxFMmg1NmR2RU95MmdBRjI3X2dtMW5YaFk0T19FNFZuX2NObU54cHB0cG9UQkZPaWVqODZFTHprZDAwYVBBNWhxR1pYMHVHbi0ya1g5WGZhenE3U2MwbWJhRy1PdlJvc3FpakgzaWJ4b3lCUGFkdEppOXUyTGZ6YnN4clBrNjM0OHpCdGVKZzQ0?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: Fed Hike Bets Fade, DXY Tests 102.18 as EUR/USD, GBP/USD Slip - Yahoo Finance",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTXp5Q1NOQ0lBTmNXcGc5SU9xdjh4M3lsX1oySGswOFdqR0FzMUFUODVkZ0RVZVZJYWpsM05WZ0k0a1dHTURwbXVPTU85RlR6ZmhEMGxPUmM0WHhYOEJMSnNVT19DSldyV0E4N1hBNDJ2RHRxbVlCbnBJOVhaMnA1ZHBTSFBfWE5UWkNiX1JscW9LUnRNMDhMMVdvYVVoQQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

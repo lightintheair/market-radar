@@ -1,0 +1,44 @@
+{
+  "week": "2026-W46",
+  "date": "2026-11-09",
+  "platform": [],
+  "macro": [
+    {
+      "title": "Mexico inflation accelerates in early August - Reuters",
+      "source": "墨西哥通胀",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率",
+      "category": "macro"
+    },
+    {
+      "title": "Customs Regulatory Updates - DHL",
+      "source": "墨西哥海关/关税",
+      "category": "macro"
+    },
+    {
+      "title": "Mexico says 1.5% GDP growth secure unless economy shrinks in second half - Reuters",
+      "source": "墨西哥经济",
+      "category": "macro"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Temu Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Temu墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "Shopee Revenue and Usage Statistics (2026) - Business of Apps",
+      "source": "Shopee墨西哥",
+      "category": "competitor"
+    },
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "速卖通墨西哥市场",
+      "category": "competitor"
+    }
+  ]
+}

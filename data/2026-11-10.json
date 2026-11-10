@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-10",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3602,
+    "mxn_usd": 0.05384,
+    "cny_usd": 0.149486,
+    "cny_cnh": 0.999164,
+    "cny_hkd": 1.172675,
+    "cny_eur": 0.133627,
+    "cny_gbp": 0.111534,
+    "cny_jpy": 23.646719,
+    "cny_cad": 0.211023,
+    "cny_aud": 0.216777,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVVScGhlUWlOQl9KZk9nY2dHdV96RG9VWFVPSW9jaU80R3ZxQnlXTV84OVNldmtSQWpIZEFaNGhvYzljWVB1ajdWV01ueWVEY2JyaURkNnVxc0RBQl9NN2c5X2o1RWlGdzhiS1o2VVNnSzJ3a0lLYjQ3clRySG9pczJLLWg5WnFzOFZNbld1ZGZHYkFmNUFYVE9RazZxVTZXaDJrMU9aeDdxTUJqeXpKb1RVS01pdkI2OXM3NkcyNzNNZlJDU09aVkt2ai1UMTkxa3pWLQ?oc=5",
+      "date": "2026-11-10",
+      "type": "news"
+    },
+    {
+      "title": "Ecommerce Marketplaces: 12 Top Sites To Sell On (2026) - Shopify",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5NN2NwNmdRT180MnRCckhudXlVV2VNS3pLdlhiamVpQXpabDZyRlVpa1NJZU56ZnNYWjk4SnJkczBRZGo0R0I3V1dEVjFGekdnZ01CdGFGclRzSE5hcjZFWXNnR0NCa20taXdzZDVGSXItRWdCNjNvd0ppSQ?oc=5",
+      "date": "2026-11-10",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico economy beats forecasts in third quarter, cooling rate-cut pressure - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "Mexico Proposes Changes to Customs Law - Sandler, Travis &amp; Rosenberg, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "REPEAT Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Banxico Cut Narrows The Peso's Yield Advantage - Exchange Rates UK",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUVlsRlE3UDhWRjdGQ3ZNdHZKTXNzT1VOUF9ESHd3bllLN0dDV3YzMUlXQkVueE1SZVBZSmdxYmZESXI5T1BOXzFzd3c2SmlRQml3Q1phZ28yMU5oNmJxUmNUSkFHcGdtVmtyeGNnZmxtNldDa284ZzlhU01aSWFsc3FyS0JPbnlqMTg0YUxkQ21vMjZmdlV2aFpRUmNTQXNPU24tbzlqcmNNTUdmLXJWVlA1T1plQV9DN2RxQXhtYWs?oc=5"
+    },
+    {
+      "title": "Mexico Inflation Jumps to Put Focus on Banxico’s Rate Policy - Bloomberg.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOUdzZDMzcmFwSkU4OE1WWWtFVU4yMEt0TURNMWxCRzdMTDdScW9yb0ZVWjlmTXBhZ2NmVjZvM3ZMSmRLbTBJb2d6ZHVQMnJmQkdwWGUwaTFMc0thcHVCTmFKVVZtandqbEpfeG40aUZibW5UZkhmMkg5M3B3ZFpzTy1EcHl6OVhhT1llMXZzNTZrdXdYa3JTYzljQS13S2htcDhfM2RJUWJBYlR5S3ZNTTlIZ0lFZw?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "Borderlands Mexico: US foreign-trade zones push to fix USMCA tariff obstacles - FreightWaves",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcGh6VTh3aDhXRmw4S1NkQ3ZtbEJ4YU5mdWthalVqdk44bW02VzhDWDV4NmpMWGhpX3JxaE1xV3NtWnF1aXBsN3ZsQTVNN0ZGNXYyZk41Q01Nc0JRMEtpMFdDeGtwVjNYVFZJMTJTalpzaGYwWjdNWFdINGNaQXItYkV0N0RLTHZ0VWFFVTREdGlDRlQyYlZtX3NoVWJRc0M1VXZpd01mcEo2MkRsbGdj?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY sits near two-week top, above 102.00 ahead of FOMC - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcnhmRzN4Mi1aZVh6OENXejZMVXAxOERmX25rZDhJeDh6a2ItUGpHbzVSTnBDNDktMTA3WXJ5RUVWaEZ6VnRabE9rellJbm02QmJheW8wZnRJZHNncXJTUmFTLVdFU2FJbHVRQ1V4czQzMDQyTV8tbXBtRlpRWGpCUWI4V3Buc3dwMjRuOE43Y2RZb1VJZG1zdHBhcWxfNFhIOHZWQnZCWnMya2FpWVA4Tnplam1YeFl2bEx4UDhjaFMwb18t?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-14",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3601,
+    "mxn_usd": 0.05387,
+    "cny_usd": 0.149611,
+    "cny_cnh": 0.999278,
+    "cny_hkd": 1.173683,
+    "cny_eur": 0.135603,
+    "cny_gbp": 0.113208,
+    "cny_jpy": 23.920176,
+    "cny_cad": 0.213332,
+    "cny_aud": 0.220715,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Tariffs on Chinese parcels are now in force. First effects visible after two weeks - xyz.pl",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQalRHc2VCcHljVGM0RE1ZNFhFY01LSld2aTdUTVE2RXYwVjdkUnV1T0lQNnZNbVU2NnJhdEt1ZFlnY3Y0c2Z3bFNGQlhTYUZwVF8td3lUck8ybFFkY2dsTkF1UmlmRlduZEpvM3dDS1BUUFl3Ry1SNFVSM2FhZlBWdXBtdkhQcG8tY0dRb0RDSlFiMk9XVjlzeXdwbGpyRXBBVDlDcW93alVVS3JXbTVnS0FtaktpQUlRQ2c?oc=5",
+      "date": "2026-11-14",
+      "type": "news"
+    },
+    {
+      "title": "China's global e-commerce push stalls as Iran war lifts costs, dampens demand - Reuters",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVVScGhlUWlOQl9KZk9nY2dHdV96RG9VWFVPSW9jaU80R3ZxQnlXTV84OVNldmtSQWpIZEFaNGhvYzljWVB1ajdWV01ueWVEY2JyaURkNnVxc0RBQl9NN2c5X2o1RWlGdzhiS1o2VVNnSzJ3a0lLYjQ3clRySG9pczJLLWg5WnFzOFZNbld1ZGZHYkFmNUFYVE9RazZxVTZXaDJrMU9aeDdxTUJqeXpKb1RVS01pdkI2OXM3NkcyNzNNZlJDU09aVkt2ai1UMTkxa3pWLQ?oc=5",
+      "date": "2026-11-14",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Mexico analysts slightly trim inflation forecast for 2026, 2027 - Reuters",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "U.S. Enlists Mexico in Trade Enforcement Crackdown - Sandler, Travis &amp; Rosenberg, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "Beyond Silos: Omnichannel Integration, Financial Inclusion - Mexico Business News",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcEdSZlFKakZaX0MxMHBGeXlES2daQ1FiS1UzWTU0eW9kQ1BBdFhIb083Z0JNXzhscjZoMlI1ZkszVUgxNENVdm9HZUZFSDB3OE1xY1hRR3hpRERtaDhMcjdWazhDWGR4UEV4WnBTY0M1TFd4TlRtM05ZYk9seTNRejFVcDlRTE5xR3Q0b0dWNVNycHMtREpVTGV0V1E3NktaZWtvTWpZbktzTjRlRXB6dVY5cXc?oc=5"
+    },
+    {
+      "title": "Mexico's Pemex sets December crude oil prices for international buyers - TradingView",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaUcyc2ZSRk5JYlFfbjFqWFdwTndYRnFqbkNzaVBtYktyd1R5SlVoSS1qa015Nm5RYkFIYTgtZjRpZGpRSTl3SV9jRjZNbXFlVjE0bHZHTzJKMlRmbWl1VmQ1dTFxQXdmamdHREtMQ3NxYzROWmx6U1VoempKdkYtc1NPVDVZb2dXNUU3S2pjTVN3TFF0UVBjNThSOThBSENOX1hYTnF3VjBsTlZvQ2l5cGFWcmh2R1VwaFFoU0hTaFVacHhPSmVKU0w4M1hCVVRDQzhhUl9Rcw?oc=5"
+    },
+    {
+      "title": "Former US Trade Officials Challenge Trump's Canada Tariffs - Newsweek",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdjV2VXkzYm9qT25kRzFoLU9kR3hHREQ3WURkaDNITFNESGhQWGROOUYzUXR4ZHRjdEJxOHVoeUtKc2gtaG5tWU9nOEdrV19pWlRxUUFUQ21fdHc5R0gxVlVycl9ZQ0pqTXN4NDlBMkRuZWJXakE3WU1jWnR0dnlMUmwxdFA5TVg3RXA5OQ?oc=5"
+    },
+    {
+      "title": "US Dollar Technical Forecast: DXY Bulls Target Yearly Highs After Hot CPI - StoneX",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVkxwZkliM1lxZXhVblgzU201dFJzbnFRUFFSN2Ftb0JfbGoxWmk0blpVRWdUX05ZQ096ZFNVNFdMSl9jTmwyWDVqeEpyQ2JLdWNYR2wtaDJkRTdTRmNENUJSQVVLYWtOS2JpTERuSDdiUGVrZ25nVWJVeEZtVUI2YXR3UkRVNWpYUng0c0xoaElNeW1kR3F0Z25fRXhJLTUtSUhWdUJHVVhZV2VGV0k0UGNjajUxTjVub0Z3dQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

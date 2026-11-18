@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-18",
+  "time": "09:34",
+  "fx": {
+    "mxn_cny": 0.3619,
+    "mxn_usd": 0.05422,
+    "cny_usd": 0.149829,
+    "cny_cnh": 0.999257,
+    "cny_hkd": 1.174578,
+    "cny_eur": 0.136247,
+    "cny_gbp": 0.113497,
+    "cny_jpy": 23.873239,
+    "cny_cad": 0.214049,
+    "cny_aud": 0.222457,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-11-18",
+      "type": "news"
+    },
+    {
+      "title": "Tariffs on Chinese parcels are now in force. First effects visible after two weeks - xyz.pl",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQalRHc2VCcHljVGM0RE1ZNFhFY01LSld2aTdUTVE2RXYwVjdkUnV1T0lQNnZNbVU2NnJhdEt1ZFlnY3Y0c2Z3bFNGQlhTYUZwVF8td3lUck8ybFFkY2dsTkF1UmlmRlduZEpvM3dDS1BUUFl3Ry1SNFVSM2FhZlBWdXBtdkhQcG8tY0dRb0RDSlFiMk9XVjlzeXdwbGpyRXBBVDlDcW93alVVS3JXbTVnS0FtaktpQUlRQ2c?oc=5",
+      "date": "2026-11-18",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Corporate",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "U.S. Enlists Mexico in Trade Enforcement Crackdown - Sandler, Travis &amp; Rosenberg, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "How to set up your AliExpress dropshipping business in Australia [2026] - WorldFirst",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQa2FJZTdkM0c4dnlLaGJyMm5uVkRNZmlhcm81WU44Y2pRMjRVRGF3R19LTzBPRndrdHN2MjZiQ3V2ZzY4YVllYVRrLW93MFJoemk3ZFV0Unl1aFIwbWs4TXRhbXJlcE5SalFiaHp3U1QydWpyRnp5U0xscGFzYklVM0NqVW1JXzQtYXMzM042MlgyblFhekljRkNEbjdCdDJYcVdiVWdUVHBZWEhLMnNNc1Zn0gG3AUFVX3lxTE0tY2hMbXg0aEt2SUoteUlUb0JGVFBTWGkzTm1wQ0lMckxxbnk5YlItbERkbzdrZXV0N0pvYW4wYlUxTGN2T2hNb0pLbnd6Q24xM01TdTNSOWxSM1EtVkMzd2IwdUxNYXlIWnhjTGhTM3MyZEJBOG1EdVJkX1hlVDFrSWJPc1dad2xFQmNOZmxJRVpDM1daWnRkSVZSLUh0S1QxN19GZWxmOVo4dFliNVFTNmpSOEJDSQ?oc=5"
+    },
+    {
+      "title": "New Congress could take up tariff bills amid USMCA talks - Homepros",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcFRVbjJ6WmliWWx0OXF6b0FfYkh5azNyNnpQY0lmQXVXQnE1dE8zX1h5cEJLSDNSSXdIRWY5MFkwQl8zYjhzRUVfT0Q0UWRjNndhandpN0hmbFBUYnpraGpfRTltc1BkQ0FkU2JuUWV5SUVvUEJRQ3h5TmRXTjJDU1ViODNqdw?oc=5"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY eases from 19-month peak; holds 103.45 confluence - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbHdaVTZ6bGJERTF2Z1ZmcjBIa0hjdlNLM1h0bGo3UVlKLXphZWhxdmRsVkRIb1RDclBpaFF5X2RoVmdlenRpaVdRLVo2blF1d3dxRkhyWUxWdnRBVzl6b2hZUVpMWGdmTVdhUXpXX0F5MzYyblFKQm1IQUM0eks4LW5tc1lnX05mdTBuZlZqLWxtZElVSEtZcHdYc3A0OUJ2MWJwU0w2M3pJakFlVXdLUlRNY1hWZkNjOEpxTE9GVlQycjQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

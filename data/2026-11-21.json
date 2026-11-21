@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-21",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.3555,
+    "mxn_usd": 0.05251,
+    "cny_usd": 0.147705,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-11-21",
+      "type": "news"
+    },
+    {
+      "title": "Tariffs on Chinese parcels are now in force. First effects visible after two weeks - xyz.pl",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQalRHc2VCcHljVGM0RE1ZNFhFY01LSld2aTdUTVE2RXYwVjdkUnV1T0lQNnZNbVU2NnJhdEt1ZFlnY3Y0c2Z3bFNGQlhTYUZwVF8td3lUck8ybFFkY2dsTkF1UmlmRlduZEpvM3dDS1BUUFl3Ry1SNFVSM2FhZlBWdXBtdkhQcG8tY0dRb0RDSlFiMk9XVjlzeXdwbGpyRXBBVDlDcW93alVVS3JXbTVnS0FtaktpQUlRQ2c?oc=5",
+      "date": "2026-11-21",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Research",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "U.S. Enlists Mexico in Trade Enforcement Crackdown - Sandler, Travis &amp; Rosenberg, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "REPEAT Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "How to set up your AliExpress dropshipping business in Australia [2026] - WorldFirst",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Peso Struggles to Recover Despite Mexico's Inflation Data - StoneX",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM2p5WktxVUpvY1JPckVLdFYycXUtUjFlMHpJZ0ttMEk2d2pHVEpFTjJ6Mklqb3VtdTdET2xxWXJqaWxDNGFQWTRsd0tOUEhSaTJXT2pmVjRJVGtTcC1IOHdJcDFMVDlWVUphZUw0WjdtSk0xM09BeVlsY1pLWVVxVmFMWEhTcXhMMkZ1ZVFkNHVZa3IwQmtibnk0bGZ1S2FXZ01wZXhCM2pEUjdMSmtJWlYzS0tHTGlRTU5XZE5wRjlRcEtkQmFCc2RsY0hPQQ?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Oil prices set for third straight weekly decline on Middle East export flows - CNBC",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5SV3VLcC1fUXZ3eUN2ckZpSzd3akdsSE55cFRrUEZFNDZtVUFxcDRCWng5dHB3XzBDaUliLUowaGdqdDVkaW5va25nUkx5OVc4UXZoVU9qem1NdWFUNndPWldTeXFhVnVo0gFuQVVfeXFMTXRDbE5XQlFpNEF3ZVBycUpzZXFqQXJOdmVWTWVlX2NWLTNPc2w2TEk5TVdEb3FSZTV3c1JpSEJpUTlaX1g3cVhfY0o1cnFZd2xLZm03ZkJWTjRCelpOU2V5bl9pYlk0RkJsZnQtS1E?oc=5"
+    },
+    {
+      "title": "Trump Says US Close to Mexico Trade Deal, Less So With Canada - Bloomberg.com",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWEtmTmdhWjZvZTJWLWxnU1hkRlU4OEl6dENEYThqM1lWNDRRUWwzUW51UWFCTGs0Y2RYNjRHaldUNXBuY3BHdFVKUUdMZVVCVFRUTENnR0ZLRTBpc1pOeFdib0c5TW4yYTRpdDZnaVJRSzY2aVNHZ0ItOWw0MDhzSzBlNDFHdWQ0Zk1HUzE4T3hhaXdrVzRBSXBMcXlNakVLUlVyS0J3NXpFWFBHNmhVcA?oc=5"
+    },
+    {
+      "title": "US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNc0hOTmZJQkxIai1DZm55bVRuX2JxV2xRV2JTY3Bva0c1dHNHSGdITjJ0LVNQWXRKbHcwUWhzYkpIblFGMWFnb1UtTWI5VF9TX3FRWDMtU0lmZWZHbXRrUm81WlpxNWtNVEZPcGtTalhmdE9mRnFGek5TTXFiWVhPb0k5ZndyWDczb3A3ZTFScFlHUXh4Rks5NmMxc3o1dDVwTTl2Tk9xSm4xbmEwb3dPNTBZTll4VWhDTTdRZXFaeXM1QQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-24",
+  "time": "09:33",
+  "fx": {
+    "mxn_cny": 0.351,
+    "mxn_usd": 0.05213,
+    "cny_usd": 0.148507,
+    "cny_cnh": 0.999312,
+    "cny_hkd": 1.173958,
+    "cny_eur": 0.137002,
+    "cny_gbp": 0.114694,
+    "cny_jpy": 23.831691,
+    "cny_cad": 0.21488,
+    "cny_aud": 0.22596,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU Hits AliExpress With Record €550M DSA Fine - SupplyChainBrain",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOb0VEWEcta0VFZFEya3UxUnNLcmdabFBuTUxNMzg1YVQwNFEwaXhhbjBoenVfMlVWdGlxQncxSU1RNmpLU1dHVzB6a1kzU1lVZ1JKT1hfY3VfQVJTQ2JvUkFES0dqU1JWdFo2SmxCYm5jUS1mZUFwWXZhUHduZ0RQb01ZM3FpQVlmTmllblNMRy1fZXZIV1JUOXcySHZyTWlDRkMyOUpoNWNpVkRMQkc4dVNZNE5CbFYtUXRwVjI3cjY4TF9EcXNGeW9pNkxTUW9idmE4?oc=5",
+      "date": "2026-11-24",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-11-24",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Research",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg.com",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "U.S. Enlists Mexico in Trade Enforcement Crackdown - Sandler, Travis &amp; Rosenberg, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Could Temu Become the Next Biggest E-Commerce Platform? - Data Explained",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "REPEAT Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping in 2027 With Shopify - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "Gold Price Forecast Mexico 2026, 2027 and Next 5 Years (XAU/MXN) - LiteFinance",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOaHFTeG1nazdGWFJhLWdMUGFfV2sxVWx5Y1V4Q3JBc2FkZGNHeGVVS3ZsM0MyWFVPR0lpX3FTeElCd04zc1VLaGxKSDUxTklobkExVXNwa2RrUUFEVW4xQ2RLQ0d4MzZaNGd4NUJ4bDV5b1dnRkYxMzlzLVNHRUNVWUlxa1YwSkdEN1FqbXFqaXIzNk0?oc=5"
+    },
+    {
+      "title": "Bank of Mexico holds interest rate, drops signal of prolonged pause - Reuters",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2JLVnpidGx0bUEtYWZtMHFpOUJxNTBnaGxxaDdlSXQtNXNKSVpwLW5FN2lGeG9BaDVDaTZhc0k1b0I3X0NObUNQVnlxQk54MEtUd1BPeVcwRzAxU0YtZU9ZMDI2R2ozZjlTYW5RbTgwQWptRUlKd3RrdFdza2dFbHNGR3VNbUVlUlVOVzhmMVpRR09tRmoxTkFlZzFfRklucUNOZTVaZVplSXc?oc=5"
+    },
+    {
+      "title": "Pemex Needs Nearly $110 Billion to Hit Mexico's Output Targets - Crude Oil Prices Today | OilPrice.com",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVktBNHZUeG9JX1ZwNzNHYTR5U2NUVVp0VnlnX1VNQzJNMXZjeEU4THdTNFN3eFdFSTd2eEFsV0NpQlQ5VmVmYzMzcm1UNGxhNGJaTVJzaG9UWWpwSWJ0U3NRUHZLLUhXV3Q1d1hnUGVwelN0RVh5UUJZS0RGczFtaFhFTE4xa2pIdFNsZTNWbzdvcU5MSFBLWVVjbzRQSkZpR3dLYzZ30gGrAUFVX3lxTE9xLUp6OWE5cm9Xc0kzWG54dGJSRlNxN09fNmJqTmlPMjhNWmo0a2xJTXlRODNGMUxVLXY0SHpPTG56WVpYd2VmaXctWWh0ZW1SNzBZQnNYWk9aU3JKZV9uZF9rSENCd1NldmdlUnk4dkhiOUluTjh1UktwNTB3OER0QTQtMmRsd19IVHRNajBTY2RScUp4M3dlbEFlYVp3TEtBaXBVRy1ialVaSQ?oc=5"
+    },
+    {
+      "title": "US Tariffs Affect Costs at 45% of Mexican Companies: HSBC - Mexico Business News",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNc0ZlbWktVVhRNEY4NUdWZW5OdUFJd2N1T2RKX1FqQ1dZbkpOTEZiOGNUOE9VZnVmeEFwY0c5Ni0wQldhRlRxdlVPNkRIcDNPak1NRHZleFFyX2VGeWhBak1uRk9rYV9EWDFlZ2xVcS1mVmtTUVpXUk0xek9vd1R2SmVqekRsUjVYSHNLZ3NRQmdFTzlBdzdiLUhZMy1ITmpT?oc=5"
+    },
+    {
+      "title": "US Dollar Price Forecast: DXY Eases Below 103.98 as Half-Point Fed Bets Fade, EUR/USD and GBP/USD Steady - FXEmpire",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQakFyNGVYU2lZT2lXWFVkamtWcl9iWm5oYVZhel85UUhNMlY1ZEpTS0ZKS1l5emQ0SlJpVjFEWDAwUlBGZVNROC1CYWpfeF9FNVFJN2kyelhiZEtIaUFYa0VkR1loakcyRVhreFV2MV9vOVdDSUg4eUpGZnB6eThBZVljNVoyeXdkMklCSjJ3ZWdsTnE5SFl2bUhZYmlHc29wNGVtcWtiVDVNTGZDNzhDX0FGdjlRMElDM01FZy11U3BMUG5iTWsyUVBDYlpBT0JWYklWajVaQWR1ckQ1R2RTMTFCZVhHczJZ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}

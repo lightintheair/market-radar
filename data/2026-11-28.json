@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-28",
+  "time": "09:35",
+  "fx": {
+    "mxn_cny": 0.3397,
+    "mxn_usd": 0.05094,
+    "cny_usd": 0.149971,
+    "source": "open.er-api.com"
+  },
+  "platform": [
+    {
+      "title": "EU Hits AliExpress With Record €550M DSA Fine - SupplyChainBrain",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOb0VEWEcta0VFZFEya3UxUnNLcmdabFBuTUxNMzg1YVQwNFEwaXhhbjBoenVfMlVWdGlxQncxSU1RNmpLU1dHVzB6a1kzU1lVZ1JKT1hfY3VfQVJTQ2JvUkFES0dqU1JWdFo2SmxCYm5jUS1mZUFwWXZhUHduZ0RQb01ZM3FpQVlmTmllblNMRy1fZXZIV1JUOXcySHZyTWlDRkMyOUpoNWNpVkRMQkc4dVNZNE5CbFYtUXRwVjI3cjY4TF9EcXNGeW9pNkxTUW9idmE4?oc=5",
+      "date": "2026-11-28",
+      "type": "news"
+    },
+    {
+      "title": "Korea Ends Foreign-Platform Enforcement Gap: Temu and AliExpress Must Name Local Agents - Tech Times",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNVBHZWF6YnYxYzJWcTA0bWpfZ0x1dGpoR2ZjZmd2UDVsRDZzNTBmSjJBM1FyMjh2dEVjQjRCaFpCTUoxTm1mUXlnamQ0YXdQamwtTVBpdDlveHJDZktKWHZXM0hFaXRJNzIwUVZzdzlfUHF5bWdtdF9PZ08xVVZnbkxzNWs1ckZaemE1N0x3a3pRTHQ5VHBvWGo2QVc5MTVkMlJiMElhVlQyY0F4WE9nS1V1Mi1hcjRpendKSWNMQ0xBWnZxUnhFcDlwWFBEd1NaNmZV?oc=5",
+      "date": "2026-11-28",
+      "type": "news"
+    }
+  ],
+  "macro": [
+    {
+      "title": "Our economic outlook for Mexico - Vanguard Research",
+      "source": "墨西哥宏观"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg",
+      "source": "Banxico利率"
+    },
+    {
+      "title": "U.S. Enlists Mexico in Trade Enforcement Crackdown - Sandler, Travis &amp; Rosenberg, P.A.",
+      "source": "墨西哥海关"
+    }
+  ],
+  "competitor": [
+    {
+      "title": "‘Temu matches Amazon in cross-border sales’ - Ecommerce News - Europe",
+      "source": "Temu墨西哥"
+    },
+    {
+      "title": "REPEAT Sea's Shopee to enter Mexico online market with app launch - Reuters",
+      "source": "Shopee墨西哥"
+    },
+    {
+      "title": "AliExpress Dropshipping in 2027 With Shopify - Shopify",
+      "source": "速卖通墨西哥"
+    }
+  ],
+  "outlook": [
+    {
+      "title": "USD/MXN Forecast: Mexican Peso Weakness Persists as Year-End Approaches - FOREX.com",
+      "source": "汇率展望",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWjRTODl5RUM0aUNqaW0xeGsxWHljNW9wX1piZDJrM01oWXpsZEoyYTNJN0xjOUZOSHBMV05vX05rWGxCYnlFaml0UG5RY2IzdVY5QU1DSzh1Skx2eWJxRHpTblI0cnpSaHVld18yZkxXbGNOQ1BNOVloUG9XRHB4VWcxVkxGaWFnbTdjY1d3VzE4cFFuOFN4a3A2RUVtdGpnc1E0YjhreHdlT0NScFVuQU1kVkpsaXRf?oc=5"
+    },
+    {
+      "title": "Mexico Unexpectedly Cuts Key Rate to 6.25% for ‘Extended Period’ - Bloomberg",
+      "source": "Banxico利率",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcEdSZlFKakZaX0MxMHBGeXlES2daQ1FiS1UzWTU0eW9kQ1BBdFhIb083Z0JNXzhscjZoMlI1ZkszVUgxNENVdm9HZUZFSDB3OE1xY1hRR3hpRERtaDhMcjdWazhDWGR4UEV4WnBTY0M1TFd4TlRtM05ZYk9seTNRejFVcDlRTE5xR3Q0b0dWNVNycHMtREpVTGV0V1E3NktaZWtvTWpZbktzTjRlRXB6dVY5cXc?oc=5"
+    },
+    {
+      "title": "Higher Oil Prices Let Mexico Pull Back Billions in Pemex Support - Yahoo Finance",
+      "source": "油价",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFhtUU5VbDYtZkx6NUw2Nm02YmhncGNoUHZDU29RM0VmcVlaYVVlUXpHNHlzdnNDem9zcURTTUItMFlUWk1MQW4wSmM1UHdUNWpleGVWdlJfUkJqSzE3V25LNzREeGVvMXFQcXFrWjQ5U0xCSm5KOXVGS0YyNXgzMXh6MmxFVG9SamhGXzl3?oc=5"
+    },
+    {
+      "title": "Republicans rethink tariffs, giving Democrats an opening to challenge Trump - ABC News - Breaking News, Latest News and Videos",
+      "source": "美墨贸易",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZWpiaWFfMlFaRm0wbWdQNGRyY0g3WmdublpxREhkS0FnSkZIQk5lbDV6cFhjblM2a2RrLVVyNUdqaWNIVFBKcWJPODIyNXdoeVRrR2ViZVNmcmIxd0lFTWNPbXJ3Mzh4WGVESkdYZlk3eDBXdXNaU3hoUTd4ZlhWUFJqNWFpX2hCaDNJelRVdm9MeWx0aG1NZmtxd2dJWWdfc1M5Q1dYSHNZc3hrS0NLWHBVcWlySGhF0gG-AUFVX3lxTE9mOFgxejN3S3J1WVA5ZFFZdHhCYnJUall5aGktMkdPamFLUmRGNTdwdjZtbnlkS21DRGpzcW1FcHpEYU8wTFpYbU1zaXFhcXJwS0xPYzF5QmRLLVI4b1h1QzBkbHNndkF6LW9CNlhiRjhUdllWR3dFOGhwUV9qUGZqNTQ0NWNBSXFCOHNxY3VUSkM3aG5TQUlqMnYyVUV3VnhrWG95MmYxSGZBc29QY3N1Y1E1RTdxeW5YUUQxZHc?oc=5"
+    },
+    {
+      "title": "US Dollar Technical Outlook: DXY Hits 2026 High—Major Trend Resistance Puts Rally to the Test - StoneX",
+      "source": "美元指数",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRGVYWmExNnltN2M5bW9OVXM0cXl4RFAxVWlkYVFfZGFsQTZ4ckx1MEd3SDFvUnFTVERxMjU5MlluVlREQ0xSaFd3eGp2b24tQ1BSVGtzNkQyYkl0cTMzcHZFaWF3MGFKY05mdjgtYVp5cV9VZWVGS3F6ZjRqd1BEUTdXNlFEamZRQmozeXdQdWEta19FQWRneGo4S182XzNrN0taSTlDcEk1YzZqRExNY3RJUzJkTXY0QW9KQ1JXUWE1d3R5UGlKaHJ3ZFZEbWYxR1lFcEVGSQ?oc=5"
+    }
+  ],
+  "source": "open.er-api.com"
+}
